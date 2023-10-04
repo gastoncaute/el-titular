@@ -1,6 +1,6 @@
 export default function Categories() {
     return (
-        <section>
+        <section className="w-full flex justify-evenly">
             <button>Clima</button>
             <button>Deporte</button>
             <button>Municipal</button>
