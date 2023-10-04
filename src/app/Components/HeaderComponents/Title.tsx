@@ -1,4 +1,4 @@
-import Categories from "./HeaderButtons/Categories";
+import Categories from "./Categories";
 
 export default function Title() {
     return(

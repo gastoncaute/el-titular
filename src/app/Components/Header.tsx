@@ -4,7 +4,7 @@ import InstagramButton from "./HeaderButtons/SocialButtons/InstagrasmButton";
 import TikTokButton from "./HeaderButtons/SocialButtons/TikTokButton";
 import TwitterButton from "./HeaderButtons/SocialButtons/TwitterButton";
 import YouTubrButton from "./HeaderButtons/SocialButtons/YouTubeButton";
-import Title from "./Title";
+import Title from "./HeaderComponents/Title";
 
 export default function Header() {
     return (
