@@ -21,11 +21,6 @@ export default function Header() {
                         </button>
                     </li>
                 </ul>
-                <section className="flex col-start-2 col-end-4 items-center justify-center">
-                    <div className="flex bg-slate-400 rounded-b-3xl border-l border-r border-b border-black w-11/12 h-12">
-                        <Categories />
-                    </div>
-                </section>
                 <ul className="flex justify-center col-start-4 col-end-5 row-span-1">
                     <li className="m-2">
                         <InstagramButton />
