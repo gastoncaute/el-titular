@@ -8,7 +8,7 @@ export default function BurgerButton() {
         setMenuVisible(!menuVisible)
     }
     return(
-        <div className="flex items-center">
+        <div>
             <button onClick={toggleBurgerButton}>
                 <svg width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
