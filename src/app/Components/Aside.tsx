@@ -2,7 +2,7 @@
 import { useState } from 'react'
 export default function Aside() {
     return(
-        <aside className="bg-gray-600 w-80 h-screen flex flex-col p-7 fixed -translate-x-full">
+        <aside className="bg-gray-600 w-80 h-full flex flex-col p-7 fixed -ml-8">
             <button>
                 <svg width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>

@@ -4,13 +4,13 @@ import InstagramButton from "./HeaderButtons/SocialButtons/InstagrasmButton";
 import TikTokButton from "./HeaderButtons/SocialButtons/TikTokButton";
 import TwitterButton from "./HeaderButtons/SocialButtons/TwitterButton";
 import YouTubrButton from "./HeaderButtons/SocialButtons/YouTubeButton";
+import Categories from "./HeaderComponents/Categories";
 import Title from "./HeaderComponents/Title";
 
 export default function Header() {
     return (
         <section className="flex justify-center">
-            <Title />
-            <header className="grid grid-cols-4 grid-rows-1 bg-slate-500 w-screen">
+            <header className="grid grid-cols-4 grid-rows-1 bg-slate-500 w-screen fixed">
                 <ul className="flex justify-center items-center col-start-1 col-end-2 row-span-1">
                     <li className="w-full flex items-center ml-8">
                         <BurgerButton />
@@ -21,6 +21,11 @@ export default function Header() {
                         </button>
                     </li>
                 </ul>
+                <section className="flex col-start-2 col-end-4 items-center justify-center">
+                    <div className="flex bg-slate-400 rounded-b-3xl border-l border-r border-b border-black w-11/12 h-12">
+                        <Categories />
+                    </div>
+                </section>
                 <ul className="flex justify-center col-start-4 col-end-5 row-span-1">
                     <li className="m-2">
                         <InstagramButton />
@@ -39,6 +44,7 @@ export default function Header() {
                     </li>
                 </ul>
             </header>
+            <Title />
         </section>
     )
 }
