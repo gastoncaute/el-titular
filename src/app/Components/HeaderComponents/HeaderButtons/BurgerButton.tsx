@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import Aside from "../Aside";
+import Aside from "../../Aside";
 
 export default function BurgerButton() {
     const [menuVisible, setMenuVisible] = useState(false)

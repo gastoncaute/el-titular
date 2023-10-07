@@ -2,7 +2,7 @@
 import { useState } from 'react'
 export default function Aside() {
     return(
-        <aside className="bg-gray-600 w-96 h-screen flex flex-col absolute p-7 -ml-8 mt-1.5">
+        <aside className="bg-gradient-to-b from-pageColor to-gradientColor w-96 h-screen flex flex-col absolute p-7 -ml-8 mt-1.5">
             <nav>
                 <ul>
                     <li>Inicio</li>
