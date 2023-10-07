@@ -7,7 +7,7 @@ export default function Header() {
         <section className="flex justify-center">
             <header className="grid grid-cols-4 bg-gradient-to-b from-pageColor to-gradientColor w-screen h-14 fixed">
                 <ul className="flex justify-center items-center col-start-1 col-end-2">
-                    <li className="w-full flex items-center ml-8">
+                    <li className="w-48 flex items-center ml-8">
                         <BurgerButton />
                     </li>
                     <li className="w-full flex items-center justify-left">

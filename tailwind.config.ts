@@ -19,6 +19,9 @@ const config: Config = {
       },
       width: {
         titleWidth: '65rem'
+      },
+      transitionDuration: {
+        '1500': '1500ms'
       }
     },
   },

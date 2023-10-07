@@ -17,9 +17,9 @@ export default function BurgerButton() {
                     <path d="M4 18l16 0" />
                 </svg>
             </button>
-            {menuVisible && (
+            <div className={`transform transition-transform duration-1500 ${menuVisible ? 'translate-x-0' : '-translate-x-full'} w-96`}>
                 <NavBar />
-            )}
+            </div>
         </div>
     )
 }
