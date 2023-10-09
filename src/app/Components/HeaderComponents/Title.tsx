@@ -16,7 +16,11 @@ export default function Title() {
     }, []);
 
     return(
-        <section className={`flex flex-col items-center justify-center fixed transform transition-transform duration-1500 ${scrollY ? '-translate-y-24' : 'translate-y-0'}`}>
+        <section
+            className={`flex flex-col items-center justify-center fixed transform transition-transform duration-1500
+            ${scrollY ? '-translate-y-24' : 'translate-y-0'}
+            `}
+        >
             <div className="flex justify-center items-center bg-gradient-to-b from-pageColor to-gradientColor rounded-b-3xl border-l border-r border-b border-white w-65rem h-24">
                 <h1 className="font-bold text-4xl">El Titular</h1>
             </div>
