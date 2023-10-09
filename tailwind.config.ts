@@ -22,6 +22,9 @@ const config: Config = {
       },
       transitionDuration: {
         '1500': '1500ms'
+      },
+      translate: {
+        '200' : '200%'
       }
     },
   },
