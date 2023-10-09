@@ -18,7 +18,8 @@ const config: Config = {
         gradientColor: '#A32D41',
       },
       width: {
-        titleWidth: '65rem'
+        '65rem': '65rem',
+        '60rem' : '60rem'
       },
       transitionDuration: {
         '1500': '1500ms'
