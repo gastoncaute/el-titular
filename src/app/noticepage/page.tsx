@@ -7,7 +7,7 @@ export default function Page() {
         <section className="h-screen flex flex-col justify-between">
             <Header />
             <main className="grid grid-cols-3 mx-48 my-24 text-black">
-                <div className="flex items-center my-12">
+                <div className="flex items-center mt-12 mb-4">
                     <p className="border border-black rounded-3xl p-4">
                         Tipo de categoria
                     </p>
@@ -29,7 +29,7 @@ export default function Page() {
                     </div>
                     <div className="row-start-3 row-end-4 border-b border-black pb-8">
                         <p className="my-8">Autor</p>
-                        <p>Un colectivo perdió el control y chocó contra un árbol durante la mañana de este martes en el barrio Villa Primera de Mar del Plata. Doce personas debieron ser asistidas por un ambulancias del Sistema de Atención Médica de Emergencias (SAME).
+                        <p className="text-2xl">Un colectivo perdió el control y chocó contra un árbol durante la mañana de este martes en el barrio Villa Primera de Mar del Plata. Doce personas debieron ser asistidas por un ambulancias del Sistema de Atención Médica de Emergencias (SAME).
                         <br />
                         Según confirmaron fuentes oficiales a Qué digital, el siniestro vial se produjo durante la mañana de este martes en la avenida Libertad y Chaco donde un colectivo de la línea 531 que conducía un joven de 29 años perdió el control y chocó contra un árbol.</p>
                     </div>
