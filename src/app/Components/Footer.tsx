@@ -1,4 +1,13 @@
 import Categories from "./HeaderComponents/Categories";
+import ClulturaButton from "./HeaderComponents/Categories/CulturaButton";
+import DeporteButton from "./HeaderComponents/Categories/DeporteButton";
+import EconomiaButton from "./HeaderComponents/Categories/EconomiaButton";
+import FotosButton from "./HeaderComponents/Categories/FotosButton";
+import InternacionalButton from "./HeaderComponents/Categories/InternacionalButton";
+import PolicialesButton from "./HeaderComponents/Categories/PolicialesButton";
+import PoliticaButton from "./HeaderComponents/Categories/PoliticaButton";
+import SociedadButton from "./HeaderComponents/Categories/SociedadButton";
+import TendenciasButton from "./HeaderComponents/Categories/TendenciasButton";
 import SocialButtons from "./HeaderComponents/HeaderButtons/SocialButtons";
 
 export default function Footer() {
@@ -13,7 +22,35 @@ export default function Footer() {
                     <h3 className="text-4xl m-4">Slogan de la pagina</h3>
                 </div>
                 <div className="p-4 flex justify-between w-full">
-                    <Categories />
+                    <ul className="w-full flex items-center justify-evenly">
+                        <li className="border-r px-4">
+                            <PolicialesButton />
+                        </li>
+                        <li className="border-r px-4">
+                            <PoliticaButton />
+                        </li>
+                        <li className="border-r px-4">
+                            <EconomiaButton />
+                        </li>
+                        <li className="border-r px-4">
+                            <SociedadButton />
+                        </li>
+                        <li className="border-r px-4">
+                            <DeporteButton />
+                        </li>
+                        <li className="border-r px-4">
+                            <ClulturaButton />
+                        </li>
+                        <li className="border-r px-4">
+                            <TendenciasButton />
+                        </li>
+                        <li className="border-r px-4">
+                            <InternacionalButton />
+                        </li>
+                        <li className="px-4">
+                            <FotosButton />
+                        </li>
+                    </ul>
                 </div>
                 <div className="w-full flex justify-center m-4">
                     <p className="p-4 text-2xl">hola@gmail.com</p>
