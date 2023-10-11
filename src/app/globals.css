@@ -14,7 +14,15 @@
   }
 }
 
+@font-face {
+  font-family: 'Serithai';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.cdnfonts.com/s/26633/Serithai-Regular.woff') format('woff');
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: #EBEBE3
+  color: #86082E;
+  background: #EBEBE3;
+  font-family: 'Serithai' sans-serif;
 }

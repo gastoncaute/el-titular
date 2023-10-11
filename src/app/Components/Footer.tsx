@@ -12,7 +12,7 @@ export default function Footer() {
                 </div>
                     <h3 className="text-4xl m-4">Slogan de la pagina</h3>
                 </div>
-                <div className="p-4">
+                <div className="p-4 flex justify-between w-full">
                     <Categories />
                 </div>
                 <div className="w-full flex justify-center m-4">
