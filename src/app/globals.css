@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: f, f, f;
-    --background-end-rgb: f, f, f;
-  }
-}
-
 @font-face {
   font-family: 'Serithai';
   font-style: normal;
