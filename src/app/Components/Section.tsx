@@ -1,4 +1,4 @@
-import Clima from "./SectionComponents/Clima";
+import Clima from "./SectionComponents/ClimaComponents/Clima";
 import Tendencias from "./SectionComponents/Tendencias";
 import Noticia from "./SectionComponents/Noticia";
 

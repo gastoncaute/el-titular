@@ -31,13 +31,18 @@ export default function Page() {
                         <p className="my-8">Autor</p>
                         <p className="text-2xl">Un colectivo perdió el control y chocó contra un árbol durante la mañana de este martes en el barrio Villa Primera de Mar del Plata. Doce personas debieron ser asistidas por un ambulancias del Sistema de Atención Médica de Emergencias (SAME).
                         <br />
-                        Según confirmaron fuentes oficiales a Qué digital, el siniestro vial se produjo durante la mañana de este martes en la avenida Libertad y Chaco donde un colectivo de la línea 531 que conducía un joven de 29 años perdió el control y chocó contra un árbol.</p>
+                        {/* @ts-ignore */}
+                        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This clip is 9 years old<a href="https://t.co/2r6BZnaDis">pic.twitter.com/2r6BZnaDis</a></p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1712352657090707625?ref_src=twsrc%5Etfw">October 12, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        Según confirmaron fuentes oficiales a Qué digital, el siniestro vial se produjo durante la mañana de este martes en la avenida Libertad y Chaco donde un colectivo de la línea 531 que conducía un joven de 29 años perdió el control y chocó contra un árbol.
+                        {/* @ts-ignore */}
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/4YizH2DQNxs?si=4aPggxN9A0JLuvmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </p>
                     </div>
                     <div className="row-start-4 row-end-5 p-8 flex justify-center items-center">
                         <p className="border border-black w-full h-full">Comentaios</p>
                     </div>
                 </div>
-                <div className="col-start-3 col-end-4 row-start-2 row-end-3 border border-black rounded-3xl ml-12 flex items-center justify-center">
+                <div className="col-start-3 col-end-4 row-start-2 row-end-3 border border-black rounded-3xl ml-12 flex items-center justify-center h-min">
                     Noticias mas recientes del tipo de categoria
                 </div>
                 <div className="col-start-2 col-end-3 row-span-3 border border-black rounded-3xl mt-12 flex items-center justify-center">
