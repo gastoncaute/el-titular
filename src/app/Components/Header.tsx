@@ -6,7 +6,6 @@ import Title from "./HeaderComponents/Title";
 
 export default function Header() {
     const [scrollY, setScrollY] = useState(0);
-
     useEffect(() => {
         const handleScroll = () => {
             setScrollY(window.scrollY);
@@ -18,29 +17,26 @@ export default function Header() {
     }, []);
     return (
         <section className="flex justify-center text-white">
-            <header className="grid grid-cols-4 bg-gradient-to-b from-pageColor to-gradientColor w-screen h-14 fixed ">
-                <ul className="flex justify-center items-center col-start-1 col-end-2">
-                    <li className="w-48 flex items-center ml-8 z-20">
+            <header className=" bg-gradient-to-b from-pageColor to-gradientColor w-screen h-14 fixed ">
+                <ul className="grid grid-cols-4">
+                    <li className="flex justify-center items-center col-start-1 col-end-2">
                         <BurgerButton />
-                    </li>
-                    <li className="w-full flex items-center justify-left">
                         <a
-                            href=""
+                            href="/"
                             className={
-                                `flex items-center justify-center transform transition-transform duration-1000
+                                `flex items-center justify-center transform transition-transform duration-1000 -z-20
                                 ${scrollY ? 'translate-y-0' : '-translate-y-24'}
                             `}
                         >
                             El Titular
                         </a>
                     </li>
-                </ul>
-                <ul className="flex justify-center col-start-4 col-end-5">
-                    <SocialButtons />
+                    <li className="flex justify-center col-start-4 col-end-5">
+                        <SocialButtons />
+                    </li>
                 </ul>
             </header>
             <Title />
         </section>
     )
 }
-

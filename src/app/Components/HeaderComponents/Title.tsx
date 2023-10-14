@@ -17,7 +17,7 @@ export default function Title() {
 
     return(
         <section
-            className={`flex flex-col items-center justify-center fixed transform transition-transform duration-1500
+            className={`flex flex-col items-center fixed transform transition-transform duration-1500
             ${scrollY ? '-translate-y-24' : 'translate-y-0'}
             `}
         >
