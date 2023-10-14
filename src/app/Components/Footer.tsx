@@ -13,8 +13,8 @@ export default function Footer() {
                     <h3 className="text-4xl m-4">Slogan de la pagina</h3>
                 </div>
                 <div className="p-4 flex justify-between w-full">
-                    <ul className="w-full flex items-center justify-evenly">
-                        <li className="flex">
+                    <ul className="w-full flex items-center justify-center">
+                        <li className="w-full flex justify-evenly">
                             <CategoriesButton />
                         </li>
                     </ul>
