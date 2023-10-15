@@ -1,5 +1,5 @@
 async function obtenerClima() {
-    const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=-57.55&lon=-38.00&appid=156c31ab1b623e3dd0ca6bdeecfb9c69`);
+    const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=-38.00&lon=-57.55&appid=156c31ab1b623e3dd0ca6bdeecfb9c69`);
     const datos = await res.json();
     return datos
 }

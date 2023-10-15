@@ -15,23 +15,8 @@ export default function Noticia() {
                         />
                     </div>
                     <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-4">
-                        <p className="text-4xl mb-8 font-bold">Peñarol debutó en la nueva temporada con una dura derrota ante Oberá</p>
-                        <p className="text-xl">El “Milrayitas” cayó como visitante por 105 a 71 en su debut en la Liga Nacional. Volverá a jugar el miércoles en Corrientes.</p>
-                    </div>
-                </Link>
-            </div>
-            <div className="col-start-1 col-end-2 row-start-3 row-end-4 p-4 flex justify-center items-center">
-                <Link href={""} className="w-full h-full grid grid-cols-2 border rounded-3xl border-pageColor py-4">
-                    <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor p-4">
-                        <Image 
-                            src={"/images/img1.jpg"}
-                            alt="Mi imagen"
-                            width={250}
-                            height={150}
-                        />
-                    </div>
-                    <div className="col-start-2 col-end-3 flex items-center p-4">
-                        <p className="text-xl font-bold">Peñarol debutó en la nueva temporada con una dura derrota ante Oberá</p>
+                        <p className="text-5xl mb-8 font-bold">Peñarol debutó en la nueva temporada con una dura derrota ante Oberá dura derrota ante Oberá</p>
+                        <p className="text-3xl">El “Milrayitas” cayó como visitante por 105 a 71 en su debut en la Liga Nacional. Volverá a jugar el miércoles en Corrientes.</p>
                     </div>
                 </Link>
             </div>
@@ -45,8 +30,8 @@ export default function Noticia() {
                             height={150}
                         />
                     </div>
-                    <div className="col-start-2 col-end-3 flex items-center justify-center p-4">
-                        <p className="text-xl font-bold">Peñarol debutó en la nueva temporada con una dura derrota ante Oberá</p>
+                    <div className="col-start-2 col-end-3 flex items-center p-4">
+                        <p className="text-2xl font-bold">Peñarol debutó en la nueva temporada con una dura derrota ante Oberá </p>
                     </div>
                 </Link>
             </div>
@@ -61,7 +46,7 @@ export default function Noticia() {
                         />
                     </div>
                     <div className="col-start-2 col-end-3 flex items-center p-4">
-                        <p className="text-xl font-bold">Peñarol debutó en la nueva temporada con una dura derrota ante Oberá</p>
+                        <p className="text-2xl font-bold">Peñarol debutó en la nueva temporada con una dura derrota ante Oberá</p>
                     </div>
                 </Link>
             </div>
@@ -76,11 +61,25 @@ export default function Noticia() {
                         />
                     </div>
                     <div className="col-start-2 col-end-3 flex items-center p-4">
-                        <p className="text-xl font-bold">Peñarol debutó en la nueva temporada con una dura derrota ante Oberá</p>
+                        <p className="text-2xl font-bold">Peñarol debutó en la nueva temporada con una dura derrota ante Oberá</p>
                     </div>
                 </Link>
             </div>
-            
+            <div className="col-start-1 col-end-2 row-start-3 row-end-4 p-4 flex justify-center items-center">
+                <Link href={""} className="w-full h-full grid grid-cols-2 border rounded-3xl border-pageColor py-4">
+                    <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor p-4">
+                        <Image 
+                            src={"/images/img1.jpg"}
+                            alt="Mi imagen"
+                            width={250}
+                            height={150}
+                        />
+                    </div>
+                    <div className="col-start-2 col-end-3 flex items-center p-4">
+                        <p className="text-2xl font-bold">Peñarol debutó en la nueva temporada con una dura derrota ante Oberá</p>
+                    </div>
+                </Link>
+            </div>
         </section>
     )
 }
