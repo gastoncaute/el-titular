@@ -16,8 +16,8 @@ export default function Header() {
         };
     }, []);
     return (
-        <section className="flex justify-center text-white">
-            <header className=" bg-gradient-to-b from-pageColor to-gradientColor w-screen h-14 fixed">
+        <header className="flex justify-center text-white">
+            <div className=" bg-gradient-to-b from-pageColor to-gradientColor w-screen h-14 fixed">
                 <ul className="grid grid-cols-4">
                     <li className="flex justify-center items-center col-start-1 col-end-2">
                         <BurgerButton />
@@ -35,8 +35,8 @@ export default function Header() {
                         <SocialButtons />
                     </li>
                 </ul>
-            </header>
+            </div>
             <Title />
-        </section>
+        </header>
     )
 }
