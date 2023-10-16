@@ -8,7 +8,7 @@ export default function BurgerButton() {
         setMenuVisible(!menuVisible)
     }
     return(
-        <div className="fixed">
+        <div className="absolute z-30">
             <button
                 onClick={toggleBurgerButton}
                 className={`z-10 absolute -top-4 transform transition-transform duration-1500 -left-4

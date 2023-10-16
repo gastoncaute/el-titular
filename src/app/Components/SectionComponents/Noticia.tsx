@@ -21,7 +21,7 @@ export default function Noticia() {
                 </Link>
             </div>
             <div className="col-start-2 col-end-3 row-start-3 row-end-4 p-4 flex justify-center items-center">
-                <Link href={""} className="w-full h-full grid grid-cols-2 border rounded-3xl border-pageColor py-4">
+                <Link href={"/noticepage"} className="w-full h-full grid grid-cols-2 border rounded-3xl border-pageColor py-4">
                     <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor p-4">
                         <Image 
                             src={"/images/img1.jpg"}
@@ -36,7 +36,7 @@ export default function Noticia() {
                 </Link>
             </div>
             <div className="col-start-1 col-end-2 row-start-4 row-end-5 p-4 flex justify-center items-center">
-                <Link href={""} className="w-full h-full grid grid-cols-2 border rounded-3xl border-pageColor py-4">
+                <Link href={"/noticepage"} className="w-full h-full grid grid-cols-2 border rounded-3xl border-pageColor py-4">
                     <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor p-4">
                         <Image 
                             src={"/images/img1.jpg"}
@@ -51,7 +51,7 @@ export default function Noticia() {
                 </Link>
             </div>
             <div className="col-start-2 col-end-3 row-start-4 row-end-5 p-4 flex justify-center items-center">
-                <Link href={""} className="w-full h-full grid grid-cols-2 border rounded-3xl border-pageColor py-4">
+                <Link href={"/noticepage"} className="w-full h-full grid grid-cols-2 border rounded-3xl border-pageColor py-4">
                     <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor p-4">
                         <Image 
                             src={"/images/img1.jpg"}
@@ -66,7 +66,7 @@ export default function Noticia() {
                 </Link>
             </div>
             <div className="col-start-1 col-end-2 row-start-3 row-end-4 p-4 flex justify-center items-center">
-                <Link href={""} className="w-full h-full grid grid-cols-2 border rounded-3xl border-pageColor py-4">
+                <Link href={"/noticepage"} className="w-full h-full grid grid-cols-2 border rounded-3xl border-pageColor py-4">
                     <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor p-4">
                         <Image 
                             src={"/images/img1.jpg"}
