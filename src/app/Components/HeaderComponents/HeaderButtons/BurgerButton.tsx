@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NavBar from "../NavBar";
 
 export default function BurgerButton() {
@@ -7,6 +7,17 @@ export default function BurgerButton() {
     const toggleBurgerButton = () => {
         setMenuVisible(!menuVisible)
     }
+    useEffect(() => {
+        const handleEscKey = (event: any) => {
+            if (menuVisible && event.keyCode === 27) {
+                toggleBurgerButton()
+            }
+        }
+        document.addEventListener("keydown", handleEscKey)
+        return () => {
+            document.removeEventListener("keydown", handleEscKey)
+        }
+    })
     return(
         <div className="absolute z-30">
             <button
