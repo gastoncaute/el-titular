@@ -24,8 +24,8 @@ export default function Header() {
                         <a
                             href="/"
                             className={
-                                `flex items-center justify-center transform transition-transform duration-1000
-                                ${scrollY ? 'translate-y-0' : '-translate-y-24'}
+                                `flex items-center justify-center text-2xl transform transition-transform duration-1000
+                                ${scrollY ? 'translate-y-0' : '-translate-y-20'}
                             `}
                         >
                             El Titular
