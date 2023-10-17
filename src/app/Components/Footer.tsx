@@ -5,7 +5,7 @@ export default function Footer() {
     return(
         <footer className="w-full grid grid-cols-4 bg-gradient-to-b from-pageColor to-gradientColor text-white absolute">
             <div className="col-start-2 col-end-4 flex flex-col justify-center items-center">
-                <h1 className="text-7xl font-bold border-b w-full flex justify-center p-4">El Titular</h1>
+                <a href="/" className="text-7xl font-bold border-b w-full flex justify-center p-4">El Titular</a>
                 <div className="flex flex-col justify-center items-center p-4">
                 <div className="p-4 flex justify-evenly">
                     <SocialButtons />
