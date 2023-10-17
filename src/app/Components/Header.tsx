@@ -17,7 +17,7 @@ export default function Header() {
     }, []);
     return (
         <header className="flex justify-center text-white">
-            <div className=" bg-gradient-to-b from-pageColor to-gradientColor w-screen h-14 fixed">
+            <div className=" bg-gradient-to-b from-pageColor to-gradientColor w-screen h-14 fixed z-10">
                 <ul className="grid grid-cols-4">
                     <li className="flex justify-center items-center col-start-1 col-end-2">
                         <BurgerButton />
