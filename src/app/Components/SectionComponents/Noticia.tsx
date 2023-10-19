@@ -57,18 +57,21 @@ export default async function Noticia() {
                                         <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor">
                                             <img
                                                 src={'/images/img1.jpg'}
-                                                alt={titulo}
-                                                width={index === 0 ? 500 : 220}
+                                                alt={noticia.title}
                                                 height={index === 0 ? 250 : 130}
+                                                width={index === 0 ? 500 : 220}
                                             />
                                         </div>
                                         <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-4">
-                                            <p className={index !== 0 ? "text-2xl font-bold" : "text-5xl mb-8 font-bold"}>
-                                                {noticia.title}
+                                            <p className={index === 0 ? "text-5xl mb-8 font-bold" : "text-2xl font-bold"}>
+                                                {titulo}
                                             </p>
                                             {index === 0 && <p className="text-3xl">
                                                 {bajada}
                                             </p>}
+                                            <p>
+                                                {noticia.price}
+                                            </p>
                                         </div>
                                     </Link>
                                 </div>
