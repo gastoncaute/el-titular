@@ -21,6 +21,14 @@ const config: Config = {
         '65rem': '65rem',
         '60rem' : '60rem'
       },
+      maxWidth: {
+        '500px' : '500px',
+        '220px' : '220px'
+      },
+      maxHeight: {
+        '250px' : '250px',
+        '130px' : '130px'
+      },
       transitionDuration: {
         '1500': '1500ms'
       },

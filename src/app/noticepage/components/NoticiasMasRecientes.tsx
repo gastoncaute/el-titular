@@ -51,6 +51,8 @@ export default function NoticiasMasRecientes() {
                     />
                     <p className='text-lg font-bold pl-4 border-l border-black'>
                         {titulo}
+                        <br />
+                        {noticia.price}
                     </p>
                 </Link>
             ))}
