@@ -2,6 +2,7 @@ import Header from "@/app/Components/Header";
 import Footer from "../Components/Footer";
 import Image from "next/image";
 import { Tweet } from "react-tweet";
+import NoticiasMasRecientes from "./components/NoticiasMasRecientes";
 
 export default function Page() {
     return(
@@ -48,7 +49,7 @@ export default function Page() {
                     Noticias mas recientes del tipo de categoria
                 </div>
                 <div className="col-start-2 col-end-3 row-span-3 border border-black rounded-3xl mt-12 flex items-center justify-center">
-                    Noticias mas recientes
+                    <NoticiasMasRecientes />
                 </div>
             </main>
             <Footer />
