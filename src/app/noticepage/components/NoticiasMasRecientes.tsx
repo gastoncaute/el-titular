@@ -21,7 +21,6 @@ type Noticias = {
 
 export default function NoticiasMasRecientes() {
     const titulo = "Peñarol debutó en la nueva temporada con una dura derrota ante Oberá"
-    const bajada = 'El “Milrayitas” cayó como visitante por 105 a 71 en su debut en la Liga Nacional. Volverá a jugar el miércoles en Corrientes.'
 
     const [noticias, setNoticias] = useState<Noticias[]>([])
 
@@ -38,7 +37,9 @@ export default function NoticiasMasRecientes() {
 
     return (
         <div className='flex flex-col item-center p-4'>
-            <h1 className='flex justify-center mb-4 text-2xl font-bold'>Más Recientes</h1>
+            <Link href={'/'} className='flex justify-center mb-4 text-2xl font-bold'>
+                Más Recientes
+            </Link>
             {noticias.map((noticia: Noticias) => (
                 <Link href={'/'} key={noticia.id} className='flex p-4 m-2 border border-black rounded-3xl'>
                     <img
