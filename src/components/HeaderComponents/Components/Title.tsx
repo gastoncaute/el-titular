@@ -1,6 +1,6 @@
 'use client'
 import React, {useEffect, useState} from "react";
-import CategoriesButton from "./CategoriesButton";
+import CategoriesButton from "../../CategoriesButton";
 import Image from "next/image";
 
 export default function Title() {

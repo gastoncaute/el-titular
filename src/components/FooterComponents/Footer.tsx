@@ -1,5 +1,5 @@
-import CategoriesButton from "./HeaderComponents/CategoriesButton";
-import SocialButtons from "./HeaderComponents/HeaderButtons/SocialButtons";
+import CategoriesButton from "../CategoriesButton";
+import SocialButtons from "../HeaderComponents/HeaderButtons/SocialButtons";
 
 export default function Footer() {
     return(

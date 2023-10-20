@@ -1,5 +1,5 @@
-import Header from "@/app/Components/Header";
-import Footer from "../Components/Footer";
+import Header from "@/components/HeaderComponents/Header";
+import Footer from "../../components/FooterComponents/Footer";
 import Image from "next/image";
 import { Tweet } from "react-tweet";
 import NoticiasMasRecientes from "./components/NoticiasMasRecientes";

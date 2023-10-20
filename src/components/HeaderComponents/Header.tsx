@@ -1,8 +1,8 @@
 'use client'
 import React, {useEffect, useState} from "react";
-import BurgerButton from "./HeaderComponents/HeaderButtons/BurgerButton";
-import SocialButtons from "./HeaderComponents/HeaderButtons/SocialButtons";
-import Title from "./HeaderComponents/Title";
+import BurgerButton from "./HeaderButtons/BurgerButton";
+import SocialButtons from "./HeaderButtons/SocialButtons";
+import Title from "./Components/Title";
 
 export default function Header() {
     const [scrollY, setScrollY] = useState(0);
