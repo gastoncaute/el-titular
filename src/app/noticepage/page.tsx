@@ -8,7 +8,7 @@ export default function Page() {
     return(
         <>
             <Header />
-            <main className="grid grid-cols-3 mx-48 my-24 text-black">
+            <section className="grid grid-cols-3 mx-48 my-24 text-black">
                 <div className="row-span-1 flex items-center mt-12 mb-4">
                     <p className="border border-black rounded-3xl p-4">
                         Tipo de categoria
@@ -51,7 +51,7 @@ export default function Page() {
                 <div className="col-start-2 col-end-3 row-span-3 border border-black rounded-3xl mt-12 flex items-center justify-center">
                     <NoticiasMasRecientes />
                 </div>
-            </main>
+            </section>
             <Footer />
         </>
     )

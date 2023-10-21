@@ -4,10 +4,10 @@ import Footer from '../components/FooterComponents/Footer'
 
 export default function Home() {
   return (
-    <section>
+    <main>
       <Header />
       <Section />
       <Footer />
-    </section>
+    </main>
   )
 }
