@@ -2,7 +2,7 @@
 "use client"
 import Link from 'next/link'
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 export async function obtenerNoticias() {
     const res = await fetch("https://fakestoreapi.com/products")
@@ -23,17 +23,13 @@ export default function NoticiasMasRecientes() {
     const titulo = "Peñarol debutó en la nueva temporada con una dura derrota ante Oberá"
 
     const [noticias, setNoticias] = useState<Noticias[]>([])
-
-    useEffect(() => {
-        const fetchNoticas = async () => {
-            const noticiasData = await obtenerNoticias()
-            noticiasData.sort((a: any, b: any) => b.price - a.price)
-            const primeras5Noticas = noticiasData.slice(0 , 5)
-            setNoticias(primeras5Noticas)
-        }
-        fetchNoticas()
-    }, [])
-
+    async function fetchNoticas() {
+        const noticiasData = await obtenerNoticias()
+        noticiasData.sort((a: any, b: any) => b.price - a.price)
+        const primeras5Noticas = noticiasData.slice(0, 5)
+        setNoticias(primeras5Noticas)
+    }
+    fetchNoticas()
 
     return (
         <div className='flex flex-col item-center p-4'>

@@ -1,20 +1,22 @@
 'use client'
-import React, {useEffect, useState} from "react";
-import BurgerButton from "./HeaderButtons/BurgerButton";
-import SocialButtons from "./HeaderButtons/SocialButtons";
-import Title from "./Components/Title";
+import { useState } from "react"
+import BurgerButton from "./HeaderButtons/BurgerButton"
+import SocialButtons from "./HeaderButtons/SocialButtons"
+import Title from "./Components/Title"
 
 export default function Header() {
-    const [scrollY, setScrollY] = useState(0);
-    useEffect(() => {
+    const [scrollY, setScrollY] = useState(0)
+    async function titleStyle() {
         const handleScroll = () => {
-            setScrollY(window.scrollY);
-        };
-        window.addEventListener("scroll", handleScroll);
+            setScrollY(window.scrollY)
+        }
+        window.addEventListener("scroll", handleScroll)
         return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
+            window.removeEventListener("scroll", handleScroll)
+        }
+    }
+    titleStyle()
+
     return (
         <header className="flex justify-center text-white">
             <div className=" bg-gradient-to-b from-pageColor to-gradientColor w-screen h-14 fixed z-10">

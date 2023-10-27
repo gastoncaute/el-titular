@@ -1,20 +1,20 @@
 'use client'
-import React, {useEffect, useState} from "react";
-import CategoriesButton from "../../CategoriesButton";
-import Image from "next/image";
+import { useState } from "react"
+import CategoriesButton from "../../CategoriesButton"
+import Image from "next/image"
 
 export default function Title() {
-    const [scrollY, setScrollY] = useState(0);
-
-    useEffect(() => {
+    const [scrollY, setScrollY] = useState(0)
+    async function inicioStyle() {
         const handleScroll = () => {
-            setScrollY(window.scrollY);
-        };
-        window.addEventListener("scroll", handleScroll);
+            setScrollY(window.scrollY)
+        }
+        window.addEventListener("scroll", handleScroll)
         return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
+            window.removeEventListener("scroll", handleScroll)
+        }
+    }
+    inicioStyle()
 
     return(
         <section
