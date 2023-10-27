@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import Link from "next/link";
 
 export async function obtenerNoticias() {
@@ -54,7 +55,7 @@ export default async function Noticia() {
                                 }>
                                     <Link href={"/noticepage"} className="w-full h-full grid grid-cols-2 border rounded-3xl border-pageColor py-8">
                                         <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor">
-                                            <img
+                                            <Image
                                                 src={'/images/img1.jpg'}
                                                 alt={noticia.title}
                                                 height={index === 0 ? 250 : 130}
