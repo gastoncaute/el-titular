@@ -7,9 +7,9 @@ export default function Footer() {
             <div className="col-start-2 col-end-4 flex flex-col justify-center items-center">
                 <a href="/" className="text-7xl font-bold border-b w-full flex justify-center p-4">El Titular</a>
                 <div className="flex flex-col justify-center items-center p-4">
-                <div className="p-4 flex justify-evenly">
-                    <SocialButtons />
-                </div>
+                    <div className="p-4 flex justify-evenly">
+                        <SocialButtons />
+                    </div>
                     <h3 className="text-4xl m-4">Slogan de la pagina</h3>
                 </div>
                 <div className="p-4 flex justify-between w-full">
@@ -37,7 +37,11 @@ export default function Footer() {
                         (223) 12345678
                     </p>
                 </div>
+                <a href="www.linkedin.com/in/gaston-cauteruccio" target="#" className="m-4 border-t w-full flex justify-center items-center">
+                    Página creada por Gaston Cauteruccio
+                </a>
             </div>
+            
         </footer>
     )
 }
