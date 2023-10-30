@@ -2,7 +2,7 @@ import Header from "@/components/HeaderComponents/Header";
 import Footer from "@/components/FooterComponents/Footer";
 import Image from "next/image";
 import { Tweet } from "react-tweet";
-import NoticiasMasRecientes from "./components/NoticiasMasRecientes";
+import NoticiasMasRecientes from "@/components/NoticiasMasRecientes";
 
 export default function Page() {
     return(
@@ -22,7 +22,7 @@ export default function Page() {
                     </div>
                     <div className="">
                         <Image 
-                            src={"/images/img1.jpg"}
+                            src={'https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt12dbddde5342ce4c/648866ff21a8556da61fa167/GOAL_-_Blank_WEB_-_Facebook_-_2023-06-13T135350.847.png?auto=webp&format=pjpg&width=3840&quality=60'}
                             alt="Mi imagen"
                             width={1000}
                             height={500}
