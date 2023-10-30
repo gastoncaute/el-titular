@@ -36,7 +36,7 @@ export default async function Noticia() {
         <>
             {Object.keys(noticiasPorCategoria).map((categoria) => (
                 <div key={categoria} className="col-start-2 col-end-6 rounded-3xl mt-24 m-8 border border-pageColor">
-                    <Link href={''} className="m-4 pb-2 flex justify-center text-2xl border-b border-pageColor">
+                    <Link href={'/categorypage'} className="m-4 pb-2 flex justify-center text-2xl border-b border-pageColor">
                         {categoria}
                     </Link>
                     <div className="grid grid-cols-2 grid-rows-4">
