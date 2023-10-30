@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client"
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { useState } from 'react'
@@ -38,12 +39,12 @@ export default function NoticiasMasRecientes() {
             </Link>
             {noticias.map((noticia: Noticias) => (
                 <Link href={'/'} key={noticia.id} className='flex p-4 m-2 border border-black rounded-3xl'>
-                    <img
+                    <Image
                     className='mx-4'
-                    src={'/images/img1.jpg'}
+                    src={'https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt12dbddde5342ce4c/648866ff21a8556da61fa167/GOAL_-_Blank_WEB_-_Facebook_-_2023-06-13T135350.847.png?auto=webp&format=pjpg&width=3840&quality=60'}
                     alt=""
-                    width={'40%'}
-                    height={'40%'}
+                    width={150}
+                    height={100}
                     />
                     <p className='text-lg font-bold pl-4 border-l border-black'>
                         {titulo}

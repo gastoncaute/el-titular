@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default function CategoriesButton() {
-    const categorias = ["Policiales", 'Politica', 'Economia', 'Sociedad', 'Deporte', 'Cultura', 'Tendencias', 'Internacional', 'Fotos']
+    const categorias = ["Policiales", 'Politica', 'Economia', 'Sociedad', 'Deporte', 'Cultura', 'Tendencias', 'Internacional', 'Infografias']
     return (
         <>
             {categorias.map((categoria, index) => (
