@@ -3,8 +3,9 @@ import Footer from "@/components/FooterComponents/Footer";
 import Image from "next/image";
 import { Tweet } from "react-tweet";
 import NoticiasMasRecientes from "@/components/NoticiasMasRecientes";
+import Noticia from "@/components/SectionComponents/components/Noticia";
 
-export default function Page() {
+export default function Page({params}: any) {
     return(
         <>
             <Header />
@@ -45,6 +46,7 @@ export default function Page() {
                         <p className="border border-black w-full h-full">Comentaios</p>
                     </div>
                 </div>
+                <Noticia noticia={params.noticia} />
                 <div className="col-start-3 col-end-4 row-span-2 border border-black rounded-3xl ml-12 flex items-center justify-center h-min">
                     Noticias mas recientes del tipo de categoria
                 </div>
