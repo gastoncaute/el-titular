@@ -5,22 +5,20 @@ import SocialButtons from "../HeaderComponents/HeaderButtons/SocialButtons";
 export default function Footer() {
     return(
         <footer className="w-full grid grid-cols-4 bg-gradient-to-b from-pageColor to-gradientColor text-white absolute">
-            <div className="col-start-2 col-end-4 flex flex-col justify-center items-center">
+            <article className="col-start-2 col-end-4 flex flex-col justify-center items-center">
                 <a href="/" className="text-7xl font-bold border-b w-full flex justify-center p-4">El Titular</a>
-                <div className="flex flex-col justify-center items-center p-4">
-                    <div className="p-4 flex justify-evenly">
+                <ul className="flex justify-center items-center p-4">
+                    <li className="flex justify-evenly">
                         <SocialButtons />
-                    </div>
-                    <h3 className="text-4xl m-4">Slogan de la pagina</h3>
-                </div>
-                <div className="p-4 flex justify-between w-full">
-                    <ul className="w-full flex items-center justify-center">
-                        <li className="w-full flex justify-evenly">
-                            <CategoriesButton />
-                        </li>
-                    </ul>
-                </div>
-                <div className="w-full flex justify-center m-4">
+                    </li>
+                </ul>
+                <h2 className="text-4xl m-4">Slogan de la pagina</h2>
+                <ul className="w-full flex items-center justify-center m-4">
+                    <li className="w-full flex justify-evenly">
+                        <CategoriesButton />
+                    </li>
+                </ul>
+                <h3 className="w-full flex justify-center m-4">
                     <p className="p-4 text-2xl flex items-center">
                         {/* @ts-ignore */}
                         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-mail" width="28" height="28" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -28,7 +26,8 @@ export default function Footer() {
                             <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
                             <path d="M3 7l9 6l9 -6" />
                         </svg>
-                        hola@gmail.com</p>
+                        hola@gmail.com
+                    </p>
                     <p className="p-4 text-2xl flex items-center">
                         {/* @ts-ignore */}
                         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-phone" width="28" height="28" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -37,12 +36,11 @@ export default function Footer() {
                         </svg>
                         (223) 12345678
                     </p>
-                </div>
+                </h3>
                 <Link href="https://www.linkedin.com/in/gaston-cauteruccio/" target="#" className="p-4 border-t w-full flex justify-center items-center">
                     Página creada por Gaston Cauteruccio
                 </Link>
-            </div>
-            
+            </article>
         </footer>
     )
 }
