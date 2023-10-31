@@ -1,3 +1,4 @@
+import Link from "next/link";
 import CategoriesButton from "../CategoriesButton";
 import SocialButtons from "../HeaderComponents/HeaderButtons/SocialButtons";
 
@@ -37,9 +38,9 @@ export default function Footer() {
                         (223) 12345678
                     </p>
                 </div>
-                <a href="www.linkedin.com/in/gaston-cauteruccio" target="#" className="m-4 border-t w-full flex justify-center items-center">
+                <Link href="https://www.linkedin.com/in/gaston-cauteruccio/" target="#" className="p-4 border-t w-full flex justify-center items-center">
                     Página creada por Gaston Cauteruccio
-                </a>
+                </Link>
             </div>
             
         </footer>
