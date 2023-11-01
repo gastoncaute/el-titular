@@ -27,7 +27,8 @@ const config: Config = {
       },
       maxHeight: {
         '400px' : '400px',
-        '130px' : '130px'
+        '130px' : '130px',
+        '220px' : '220px'
       },
       transitionDuration: {
         '1500': '1500ms'
