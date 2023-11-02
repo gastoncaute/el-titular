@@ -1,9 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { useState } from "react";
 
 export async function obtenerNoticias() {
   const res = await fetch("https://fakestoreapi.com/products");
@@ -20,26 +18,21 @@ type Noticias = {
   price: number;
 };
 
-export default function NoticiasMasRecientes() {
+export default async function NoticiasMasRecientes() {
   const titulo =
     "Peñarol debutó en la nueva temporada con una dura derrota ante Oberá";
-  const imagen = "https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt12dbddde5342ce4c/648866ff21a8556da61fa167/GOAL_-_Blank_WEB_-_Facebook_-_2023-06-13T135350.847.png?auto=webp&format=pjpg&width=3840&quality=60"
+  const imagen =
+    "https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt12dbddde5342ce4c/648866ff21a8556da61fa167/GOAL_-_Blank_WEB_-_Facebook_-_2023-06-13T135350.847.png?auto=webp&format=pjpg&width=3840&quality=60";
 
-  const [noticias, setNoticias] = useState<Noticias[]>([]);
-  async function fetchNoticas() {
-    const noticiasData = await obtenerNoticias();
-    noticiasData.sort((a: any, b: any) => b.price - a.price);
-    const primeras5Noticas = noticiasData.slice(0, 5);
-    setNoticias(primeras5Noticas);
-  }
-  fetchNoticas();
+  const noticias = await obtenerNoticias();
+  noticias.sort((a: any, b: any) => b.price - a.price);
 
   return (
     <div className="flex flex-col item-center p-4">
       <Link href={"/"} className="flex justify-center mb-4 text-2xl font-bold">
         Más Recientes
       </Link>
-      {noticias.map((noticia: Noticias) => (
+      {noticias.slice(0, 5).map((noticia: Noticias) => (
         <Link
           href={`/pages/noticepage/${noticia.title}`}
           key={noticia.id}
@@ -47,9 +40,7 @@ export default function NoticiasMasRecientes() {
         >
           <Image
             className="mx-4"
-            src={
-              noticia.image
-            }
+            src={noticia.image}
             alt={noticia.title}
             width={150}
             height={100}
