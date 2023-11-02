@@ -28,6 +28,18 @@ export default async function Page({ params }: any) {
   const date = "Martes 10 de Octubre";
   const imagen =
     "https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt12dbddde5342ce4c/648866ff21a8556da61fa167/GOAL_-_Blank_WEB_-_Facebook_-_2023-06-13T135350.847.png?auto=webp&format=pjpg&width=3840&quality=60";
+  const videoDeYouTube = (
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/4YizH2DQNxs?si=4aPggxN9A0JLuvmo"
+      title="YouTube video player"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+    ></iframe>
+  );
+  const videoDeTwitter = `1712994909173510367`;
 
   const noticias = await obtenerNoticias();
   const noticiaSeleccionada = params.noticia;
@@ -100,18 +112,10 @@ export default async function Page({ params }: any) {
                 Libertad y Chaco donde un colectivo de la línea 531 que conducía
                 un joven de 29 años perdió el control y chocó contra un árbol.
                 {/* @ts-ignore */}
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/4YizH2DQNxs?si=4aPggxN9A0JLuvmo"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
+                {videoDeYouTube}
               </p>
               <div>
-                <Tweet id="1712994909173510367" />
+                <Tweet id={videoDeTwitter} />
               </div>
             </div>
             <div className="p-8 flex justify-center items-center">
