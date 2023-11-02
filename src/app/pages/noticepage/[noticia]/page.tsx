@@ -39,9 +39,6 @@ export default async function Page({params}: any) {
   })
   const datosDeNoticiaSeleccionada = noticias.filter((noticia: Noticias) => noticia.title === noticiaSeleccionadaArreglada)
 
-
-
-
   return(
     <>
       <Header />

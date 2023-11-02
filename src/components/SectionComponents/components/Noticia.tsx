@@ -17,8 +17,7 @@ type Noticias = {
   price: number;
 };
 
-export default async function Noticia({ noticia }: { noticia: any }) {
-  console.log(noticia);
+export default async function Noticia() {
   const noticias = await obtenerNoticias();
   const noticiasPorCategoria: { [key: string]: Noticias[] } = {};
 
@@ -39,7 +38,7 @@ export default async function Noticia({ noticia }: { noticia: any }) {
   return (
     <>
       {Object.keys(noticiasPorCategoria).map((categoria) => (
-        <div
+        <article
           key={categoria}
           className="col-start-2 col-end-6 rounded-3xl mt-24 m-8 border border-pageColor"
         >
@@ -94,7 +93,7 @@ export default async function Noticia({ noticia }: { noticia: any }) {
                             : "text-2xl font-bold"
                         }
                       >
-                        {titulo}
+                        {noticia.title}
                       </p>
                       {index === 0 && <p className="text-3xl">{bajada}</p>}
                       <p>{noticia.price}</p>
@@ -104,7 +103,7 @@ export default async function Noticia({ noticia }: { noticia: any }) {
               );
             })}
           </div>
-        </div>
+        </article>
       ))}
     </>
   );

@@ -23,6 +23,7 @@ type Noticias = {
 export default function NoticiasMasRecientes() {
   const titulo =
     "Peñarol debutó en la nueva temporada con una dura derrota ante Oberá";
+  const imagen = "https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt12dbddde5342ce4c/648866ff21a8556da61fa167/GOAL_-_Blank_WEB_-_Facebook_-_2023-06-13T135350.847.png?auto=webp&format=pjpg&width=3840&quality=60"
 
   const [noticias, setNoticias] = useState<Noticias[]>([]);
   async function fetchNoticas() {
@@ -40,21 +41,21 @@ export default function NoticiasMasRecientes() {
       </Link>
       {noticias.map((noticia: Noticias) => (
         <Link
-          href={"/noticepage"}
+          href={`/pages/noticepage/${noticia.title}`}
           key={noticia.id}
           className="flex p-4 m-2 border border-black rounded-3xl"
         >
           <Image
             className="mx-4"
             src={
-              "https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt12dbddde5342ce4c/648866ff21a8556da61fa167/GOAL_-_Blank_WEB_-_Facebook_-_2023-06-13T135350.847.png?auto=webp&format=pjpg&width=3840&quality=60"
+              noticia.image
             }
-            alt=""
+            alt={noticia.title}
             width={150}
             height={100}
           />
           <p className="text-lg font-bold pl-4 border-l border-black">
-            {titulo}
+            {noticia.title}
             <br />
             {noticia.price}
           </p>
