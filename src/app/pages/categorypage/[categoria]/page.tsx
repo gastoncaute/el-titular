@@ -26,7 +26,10 @@ export default async function categoryPage({ params }: any) {
   // const bajada = 'El “Milrayitas” cayó como visitante por 105 a 71 en su debut en la Liga Nacional. Volverá a jugar el miércoles en Corrientes.'
 
   const categoriaSeleccionada = params.categoria;
-  const categoriaSeleccionadaArreglada = categoriaSeleccionada.replace( /%20/g, " " );
+  const categoriaSeleccionadaArreglada = categoriaSeleccionada.replace(
+    /%20/g,
+    " "
+  );
   const noticiasDeCadaCategoria = noticias.filter(
     (noticia: Noticias) => noticia.category === categoriaSeleccionadaArreglada
   );
@@ -36,9 +39,11 @@ export default async function categoryPage({ params }: any) {
     <>
       <Header />
       <section className="grid grid-cols-3 mx-48 my-24 text-black">
-        <p className="border border-black rounded-3xl p-4 items-center mt-16 mb-4 w-min">
-          {categoriaSeleccionadaArreglada}
-        </p>
+        <div className="row-span-1 flex items-center mt-12 mb-4">
+          <p className="border border-black rounded-3xl p-4">
+            {categoriaSeleccionadaArreglada}
+          </p>
+        </div>
         <article className="col-start-1 col-end-3 border border-black rounded-3xl h-min p-4">
           {noticiasDeCadaCategoria.map((noticia: Noticias, index: any) => (
             <Link
