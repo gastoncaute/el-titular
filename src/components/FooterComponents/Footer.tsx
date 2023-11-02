@@ -67,7 +67,7 @@ export default function Footer() {
         <Link
           href="https://www.linkedin.com/in/gaston-cauteruccio/"
           target="#"
-          className="p-4 border-t w-full flex justify-center items-center"
+          className="p-4 border-t w-full flex justify-center items-center text-xs"
         >
           Página creada por Gaston Cauteruccio
         </Link>
