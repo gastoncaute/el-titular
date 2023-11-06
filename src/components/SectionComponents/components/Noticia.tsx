@@ -2,38 +2,48 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export async function obtenerNoticias() {
-  const res = await fetch("https://fakestoreapi.com/products");
-  const data = await res.json();
-  return data;
+async function obtenerNoticias() {
+  const res = await fetch(
+    "https://lrwm6m86.api.sanity.io/v2022-03-07/data/query/production?query=*%5B_type+%3D%3D+%27noticias%27%5D",
+    {
+      method: "GET",
+      cache: "no-store",
+    }
+  );
+  if (res.ok) {
+    const data = await res.json();
+    if (data && data.result) {
+      return data.result;
+    } else {
+      return [];
+    }
+  } else {
+    throw new Error("Error al obtener noticias de la API");
+  }
 }
 
-type Noticias = {
-  id: string;
+interface Noticia {
+  _id: string;
+  bajada: string;
+  descripcion: string;
   title: string;
-  description: string;
-  category: string;
-  image: string;
-  price: number;
-};
+  _createdAt: any;
+  categoria: string;
+  image_principal: string;
+}
 
 export default async function Noticia() {
   const noticias = await obtenerNoticias();
-  const noticiasPorCategoria: { [key: string]: Noticias[] } = {};
+  const noticiasPorCategoria: { [key: string]: Noticia[] } = {};
 
-  const titulo =
-    "Peñarol debutó en la nueva temporada con una dura derrota ante Oberá";
-  const bajada =
-    "El “Milrayitas” cayó como visitante por 105 a 71 en su debut en la Liga Nacional. Volverá a jugar el miércoles en Corrientes.";
-
-  noticias.forEach((noticia: Noticias) => {
-    if (!noticiasPorCategoria[noticia.category]) {
-      noticiasPorCategoria[noticia.category] = [];
+  noticias.forEach((noticia: Noticia) => {
+    if (!noticiasPorCategoria[noticia.categoria]) {
+      noticiasPorCategoria[noticia.categoria] = [];
     }
-    noticiasPorCategoria[noticia.category].push(noticia);
+    noticiasPorCategoria[noticia.categoria].push(noticia);
   });
   for (const categoria in noticiasPorCategoria) {
-    noticiasPorCategoria[categoria].sort((a, b) => b.price - a.price);
+    noticiasPorCategoria[categoria].sort((a, b) => b._createdAt - a._createdAt);
   }
   return (
     <>
@@ -55,7 +65,7 @@ export default async function Noticia() {
               }
               return (
                 <div
-                  key={noticia.id}
+                  key={noticia._id}
                   className={
                     index === 0
                       ? "col-start-1 col-end-3 row-start-1 row-end-3 p-4"
@@ -79,7 +89,7 @@ export default async function Noticia() {
                             ? "max-h-400px max-w-500px"
                             : "max-h-130px max-w-220px"
                         }
-                        src={noticia.image}
+                        src={noticia.image_principal}
                         alt={noticia.title}
                         height={index === 0 ? 250 : 130}
                         width={index === 0 ? 500 : 220}
@@ -95,8 +105,9 @@ export default async function Noticia() {
                       >
                         {noticia.title}
                       </p>
-                      {index === 0 && <p className="text-3xl">{bajada}</p>}
-                      <p>{noticia.price}</p>
+                      {index === 0 && (
+                        <p className="text-3xl">{noticia.bajada}</p>
+                      )}
                     </div>
                   </Link>
                 </div>

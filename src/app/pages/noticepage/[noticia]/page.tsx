@@ -5,29 +5,37 @@ import { Tweet } from "react-tweet";
 import NoticiasMasRecientes from "@/components/NoticiasMasRecientes";
 import Link from "next/link";
 
-export async function obtenerNoticias() {
-  const res = await fetch("https://fakestoreapi.com/products");
-  const data = await res.json();
-  return data;
+async function obtenerNoticias() {
+  const res = await fetch(
+    "https://lrwm6m86.api.sanity.io/v2022-03-07/data/query/production?query=*%5B_type+%3D%3D+%27noticias%27%5D",
+    {
+      method: "GET",
+      cache: "no-store",
+    }
+  );
+  if (res.ok) {
+    const data = await res.json();
+    if (data && data.result) {
+      return data.result;
+    } else {
+      return [];
+    }
+  } else {
+    throw new Error("Error al obtener noticias de la API");
+  }
 }
 
-type Noticias = {
-  id: string;
+interface Noticia {
+  _id: string;
+  bajada: string;
+  descripcion: string;
   title: string;
-  description: string;
-  category: string;
-  image: string;
-  price: number;
-};
+  _createdAt: any;
+  categoria: string;
+  image_principal: string;
+}
 
 export default async function Page({ params }: any) {
-  const titulo =
-    "Peñarol debutó en la nueva temporada con una dura derrota ante Oberá";
-  const bajada =
-    "El “Milrayitas” cayó como visitante por 105 a 71 en su debut en la Liga Nacional. Volverá a jugar el miércoles en Corrientes.";
-  const date = "Martes 10 de Octubre";
-  const imagen =
-    "https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt12dbddde5342ce4c/648866ff21a8556da61fa167/GOAL_-_Blank_WEB_-_Facebook_-_2023-06-13T135350.847.png?auto=webp&format=pjpg&width=3840&quality=60";
   const videoDeYouTube = (
     <iframe
       width="560"
@@ -61,38 +69,38 @@ export default async function Page({ params }: any) {
     }
   );
   const datosDeNoticiaSeleccionada = noticias.filter(
-    (noticia: Noticias) => noticia.title === noticiaSeleccionadaArreglada
+    (noticia: Noticia) => noticia.title === noticiaSeleccionadaArreglada
   );
 
   return (
     <>
       <Header />
-      {datosDeNoticiaSeleccionada.map((noticia: Noticias, index: any) => (
+      {datosDeNoticiaSeleccionada.map((noticia: Noticia, index: any) => (
         <article
           className="grid grid-cols-3 mx-48 my-24 text-black"
           key={index}
         >
           <div className="row-span-1 flex items-center mt-12 mb-4">
             <Link
-              href={`/pages/categorypage/${noticia.category}`}
+              href={`/pages/categorypage/${noticia.categoria}`}
               className="border border-black rounded-3xl p-4"
             >
-              {noticia.category}
+              {noticia.categoria}
             </Link>
           </div>
           <div className="col-start-1 col-end-3 row-span-2 border border-black rounded-3xl  p-4">
             <div className="row-start-1 row-end-2 mb-8">
               <h1 className="text-5xl font-bold mb-4">{noticia.title}</h1>
               <h3 className="text-2xl border-b border-black pb-4">
-                {noticia.description}
+                {noticia.descripcion}
               </h3>
               <h5 className="flex justify-end py-4 border-b border-black">
-                {noticia.price}
+                {noticia._createdAt}
               </h5>
             </div>
             <div className="">
               <Image
-                src={noticia.image}
+                src={noticia.image_principal}
                 alt={noticia.title}
                 width={500}
                 height={250}
@@ -123,7 +131,7 @@ export default async function Page({ params }: any) {
             </div>
           </div>
           <div className="col-start-3 col-end-4 row-span-2 border border-black rounded-3xl ml-12 flex items-center justify-center h-min">
-            Noticias más recientes de {noticia.category}
+            Noticias más recientes de {noticia.categoria}
           </div>
           <div className="col-start-2 col-end-3 row-span-3 border border-black rounded-3xl mt-12 flex items-center justify-center">
             <NoticiasMasRecientes />
