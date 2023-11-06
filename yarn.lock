@@ -511,7 +511,7 @@
     get-random-values-esm "^1.0.0"
     lodash "^4.17.21"
 
-"@sanity/cli@3.19.1":
+"@sanity/cli@^3.19.1", "@sanity/cli@3.19.1":
   version "3.19.1"
   resolved "https://registry.npmjs.org/@sanity/cli/-/cli-3.19.1.tgz"
   integrity sha512-4kjZzCgrXGhUD09AU/cj3gHQ/h30VJ4FZ+y9B7M8YNE/5GQL+S00mtt93J57AWARwuMpqXgVnCO3HINMvHthwQ==
