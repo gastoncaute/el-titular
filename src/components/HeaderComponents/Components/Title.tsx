@@ -6,14 +6,16 @@ import Link from "next/link";
 
 export default function Title() {
   const [scrollY, setScrollY] = useState(0);
-  async function inicioStyle() {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+  function inicioStyle() {
+    if (typeof window !== "undefined") {
+      const handleScroll = () => {
+        setScrollY(window.scrollY);
+      };
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
   }
   inicioStyle();
 

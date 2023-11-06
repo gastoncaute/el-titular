@@ -8,15 +8,18 @@ export default function BurgerButton() {
     setMenuVisible(!menuVisible);
   };
   async function BurgerButtonStyle() {
-    const handleEscKey = (event: any) => {
-      if (menuVisible && event.keyCode === 27) {
-        toggleBurgerButton();
-      }
-    };
-    document.addEventListener("keydown", handleEscKey);
-    return () => {
-      document.removeEventListener("keydown", handleEscKey);
-    };
+    if (typeof document !== "undefined") {
+      const handleEscKey = (event: any) => {
+        if (menuVisible && event.keyCode === 27) {
+          toggleBurgerButton();
+        }
+      };
+      document.addEventListener("keydown", handleEscKey);
+
+      return () => {
+        document.removeEventListener("keydown", handleEscKey);
+      };
+    }
   }
   BurgerButtonStyle();
 

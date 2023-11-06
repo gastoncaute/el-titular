@@ -6,14 +6,16 @@ import Title from "./Components/Title";
 
 export default function Header() {
   const [scrollY, setScrollY] = useState(0);
-  async function titleStyle() {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+  function titleStyle() {
+    if (typeof window !== "undefined") {
+      const handleScroll = () => {
+        setScrollY(window.scrollY);
+      };
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
   }
   titleStyle();
 
