@@ -48,7 +48,7 @@ export default async function Noticia() {
       {Object.keys(noticiasPorCategoria).map((categoria) => (
         <article
           key={categoria}
-          className="col-start-2 col-end-6 rounded-3xl mt-24 m-8 border border-pageColor"
+          className="col-start-2 col-end-6 rounded-3xl m-8 border border-pageColor"
         >
           <Link
             href={`/pages/categorypage/${categoria}`}
