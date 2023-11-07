@@ -33,22 +33,11 @@ interface Noticia {
   _createdAt: any;
   categoria: string;
   image_principal: string;
+  YouTubeCode_1: any;
+  TwitterID_1: string;
 }
 
 export default async function Page({ params }: any) {
-  const videoDeYouTube = (
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/4YizH2DQNxs?si=4aPggxN9A0JLuvmo"
-      title="YouTube video player"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowFullScreen
-    ></iframe>
-  );
-  const videoDeTwitter = `1712994909173510367`;
-
   const noticias = await obtenerNoticias();
   const noticiaSeleccionada = params.noticia;
   const noticiaSeleccionadaArreglada = noticiaSeleccionada.replace(
@@ -120,10 +109,10 @@ export default async function Page({ params }: any) {
                 Libertad y Chaco donde un colectivo de la línea 531 que conducía
                 un joven de 29 años perdió el control y chocó contra un árbol.
                 {/* @ts-ignore */}
-                {videoDeYouTube}
               </p>
+              <video src={noticia.YouTubeCode_1}></video>
               <div>
-                <Tweet id={videoDeTwitter} />
+                <Tweet id={noticia.TwitterID_1} />
               </div>
             </div>
             <div className="p-8 flex justify-center items-center">

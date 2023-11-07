@@ -45,127 +45,127 @@ export default {
     },
 
     {
-      name: 'imagen_1_1',
-      type: 'string',
-      title: 'Primer Imagen del Segundo Bloque',
-    },
-    {
-      name: 'YouTubeCode_1_1',
-      type: 'string',
-      title: 'Video de YouTube',
-    },
-    {
-      name: 'TwitterID_1_1',
-      type: 'number',
-      title: 'ID de Twitter',
-    },
-    {
-      name: 'parrafo_2_1',
-      type: 'string',
-      title: 'Primer Párrafo del Segundo Bloque',
-    },
-    {
-      name: 'parrafo_2_2',
-      type: 'string',
-      title: 'Segundo Párrafo del Segundo Bloque',
-    },
-    {
-      name: 'parrafo_2_3',
-      type: 'string',
-      title: 'Tercer Párrafo del Segundo Bloque',
-    },
-
-    {
       name: 'imagen_2',
       type: 'string',
-      title: 'Primer Imagen del Tercer Bloque',
+      title: 'Segunda Imagen',
     },
     {
-      name: 'YouTubeCode_2',
+      name: 'YouTubeCode_1',
       type: 'string',
-      title: 'Video de YouTube',
+      title: 'Primer Video de YouTube',
     },
     {
-      name: 'TwitterID_2',
-      type: 'number',
-      title: 'ID de Twitter',
-    },
-    {
-      name: 'parrafo_3_1',
+      name: 'TwitterID_1',
       type: 'string',
-      title: 'Primer Párrafo del Tercer Bloque',
+      title: 'Primer ID de Twitter',
     },
     {
-      name: 'parrafo_3_2',
+      name: 'parrafo_3',
       type: 'string',
-      title: 'Segundo Párrafo del Tercer Bloque',
+      title: 'Párrafo 3',
     },
     {
-      name: 'parrafo_3_3',
+      name: 'parrafo_4',
       type: 'string',
-      title: 'Tercer Párrafo del Tercer Bloque',
+      title: 'Párrafo 4',
+    },
+    {
+      name: 'parrafo_5',
+      type: 'string',
+      title: 'Párrafo 5',
     },
 
     {
       name: 'imagen_3',
       type: 'string',
-      title: 'Primer Imagen del Cuarto Bloque',
+      title: 'Tercer Imagen',
     },
     {
-      name: 'YouTubeCode_3',
+      name: 'YouTubeCode_2',
       type: 'string',
-      title: 'Video de YouTube',
+      title: 'Segundo Video de YouTube',
     },
     {
-      name: 'TwitterID_3',
+      name: 'TwitterID_2',
       type: 'number',
-      title: 'ID de Twitter',
+      title: 'Segundo ID de Twitter',
     },
     {
-      name: 'parrafo_4_1',
+      name: 'parrafo_36',
       type: 'string',
-      title: 'Primer Párrafo del Cuarto Bloque',
+      title: 'Párrafo 6',
     },
     {
-      name: 'parrafo_4_2',
+      name: 'parrafo_7',
       type: 'string',
-      title: 'Segundo Párrafo del Cuarto Bloque',
+      title: 'Párrafo 7',
     },
     {
-      name: 'parrafo_4_3',
+      name: 'parrafo_8',
       type: 'string',
-      title: 'Tercer Párrafo del Cuarto Bloque',
+      title: 'Párrafo 8',
     },
 
     {
       name: 'imagen_4',
       type: 'string',
-      title: 'Primer Imagen del Quinto Bloque',
+      title: 'Cuarta Imagen',
+    },
+    {
+      name: 'YouTubeCode_3',
+      type: 'string',
+      title: 'Tercer Video de YouTube',
+    },
+    {
+      name: 'TwitterID_3',
+      type: 'number',
+      title: 'Tercer ID de Twitter',
+    },
+    {
+      name: 'parrafo_9',
+      type: 'string',
+      title: 'Párrafo 9',
+    },
+    {
+      name: 'parrafo_10',
+      type: 'string',
+      title: 'Párrafo 10',
+    },
+    {
+      name: 'parrafo_11',
+      type: 'string',
+      title: 'Párrafo 11',
+    },
+
+    {
+      name: 'imagen_5',
+      type: 'string',
+      title: 'Quinta Imagen',
     },
     {
       name: 'YouTubeCode_4',
       type: 'string',
-      title: 'Video de YouTube',
+      title: 'Cuarto Video de YouTube',
     },
     {
       name: 'TwitterID_4',
       type: 'number',
-      title: 'ID de Twitter',
+      title: 'Cuarto ID de Twitter',
     },
     {
-      name: 'parrafo_5_1',
+      name: 'parrafo_12',
       type: 'string',
-      title: 'Primer Párrafo del Quinto Bloque',
+      title: 'Párrafo 12',
     },
     {
-      name: 'parrafo_5_2',
+      name: 'parrafo_13',
       type: 'string',
-      title: 'Segundo Párrafo del Quinto Bloque',
+      title: 'Párrafo 13',
     },
     {
-      name: 'parrafo_5_3',
+      name: 'parrafo_14',
       type: 'string',
-      title: 'Tercer Párrafo del Quinto Bloque',
+      title: 'Párrafo 14',
     },
     {
       name: 'imagenes_array',
