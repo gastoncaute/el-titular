@@ -33,6 +33,10 @@ interface Noticia {
   _createdAt: any;
   categoria: string;
   image_principal: string;
+  epigrafe: string;
+  copete: string;
+  parrafo_1: string;
+  parrafo_2: string;
   YouTubeCode_1: any;
   TwitterID_1: string;
 }
@@ -41,7 +45,7 @@ export default async function Page({ params }: any) {
   const noticias = await obtenerNoticias();
   const noticiaSeleccionada = params.noticia;
   const noticiaSeleccionadaArreglada = noticiaSeleccionada.replace(
-    /%20|%26|%2C|%E2%80%93/g,
+    /%20|%26|%2C|%E2%80%93|%C3%BA/g,
     (match: any) => {
       switch (match) {
         case "%20":
@@ -52,6 +56,8 @@ export default async function Page({ params }: any) {
           return "-";
         case "%26":
           return "&";
+        case "%C3%BA":
+          return "ú";
         default:
           return match;
       }
@@ -94,23 +100,19 @@ export default async function Page({ params }: any) {
                 width={500}
                 height={250}
               />
-              <h5 className=" py-4 border-b border-black">Epigrafe</h5>
+              <h5 className=" py-4 border-b border-black">
+                {noticia.epigrafe}
+              </h5>
             </div>
             <div className="border-b border-black pb-8">
               <p className="my-8">Autor</p>
+              <p>{noticia.copete}</p>
               <p className="text-2xl">
-                Un colectivo perdió el control y chocó contra un árbol durante
-                la mañana de este martes en el barrio Villa Primera de Mar del
-                Plata. Doce personas debieron ser asistidas por un ambulancias
-                del Sistema de Atención Médica de Emergencias (SAME).
+                {noticia.parrafo_1}
                 <br />
-                Según confirmaron fuentes oficiales a Qué digital, el siniestro
-                vial se produjo durante la mañana de este martes en la avenida
-                Libertad y Chaco donde un colectivo de la línea 531 que conducía
-                un joven de 29 años perdió el control y chocó contra un árbol.
-                {/* @ts-ignore */}
+                {noticia.parrafo_2}
               </p>
-              <video src={noticia.YouTubeCode_1}></video>
+              {noticia.YouTubeCode_1}
               <div>
                 <Tweet id={noticia.TwitterID_1} />
               </div>
