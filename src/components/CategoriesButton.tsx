@@ -2,10 +2,6 @@ import Link from "next/link";
 
 export default function CategoriesButton() {
   const categorias = [
-    // "men's clothing",
-    // "women's clothing",
-    // "electronics",
-    // "jewelery",
     "Policiales",
     "Politica",
     "Economia",
