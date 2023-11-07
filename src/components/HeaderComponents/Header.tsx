@@ -27,9 +27,10 @@ export default function Header() {
             <BurgerButton />
             <a
               href="/"
-              className={`flex items-center justify-center text-2xl transform transition-transform duration-1000
-                                ${scrollY ? "translate-y-0" : "-translate-y-20"}
-                            `}
+              className={`
+                flex items-center justify-center text-2xl transform transition-transform duration-1000
+                ${scrollY ? "translate-y-0" : "-translate-y-20"}
+              `}
             >
               El Titular
             </a>

@@ -28,7 +28,7 @@ export default function Title() {
       <div className="grid grid-cols-3 items-center bg-gradient-to-b from-pageColor to-gradientColor rounded-b-3xl border-l border-r border-b border-white w-65rem h-24">
         <Image
           className="ml-16"
-          src="/favicon.ico"
+          src="/android-chrome-512x512.png"
           alt="Icono"
           width="64"
           height="64"
