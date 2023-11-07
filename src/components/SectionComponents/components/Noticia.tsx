@@ -4,7 +4,7 @@ import Link from "next/link";
 
 async function obtenerNoticias() {
   const res = await fetch(
-    "https://lrwm6m86.api.sanity.io/v2022-03-07/data/query/production?query=*%5B_type+%3D%3D+%27noticias%27%5D",
+    "https://lrwm6m86.api.sanity.io/v2022-03-07/data/query/production?query=*%5B_type+%3D%3D+%27noticias%27%5D|order(_createdAt desc)",
     {
       method: "GET",
       cache: "no-store",
@@ -42,9 +42,7 @@ export default async function Noticia() {
     }
     noticiasPorCategoria[noticia.categoria].push(noticia);
   });
-  for (const categoria in noticiasPorCategoria) {
-    noticiasPorCategoria[categoria].sort((a, b) => b._createdAt - a._createdAt);
-  }
+
   return (
     <>
       {Object.keys(noticiasPorCategoria).map((categoria) => (
@@ -58,7 +56,7 @@ export default async function Noticia() {
           >
             {categoria}
           </Link>
-          <div className="grid grid-cols-2 grid-rows-4">
+          <div className="grid grid-cols-2">
             {noticiasPorCategoria[categoria].map((noticia, index) => {
               if (index >= 5) {
                 return null;
