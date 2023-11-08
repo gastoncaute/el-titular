@@ -7,6 +7,19 @@ export default {
       name: 'categoria',
       type: 'string',
       title: 'Categoria',
+      options: {
+        list: [
+          {title: 'Policiales', value: 'Policiales'},
+          {title: 'Politica', value: 'Politica'},
+          {title: 'Economia', value: 'Economia'},
+          {title: 'Sociedad', value: 'Sociedad'},
+          {title: 'Deporte', value: 'Deporte'},
+          {title: 'Cultura', value: 'Cultura'},
+          {title: 'Tendencias', value: 'Tendencias'},
+          {title: 'Internacional', value: 'Internacional'},
+          {title: 'Infografias', value: 'Infografias'},
+        ],
+      },
     },
     {
       name: 'title',
