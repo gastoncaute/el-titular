@@ -51,9 +51,9 @@ export default async function categoryPage({ params }: any) {
       <Header />
       <section className="grid grid-cols-3 mx-48 my-24 text-black">
         <div className="row-span-1 flex items-center mt-12 mb-4">
-          <p className="border border-black rounded-3xl p-4">
+          <Link href={""} className="border border-black rounded-3xl p-4">
             {categoriaSeleccionadaArreglada}
-          </p>
+          </Link>
         </div>
         <article className="col-start-1 col-end-3 border border-black rounded-3xl h-min p-4">
           {noticiasDeCadaCategoria.map((noticia: Noticia, index: any) => (
