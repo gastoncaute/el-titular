@@ -4,6 +4,13 @@ export default {
   title: 'Noticias',
   fields: [
     {
+      name: 'autor',
+      type: 'reference',
+      title: 'Autor',
+      validation: (Rule: any) => Rule.required(),
+      to: [{type: 'author'}],
+    },
+    {
       name: 'categoria',
       type: 'string',
       title: 'Categoria',

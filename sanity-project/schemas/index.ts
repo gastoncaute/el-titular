@@ -1,3 +1,4 @@
 import noticias from './noticias'
+import author from './author'
 
-export const schemaTypes = [noticias]
+export const schemaTypes = [noticias, author]
