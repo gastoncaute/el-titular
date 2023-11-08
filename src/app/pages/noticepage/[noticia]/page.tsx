@@ -41,6 +41,32 @@ interface Noticia {
   TwitterID_1: string;
 }
 
+async function obtenerAutor() {
+  const res = await fetch(
+    "https://lrwm6m86.api.sanity.io/v2022-03-07/data/query/production?query=*%5B_type+%3D%3D+%27author%27%5D",
+    {
+      method: "GET",
+      cache: "no-store",
+    }
+  );
+  if (res.ok) {
+    const data = await res.json();
+    if (data && data.result) {
+      return data.result;
+    } else {
+      return [];
+    }
+  } else {
+    throw new Error("Error al obtener noticias de la API");
+  }
+}
+
+interface Autor {
+  _id: string;
+  photo: string;
+  name: string;
+}
+
 export default async function Page({ params }: any) {
   const noticias = await obtenerNoticias();
   const noticiaSeleccionada = params.noticia;
@@ -66,6 +92,8 @@ export default async function Page({ params }: any) {
   const datosDeNoticiaSeleccionada = noticias.filter(
     (noticia: Noticia) => noticia.title === noticiaSeleccionadaArreglada
   );
+
+  const autor = await obtenerAutor();
 
   return (
     <>
@@ -105,7 +133,25 @@ export default async function Page({ params }: any) {
               </h5>
             </div>
             <div className="border-b border-black pb-8">
-              <p className="my-8">Autor</p>
+              {autor.map((item: Autor) => (
+                <p
+                  className="my-8 border border-black rounded-xl p-2 w-52 text-sm flex items-center"
+                  key={item._id}
+                >
+                  <Image
+                    src={item.photo}
+                    alt={item.name}
+                    width={50}
+                    height={50}
+                    className="border border-black rounded-full mr-2"
+                  />
+                  <h5 className="border-l border-black pl-2">
+                    Autor:
+                    <br />
+                    {item.name}
+                  </h5>
+                </p>
+              ))}
               <p>{noticia.copete}</p>
               <p className="text-2xl">
                 {noticia.parrafo_1}

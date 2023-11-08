@@ -8,11 +8,13 @@ export default {
       name: 'name',
       type: 'string',
       title: 'Nombre',
+      validation: (Rule: any) => Rule.required(),
     },
     {
       name: 'photo',
-      type: 'image',
+      type: 'string',
       title: 'Foto',
+      validation: (Rule: any) => Rule.required(),
     },
   ],
 }
