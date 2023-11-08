@@ -7,6 +7,7 @@ export default {
       name: 'categoria',
       type: 'string',
       title: 'Categoria',
+      validation: (Rule: any) => Rule.required(),
       options: {
         list: [
           {title: 'Policiales', value: 'Policiales'},
@@ -25,16 +26,22 @@ export default {
       name: 'title',
       type: 'string',
       title: 'Título',
+      validation: (Rule: any) => [
+        Rule.required(),
+        Rule.max(90).error('El titulo debe tener 90 caracteres como máximo'),
+      ],
     },
     {
       name: 'bajada',
       type: 'string',
       title: 'Bajada',
+      validation: (Rule: any) => Rule.required(),
     },
     {
       name: 'image_principal',
       type: 'string',
       title: 'Imagen Principal',
+      validation: (Rule: any) => Rule.required(),
     },
     {
       name: 'epigrafe',
