@@ -16,6 +16,7 @@ const config: Config = {
       colors: {
         pageColor: "#86082E",
         gradientColor: "#A32D41",
+        backgraundColor: "#ebebe3",
       },
       width: {
         "65rem": "65rem",
