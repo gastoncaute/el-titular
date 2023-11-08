@@ -84,8 +84,8 @@ export default async function Noticia() {
                       <Image
                         className={
                           index === 0
-                            ? "max-h-400px max-w-500px"
-                            : "max-h-130px max-w-220px"
+                            ? "max-h-400px max-w-full"
+                            : "max-h-130px max-w-full"
                         }
                         src={noticia.image_principal}
                         alt={noticia.title}

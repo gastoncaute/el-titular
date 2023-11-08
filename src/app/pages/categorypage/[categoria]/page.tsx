@@ -63,13 +63,14 @@ export default async function categoryPage({ params }: any) {
               key={index}
             >
               <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-black">
-                <Image
-                  className={"max-h-220px max-w-500px"}
-                  src={noticia.image_principal}
-                  alt={noticia.title}
-                  height={250}
-                  width={400}
-                />
+                <div style={{ maxWidth: "100%", height: "auto" }}>
+                  <Image
+                    src={noticia.image_principal}
+                    alt={noticia.title}
+                    height={250}
+                    width={400}
+                  />
+                </div>
               </div>
               <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-4">
                 <h1 className={"text-3xl mb-8 font-bold"}>{noticia.title}</h1>
