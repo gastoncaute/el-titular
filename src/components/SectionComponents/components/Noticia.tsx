@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+import MasRecientes from "@/components/MasRecientes";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -45,6 +45,7 @@ export default async function Noticia() {
 
   return (
     <>
+      <MasRecientes />
       {Object.keys(noticiasPorCategoria).map((categoria) => (
         <article
           key={categoria}
