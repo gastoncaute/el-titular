@@ -23,3 +23,15 @@ body {
 .title {
   font-family: "Montserrat", sans-serif;
 }
+
+.button:hover {
+  background: linear-gradient(to bottom, #86082e, #a32d41);
+  color: #fff;
+  font-weight: bold;
+}
+
+.headersButtons:hover {
+  font-weight: bold;
+  color: #000;
+  stroke: #000;
+}

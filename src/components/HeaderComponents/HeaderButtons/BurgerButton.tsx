@@ -28,8 +28,8 @@ export default function BurgerButton() {
       <button
         onClick={toggleBurgerButton}
         className={`z-10 absolute -top-4 transform transition-transform duration-1500 -left-4
-                    ${menuVisible ? "translate-x-0" : "translate-x-full"}
-                `}
+          ${menuVisible ? "translate-x-0" : "translate-x-full"}
+        `}
       >
         <svg
           width="36"
@@ -40,6 +40,7 @@ export default function BurgerButton() {
           fill="none"
           strokeLinecap="round"
           strokeLinejoin="round"
+          className="headersButtons"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M4 6l16 0" />
@@ -49,9 +50,7 @@ export default function BurgerButton() {
       </button>
       <div
         className={`transform transition-transform duration-1500
-                    ${
-                      menuVisible ? "translate-x-0" : "-translate-x-full"
-                    } w-96`}
+        ${menuVisible ? "translate-x-0" : "-translate-x-full"} w-96`}
       >
         <NavBar />
       </div>

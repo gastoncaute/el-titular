@@ -22,7 +22,10 @@ export default async function CategoryPage({ params }: any) {
       <Header />
       <section className="grid grid-cols-3 mx-48 my-24 text-black">
         <div className="row-span-1 flex items-center mt-12 mb-4">
-          <Link href={""} className="border border-black rounded-3xl p-4">
+          <Link
+            href={""}
+            className="border border-black rounded-3xl p-4 button"
+          >
             {categoriaSeleccionadaArreglada}
           </Link>
         </div>
@@ -51,7 +54,7 @@ export default async function CategoryPage({ params }: any) {
                 </div>
               </Link>
             ))}
-          <button className="border border-black rounded-3xl p-2 w-60 text-xl font-bold">
+          <button className="border border-black rounded-3xl p-2 w-60 text-xl font-bold button">
             VER MAS
           </button>
         </article>
