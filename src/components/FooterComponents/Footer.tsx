@@ -64,13 +64,15 @@ export default function Footer() {
             (223) 12345678
           </p>
         </h3>
-        <Link
-          href="https://www.linkedin.com/in/gaston-cauteruccio/"
-          target="#"
-          className="p-4 border-t w-full flex justify-center items-center text-xs"
-        >
-          Página creada por Gaston Cauteruccio
-        </Link>
+        <h5 className="p-4 border-t w-full flex justify-center items-center">
+          <Link
+            href="https://www.linkedin.com/in/gaston-cauteruccio/"
+            target="#"
+            className=" text-xs headersButtons"
+          >
+            Página creada por Gaston Cauteruccio
+          </Link>
+        </h5>
       </article>
     </footer>
   );
