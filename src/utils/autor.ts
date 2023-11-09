@@ -17,19 +17,3 @@ export async function obtenerAutor() {
     throw new Error("Error al obtener el autor del servidor");
   }
 }
-
-export interface Autor {
-  _id: string;
-  name: string;
-  _createdAt: string;
-  _updatedAt: string;
-  _rev: string;
-  _type: string;
-  photo: {
-    _type: string;
-    asset: {
-      _type: string;
-      _ref: string;
-    };
-  };
-}

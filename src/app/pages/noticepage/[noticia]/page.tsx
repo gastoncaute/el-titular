@@ -4,8 +4,9 @@ import Image from "next/image";
 import { Tweet } from "react-tweet";
 import NoticiasMasRecientes from "@/components/NoticiasMasRecientes";
 import Link from "next/link";
-import { obtenerNoticias, Noticia } from "@/utils/noticia";
-import { obtenerAutor, Autor } from "@/utils/autor";
+import { obtenerNoticias } from "@/utils/noticia";
+import { Noticia, Autor } from "@/types/componentes.types";
+import { obtenerAutor } from "@/utils/autor";
 
 export default async function Page({ params }: any) {
   const noticias = await obtenerNoticias();

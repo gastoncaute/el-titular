@@ -4,7 +4,8 @@ import Header from "@/components/HeaderComponents/Header";
 import Link from "next/link";
 import Image from "next/image";
 import NoticiasMasRecientes from "@/components/NoticiasMasRecientes";
-import { obtenerNoticias, Noticia } from "@/utils/noticia";
+import { obtenerNoticias } from "@/utils/noticia";
+import { Noticia } from "@/types/componentes.types";
 
 export default async function CategoryPage({ params }: any) {
   const noticias = await obtenerNoticias();

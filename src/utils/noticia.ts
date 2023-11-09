@@ -17,19 +17,3 @@ export async function obtenerNoticias() {
     throw new Error("Error al obtener noticias de la API");
   }
 }
-
-export interface Noticia {
-  _id: string;
-  bajada: string;
-  descripcion: string;
-  title: string;
-  _createdAt: any;
-  categoria: string;
-  image_principal: string;
-  epigrafe: string;
-  copete: string;
-  parrafo_1: string;
-  parrafo_2: string;
-  YouTubeCode_1: any;
-  TwitterID_1: string;
-}
