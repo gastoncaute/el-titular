@@ -55,7 +55,7 @@ export default async function Page({ params }: any) {
           <div className="row-span-1 flex items-center mt-12 mb-4">
             <Link
               href={`/pages/categorypage/${noticia.categoria}`}
-              className="border border-black rounded-3xl p-4 font-bold button"
+              className="border border-black rounded-3xl p-2 px-4 font-bold button"
             >
               {noticia.categoria}
             </Link>
