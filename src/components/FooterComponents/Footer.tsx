@@ -25,7 +25,6 @@ export default function Footer() {
         </ul>
         <h3 className="w-full flex justify-center m-4">
           <p className="p-4 text-2xl flex items-center">
-            {/* @ts-ignore */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="icon icon-tabler icon-tabler-mail"
@@ -45,7 +44,6 @@ export default function Footer() {
             hola@gmail.com
           </p>
           <p className="p-4 text-2xl flex items-center">
-            {/* @ts-ignore */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="icon icon-tabler icon-tabler-phone"
