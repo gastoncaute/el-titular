@@ -2,6 +2,7 @@
 import { useState } from "react";
 import CategoriesButton from "../../CategoriesButton";
 import Link from "next/link";
+import Image from "next/image";
 import "@/app/globals.css";
 
 export default function Title() {
@@ -30,8 +31,12 @@ export default function Title() {
           href={"/"}
           className="font-bold text-7xl flex justify-center title"
         >
-          <p className="text-white mr-4">EL</p>
-          <p className="text-backgraundColor">TITULAR</p>
+          <Image
+            src={"/eltitularwhite.png"}
+            alt="EL TITULAR"
+            height={80}
+            width={450}
+          />
         </Link>
       </h1>
       <nav className="flex items-center bg-gradient-to-b from-pageColor to-gradientColor rounded-b-3xl border-l border-r border-b border-white w-60rem h-12 px-4">

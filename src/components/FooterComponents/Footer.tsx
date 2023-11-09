@@ -1,6 +1,7 @@
 import Link from "next/link";
 import CategoriesButton from "../CategoriesButton";
 import SocialButtons from "../HeaderComponents/HeaderButtons/SocialButtons";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -10,7 +11,12 @@ export default function Footer() {
           href="/"
           className="text-7xl font-bold border-b w-full flex justify-center p-4"
         >
-          El Titular
+          <Image
+            src={"/eltitularwhite.png"}
+            alt="EL TITULAR"
+            height={80}
+            width={350}
+          />
         </Link>
         <ul className="flex justify-center items-center p-4">
           <li className="flex justify-evenly">

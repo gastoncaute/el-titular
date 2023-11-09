@@ -3,6 +3,8 @@ import { useState } from "react";
 import BurgerButton from "./HeaderButtons/BurgerButton";
 import SocialButtons from "./HeaderButtons/SocialButtons";
 import Title from "./Components/Title";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [scrollY, setScrollY] = useState(0);
@@ -25,15 +27,20 @@ export default function Header() {
         <ul className="grid grid-cols-4">
           <li className="flex justify-center items-center col-start-1 col-end-2">
             <BurgerButton />
-            <a
+            <Link
               href="/"
               className={`
               headersButtons flex items-center justify-center text-2xl transform transition-transform duration-1000
                 ${scrollY ? "translate-y-0" : "-translate-y-20"}
               `}
             >
-              El Titular
-            </a>
+              <Image
+                src={"/eltitularwhite.png"}
+                alt="EL TITULAR"
+                height={50}
+                width={100}
+              />
+            </Link>
           </li>
           <li className="flex justify-center col-start-4 col-end-5">
             <SocialButtons />
