@@ -3,13 +3,13 @@ export default {
   type: 'document',
   title: 'Noticias',
   fields: [
-    // {
-    //   name: 'autor',
-    //   type: 'reference',
-    //   title: 'Autor',
-    //   validation: (Rule: any) => Rule.required(),
-    //   to: [{type: 'author'}],
-    // },
+    {
+      name: 'autor',
+      type: 'reference',
+      title: 'Autor',
+      validation: (Rule: any) => Rule.required(),
+      to: [{type: 'author'}],
+    },
     {
       name: 'categoria',
       type: 'string',
