@@ -39,6 +39,13 @@ export default async function Page({ params }: any) {
   const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
   const imageUrl = baseUrl + modifiedRef;
 
+  const formatCreatedAt = (createdAt: string) => {
+    const date = new Date(createdAt);
+    const day = date.getDate();
+    const month = date.toLocaleString("default", { month: "long" });
+    return `${day} de ${month}`;
+  };
+
   return (
     <>
       <Header />
@@ -62,7 +69,7 @@ export default async function Page({ params }: any) {
                 {noticia.descripcion}
               </h3>
               <h5 className="flex justify-end py-4 border-b border-black">
-                {noticia._createdAt}
+                {formatCreatedAt(noticia._createdAt)}
               </h5>
             </div>
             <div className="">
