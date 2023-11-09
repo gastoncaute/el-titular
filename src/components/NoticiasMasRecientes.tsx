@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { obtenerNoticias, Noticia } from "@/utils/noticia";
+import { Noticia } from "@/types/componentes.types";
+import { obtenerNoticias } from "@/utils/noticia";
 
 export default async function NoticiasMasRecientes() {
   const noticias = await obtenerNoticias();
