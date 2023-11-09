@@ -54,9 +54,11 @@ export default async function CategoryPage({ params }: any) {
                 </div>
               </Link>
             ))}
-          <button className="border border-black rounded-3xl p-2 w-60 text-xl font-bold button">
-            VER MAS
-          </button>
+          {noticiasDeCadaCategoria.length > 5 && (
+            <button className="border border-black rounded-3xl p-2 w-60 text-xl font-bold button">
+              VER MAS
+            </button>
+          )}
         </article>
         <div className="col-start-3 col-end-4 border border-black rounded-3xl ml-12 flex items-center justify-center h-min">
           <NoticiasMasRecientes />
