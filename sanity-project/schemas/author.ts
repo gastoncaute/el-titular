@@ -7,15 +7,15 @@ export default {
       name: 'name',
       type: 'string',
       title: 'Nombre',
-      validation: (Rule: any) => [
-        Rule.required().error('El nombre del autor es obligatorio'),
-        Rule.unique('name').error('Este nombre de autor ya existe'),
-      ],
+      validation: (Rule: any) => [Rule.required().error('El nombre del autor es obligatorio')],
     },
     {
       name: 'photo',
       type: 'image',
       title: 'Foto',
+      options: {
+        accept: 'image/jpeg',
+      },
       validation: (Rule: any) => Rule.required(),
     },
   ],

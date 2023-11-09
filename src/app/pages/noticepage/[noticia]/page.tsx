@@ -34,6 +34,10 @@ export default async function Page({ params }: any) {
   );
 
   const autor = await obtenerAutor();
+  const ref = autor.map((item: Autor) => item.photo.asset._ref);
+  const modifiedRef = String(ref).replace("image-", "").replace("-jpg", ".jpg");
+  const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
+  const imageUrl = baseUrl + modifiedRef;
 
   return (
     <>
@@ -79,7 +83,7 @@ export default async function Page({ params }: any) {
                   key={item._id}
                 >
                   <Image
-                    src={item.photo}
+                    src={imageUrl}
                     alt={item.name}
                     width={50}
                     height={50}
