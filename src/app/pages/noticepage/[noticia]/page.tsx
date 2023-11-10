@@ -7,27 +7,12 @@ import Link from "next/link";
 import { obtenerNoticias } from "@/utils/noticia";
 import { Noticia, Autor } from "@/types/componentes.types";
 import { obtenerAutor } from "@/utils/autor";
+import { repalceParams } from "@/utils/replaceParams";
 
 export default async function Page({ params }: any) {
   const noticias = await obtenerNoticias();
   const noticiaSeleccionada = params.noticia;
-  const noticiaSeleccionadaArreglada = noticiaSeleccionada.replace(
-    /%20|%26|%2C|%E2%80%93|%C3%BA/g,
-    (match: any) => {
-      switch (match) {
-        case "%20":
-          return " ";
-        case "%2C":
-          return ",";
-        case "%E2%80%93":
-          return "-";
-        case "%C3%BA":
-          return "ú";
-        default:
-          return match;
-      }
-    }
-  );
+  const noticiaSeleccionadaArreglada = repalceParams(noticiaSeleccionada);
   const datosDeNoticiaSeleccionada = noticias.filter(
     (noticia: Noticia) => noticia.title === noticiaSeleccionadaArreglada
   );
