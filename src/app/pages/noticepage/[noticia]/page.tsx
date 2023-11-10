@@ -8,6 +8,7 @@ import { obtenerNoticias } from "@/utils/noticia";
 import { Noticia, Autor } from "@/types/componentes.types";
 import { obtenerAutor } from "@/utils/autor";
 import { repalceParams } from "@/utils/replaceParams";
+import MasRecientesDeCategoria from "@/components/MasRecientesDeCategoria";
 
 export default async function Page({ params }: any) {
   const noticias = await obtenerNoticias();
@@ -103,7 +104,7 @@ export default async function Page({ params }: any) {
             </div>
           </div>
           <div className="col-start-3 col-end-4 row-span-2 border border-black rounded-3xl ml-12 flex items-center justify-center h-min">
-            Noticias más recientes de {noticia.categoria}
+            <MasRecientesDeCategoria noticias={datosDeNoticiaSeleccionada} />
           </div>
           <div className="col-start-2 col-end-3 row-span-3 border border-black rounded-3xl mt-12 flex items-center justify-center">
             <NoticiasMasRecientes />
