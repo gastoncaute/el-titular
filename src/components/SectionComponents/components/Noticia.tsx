@@ -23,12 +23,15 @@ export default async function Noticia() {
           key={categoria}
           className="col-start-2 col-end-6 rounded-3xl m-8 border border-pageColor"
         >
-          <Link
-            href={`/pages/categorypage/${categoria}`}
-            className="m-4 pb-2 flex justify-center text-2xl border-b border-pageColor"
-          >
-            {categoria}
-          </Link>
+          <div className="m-4 pb-2 flex items-center justify-center mb-4 border-b border-pageColor">
+            <Link
+              href={`/pages/categorypage/${categoria}`}
+              className="flex justify-center text-2xl rounded-3xl p-2 px-4 button"
+            >
+              {categoria}
+            </Link>
+          </div>
+
           <div className="grid grid-cols-2">
             {noticiasPorCategoria[categoria].map((noticia, index) => {
               if (index >= 5) {
