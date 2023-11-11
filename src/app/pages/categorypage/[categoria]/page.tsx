@@ -25,7 +25,7 @@ export default async function CategoryPage({ params }: any) {
         <div className="row-span-1 flex items-center mt-12 mb-4">
           <Link
             href={""}
-            className="border border-black rounded-3xl p-4 button"
+            className="border border-black rounded-3xl p-2 px-4 font-bold button"
           >
             {categoriaSeleccionadaArreglada}
           </Link>
