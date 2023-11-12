@@ -21,7 +21,7 @@ export default async function CategoryPage({ params }: any) {
   return (
     <>
       <Header />
-      <section className="grid grid-cols-2 mx-48 my-24 text-black">
+      <section className="grid grid-cols-3 mx-48 my-24 text-black">
         <div className="row-span-1 flex items-center mt-12 mb-4">
           <Link
             href={""}
@@ -61,6 +61,9 @@ export default async function CategoryPage({ params }: any) {
             </button>
           )}
         </article>
+        <div className="col-start-3 col-end-4 border border-pageColor rounded-3xl ml-12 flex items-center justify-center h-min">
+          <NoticiasMasRecientes />
+        </div>
       </section>
       <Footer />
     </>
