@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import NavBar from "../Components/NavBar";
+import NavBar from "../../NavBar";
 
 export default function BurgerButton() {
   const [menuVisible, setMenuVisible] = useState(false);

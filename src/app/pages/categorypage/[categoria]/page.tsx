@@ -3,7 +3,7 @@ import Footer from "@/components/FooterComponents/Footer";
 import Header from "@/components/HeaderComponents/Header";
 import Link from "next/link";
 import Image from "next/image";
-import NoticiasMasRecientes from "@/components/NoticiasMasRecientes";
+import NoticiasMasRecientes from "@/components/MasRecientesVentana";
 import { obtenerNoticias } from "@/utils/noticia";
 import { Noticia } from "@/types/componentes.types";
 

@@ -2,7 +2,7 @@ import Header from "@/components/HeaderComponents/Header";
 import Footer from "@/components/FooterComponents/Footer";
 import Image from "next/image";
 import { Tweet } from "react-tweet";
-import NoticiasMasRecientes from "@/components/NoticiasMasRecientes";
+import NoticiasMasRecientes from "@/components/MasRecientesVentana";
 import Link from "next/link";
 import { obtenerNoticias } from "@/utils/noticia";
 import { Noticia, Autor } from "@/types/componentes.types";

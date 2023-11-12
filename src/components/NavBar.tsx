@@ -5,7 +5,8 @@ export default function NavBar() {
         <li className="py-4 text-xl headersButtons w-min">
           <a href="/">Inicio</a>
         </li>
-        <li className="headersButtons w-min">Epigrafias</li>
+        <li className="py-4 text-xl headersButtons">Ultimas Noticias</li>
+        <li className="py-4 text-xl headersButtons w-min">Infografias</li>
       </ul>
     </nav>
   );
