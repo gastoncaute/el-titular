@@ -26,7 +26,7 @@ export default async function Noticia() {
           <div className="m-4 pb-2 flex items-center justify-center mb-4 border-b border-pageColor">
             <Link
               href={`/pages/categorypage/${categoria}`}
-              className="flex justify-center text-2xl rounded-3xl p-2 px-4 button"
+              className="flex justify-center text-2xl rounded-3xl p-2 px-4 border border-transparent button"
             >
               {categoria}
             </Link>
