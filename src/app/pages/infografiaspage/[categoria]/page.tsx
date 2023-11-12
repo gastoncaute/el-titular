@@ -36,16 +36,16 @@ export default async function page({ params }: any) {
                 key={index}
                 className={
                   index === 0
-                    ? "mx-8 m-4 col-start-1 col-end-2 row-start-1 row-end-2 border rounded-3xl border-pageColor py-8 title flex justify-center items-center"
+                    ? "mx-8 m-4 col-start-1 col-end-2 row-start-1 row-end-2 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor "
                     : index === 1
-                    ? "mx-8 m-4 col-start-2 col-end-3 row-start-1 row-end-2 border rounded-3xl border-pageColor py-8 title flex justify-center items-center"
+                    ? "mx-8 m-4 col-start-2 col-end-3 row-start-1 row-end-2 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor "
                     : index === 2
-                    ? "mx-8 m-4 col-start-1 col-end-2 row-start-2 row-end-3 border rounded-3xl border-pageColor py-8 title flex justify-center items-center"
+                    ? "mx-8 m-4 col-start-1 col-end-2 row-start-2 row-end-3 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor "
                     : index === 3
-                    ? "mx-8 m-4 col-start-2 col-end-3 row-start-2 row-end-3 border rounded-3xl border-pageColor py-8 title flex justify-center items-center"
+                    ? "mx-8 m-4 col-start-2 col-end-3 row-start-2 row-end-3 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor "
                     : index === 4
-                    ? "mx-8 m-4 col-start-1 col-end-2 row-start-3 row-end-4 border rounded-3xl border-pageColor py-8 title flex justify-center items-center"
-                    : "mx-8 m-4 col-start-2 col-end-3 row-start-3 row-end-4 border rounded-3xl border-pageColor py-8 title flex justify-center items-center"
+                    ? "mx-8 m-4 col-start-1 col-end-2 row-start-3 row-end-4 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor "
+                    : "mx-8 m-4 col-start-2 col-end-3 row-start-3 row-end-4 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor "
                 }
               >
                 <div className="flex justify-center items-center">
@@ -58,9 +58,13 @@ export default async function page({ params }: any) {
                     />
                   </div>
                 </div>
-                {/* <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-4">
-                <h1 className={"text-3xl mb-8 font-bold"}>{noticia.title}</h1> 
-              </div>*/}
+                <h1
+                  className={
+                    "flex items-center justify-center infografia_title text-3xl font-bold mt-4"
+                  }
+                >
+                  {noticia.title}
+                </h1>
               </Link>
             );
           })}

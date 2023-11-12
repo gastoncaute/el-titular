@@ -36,4 +36,23 @@ body {
 
 .title:hover {
   text-decoration: underline;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.noticias_title:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  z-index: 1;
+  background: #ebebe3;
+}
+
+.infografia_title {
+  display: none;
+}
+
+.noticias_title:hover .infografia_title {
+  display: block;
 }

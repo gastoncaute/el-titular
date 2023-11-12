@@ -19,7 +19,11 @@ export default async function MasRecientesDeCategoria({
     <article className="flex flex-col item-center p-4">
       <h1 className="flex justify-center border-b border-pageColor pb-2 mb-2">
         <Link
-          href={`/pages/categorypage/${categoriaSeleccionada}`}
+          href={
+            categoriaSeleccionada === "Infografias"
+              ? `/pages/infografiaspage/${categoriaSeleccionada}`
+              : `/pages/categorypage/${categoriaSeleccionada}`
+          }
           className="p-2 px-4 text-2xl font-bold button rounded-3xl border border-transparent"
         >
           Más recientes de {categoriaSeleccionada}
@@ -29,7 +33,7 @@ export default async function MasRecientesDeCategoria({
         <Link
           href={`/pages/noticepage/${noticia.title}`}
           key={noticia._id}
-          className="flex p-4 m-2 border border-pageColor rounded-3xl"
+          className="flex p-4 m-2 border border-pageColor rounded-3xl noticias_title"
         >
           <Image
             className="mx-4"
@@ -38,7 +42,7 @@ export default async function MasRecientesDeCategoria({
             width={150}
             height={100}
           />
-          <p className="text-lg font-bold pl-4 border-l border-pageColor flex items-center title">
+          <p className="text-lg font-bold pl-4 border-l border-pageColor flex items-center">
             {noticia.title}
           </p>
         </Link>

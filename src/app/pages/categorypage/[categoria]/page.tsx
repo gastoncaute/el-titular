@@ -36,7 +36,7 @@ export default async function CategoryPage({ params }: any) {
             .map((noticia: Noticia, index: any) => (
               <Link
                 href={`/pages/noticepage/${noticia.title}`}
-                className="w-full h-min grid grid-cols-2 border rounded-3xl border-pageColor py-8 my-8"
+                className="w-full h-min grid grid-cols-2 border rounded-3xl border-pageColor py-8 my-8 noticias_title"
                 key={index}
               >
                 <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor">

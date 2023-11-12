@@ -22,7 +22,7 @@ export default async function NoticiasMasRecientes() {
         <Link
           href={`/pages/noticepage/${noticia.title}`}
           key={noticia._id}
-          className="flex p-4 m-2 border border-pageColor rounded-3xl"
+          className="flex p-4 m-2 border border-pageColor rounded-3xl noticias_title"
         >
           <Image
             className="mx-4"
@@ -31,7 +31,7 @@ export default async function NoticiasMasRecientes() {
             width={150}
             height={100}
           />
-          <p className="text-lg font-bold pl-4 border-l border-pageColor flex items-center title">
+          <p className="text-lg font-bold pl-4 border-l border-pageColor flex items-center">
             {noticia.title}
           </p>
         </Link>
