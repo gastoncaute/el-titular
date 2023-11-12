@@ -38,7 +38,7 @@ export default async function MasRecientesDeCategoria({
             width={150}
             height={100}
           />
-          <p className="text-lg font-bold pl-4 border-l border-pageColor">
+          <p className="text-lg font-bold pl-4 border-l border-pageColor flex items-center title">
             {noticia.title}
           </p>
         </Link>

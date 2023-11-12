@@ -35,6 +35,5 @@ body {
 }
 
 .title:hover {
-  color: #000;
   text-decoration: underline;
 }
