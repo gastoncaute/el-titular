@@ -9,7 +9,7 @@ export default function Footer() {
       <article className="col-start-2 col-end-4 flex flex-col justify-center items-center">
         <Link
           href="/"
-          className="text-7xl font-bold border-b w-full flex justify-center p-4"
+          className="text-7xl font-bold border-b w-full flex justify-center p-12"
         >
           <Image
             src={"/eltitularwhite.png"}
