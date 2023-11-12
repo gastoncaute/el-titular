@@ -23,7 +23,8 @@ export default function Footer() {
             <SocialButtons />
           </li>
         </ul>
-        <h2 className="text-4xl m-4">``NOTICIAS QUE MARCAN LA DIFERENCIA``</h2>
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
+        <h2 className="text-4xl m-4">"NOTICIAS QUE MARCAN LA DIFERENCIA"</h2>
         <ul className="w-full flex items-center justify-center m-4">
           <li className="w-full flex justify-evenly">
             <CategoriesButton />

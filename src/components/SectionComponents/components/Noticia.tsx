@@ -80,7 +80,7 @@ export default async function Noticia() {
                         {noticia.title}
                       </p>
                       {index === 0 && (
-                        <p className="text-3xl bajada">{noticia.bajada}</p>
+                        <p className="text-3xl">{noticia.bajada}</p>
                       )}
                     </div>
                   </Link>
