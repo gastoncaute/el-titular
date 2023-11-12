@@ -55,7 +55,7 @@ export default async function Page({ params }: any) {
             <div className="row-start-1 row-end-2 mb-8">
               <h1 className="text-5xl font-bold mb-4">{noticia.title}</h1>
               <h3 className="text-2xl border-b border-pageColor pb-4">
-                {noticia.descripcion}
+                {noticia.bajada}
               </h3>
               <h5 className="flex justify-end py-4 border-b border-pageColor">
                 {formatCreatedAt(noticia._createdAt)}
@@ -65,10 +65,10 @@ export default async function Page({ params }: any) {
               <Image
                 src={noticia.image_principal}
                 alt={noticia.title}
-                width={500}
+                width={1000}
                 height={250}
               />
-              <h5 className=" py-4 border-b border-pageColor">
+              <h5 className="py-4 text-gray-700 border-b border-pageColor">
                 {noticia.epigrafe}
               </h5>
             </div>
@@ -92,17 +92,33 @@ export default async function Page({ params }: any) {
                   </h5>
                 </p>
               ))}
-              <p>{noticia.copete}</p>
-              <p className="text-2xl">
-                {noticia.parrafo_1}
-                <br />
-                {noticia.parrafo_2}
-              </p>
+              <p className="text-2xl py-4">{noticia.copete}</p>
+              <p className="text-2xl py-4">{noticia.parrafo_1}</p>
+              <p className="text-2xl py-4"> {noticia.parrafo_2}</p>
               {noticia.YouTubeCode_1}
               <div>
                 <Tweet id={noticia.TwitterID_1} />
               </div>
+              <Image
+                src={noticia.imagen_2}
+                alt="Imagen 2"
+                height={1000}
+                width={1000}
+              />
+              <p className="py-4 text-gray-700">{noticia.epigrafe}</p>
+              <div className="py-4">
+                <p className="text-2xl py-4">{noticia.parrafo_3}</p>
+                <p className="text-2xl py-4">{noticia.parrafo_4}</p>
+              </div>
+              <Image
+                src={noticia.imagen_3}
+                alt="Imagen 3"
+                height={1000}
+                width={1000}
+              />
             </div>
+            <p className="py-4 text-gray-700">{noticia.epigrafe}</p>
+
             <div className="p-8 flex justify-center items-center">
               <p className="border border-pageColor w-full h-full">
                 Comentarios
@@ -112,7 +128,7 @@ export default async function Page({ params }: any) {
           <div className="col-start-3 col-end-4 row-span-2 border border-pageColor rounded-3xl ml-12 flex items-center justify-center h-min">
             <MasRecientesDeCategoria categoria={noticia.categoria} />
           </div>
-          <div className="col-start-2 col-end-3 row-span-3 border border-pageColor rounded-3xl mt-12 flex items-center justify-center">
+          <div className="col-start-1 col-end-4 row-span-3 border border-pageColor rounded-3xl mt-12 flex items-center justify-center">
             <NoticiasMasRecientes />
           </div>
         </article>
