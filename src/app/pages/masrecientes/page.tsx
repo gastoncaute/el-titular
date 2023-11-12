@@ -7,7 +7,7 @@ import NoticiasMasRecientes from "@/components/MasRecientesVentana";
 import { obtenerNoticias } from "@/utils/noticia";
 import { Noticia } from "@/types/componentes.types";
 
-export default async function CategoryPage() {
+export default async function page() {
   const noticias = await obtenerNoticias();
 
   return (

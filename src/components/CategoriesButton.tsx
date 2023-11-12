@@ -15,7 +15,14 @@ export default function CategoriesButton() {
   return (
     <>
       {categorias.map((categoria: string) => (
-        <Link key={categoria} href={`/pages/categorypage/${categoria}`}>
+        <Link
+          key={categoria}
+          href={
+            categoria === "Infografias"
+              ? `/pages/infografiaspage/${categoria}`
+              : `/pages/categorypage/${categoria}`
+          }
+        >
           <p className="flex items-center p-3 border-x h-2 headersButtons">
             {categoria}
           </p>
