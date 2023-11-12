@@ -19,7 +19,7 @@ export default async function MasRecientesDeCategoria({
     <article className="flex flex-col item-center p-4">
       <h1 className="flex justify-center border-b border-pageColor pb-2 mb-2">
         <Link
-          href={"/"}
+          href={`/pages/categorypage/${categoriaSeleccionada}`}
           className="p-2 px-4 text-2xl font-bold button rounded-3xl border border-transparent"
         >
           Más recientes de {categoriaSeleccionada}
