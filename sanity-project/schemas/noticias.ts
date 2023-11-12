@@ -77,6 +77,11 @@ export default {
       title: 'Segunda Imagen',
     },
     {
+      name: `epigrafe_2`,
+      type: `string`,
+      title: `Segundo epigrafe`,
+    },
+    {
       name: 'YouTubeCode_1',
       type: 'string',
       title: 'Primer Video de YouTube',
@@ -106,6 +111,11 @@ export default {
       name: 'imagen_3',
       type: 'string',
       title: 'Tercer Imagen',
+    },
+    {
+      name: `epigrafe_3`,
+      type: `string`,
+      title: `Tercer epigrafe`,
     },
     {
       name: 'YouTubeCode_2',

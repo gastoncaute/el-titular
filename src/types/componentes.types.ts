@@ -1,15 +1,26 @@
 export interface Noticia {
+  autor: {
+    _ref: string;
+    _type: string;
+  };
   _id: string;
-  bajada: string;
-  descripcion: string;
-  title: string;
+  _rev: string;
   _createdAt: any;
+  _updatedAt: string;
+  _type: string;
   categoria: string;
+  title: string;
+  bajada: string;
+  copete: string;
   image_principal: string;
   epigrafe: string;
-  copete: string;
   parrafo_1: string;
   parrafo_2: string;
+  imagen_2: string;
+  parrafo_3: string;
+  parrafo_4: string;
+  imagen_3: string;
+
   YouTubeCode_1: any;
   TwitterID_1: string;
 }
