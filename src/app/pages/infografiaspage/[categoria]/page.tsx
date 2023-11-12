@@ -68,11 +68,13 @@ export default async function page({ params }: any) {
               </Link>
             );
           })}
-          {noticiasDeCadaCategoria.length > 6 && (
-            <button className="border border-pageColor rounded-3xl p-2 w-60 text-xl font-bold button">
-              VER MAS
-            </button>
-          )}
+          <div className="col-start-1 col-end-3 flex justify-center items-center w-full pt-4">
+            {noticiasDeCadaCategoria.length > 6 && (
+              <button className="border border-pageColor rounded-3xl p-2 w-60 text-xl font-bold button">
+                VER MAS
+              </button>
+            )}
+          </div>
         </article>
       </section>
       <Footer />
