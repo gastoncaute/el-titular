@@ -9,9 +9,9 @@ export default async function NoticiasMasRecientes() {
 
   return (
     <div className="flex flex-col item-center p-4">
-      <h1 className="flex justify-center border-b border-black pb-2 mb-2">
+      <h1 className="flex justify-center border-b border-pageColor pb-2 mb-2">
         <Link
-          href={"/"}
+          href={"/pages/masrecientes"}
           className="p-2 px-4 text-2xl font-bold button rounded-3xl border border-transparent"
         >
           Más Recientes
@@ -22,7 +22,7 @@ export default async function NoticiasMasRecientes() {
         <Link
           href={`/pages/noticepage/${noticia.title}`}
           key={noticia._id}
-          className="flex p-4 m-2 border border-black rounded-3xl"
+          className="flex p-4 m-2 border border-pageColor rounded-3xl"
         >
           <Image
             className="mx-4"
@@ -31,7 +31,7 @@ export default async function NoticiasMasRecientes() {
             width={150}
             height={100}
           />
-          <p className="text-lg font-bold pl-4 border-l border-black">
+          <p className="text-lg font-bold pl-4 border-l border-pageColor">
             {noticia.title}
           </p>
         </Link>

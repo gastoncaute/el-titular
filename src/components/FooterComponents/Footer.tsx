@@ -23,7 +23,7 @@ export default function Footer() {
             <SocialButtons />
           </li>
         </ul>
-        <h2 className="text-4xl m-4">Slogan de la pagina</h2>
+        <h2 className="text-4xl m-4">``NOTICIAS QUE MARCAN LA DIFERENCIA``</h2>
         <ul className="w-full flex items-center justify-center m-4">
           <li className="w-full flex justify-evenly">
             <CategoriesButton />
@@ -72,7 +72,7 @@ export default function Footer() {
           <Link
             href="https://www.linkedin.com/in/gaston-cauteruccio/"
             target="#"
-            className=" text-xs headersButtons"
+            className=" text-xs title"
           >
             Página creada por Gaston Cauteruccio
           </Link>

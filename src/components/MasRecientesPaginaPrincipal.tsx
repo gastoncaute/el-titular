@@ -30,7 +30,7 @@ export default async function MasRecientes() {
             >
               <Link
                 href={`/pages/noticepage/${noticia.title}`}
-                className="w-full h-full grid grid-cols-2 border rounded-3xl border-pageColor py-8"
+                className="w-full h-full grid grid-cols-2 border rounded-3xl border-pageColor py-8 title"
               >
                 <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor">
                   <Image

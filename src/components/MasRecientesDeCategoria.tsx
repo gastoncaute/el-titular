@@ -4,7 +4,11 @@ import Link from "next/link";
 import { Noticia } from "@/types/componentes.types";
 import { obtenerNoticias } from "@/utils/noticia";
 
-export default async function MasRecientesDeCategoria({ categoria }: { categoria: string }) {
+export default async function MasRecientesDeCategoria({
+  categoria,
+}: {
+  categoria: string;
+}) {
   const noticias = await obtenerNoticias();
   const categoriaSeleccionada = categoria;
   const noticiasDeCadaCategoria = noticias.filter(
@@ -13,7 +17,7 @@ export default async function MasRecientesDeCategoria({ categoria }: { categoria
 
   return (
     <article className="flex flex-col item-center p-4">
-      <h1 className="flex justify-center border-b border-black pb-2 mb-2">
+      <h1 className="flex justify-center border-b border-pageColor pb-2 mb-2">
         <Link
           href={"/"}
           className="p-2 px-4 text-2xl font-bold button rounded-3xl border border-transparent"
@@ -25,7 +29,7 @@ export default async function MasRecientesDeCategoria({ categoria }: { categoria
         <Link
           href={`/pages/noticepage/${noticia.title}`}
           key={noticia._id}
-          className="flex p-4 m-2 border border-black rounded-3xl"
+          className="flex p-4 m-2 border border-pageColor rounded-3xl"
         >
           <Image
             className="mx-4"
@@ -34,7 +38,7 @@ export default async function MasRecientesDeCategoria({ categoria }: { categoria
             width={150}
             height={100}
           />
-          <p className="text-lg font-bold pl-4 border-l border-black">
+          <p className="text-lg font-bold pl-4 border-l border-pageColor">
             {noticia.title}
           </p>
         </Link>

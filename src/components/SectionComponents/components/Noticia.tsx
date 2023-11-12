@@ -54,7 +54,7 @@ export default async function Noticia() {
                 >
                   <Link
                     href={`/pages/noticepage/${noticia.title}`}
-                    className="w-full h-full grid grid-cols-2 border rounded-3xl border-pageColor py-8"
+                    className="w-full h-full grid grid-cols-2 border rounded-3xl border-pageColor py-8 title"
                   >
                     <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor">
                       <Image
@@ -80,7 +80,7 @@ export default async function Noticia() {
                         {noticia.title}
                       </p>
                       {index === 0 && (
-                        <p className="text-3xl">{noticia.bajada}</p>
+                        <p className="text-3xl bajada">{noticia.bajada}</p>
                       )}
                     </div>
                   </Link>

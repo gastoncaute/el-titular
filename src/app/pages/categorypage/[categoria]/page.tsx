@@ -25,21 +25,21 @@ export default async function CategoryPage({ params }: any) {
         <div className="row-span-1 flex items-center mt-12 mb-4">
           <Link
             href={""}
-            className="border border-black rounded-3xl p-2 px-4 font-bold button"
+            className="border border-pageColor rounded-3xl p-2 px-4 font-bold button"
           >
             {categoriaSeleccionadaArreglada}
           </Link>
         </div>
-        <article className="col-start-1 col-end-3 border border-black rounded-3xl h-min p-4 flex flex-col items-center">
+        <article className="col-start-1 col-end-3 border border-pageColor rounded-3xl h-min p-4 flex flex-col items-center">
           {noticiasDeCadaCategoria
             .slice(0, 5)
             .map((noticia: Noticia, index: any) => (
               <Link
                 href={`/pages/noticepage/${noticia.title}`}
-                className="w-full h-min grid grid-cols-2 border rounded-3xl border-black py-8 my-8"
+                className="w-full h-min grid grid-cols-2 border rounded-3xl border-pageColor py-8 my-8"
                 key={index}
               >
-                <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-black">
+                <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor">
                   <div style={{ maxWidth: "100%", height: "auto" }}>
                     <Image
                       src={noticia.image_principal}
@@ -56,12 +56,12 @@ export default async function CategoryPage({ params }: any) {
               </Link>
             ))}
           {noticiasDeCadaCategoria.length > 5 && (
-            <button className="border border-black rounded-3xl p-2 w-60 text-xl font-bold button">
+            <button className="border border-pageColor rounded-3xl p-2 w-60 text-xl font-bold button">
               VER MAS
             </button>
           )}
         </article>
-        <div className="col-start-3 col-end-4 border border-black rounded-3xl ml-12 flex items-center justify-center h-min">
+        <div className="col-start-3 col-end-4 border border-pageColor rounded-3xl ml-12 flex items-center justify-center h-min">
           <NoticiasMasRecientes />
         </div>
       </section>
