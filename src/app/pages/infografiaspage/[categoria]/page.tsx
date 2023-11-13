@@ -31,8 +31,7 @@ export default async function page({ params }: any) {
               return null;
             }
             return (
-              <Link
-                href={`/pages/noticepage/${noticia.title}`}
+              <article
                 key={index}
                 className={
                   index === 0
@@ -65,7 +64,7 @@ export default async function page({ params }: any) {
                 >
                   {noticia.title}
                 </h1>
-              </Link>
+              </article>
             );
           })}
           <div className="col-start-1 col-end-3 flex justify-center items-center w-full pt-4">
