@@ -32,6 +32,7 @@ export const repalceParams = (param: string): string => {
 
         case "%C3%9A":
           return "Ú";
+
         case "%C3%BA":
           return "ú";
         default:

@@ -51,7 +51,7 @@ export default async function CategoryPage({ params }: any) {
                 </div>
                 <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-4">
                   <h1 className={"text-3xl mb-8 font-bold"}>{noticia.title}</h1>
-                  <h2 className="text-xl">{noticia.descripcion}</h2>
+                  <h2 className="text-xl">{noticia.bajada}</h2>
                 </div>
               </Link>
             ))}
@@ -61,7 +61,7 @@ export default async function CategoryPage({ params }: any) {
             </button>
           )}
         </article>
-        <div className="col-start-3 col-end-4 border border-pageColor rounded-3xl ml-12 flex items-center justify-center h-min">
+        <div className="col-start-3 col-end-4 ml-12 flex items-center justify-center h-min">
           <NoticiasMasRecientes />
         </div>
       </section>

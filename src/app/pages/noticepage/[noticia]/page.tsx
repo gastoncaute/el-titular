@@ -116,8 +116,8 @@ export default async function Page({ params }: any) {
                 height={1000}
                 width={1000}
               />
+              <p className="pt-4 text-gray-700">{noticia.epigrafe}</p>
             </div>
-            <p className="py-4 text-gray-700">{noticia.epigrafe}</p>
 
             <div className="p-8 flex justify-center items-center">
               <p className="border border-pageColor w-full h-full">
@@ -128,7 +128,7 @@ export default async function Page({ params }: any) {
           <div className="col-start-3 col-end-4 row-span-2 border border-pageColor rounded-3xl ml-12 flex items-center justify-center h-min">
             <MasRecientesDeCategoria categoria={noticia.categoria} />
           </div>
-          <div className="col-start-1 col-end-4 row-span-3 border border-pageColor rounded-3xl mt-12 flex items-center justify-center">
+          <div className="col-span-3 row-span-3 mt-12 flex items-center justify-center">
             <NoticiasMasRecientes />
           </div>
         </article>

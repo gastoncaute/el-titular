@@ -8,7 +8,7 @@ export default async function NoticiasMasRecientes() {
   const noticias = await obtenerNoticias();
 
   return (
-    <article className="flex flex-col item-center p-4">
+    <article className="flex flex-col item-center p-4 border border-pageColor rounded-3xl">
       <h1 className="flex justify-center border-b border-pageColor pb-2 mb-2">
         <Link
           href={"/pages/masrecientes"}
