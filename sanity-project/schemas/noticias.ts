@@ -25,7 +25,6 @@ export default {
           {title: 'Cultura', value: 'Cultura'},
           {title: 'Tendencias', value: 'Tendencias'},
           {title: 'Internacional', value: 'Internacional'},
-          {title: 'Infografias', value: 'Infografias'},
         ],
       },
     },
