@@ -41,7 +41,7 @@ export default async function page() {
               </div>
               <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-4">
                 <h1 className={"text-3xl mb-8 font-bold"}>{noticia.title}</h1>
-                <h2 className="text-xl">{noticia.descripcion}</h2>
+                <h2 className="text-xl">{noticia.bajada}</h2>
               </div>
             </Link>
           ))}
