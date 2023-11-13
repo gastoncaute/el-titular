@@ -54,7 +54,7 @@ export default async function page({ params }: any) {
                       src={noticia.image_principal}
                       alt={noticia.title}
                       height={250}
-                      width={400}
+                      width={550}
                     />
                   </div>
                 </div>
