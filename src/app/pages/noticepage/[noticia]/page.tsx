@@ -20,9 +20,13 @@ export default async function Page({ params }: any) {
 
   const autor = await obtenerAutor();
   const ref = autor.map((item: Autor) => item.photo.asset._ref);
-  const modifiedRef = String(ref).replace("image-", "").replace("-jpg", ".jpg");
-  const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
-  const imageUrl = baseUrl + modifiedRef;
+  const imageUrls = ref.map((ref: any) => {
+    const modifiedRef = String(ref)
+      .replace("image-", "")
+      .replace("-jpg", ".jpg");
+    const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
+    return baseUrl + modifiedRef;
+  });
 
   const formatCreatedAt = (createdAt: string) => {
     const date = new Date(createdAt);
@@ -73,25 +77,32 @@ export default async function Page({ params }: any) {
               </h5>
             </div>
             <div className="border-b border-pageColor pb-8">
-              {autor.map((item: Autor) => (
-                <p
-                  className="my-8 border border-pageColor rounded-xl p-2 w-52 text-sm flex items-center"
-                  key={item._id}
-                >
-                  <Image
-                    src={imageUrl}
-                    alt={item.name}
-                    width={50}
-                    height={50}
-                    className="border border-pageColor rounded-full mr-2"
-                  />
-                  <h5 className="border-l border-pageColor pl-2">
-                    Autor:
-                    <br />
-                    {item.name}
-                  </h5>
-                </p>
-              ))}
+              {autor.map((item: Autor, index: number) => {
+                const imageUrl = imageUrls[index];
+                if (item._id === noticia.autor._ref && imageUrl) {
+                  return (
+                    <p
+                      className="my-8 border border-pageColor rounded-xl p-2 w-52 text-sm flex items-center"
+                      key={item._id}
+                    >
+                      <Image
+                        src={imageUrl}
+                        alt={item.name}
+                        width={50}
+                        height={50}
+                        className="border border-pageColor rounded-full mr-2"
+                      />
+                      <h5 className="border-l border-pageColor pl-2">
+                        Autor:
+                        <br />
+                        {item.name}
+                      </h5>
+                    </p>
+                  );
+                }
+                return null;
+              })}
+
               <p className="text-2xl py-4">{noticia.copete}</p>
               <p className="text-2xl py-4">{noticia.parrafo_1}</p>
               <p className="text-2xl py-4"> {noticia.parrafo_2}</p>
