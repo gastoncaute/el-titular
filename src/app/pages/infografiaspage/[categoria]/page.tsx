@@ -17,10 +17,10 @@ export default async function page({ params }: any) {
     <>
       <Header />
       <section className="grid grid-cols-2 mx-48 my-24 text-black">
-        <div className="row-span-1 flex items-center mt-12 mb-4">
+        <div className="row-span-1 col-span-2 flex justify-center items-center mt-16 mb-4">
           <Link
             href={""}
-            className="border border-pageColor rounded-3xl p-2 px-4 font-bold button"
+            className="border border-pageColor rounded-3xl p-2 px-16 text-2xl font-bold button"
           >
             {categoriaSeleccionada}
           </Link>
