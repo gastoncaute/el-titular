@@ -1,16 +1,23 @@
 import Footer from "@/components/FooterComponents/Footer";
 import Header from "@/components/HeaderComponents/Header";
-import { Noticia } from "@/types/componentes.types";
-import { obtenerNoticias } from "@/utils/noticia";
+import { Infografia } from "@/types/componentes.types";
+import { obtenerInfografias } from "@/utils/obtenerInfografias";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export default async function page({ params }: any) {
-  const noticias = await obtenerNoticias();
-  const categoriaSeleccionada = params.categoria;
-  const noticiasDeCadaCategoria = noticias.filter((noticia: Noticia) => {
-    return noticia.categoria === categoriaSeleccionada;
+  const infografias = await obtenerInfografias();
+
+  const ref = infografias.map(
+    (infografia: Infografia) => infografia.photo.asset._ref
+  );
+  const imageUrls = ref.map((ref: any) => {
+    const modifiedRef = String(ref)
+      .replace("image-", "")
+      .replace("-jpg", ".jpg");
+    const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
+    return baseUrl + modifiedRef;
   });
 
   return (
@@ -22,11 +29,12 @@ export default async function page({ params }: any) {
             href={""}
             className="border border-pageColor rounded-3xl p-2 px-16 text-2xl font-bold button"
           >
-            {categoriaSeleccionada}
+            Infografias
           </Link>
         </div>
         <article className="col-start-1 col-end-3 grid grid-cols-2 border border-pageColor rounded-3xl h-min p-4">
-          {noticiasDeCadaCategoria.map((noticia: Noticia, index: any) => {
+          {infografias.map((infografia: Infografia, index: number) => {
+            const imageUrl = imageUrls[index];
             if (index >= 6) {
               return null;
             }
@@ -50,10 +58,10 @@ export default async function page({ params }: any) {
                 <div className="flex justify-center items-center">
                   <div style={{ maxWidth: "120%", height: "auto" }}>
                     <Image
-                      src={noticia.image_principal}
-                      alt={noticia.title}
+                      src={imageUrl}
+                      alt={infografia.title}
                       height={250}
-                      width={550}
+                      width={200}
                     />
                   </div>
                 </div>
@@ -62,13 +70,13 @@ export default async function page({ params }: any) {
                     "flex items-center justify-center infografia_title text-3xl font-bold mt-4"
                   }
                 >
-                  {noticia.title}
+                  {infografia.title}
                 </h1>
               </article>
             );
           })}
           <div className="col-start-1 col-end-3 flex justify-center items-center w-full pt-4">
-            {noticiasDeCadaCategoria.length > 6 && (
+            {infografias.length > 6 && (
               <button className="border border-pageColor rounded-3xl p-2 w-60 text-xl font-bold button">
                 VER MAS
               </button>

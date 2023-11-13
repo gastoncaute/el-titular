@@ -40,3 +40,19 @@ export interface Autor {
     };
   };
 }
+
+export interface Infografia {
+  _id: string;
+  title: string;
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  _type: string;
+  photo: {
+    _type: string;
+    asset: {
+      _type: string;
+      _ref: string;
+    };
+  };
+}
