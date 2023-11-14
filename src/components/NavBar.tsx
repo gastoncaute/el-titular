@@ -12,21 +12,25 @@ export default function NavBar() {
         <li className="py-4 text-xl headersButtons w-40 navbar_li">
           <Link href={"/pages/masrecientes"}>Ultimas Noticias</Link>
         </li>
-        <li className="py-4 text-xl headersButtons w-40 navbar_li navbar_categories">
+        <li className="py-4 text-xl w-40 navbar_li navbar_categories">
           Categorias
           <CategoriesButton />
+          <Link
+            href={"/pages/fotospage/Fotografias"}
+            className="flex items-center p-3 border-x h-2 headersButtons category_nav_li"
+          >
+            Fotografias
+          </Link>
         </li>
         <li className="py-4 text-xl headersButtons w-min navbar_li navbar_infografia">
           <Link href={"/pages/fotospage/Infografias"}>Infografias</Link>
         </li>
-        <li className="py-4 text-xl headersButtons w-min navbar_li">
+        <li className="py-4 text-xl headersButtons w-min navbar_li navbar_fotografia">
           <Link href={"/pages/fotospage/Fotografias"}>Fotografias</Link>
         </li>
       </ul>
-      <ul className="navbar_social_buttons mb-12">
-        <li className="text-sm flex justify-center">
-          Síguenos en nuestras redes
-        </li>
+      <ul className="navbar_social_buttons text-xl">
+        <li className="flex justify-center">Síguenos en nuestras redes</li>
         <li className="flex justify-center">
           <SocialButtons />
         </li>

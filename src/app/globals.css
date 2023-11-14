@@ -217,6 +217,8 @@ body {
 
   .navbar_social_buttons {
     display: block;
+    margin-bottom: 3rem;
+    font-size: 14px;
   }
 
   .social_buttons {

@@ -27,9 +27,7 @@ export default function BurgerButton() {
     <div className="absolute z-30">
       <button
         onClick={toggleBurgerButton}
-        className={`z-10 absolute -top-4 transform transition-transform duration-1500 button_burgerButton
-          ${menuVisible ? "translate-x-0" : "translate-x-full"}
-        `}
+        className={`z-10 absolute -top-4 transform transition-transform duration-1500 button_burgerButton`}
       >
         <svg
           width="36"
