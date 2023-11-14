@@ -9,7 +9,7 @@ export default function Footer() {
       <article className="col-start-2 col-end-4 flex flex-col justify-center items-center">
         <Link
           href="/"
-          className="text-7xl font-bold border-b w-full flex justify-center p-12"
+          className="text-7xl font-bold border-b w-full flex justify-center p-12 footer_title"
         >
           <Image
             className="title_hover"
@@ -19,23 +19,24 @@ export default function Footer() {
             width={350}
           />
         </Link>
-        <ul className="flex justify-center items-center p-4">
+        <ul className="flex justify-center items-center p-4 footer_socials">
           <li className="flex justify-evenly">
             <SocialButtons />
           </li>
         </ul>
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
-        <h2 className="text-4xl m-4">"NOTICIAS QUE MARCAN LA DIFERENCIA"</h2>
+        <h2 className="text-4xl m-4 footer_slogan">
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
+          "NOTICIAS QUE MARCAN LA DIFERENCIA"
+        </h2>
         <ul className="w-full flex items-center justify-center m-4">
           <li className="w-full flex justify-evenly">
             <CategoriesButton />
           </li>
         </ul>
-        <h3 className="w-full flex justify-center m-4">
-          <p className="p-4 text-2xl flex items-center">
+        <h3 className="w-full flex justify-center m-4 footer_contact">
+          <p className="p-4 text-2xl flex items-center footer_contact_p">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-mail"
+              className="footer_contact_svg"
               width="28"
               height="28"
               viewBox="0 0 24 24"
@@ -51,10 +52,9 @@ export default function Footer() {
             </svg>
             hola@gmail.com
           </p>
-          <p className="p-4 text-2xl flex items-center">
+          <p className="p-4 text-2xl flex items-center footer_contact_p">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-phone"
+              className="footer_contact_svg"
               width="28"
               height="28"
               viewBox="0 0 24 24"
@@ -74,7 +74,7 @@ export default function Footer() {
           <Link
             href="https://www.linkedin.com/in/gaston-cauteruccio/"
             target="#"
-            className=" text-xs title_hover"
+            className="text-xs title_hover footer_created"
           >
             Página creada por Gaston Cauteruccio
           </Link>

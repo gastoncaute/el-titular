@@ -60,6 +60,34 @@
     width: 28px;
     height: 28px;
   }
+
+  .footer_title {
+    padding: 2.5rem;
+  }
+
+  .footer_socials {
+    padding-bottom: 0;
+  }
+
+  .footer_slogan {
+    font-size: 2rem;
+  }
+
+  .footer_contact {
+    margin: 0.5rem;
+  }
+
+  .footer_contact_p {
+    font-size: 1rem;
+  }
+  .footer_contact_svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer_created {
+    font-size: x-small;
+  }
 }
 
 body {
