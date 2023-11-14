@@ -16,7 +16,7 @@ export default {
       options: {
         accept: 'image/jpeg',
       },
-      validation: (Rule: any) => Rule.required(),
+      validation: (Rule: any) => [Rule.required().error('La imagen del autor es obligatoria')],
     },
   ],
 }
