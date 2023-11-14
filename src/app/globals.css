@@ -64,10 +64,6 @@ body {
     font-family: "Serithai", sans-serif;
   }
 
-  .button_burgerButton {
-    transform: none;
-  }
-
   .burgerButton {
     margin-left: 2rem;
     width: 32px;
@@ -156,11 +152,8 @@ body {
     font-family: "Serithai", sans-serif;
   }
 
-  .button_burgerButton {
-    transform: none;
-  }
-
   .burgerButton {
+    margin-top: 1.5rem;
     margin-left: 10rem;
     width: 32px;
     height: 32px;
@@ -169,6 +162,15 @@ body {
   .header {
     width: 100vw;
     height: 3rem;
+  }
+
+  .title_transform {
+    transform: none;
+  }
+
+  .subtitle_transform {
+    display: none;
+    transform: none;
   }
 
   .title {
