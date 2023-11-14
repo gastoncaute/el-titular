@@ -19,7 +19,7 @@ export default function CategoriesButton() {
           key={categoria}
           href={
             categoria === "Infografias"
-              ? `/pages/infografiaspage/${categoria}`
+              ? `/pages/fotospage/${categoria}`
               : `/pages/categorypage/${categoria}`
           }
         >

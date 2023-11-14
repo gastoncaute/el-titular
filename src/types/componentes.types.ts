@@ -50,9 +50,10 @@ export interface Autor {
   };
 }
 
-export interface Infografia {
+export interface Foto {
   _id: string;
   title: string;
+  categoria: string;
   _createdAt: string;
   _updatedAt: string;
   _rev: string;

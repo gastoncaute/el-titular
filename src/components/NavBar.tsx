@@ -11,10 +11,10 @@ export default function NavBar() {
           <Link href={"/pages/masrecientes"}>Ultimas Noticias</Link>
         </li>
         <li className="py-4 text-xl headersButtons w-min">
-          <Link href={"/pages/infografiaspage/Infografias"}>Infografias</Link>
+          <Link href={"/pages/fotospage/Infografias"}>Infografias</Link>
         </li>
         <li className="py-4 text-xl headersButtons w-min">
-          <Link href={"/pages/fotografiaspage/Fotografias"}>Fotografias</Link>
+          <Link href={"/pages/fotospage/Fotografias"}>Fotografias</Link>
         </li>
       </ul>
     </nav>

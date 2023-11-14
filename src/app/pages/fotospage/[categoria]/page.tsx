@@ -1,17 +1,20 @@
 import Footer from "@/components/FooterComponents/Footer";
 import Header from "@/components/HeaderComponents/Header";
-import { Infografia } from "@/types/componentes.types";
-import { obtenerInfografias } from "@/utils/obtenerInfografias";
+import { Foto } from "@/types/componentes.types";
+import { obtenerFotos } from "@/utils/obtenerFotos";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export default async function page({ params }: any) {
-  const infografias = await obtenerInfografias();
+  const fotos = await obtenerFotos();
 
-  const ref = infografias.map(
-    (infografia: Infografia) => infografia.photo.asset._ref
+  const categoriaSeleccionada = params.categoria;
+  const fotosDeCategoria = fotos.filter(
+    (foto: Foto) => foto.categoria === categoriaSeleccionada
   );
+
+  const ref = fotosDeCategoria.map((foto: Foto) => foto.photo.asset._ref);
   const imageUrls = ref.map((ref: any) => {
     const modifiedRef = String(ref)
       .replace("image-", "")
@@ -29,11 +32,11 @@ export default async function page({ params }: any) {
             href={""}
             className="border border-pageColor rounded-3xl p-2 px-16 text-2xl font-bold button"
           >
-            Fotografias
+            {categoriaSeleccionada}
           </Link>
         </div>
         <article className="col-start-1 col-end-3 grid grid-cols-2 border border-pageColor rounded-3xl h-min p-4">
-          {infografias.map((infografia: Infografia, index: number) => {
+          {fotosDeCategoria.map((foto: Foto, index: number) => {
             const imageUrl = imageUrls[index];
             if (index >= 6) {
               return null;
@@ -56,10 +59,11 @@ export default async function page({ params }: any) {
                 }
               >
                 <div className="flex justify-center items-center">
-                  <div style={{ maxWidth: "120%", height: "auto" }}>
+                  <div>
                     <Image
+                      className="max-h-220px max-w-min"
                       src={imageUrl}
-                      alt={infografia.title}
+                      alt={foto.title}
                       height={250}
                       width={200}
                     />
@@ -70,13 +74,13 @@ export default async function page({ params }: any) {
                     "flex items-center justify-center infografia_title text-3xl font-bold mt-4"
                   }
                 >
-                  {infografia.title}
+                  {foto.title}
                 </h1>
               </article>
             );
           })}
           <div className="col-start-1 col-end-3 flex justify-center items-center w-full pt-4">
-            {infografias.length > 6 && (
+            {fotosDeCategoria.length > 6 && (
               <button className="border border-pageColor rounded-3xl p-2 w-60 text-xl font-bold button">
                 VER MAS
               </button>
