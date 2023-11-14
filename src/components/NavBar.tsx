@@ -23,7 +23,7 @@ export default function NavBar() {
           <Link href={"/pages/fotospage/Fotografias"}>Fotografias</Link>
         </li>
       </ul>
-      <ul className="navbar_social_buttons mb-8">
+      <ul className="navbar_social_buttons mb-12">
         <li className="text-sm flex justify-center">
           Síguenos en nuestras redes
         </li>
