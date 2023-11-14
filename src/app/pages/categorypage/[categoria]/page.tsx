@@ -24,7 +24,8 @@ export default async function CategoryPage({ params }: any) {
   const noticeImageUrls = noticeRef.map((ref: any) => {
     const modifiedRef = String(ref)
       .replace("image-", "")
-      .replace("-jpg", ".jpg");
+      .replace("-jpg", ".jpg")
+      .replace("-webp", ".webp");
     const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
     return baseUrl + modifiedRef;
   });
