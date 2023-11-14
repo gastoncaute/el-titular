@@ -13,6 +13,9 @@ export default function NavBar() {
         <li className="py-4 text-xl headersButtons w-min">
           <Link href={"/pages/infografiaspage/Infografias"}>Infografias</Link>
         </li>
+        <li className="py-4 text-xl headersButtons w-min">
+          <Link href={"/pages/fotografiaspage/Fotografias"}>Fotografias</Link>
+        </li>
       </ul>
     </nav>
   );
