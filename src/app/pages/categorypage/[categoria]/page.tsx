@@ -18,7 +18,7 @@ export default async function CategoryPage({ params }: any) {
     (noticia: Noticia) => noticia.categoria === categoriaSeleccionadaArreglada
   );
 
-  const noticeRef = noticias.map(
+  const noticeRef = noticiasDeCadaCategoria.map(
     (noticia: Noticia) => noticia.image_principal.imagen.asset._ref
   );
   const noticeImageUrls = noticeRef.map((ref: any) => {

@@ -29,13 +29,14 @@ export default async function Page({ params }: any) {
     return baseUrl + modifiedRef;
   });
 
-  const noticeRef = noticias.map(
+  const noticeRef = datosDeNoticiaSeleccionada.map(
     (noticia: Noticia) => noticia.image_principal.imagen.asset._ref
   );
   const noticeImageUrls = noticeRef.map((ref: any) => {
     const modifiedRef = String(ref)
       .replace("image-", "")
-      .replace("-jpg", ".jpg");
+      .replace("-jpg", ".jpg")
+      .replace("-webp", ".webp");
     const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
     return baseUrl + modifiedRef;
   });

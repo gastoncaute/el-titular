@@ -15,7 +15,7 @@ export default async function MasRecientesDeCategoria({
     (noticia: Noticia) => noticia.categoria === categoriaSeleccionada
   );
 
-  const noticeRef = noticias.map(
+  const noticeRef = noticiasDeCadaCategoria.map(
     (noticia: Noticia) => noticia.image_principal.imagen.asset._ref
   );
   const noticeImageUrls = noticeRef.map((ref: any) => {

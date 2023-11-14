@@ -27,6 +27,8 @@ export default async function Noticia() {
     return baseUrl + modifiedRef;
   });
 
+  let globalIndex = 0;
+
   return (
     <>
       <MasRecientes />
@@ -46,7 +48,8 @@ export default async function Noticia() {
 
           <div className="grid grid-cols-2">
             {noticiasPorCategoria[categoria].map((noticia, index) => {
-              const imageUrl = imageUrls[index];
+              const imageUrl = imageUrls[globalIndex];
+              globalIndex++;
               if (index >= 5) {
                 return null;
               }
