@@ -27,7 +27,7 @@ export default function BurgerButton() {
     <div className="absolute z-30">
       <button
         onClick={toggleBurgerButton}
-        className={`z-10 absolute -top-4 transform transition-transform duration-1500 -left-4
+        className={`z-10 absolute -top-4 transform transition-transform duration-1500 button_burgerButton
           ${menuVisible ? "translate-x-0" : "translate-x-full"}
         `}
       >
@@ -40,7 +40,7 @@ export default function BurgerButton() {
           fill="none"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="headersButtons"
+          className="headersButtons burgerButton"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M4 6l16 0" />

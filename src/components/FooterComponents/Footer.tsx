@@ -12,7 +12,7 @@ export default function Footer() {
           className="text-7xl font-bold border-b w-full flex justify-center p-12"
         >
           <Image
-            className="title"
+            className="title_hover"
             src={"/eltitularwhite.png"}
             alt="EL TITULAR"
             height={80}
@@ -74,7 +74,7 @@ export default function Footer() {
           <Link
             href="https://www.linkedin.com/in/gaston-cauteruccio/"
             target="#"
-            className=" text-xs title"
+            className=" text-xs title_hover"
           >
             Página creada por Gaston Cauteruccio
           </Link>

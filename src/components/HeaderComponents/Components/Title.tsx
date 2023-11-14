@@ -26,10 +26,10 @@ export default function Title() {
             ${scrollY ? "-translate-y-24" : "translate-y-0"}
             `}
     >
-      <h1 className="flex justify-center items-center bg-gradient-to-b from-pageColor to-gradientColor rounded-b-3xl border-l border-r border-b border-white w-65rem h-24">
+      <h1 className="flex justify-center items-center bg-gradient-to-b from-pageColor to-gradientColor rounded-b-3xl border-l border-r border-b border-white w-65rem h-24 title">
         <Link
           href={"/"}
-          className="font-bold text-7xl flex justify-center title"
+          className="font-bold text-7xl flex justify-center title_hover"
         >
           <Image
             src={"/eltitularwhite.png"}
@@ -39,7 +39,7 @@ export default function Title() {
           />
         </Link>
       </h1>
-      <nav className="flex items-center bg-gradient-to-b from-pageColor to-gradientColor rounded-b-3xl border-l border-r border-b border-white w-60rem h-12 px-4">
+      <nav className="flex items-center bg-gradient-to-b from-pageColor to-gradientColor rounded-b-3xl border-l border-r border-b border-white w-60rem h-12 px-4 category_nav">
         <ul className="w-full flex items-center justify-evenly">
           <li className="flex justify-evenly w-full">
             <CategoriesButton />
