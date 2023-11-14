@@ -10,7 +10,11 @@
     format("woff");
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1600px) {
+.navbar_categories {
+  display: none;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1600px) {
   body {
     font-size: 12px;
     color: #86082e;
@@ -24,7 +28,6 @@
 
   .burgerButton {
     margin-left: 2rem;
-    transform: none;
     width: 32px;
     height: 32px;
   }
@@ -33,6 +36,14 @@
     margin-left: 0;
     width: 20rem;
     margin-top: -22px;
+  }
+
+  .navbar_categories {
+    display: none;
+  }
+
+  .navbar_social_buttons {
+    display: none;
   }
 
   .navbar_li {
@@ -59,6 +70,120 @@
   .social_buttons {
     width: 28px;
     height: 28px;
+  }
+
+  .footer_title {
+    padding: 2rem;
+  }
+
+  .footer_socials {
+    padding-bottom: 0;
+  }
+
+  .footer_slogan {
+    font-size: 2rem;
+  }
+
+  .footer_category {
+    margin: 0.5rem;
+  }
+
+  .footer_contact {
+    margin: 0.5rem;
+  }
+
+  .footer_contact_p {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .footer_contact_svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer_created {
+    font-size: x-small;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 10px;
+    color: #86082e;
+    background: #ebebe3;
+    font-family: "Serithai", sans-serif;
+  }
+
+  .button_burgerButton {
+    transform: none;
+  }
+
+  .burgerButton {
+    margin-left: 10rem;
+    width: 32px;
+    height: 32px;
+  }
+
+  .header {
+    width: 100vw;
+    height: 3rem;
+  }
+
+  .title {
+    width: 13rem;
+    height: 2.5rem;
+    padding: 1rem;
+  }
+
+  .category_nav {
+    display: none;
+  }
+
+  .category_nav_li {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom-width: 1px;
+    border-left: none;
+    border-right: none;
+  }
+
+  .header_social_buttons {
+    display: none;
+  }
+
+  .navbar {
+    margin-left: 8.75rem;
+    width: 15rem;
+    margin-top: -20px;
+    padding: 0.75rem;
+    padding-top: 1.5rem;
+  }
+
+  .navbar_categories {
+    display: block;
+  }
+
+  .navbar_li {
+    font-size: 18px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .navbar_infografia {
+    display: none;
+  }
+
+  .navbar_social_buttons {
+    display: block;
+  }
+
+  .social_buttons {
+    width: 20px;
+    height: 20px;
+  }
+
+  .clima_widget {
+    display: none;
   }
 
   .footer_title {

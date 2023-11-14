@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <Section />
-      <Footer />
+      {/* <Section />
+      <Footer /> */}
     </main>
   );
 }

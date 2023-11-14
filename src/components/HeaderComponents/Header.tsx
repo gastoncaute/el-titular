@@ -42,7 +42,7 @@ export default function Header() {
               />
             </Link>
           </li>
-          <li className="flex justify-center col-start-4 col-end-5">
+          <li className="flex justify-center col-start-4 col-end-5 header_social_buttons">
             <SocialButtons />
           </li>
         </ul>
