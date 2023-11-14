@@ -7,14 +7,14 @@ export default {
       name: 'autor',
       type: 'reference',
       title: 'Autor',
-      validation: (Rule: any) => Rule.required(),
+      validation: (Rule: any) => Rule.required().error('El "Autor" es obligatorio'),
       to: [{type: 'author'}],
     },
     {
       name: 'categoria',
       type: 'string',
-      title: 'Categoria',
-      validation: (Rule: any) => Rule.required(),
+      title: 'Categoría',
+      validation: (Rule: any) => Rule.required().error('La "Categoría" es obligatoria'),
       options: {
         list: [
           {title: 'Policiales', value: 'Policiales'},
@@ -33,26 +33,35 @@ export default {
       type: 'string',
       title: 'Título',
       validation: (Rule: any) => [
-        Rule.required(),
-        Rule.max(90).error('El titulo debe tener 90 caracteres como máximo'),
+        Rule.required().error('El "Título" es obligatorio'),
+        Rule.max(90).error('El "Título" debe tener 90 caracteres como máximo'),
       ],
     },
     {
       name: 'bajada',
       type: 'string',
       title: 'Bajada',
-      validation: (Rule: any) => Rule.required(),
+      validation: (Rule: any) => Rule.required().error('La "Bajada" es obligatoria'),
     },
     {
       name: 'image_principal',
-      type: 'string',
       title: 'Imagen Principal',
-      validation: (Rule: any) => Rule.required(),
-    },
-    {
-      name: 'epigrafe',
-      type: 'string',
-      title: 'Epígrafe',
+      type: 'object',
+      fields: [
+        {
+          name: 'imagen',
+          type: 'image',
+          title: 'Imagen',
+          validation: (Rule: any) => Rule.required().error('La "Imagen" es obligatoria'),
+        },
+        {
+          name: 'epigrafe',
+          type: 'string',
+          title: 'Epígrafe',
+          validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
+        },
+      ],
+      validation: (Rule: any) => Rule.required().error('La "Imagen Principal" es obligatoria'),
     },
     {
       name: 'copete',

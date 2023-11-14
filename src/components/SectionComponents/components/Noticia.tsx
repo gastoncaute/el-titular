@@ -15,6 +15,17 @@ export default async function Noticia() {
     noticiasPorCategoria[noticia.categoria].push(noticia);
   });
 
+  const ref = noticias.map(
+    (noticia: Noticia) => noticia.image_principal.imagen.asset._ref
+  );
+  const imageUrls = ref.map((ref: any) => {
+    const modifiedRef = String(ref)
+      .replace("image-", "")
+      .replace("-jpg", ".jpg");
+    const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
+    return baseUrl + modifiedRef;
+  });
+
   return (
     <>
       <MasRecientes />
@@ -34,6 +45,7 @@ export default async function Noticia() {
 
           <div className="grid grid-cols-2">
             {noticiasPorCategoria[categoria].map((noticia, index) => {
+              const imageUrl = imageUrls[index];
               if (index >= 5) {
                 return null;
               }
@@ -60,10 +72,10 @@ export default async function Noticia() {
                       <Image
                         className={
                           index === 0
-                            ? "max-h-400px max-w-full"
-                            : "max-h-130px max-w-full"
+                            ? "max-h-400px max-w-min"
+                            : "max-h-130px max-w-min"
                         }
-                        src={noticia.image_principal}
+                        src={imageUrl}
                         alt={noticia.title}
                         height={index === 0 ? 250 : 130}
                         width={index === 0 ? 500 : 220}

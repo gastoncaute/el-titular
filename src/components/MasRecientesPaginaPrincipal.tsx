@@ -6,10 +6,23 @@ import { obtenerNoticias } from "@/utils/noticia";
 
 export default async function MasRecientes() {
   const noticias = await obtenerNoticias();
+
+  const noticeRef = noticias.map(
+    (noticia: Noticia) => noticia.image_principal.imagen.asset._ref
+  );
+  const noticeImageUrls = noticeRef.map((ref: any) => {
+    const modifiedRef = String(ref)
+      .replace("image-", "")
+      .replace("-jpg", ".jpg");
+    const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
+    return baseUrl + modifiedRef;
+  });
+
   return (
     <article className="col-start-2 col-end-6 rounded-3xl m-8 border border-pageColor">
       <div className="grid grid-cols-2">
-        {noticias.map((noticia: Noticia, index: any) => {
+        {noticias.map((noticia: Noticia, index: number) => {
+          const noticeImageUrl = noticeImageUrls[index];
           if (index >= 5) {
             return null;
           }
@@ -36,10 +49,10 @@ export default async function MasRecientes() {
                   <Image
                     className={
                       index === 0
-                        ? "max-h-400px max-w-full"
-                        : "max-h-130px max-w-full"
+                        ? "max-h-400px max-w-min"
+                        : "max-h-130px max-w-min"
                     }
-                    src={noticia.image_principal}
+                    src={noticeImageUrl}
                     alt={noticia.title}
                     height={index === 0 ? 250 : 130}
                     width={index === 0 ? 500 : 220}

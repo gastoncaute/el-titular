@@ -12,7 +12,16 @@ export interface Noticia {
   title: string;
   bajada: string;
   copete: string;
-  image_principal: string;
+  image_principal: {
+    epigrafe: string;
+    imagen: {
+      _type: any;
+      asset: {
+        _ref: string;
+        _type: string;
+      };
+    };
+  };
   epigrafe: string;
   parrafo_1: string;
   parrafo_2: string;
