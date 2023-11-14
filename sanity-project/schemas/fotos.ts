@@ -1,8 +1,20 @@
 export default {
-  name: 'infografias',
+  name: 'fotos',
   type: 'document',
-  title: 'Infografias',
+  title: 'Fotos',
   fields: [
+    {
+      name: 'categoria',
+      type: 'string',
+      title: 'Categoria',
+      validation: (Rule: any) => Rule.required().error('La "Categoría" es obligatoria'),
+      options: {
+        list: [
+          {title: 'Infografias', value: 'Infografias'},
+          {title: 'Fotografias', value: 'Fotografias'},
+        ],
+      },
+    },
     {
       name: 'title',
       type: 'string',
