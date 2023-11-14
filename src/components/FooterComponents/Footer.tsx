@@ -12,6 +12,7 @@ export default function Footer() {
           className="text-7xl font-bold border-b w-full flex justify-center p-12"
         >
           <Image
+            className="title"
             src={"/eltitularwhite.png"}
             alt="EL TITULAR"
             height={80}
