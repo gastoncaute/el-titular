@@ -28,7 +28,7 @@ export default function Footer() {
           {/* eslint-disable-next-line react/no-unescaped-entities */}
           "NOTICIAS QUE MARCAN LA DIFERENCIA"
         </h2>
-        <ul className="w-full flex items-center justify-center m-4">
+        <ul className="w-full flex items-center justify-center m-4 footer_category">
           <li className="w-full flex justify-evenly">
             <CategoriesButton />
           </li>

@@ -62,7 +62,7 @@
   }
 
   .footer_title {
-    padding: 2.5rem;
+    padding: 2rem;
   }
 
   .footer_socials {
@@ -73,12 +73,17 @@
     font-size: 2rem;
   }
 
+  .footer_category {
+    margin: 0.5rem;
+  }
+
   .footer_contact {
     margin: 0.5rem;
   }
 
   .footer_contact_p {
     font-size: 1rem;
+    padding: 0.5rem;
   }
   .footer_contact_svg {
     width: 20px;
