@@ -27,16 +27,16 @@ export default async function page({ params }: any) {
   return (
     <>
       <Header />
-      <section className="grid grid-cols-2 mx-48 my-24 text-black">
-        <div className="row-span-1 col-span-2 flex justify-center items-center mt-16 mb-4">
+      <section className="grid grid-cols-2 mx-48 my-24 text-black fotos_main_section">
+        <div className="row-span-1 col-span-2 flex justify-center items-center mt-16 mb-4 fotos_div_category_link">
           <Link
             href={""}
-            className="border border-pageColor rounded-3xl p-2 px-16 text-2xl font-bold button"
+            className="border border-pageColor rounded-3xl p-2 px-16 text-2xl font-bold button fotos_div_link"
           >
             {categoriaSeleccionada}
           </Link>
         </div>
-        <article className="col-start-1 col-end-3 grid grid-cols-2 border border-pageColor rounded-3xl h-min p-4">
+        <article className="col-start-1 col-end-3 grid grid-cols-2 border border-pageColor rounded-3xl h-min p-4 fotos_main_article">
           {fotosDeCategoria.map((foto: Foto, index: number) => {
             const imageUrl = imageUrls[index];
             if (index >= 6) {
@@ -47,28 +47,26 @@ export default async function page({ params }: any) {
                 key={index}
                 className={
                   index === 0
-                    ? "mx-8 m-4 col-start-1 col-end-2 row-start-1 row-end-2 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor "
+                    ? "mx-8 m-4 col-start-1 col-end-2 row-start-1 row-end-2 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor fotos_image_article"
                     : index === 1
-                    ? "mx-8 m-4 col-start-2 col-end-3 row-start-1 row-end-2 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor "
+                    ? "mx-8 m-4 col-start-2 col-end-3 row-start-1 row-end-2 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor fotos_image_article"
                     : index === 2
-                    ? "mx-8 m-4 col-start-1 col-end-2 row-start-2 row-end-3 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor "
+                    ? "mx-8 m-4 col-start-1 col-end-2 row-start-2 row-end-3 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor fotos_image_article"
                     : index === 3
-                    ? "mx-8 m-4 col-start-2 col-end-3 row-start-2 row-end-3 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor "
+                    ? "mx-8 m-4 col-start-2 col-end-3 row-start-2 row-end-3 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor fotos_image_article"
                     : index === 4
-                    ? "mx-8 m-4 col-start-1 col-end-2 row-start-3 row-end-4 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor "
-                    : "mx-8 m-4 col-start-2 col-end-3 row-start-3 row-end-4 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor "
+                    ? "mx-8 m-4 col-start-1 col-end-2 row-start-3 row-end-4 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor fotos_image_article"
+                    : "mx-8 m-4 col-start-2 col-end-3 row-start-3 row-end-4 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor fotos_image_article"
                 }
               >
                 <div className="flex justify-center items-center">
-                  <div>
-                    <Image
-                      className="max-h-220px max-w-min"
-                      src={imageUrl}
-                      alt={foto.title}
-                      height={250}
-                      width={200}
-                    />
-                  </div>
+                  <Image
+                    className="max-h-220px max-w-min"
+                    src={imageUrl}
+                    alt={foto.title}
+                    height={250}
+                    width={200}
+                  />
                 </div>
                 <h1
                   className={

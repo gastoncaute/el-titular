@@ -390,6 +390,39 @@ body {
     margin: 0.25rem;
   }
 
+  /* FOTOS RESPONSIVE */
+
+  .fotos_main_section {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+  }
+
+  .fotos_div_category_link {
+    margin-top: 3rem;
+  }
+
+  .fotos_div_link {
+    font-size: 16px;
+    padding: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .fotos_main_article {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .fotos_image_article {
+    margin: 1rem;
+  }
+
+  .infografia_title {
+    font-size: 16px;
+  }
+
   /* FOOTER */
 
   .footer {
