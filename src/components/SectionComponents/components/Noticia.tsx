@@ -35,12 +35,12 @@ export default async function Noticia() {
       {Object.keys(noticiasPorCategoria).map((categoria) => (
         <article
           key={categoria}
-          className="col-start-2 col-end-6 rounded-3xl m-8 border border-pageColor"
+          className="col-start-2 col-end-6 rounded-3xl m-8 border border-pageColor category_section"
         >
-          <div className="m-4 pb-2 flex items-center justify-center mb-4 border-b border-pageColor">
+          <div className="m-4 pb-2 flex items-center justify-center mb-4 border-b border-pageColor category_button_section">
             <Link
               href={`/pages/categorypage/${categoria}`}
-              className="flex justify-center text-2xl rounded-3xl p-2 px-4 border border-transparent button"
+              className="flex justify-center text-2xl font-bold rounded-3xl p-2 border border-transparent button category_button_section_link"
             >
               {categoria}
             </Link>
@@ -60,24 +60,24 @@ export default async function Noticia() {
                     index === 0
                       ? "col-start-1 col-end-3 row-start-1 row-end-3 p-4"
                       : index === 1
-                      ? "col-start-1 col-end-2 row-start-3 row-end-4 p-4"
+                      ? "col-start-1 col-end-2 row-start-3 row-end-4 p-4 second_section_notice"
                       : index === 2
-                      ? "col-start-2 col-end-3 row-start-3 row-end-4 p-4"
+                      ? "col-start-2 col-end-3 row-start-3 row-end-4 p-4 section_notice_none"
                       : index === 3
-                      ? "col-start-1 col-end-2 row-start-4 row-end-5 p-4"
-                      : "col-start-2 col-end-3 row-start-4 row-end-5 p-4"
+                      ? "col-start-1 col-end-2 row-start-4 row-end-5 p-4 section_notice_none"
+                      : "col-start-2 col-end-3 row-start-4 row-end-5 p-4 section_notice_none"
                   }
                 >
                   <Link
                     href={`/pages/noticepage/${noticia.title}`}
-                    className="w-full h-full grid grid-cols-2 border rounded-3xl border-pageColor py-8 noticias_title"
+                    className="w-full h-full grid grid-cols-2 border rounded-3xl border-pageColor py-8 noticias_title main_section_notice"
                   >
-                    <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor">
+                    <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor category_section_image_content">
                       <Image
                         className={
                           index === 0
-                            ? "max-h-350px max-w-min"
-                            : "max-h-130px max-w-min"
+                            ? "max-h-350px max-w-min category_section_image"
+                            : "max-h-130px max-w-min category_section_image"
                         }
                         src={imageUrl}
                         alt={noticia.title}
@@ -85,18 +85,20 @@ export default async function Noticia() {
                         width={index === 0 ? 500 : 220}
                       />
                     </div>
-                    <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-4">
-                      <p
+                    <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-4 ultimasNoticias_title_component">
+                      <h1
                         className={
                           index === 0
-                            ? "text-5xl mb-8 font-bold"
-                            : "text-2xl font-bold"
+                            ? "text-5xl mb-8 font-bold principal_page_title"
+                            : "text-2xl font-bold principal_page_title"
                         }
                       >
                         {noticia.title}
-                      </p>
+                      </h1>
                       {index === 0 && (
-                        <p className="text-3xl">{noticia.bajada}</p>
+                        <h2 className="text-3xl principal_page_bajada">
+                          {noticia.bajada}
+                        </h2>
                       )}
                     </div>
                   </Link>
