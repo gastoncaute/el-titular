@@ -32,6 +32,7 @@ export default function Title() {
           className="font-bold text-7xl flex justify-center title_hover"
         >
           <Image
+            className="title_image"
             src={"/eltitularwhite.png"}
             alt="EL TITULAR"
             height={80}
