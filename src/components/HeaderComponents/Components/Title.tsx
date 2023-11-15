@@ -23,7 +23,7 @@ export default function Title() {
   return (
     <section
       className={`flex flex-col items-center fixed transform transition-transform duration-1500 z-10 title_transform
-            ${scrollY ? "-translate-y-24" : "translate-y-0"}
+            ${scrollY ? "-translate-y-24 title_translate" : "translate-y-0"}
             `}
     >
       <h1 className="flex justify-center items-center bg-gradient-to-b from-pageColor to-gradientColor rounded-b-3xl border-l border-r border-b border-white w-65rem h-24 title">
