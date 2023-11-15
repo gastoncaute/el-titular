@@ -10,7 +10,7 @@ export default function Footer() {
         <h1 className="flex justify-center items-center footer_title">
           <Link
             href="/"
-            className="text-7xl font-bold border-b w-full flex justify-center p-12 footer_title"
+            className="text-7xl font-bold w-full flex justify-center p-12 footer_title"
           >
             <Image
               className="title_hover footer_image"
@@ -21,7 +21,7 @@ export default function Footer() {
             />
           </Link>
         </h1>
-        <ul className="flex justify-center items-center p-4 footer_socials">
+        <ul className="flex justify-center items-center p-4 footer_socials border-t w-full">
           <li className="flex justify-evenly">
             <SocialButtons />
           </li>
