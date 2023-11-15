@@ -76,7 +76,7 @@ export default async function Noticia() {
                       <Image
                         className={
                           index === 0
-                            ? "max-h-400px max-w-min"
+                            ? "max-h-350px max-w-min"
                             : "max-h-130px max-w-min"
                         }
                         src={imageUrl}

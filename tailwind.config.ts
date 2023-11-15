@@ -27,7 +27,7 @@ const config: Config = {
         "220px": "220px",
       },
       maxHeight: {
-        "400px": "400px",
+        "350px": "300px",
         "300px": "300px",
         "220px": "220px",
         "130px": "130px",

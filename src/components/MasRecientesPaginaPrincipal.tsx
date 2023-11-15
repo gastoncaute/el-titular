@@ -49,7 +49,7 @@ export default async function MasRecientes() {
                 <Image
                   className={
                     index === 0
-                      ? "max-h-400px max-w-min ultimasNoticias_image"
+                      ? "max-h-350px max-w-min ultimasNoticias_image"
                       : "max-h-130px max-w-min ultimasNoticias_image"
                   }
                   src={noticeImageUrl}
