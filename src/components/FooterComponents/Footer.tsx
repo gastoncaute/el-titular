@@ -5,20 +5,22 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="w-full grid grid-cols-4 bg-gradient-to-b from-pageColor to-gradientColor text-white absolute">
+    <footer className="w-full grid grid-cols-4 bg-gradient-to-b from-pageColor to-gradientColor text-white absolute footer">
       <article className="col-start-2 col-end-4 flex flex-col justify-center items-center">
-        <Link
-          href="/"
-          className="text-7xl font-bold border-b w-full flex justify-center p-12 footer_title"
-        >
-          <Image
-            className="title_hover"
-            src={"/eltitularwhite.png"}
-            alt="EL TITULAR"
-            height={80}
-            width={350}
-          />
-        </Link>
+        <h1 className="flex justify-center items-center footer_title">
+          <Link
+            href="/"
+            className="text-7xl font-bold border-b w-full flex justify-center p-12 footer_title"
+          >
+            <Image
+              className="title_hover footer_image"
+              src={"/eltitularwhite.png"}
+              alt="EL TITULAR"
+              height={80}
+              width={350}
+            />
+          </Link>
+        </h1>
         <ul className="flex justify-center items-center p-4 footer_socials">
           <li className="flex justify-evenly">
             <SocialButtons />

@@ -253,6 +253,8 @@ body {
   .main_section {
     display: flex;
     flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 0rem;
   }
 
   .clima_widget {
@@ -261,16 +263,31 @@ body {
 
   /* FOOTER */
 
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+
   .footer_title {
-    padding: 2rem;
+    width: 100%;
+    height: 2.5rem;
+    padding-top: 1.25rem;
+    padding-bottom: 2rem;
+  }
+
+  .footer_image {
+    height: 1rem;
+    width: min-content;
   }
 
   .footer_socials {
-    padding-bottom: 0;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
   }
 
   .footer_slogan {
-    font-size: 2rem;
+    margin: 0rem;
+    font-size: 1rem;
   }
 
   .footer_category {
@@ -278,16 +295,16 @@ body {
   }
 
   .footer_contact {
-    margin: 0.5rem;
+    margin: 0rem;
   }
 
   .footer_contact_p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     padding: 0.5rem;
   }
   .footer_contact_svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
 
   .footer_created {
