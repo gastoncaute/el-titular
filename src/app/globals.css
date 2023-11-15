@@ -214,8 +214,8 @@ body {
   .navbar {
     margin-left: 8.75rem;
     width: 15rem;
-    height: 110vh;
-    margin-top: -20px;
+    height: 100vh;
+    margin-top: 1px;
     padding: 0.75rem;
     padding-top: 1.5rem;
   }
