@@ -175,6 +175,7 @@ body {
   }
 
   .header {
+    margin-top: -1px;
     width: 100vw;
     height: 3rem;
   }
@@ -273,7 +274,7 @@ body {
   }
 
   .footer_category {
-    margin: 0.5rem;
+    display: none;
   }
 
   .footer_contact {
