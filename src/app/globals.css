@@ -262,6 +262,56 @@ body {
     display: none;
   }
 
+  .main_section_ultimasNoticias {
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.75rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+
+  .ultimasNoticias_article {
+    width: min-content;
+    padding: 0.5rem;
+  }
+
+  .ultimasNoticias_link {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ultimasNoticias_image_content {
+    padding: 0.5rem;
+    border-right: none;
+    border-bottom-width: 1px;
+  }
+
+  .ultimasNoticias_image {
+    max-height: 150px;
+    max-width: min-content;
+  }
+
+  .ultimasNoticias_title_component {
+    margin: 0;
+  }
+
+  .ultimasNoticias_title {
+    text-align: justify;
+    font-size: 20px;
+    margin: 0.25rem;
+  }
+
+  .ultimasNoticias_bajada {
+    text-align: justify;
+    font-size: 14px;
+    margin: 0.25rem;
+  }
+
   /* FOOTER */
 
   .footer {
