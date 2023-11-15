@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="w-full grid grid-cols-4 bg-gradient-to-b from-pageColor to-gradientColor text-white absolute footer">
       <article className="col-start-2 col-end-4 flex flex-col justify-center items-center">
-        <h1 className="flex justify-center items-center footer_title">
+        <h1 className="flex justify-center items-center">
           <Link
             href="/"
             className="text-7xl font-bold w-full flex justify-center p-12 footer_title"
