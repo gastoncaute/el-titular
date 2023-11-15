@@ -121,6 +121,10 @@ body {
     height: 28px;
   }
 
+  /* SECTION */
+
+  /* FOOTER */
+
   .footer_title {
     padding: 2rem;
   }
@@ -243,9 +247,18 @@ body {
     height: 20px;
   }
 
+  /* SECTION */
+
+  .main_section {
+    display: flex;
+    flex-direction: column;
+  }
+
   .clima_widget {
     display: none;
   }
+
+  /* FOOTER */
 
   .footer_title {
     padding: 2rem;
