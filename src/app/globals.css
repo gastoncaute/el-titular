@@ -118,6 +118,9 @@ body {
 
   .category_nav_li {
     padding: 0.5rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.5rem;
+    font-size: 14px;
   }
 
   .social_buttons {
