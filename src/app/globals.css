@@ -254,13 +254,34 @@ body {
   .main_section {
     display: flex;
     flex-direction: column;
-    padding-top: 2rem;
+    margin-top: -2rem;
     padding-bottom: 0rem;
   }
 
   .clima_widget {
     display: none;
   }
+
+  .principal_page_ultimasNoticias_link {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .principal_page_ultimasNoticias_title {
+    text-align: justify;
+    font-size: 20px;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .principal_page_ultimasNoticias_bajada {
+    text-align: justify;
+    font-size: 12px;
+    margin: 0;
+  }
+
+  /* pagina de ultimas noticias */
 
   .main_section_ultimasNoticias {
     width: min-content;

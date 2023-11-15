@@ -20,62 +20,64 @@ export default async function MasRecientes() {
   });
 
   return (
-    <article className="col-start-2 col-end-6 rounded-3xl m-8 border border-pageColor">
-      <div className="grid grid-cols-2">
-        {noticias.map((noticia: Noticia, index: number) => {
-          const noticeImageUrl = noticeImageUrls[index];
-          if (index >= 5) {
-            return null;
-          }
-          return (
-            <div
-              key={noticia._id}
-              className={
-                index === 0
-                  ? "col-start-1 col-end-3 row-start-1 row-end-3 p-4"
-                  : index === 1
-                  ? "col-start-1 col-end-2 row-start-3 row-end-4 p-4"
-                  : index === 2
-                  ? "col-start-2 col-end-3 row-start-3 row-end-4 p-4"
-                  : index === 3
-                  ? "col-start-1 col-end-2 row-start-4 row-end-5 p-4"
-                  : "col-start-2 col-end-3 row-start-4 row-end-5 p-4"
-              }
+    <article className="col-start-2 col-end-6 grid grid-cols-2 rounded-3xl m-8 border border-pageColor main_section">
+      {noticias.map((noticia: Noticia, index: number) => {
+        const noticeImageUrl = noticeImageUrls[index];
+        if (index >= 5) {
+          return null;
+        }
+        return (
+          <div
+            key={noticia._id}
+            className={
+              index === 0
+                ? "col-start-1 col-end-3 row-start-1 row-end-3 p-4"
+                : index === 1
+                ? "col-start-1 col-end-2 row-start-3 row-end-4 p-4"
+                : index === 2
+                ? "col-start-2 col-end-3 row-start-3 row-end-4 p-4"
+                : index === 3
+                ? "col-start-1 col-end-2 row-start-4 row-end-5 p-4"
+                : "col-start-2 col-end-3 row-start-4 row-end-5 p-4"
+            }
+          >
+            <Link
+              href={`/pages/noticepage/${noticia.title}`}
+              className="w-full h-full grid grid-cols-2 border rounded-3xl border-pageColor py-8 noticias_title principal_page_ultimasNoticias_link"
             >
-              <Link
-                href={`/pages/noticepage/${noticia.title}`}
-                className="w-full h-full grid grid-cols-2 border rounded-3xl border-pageColor py-8 noticias_title"
-              >
-                <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor">
-                  <Image
-                    className={
-                      index === 0
-                        ? "max-h-400px max-w-min"
-                        : "max-h-130px max-w-min"
-                    }
-                    src={noticeImageUrl}
-                    alt={noticia.title}
-                    height={index === 0 ? 250 : 130}
-                    width={index === 0 ? 500 : 220}
-                  />
-                </div>
-                <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-4">
-                  <p
-                    className={
-                      index === 0
-                        ? "text-5xl mb-8 font-bold"
-                        : "text-2xl font-bold"
-                    }
-                  >
-                    {noticia.title}
-                  </p>
-                  {index === 0 && <p className="text-3xl">{noticia.bajada}</p>}
-                </div>
-              </Link>
-            </div>
-          );
-        })}
-      </div>
+              <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor ultimasNoticias_image_content">
+                <Image
+                  className={
+                    index === 0
+                      ? "max-h-400px max-w-min ultimasNoticias_image"
+                      : "max-h-130px max-w-min ultimasNoticias_image"
+                  }
+                  src={noticeImageUrl}
+                  alt={noticia.title}
+                  height={index === 0 ? 250 : 130}
+                  width={index === 0 ? 500 : 220}
+                />
+              </div>
+              <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-4 ultimasNoticias_title_component">
+                <h1
+                  className={
+                    index === 0
+                      ? "text-5xl mb-8 font-bold principal_page_ultimasNoticias_title"
+                      : "text-2xl font-bold principal_page_ultimasNoticias_title"
+                  }
+                >
+                  {noticia.title}
+                </h1>
+                {index === 0 && (
+                  <h2 className="text-3xl principal_page_ultimasNoticias_bajada">
+                    {noticia.bajada}
+                  </h2>
+                )}
+              </div>
+            </Link>
+          </div>
+        );
+      })}
     </article>
   );
 }
