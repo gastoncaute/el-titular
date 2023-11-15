@@ -48,7 +48,7 @@ export default function BurgerButton() {
       </button>
       <div
         className={`transform transition-transform duration-1500
-        ${menuVisible ? "translate-x-0" : "-translate-x-full"} w-96`}
+        ${menuVisible ? "translate-x-0" : "-translate-x-200"} w-96`}
       >
         <NavBar />
       </div>
