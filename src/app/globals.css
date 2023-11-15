@@ -228,6 +228,10 @@ body {
     display: none;
   }
 
+  .navbar_fotografia {
+    display: none;
+  }
+
   .navbar_social_buttons {
     display: block;
     margin-bottom: 3rem;
