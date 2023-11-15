@@ -33,7 +33,7 @@ export default async function CategoryPage({ params }: any) {
   return (
     <>
       <Header />
-      <section className="grid grid-cols-3 mx-48 my-24 text-black">
+      <section className="grid grid-cols-3 mx-48 my-24 text-black main_section_ultimasNoticias">
         <div className="row-span-1 flex items-center mt-12 mb-4">
           <Link
             href={""}
@@ -42,7 +42,7 @@ export default async function CategoryPage({ params }: any) {
             {categoriaSeleccionadaArreglada}
           </Link>
         </div>
-        <article className="col-start-1 col-end-3 border border-pageColor rounded-3xl h-min p-4 flex flex-col items-center">
+        <article className="col-start-1 col-end-3 border border-pageColor rounded-3xl h-min p-4 flex flex-col items-center ultimasNoticias_article">
           {noticiasDeCadaCategoria
             .slice(0, 5)
             .map((noticia: Noticia, index: number) => {
@@ -50,25 +50,29 @@ export default async function CategoryPage({ params }: any) {
               return (
                 <Link
                   href={`/pages/noticepage/${noticia.title}`}
-                  className="w-full h-min grid grid-cols-2 border rounded-3xl border-pageColor py-8 my-8 noticias_title"
+                  className="w-full h-min grid grid-cols-2 border rounded-3xl border-pageColor py-8 my-8 noticias_title ultimasNoticias_link"
                   key={index}
                 >
-                  <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor">
-                    <div style={{ maxWidth: "100%", height: "auto" }}>
-                      <Image
-                        className="max-h-220px max-w-min"
-                        src={noticeImageUrl}
-                        alt={noticia.title}
-                        height={250}
-                        width={400}
-                      />
-                    </div>
+                  <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor ultimasNoticias_image_content">
+                    <Image
+                      className="max-h-220px max-w-min ultimasNoticias_image"
+                      src={noticeImageUrl}
+                      alt={noticia.title}
+                      height={250}
+                      width={400}
+                    />
                   </div>
-                  <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-4">
-                    <h1 className={"text-3xl mb-8 font-bold"}>
+                  <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-4 ultimasNoticias_title_component">
+                    <h1
+                      className={
+                        "text-3xl mb-8 font-bold ultimasNoticias_title"
+                      }
+                    >
                       {noticia.title}
                     </h1>
-                    <h2 className="text-xl">{noticia.bajada}</h2>
+                    <h2 className="text-xl ultimasNoticias_bajada">
+                      {noticia.bajada}
+                    </h2>
                   </div>
                 </Link>
               );
@@ -79,7 +83,7 @@ export default async function CategoryPage({ params }: any) {
             </button>
           )}
         </article>
-        <div className="col-start-3 col-end-4 ml-12 flex items-center justify-center h-min">
+        <div className="col-start-3 col-end-4 ml-12 flex items-center justify-center h-min display_none">
           <NoticiasMasRecientes />
         </div>
       </section>
