@@ -70,7 +70,7 @@ export default async function page({ params }: any) {
                 </div>
                 <h1
                   className={
-                    "flex items-center justify-center infografia_title text-3xl font-bold mt-4"
+                    "flex items-center justify-center fotos_title text-3xl font-bold mt-4"
                   }
                 >
                   {foto.title}

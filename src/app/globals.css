@@ -44,11 +44,11 @@ body {
   text-decoration: underline;
 }
 
-.infografia_title {
+.fotos_title {
   display: none;
 }
 
-.noticias_title:hover .infografia_title {
+.noticias_title:hover .fotos_title {
   display: block;
 }
 
@@ -127,6 +127,26 @@ body {
 
   /* SECTION */
 
+  /* CATEGORYPAGE */
+
+  .main_section_ultimasNoticias {
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+
+  .ultimasNoticias_image {
+    max-height: 12rem;
+  }
+
+  .fotos_main_section {
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+
+  .fotos_title {
+    font-size: 20px;
+  }
+
   /* FOOTER */
 
   .footer_title {
@@ -162,6 +182,8 @@ body {
     font-size: x-small;
   }
 }
+
+/* ----------o----------o----------o----------o----------o----------o----------o----------o----------o----------o----------o---------- */
 
 @media screen and (max-width: 600px) {
   .display_none {
@@ -423,7 +445,7 @@ body {
     margin: 1rem;
   }
 
-  .infografia_title {
+  .fotos_title {
     font-size: 16px;
   }
 
