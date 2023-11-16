@@ -121,9 +121,16 @@ export default async function Page({ params }: any) {
                   return null;
                 })}
 
-                <p className="text-2xl py-4">{noticia.copete}</p>
-                <p className="text-2xl py-4">{noticia.parrafo_1}</p>
-                <p className="text-2xl py-4"> {noticia.parrafo_2}</p>
+                <p className="text-2xl py-4 noticepage_parrafo">
+                  {noticia.copete}
+                </p>
+                <p className="text-2xl py-4 noticepage_parrafo">
+                  {noticia.parrafo_1}
+                </p>
+                <p className="text-2xl py-4 noticepage_parrafo">
+                  {" "}
+                  {noticia.parrafo_2}
+                </p>
                 {noticia.YouTubeCode_1}
                 <div>
                   <Tweet id={noticia.TwitterID_1} />
@@ -136,8 +143,12 @@ export default async function Page({ params }: any) {
                 />
                 <p className="py-4 text-gray-700">{noticia.epigrafe}</p>
                 <div className="py-4">
-                  <p className="text-2xl py-4">{noticia.parrafo_3}</p>
-                  <p className="text-2xl py-4">{noticia.parrafo_4}</p>
+                  <p className="text-2xl py-4 noticepage_parrafo">
+                    {noticia.parrafo_3}
+                  </p>
+                  <p className="text-2xl py-4 noticepage_parrafo">
+                    {noticia.parrafo_4}
+                  </p>
                 </div>
                 <Image
                   src={noticia.imagen_3}

@@ -406,7 +406,7 @@ body {
     width: 100%;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .noticepage_autor {
@@ -425,6 +425,13 @@ body {
   .noticepage_autor_name {
     font-size: 10px;
     line-height: 1.5;
+  }
+
+  .noticepage_parrafo {
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   /* pagina de ultimas noticias */
