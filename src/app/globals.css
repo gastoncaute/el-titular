@@ -361,6 +361,61 @@ body {
     line-height: 1.5;
   }
 
+  /* NOTICEPAGR */
+
+  .noticepage_main_section {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+  }
+
+  .noticepage_title {
+    font-size: 32px;
+  }
+
+  .noticepage_bajada {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .noticepage_fecha {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .noticepage_div_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  .noticepage_image {
+    max-height: 200px;
+    width: min-content;
+  }
+
+  .noticepage_epigrafe {
+    width: 100%;
+  }
+
+  .noticepage_autor {
+    height: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .noticepage_autor_image {
+  }
+
+  .noticepage_autor_name {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
   /* pagina de ultimas noticias */
 
   .main_section_ultimasNoticias {

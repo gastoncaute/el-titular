@@ -55,7 +55,7 @@ export default async function Page({ params }: any) {
         const noticeImageUrl = noticeImageUrls[index];
         return (
           <article
-            className="grid grid-cols-3 mx-48 my-24 text-black"
+            className="grid grid-cols-3 mx-48 my-24 text-black noticepage_main_section"
             key={index}
           >
             <div className="row-span-1 flex items-center mt-12 mb-4">
@@ -70,24 +70,27 @@ export default async function Page({ params }: any) {
                 {noticia.categoria}
               </Link>
             </div>
-            <div className="col-start-1 col-end-3 row-span-2 border border-pageColor rounded-3xl  p-4">
-              <div className="row-start-1 row-end-2 mb-8">
-                <h1 className="text-5xl font-bold mb-4">{noticia.title}</h1>
-                <h3 className="text-2xl border-b border-pageColor pb-4">
+            <div className="col-start-1 col-end-3 row-span-2 border border-pageColor rounded-3xl p-4 ">
+              <div className="row-start-1 row-end-2">
+                <h1 className="text-5xl font-bold mb-4 noticepage_title">
+                  {noticia.title}
+                </h1>
+                <h3 className="text-2xl border-b border-pageColor pb-4 noticepage_bajada">
                   {noticia.bajada}
                 </h3>
-                <h5 className="flex justify-end py-4 border-b border-pageColor">
+                <h5 className="flex justify-end py-4 border-b border-pageColor noticepage_fecha">
                   {formatCreatedAt(noticia._createdAt)}
                 </h5>
               </div>
-              <div className="">
+              <div className="mt-8 noticepage_div_image">
                 <Image
+                  className="noticepage_image"
                   src={noticeImageUrl}
                   alt={noticia.title}
                   width={1000}
                   height={250}
                 />
-                <h5 className="py-4 text-gray-700 border-b border-pageColor">
+                <h5 className="py-4 text-gray-700 border-b border-pageColor noticepage_epigrafe">
                   {noticia.image_principal.epigrafe}
                 </h5>
               </div>
@@ -96,8 +99,8 @@ export default async function Page({ params }: any) {
                   const imageUrl = imageUrls[index];
                   if (item._id === noticia.autor._ref && imageUrl) {
                     return (
-                      <p
-                        className="my-8 border border-pageColor rounded-xl p-2 w-52 text-sm flex items-center"
+                      <article
+                        className="my-8 border border-pageColor rounded-xl p-2 w-52 text-sm flex items-center noticepage_autor"
                         key={item._id}
                       >
                         <Image
@@ -105,14 +108,14 @@ export default async function Page({ params }: any) {
                           alt={item.name}
                           width={50}
                           height={50}
-                          className="border border-pageColor rounded-full mr-2"
+                          className="border border-pageColor rounded-full mr-2 noticepage_autor_image"
                         />
-                        <h5 className="border-l border-pageColor pl-2">
+                        <h5 className="border-l border-pageColor pl-2 noticepage_autor_name">
                           Autor:
                           <br />
                           {item.name}
                         </h5>
-                      </p>
+                      </article>
                     );
                   }
                   return null;
@@ -151,7 +154,7 @@ export default async function Page({ params }: any) {
                 </p>
               </div>
             </div>
-            <div className="col-start-3 col-end-4 row-span-2 border border-pageColor rounded-3xl ml-12 flex items-center justify-center h-min">
+            <div className="col-start-3 col-end-4 row-span-2 border border-pageColor rounded-3xl ml-12 flex items-center justify-center h-min display_none">
               <MasRecientesDeCategoria categoria={noticia.categoria} />
             </div>
             <div className="col-span-3 row-span-3 mt-12 flex items-center justify-center">
