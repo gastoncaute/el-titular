@@ -24,7 +24,7 @@ export default async function NoticiasMasRecientes() {
       <h1 className="flex justify-center border-b border-pageColor pb-2 mb-2">
         <Link
           href={"/pages/masrecientes"}
-          className="p-2 px-4 text-2xl font-bold button rounded-3xl border border-transparent"
+          className="p-2 px-4 text-2xl font-bold button rounded-3xl border border-transparent noticepage_masRecientes_category"
         >
           Más Recientes
         </Link>
@@ -36,16 +36,16 @@ export default async function NoticiasMasRecientes() {
           <Link
             href={`/pages/noticepage/${noticia.title}`}
             key={noticia._id}
-            className="flex p-4 m-2 border border-pageColor rounded-3xl noticias_title"
+            className="flex p-4 my-2 border border-pageColor rounded-3xl noticias_title noticepage_masRecientes_notices"
           >
             <Image
-              className="mx-4 max-h-130px max-w-min"
+              className="mx-4 max-h-130px max-w-min noticepage_masRecientes_image"
               src={noticeImageUrl}
               alt={noticia.title}
               width={150}
               height={100}
             />
-            <p className="text-lg font-bold pl-4 border-l border-pageColor flex items-center">
+            <p className="text-lg font-bold pl-4 border-l border-pageColor flex items-center noticepage_masRecientes_title">
               {noticia.title}
             </p>
           </Link>

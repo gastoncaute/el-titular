@@ -364,7 +364,7 @@ body {
     text-align: justify;
     font-size: 14px;
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.25;
   }
 
   /* NOTICEPAGE */
@@ -432,6 +432,33 @@ body {
     line-height: 1.5;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+  }
+
+  .noticepage_masRecientes_category {
+    font-size: 18px;
+    padding: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .noticepage_masRecientes_notices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .noticepage_masRecientes_image {
+    height: 170px;
+    width: min-content;
+  }
+
+  .noticepage_masRecientes_title {
+    width: 100%;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    padding-left: 0;
+    border-left: none;
+    border-top-width: 1px;
   }
 
   /* pagina de ultimas noticias */
