@@ -20,7 +20,7 @@ export default async function MasRecientes() {
   });
 
   return (
-    <article className="col-start-2 col-end-6 grid grid-cols-2 rounded-3xl m-8 border border-pageColor main_section">
+    <article className="col-start-2 col-end-6 grid grid-cols-2 rounded-3xl m-8 border border-pageColor masRecientes_main_section">
       {noticias.map((noticia: Noticia, index: number) => {
         const noticeImageUrl = noticeImageUrls[index];
         if (index >= 5) {
