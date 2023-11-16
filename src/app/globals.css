@@ -454,6 +454,8 @@ body {
 
   .noticepage_masRecientes_title {
     width: 100%;
+    font-size: 14px;
+    line-height: 1.5;
     margin-top: 1rem;
     padding-top: 0.5rem;
     padding-left: 0;
