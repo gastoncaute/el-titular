@@ -94,7 +94,7 @@ export default async function Page({ params }: any) {
                   {noticia.image_principal.epigrafe}
                 </h5>
               </div>
-              <div className="border-b border-pageColor pb-8">
+              <div className="pb-4">
                 {autor.map((item: Autor, index: number) => {
                   const imageUrl = imageUrls[index];
                   if (item._id === noticia.autor._ref && imageUrl) {
@@ -128,42 +128,50 @@ export default async function Page({ params }: any) {
                   {noticia.parrafo_1}
                 </p>
                 <p className="text-2xl py-4 noticepage_parrafo">
-                  {" "}
                   {noticia.parrafo_2}
                 </p>
                 {noticia.YouTubeCode_1}
-                <div>
-                  <Tweet id={noticia.TwitterID_1} />
-                </div>
-                <Image
-                  src={noticia.imagen_2}
-                  alt="Imagen 2"
-                  height={1000}
-                  width={1000}
-                />
-                <p className="py-4 text-gray-700">{noticia.epigrafe}</p>
-                <div className="py-4">
+                {noticia.TwitterID_1 && <Tweet id={noticia.TwitterID_1} />}
+                {noticia.imagen_2 && (
+                  <div>
+                    <Image
+                      src={noticia.imagen_2}
+                      alt="Imagen 2"
+                      height={1000}
+                      width={1000}
+                    />
+                    <h5 className="py-4 text-gray-700">{noticia.epigrafe}</h5>
+                  </div>
+                )}
+
+                {noticia.parrafo_3 && (
                   <p className="text-2xl py-4 noticepage_parrafo">
                     {noticia.parrafo_3}
                   </p>
+                )}
+                {noticia.parrafo_4 && (
                   <p className="text-2xl py-4 noticepage_parrafo">
                     {noticia.parrafo_4}
                   </p>
-                </div>
-                <Image
-                  src={noticia.imagen_3}
-                  alt="Imagen 3"
-                  height={1000}
-                  width={1000}
-                />
-                <p className="pt-4 text-gray-700">{noticia.epigrafe}</p>
+                )}
+                {noticia.imagen_3 && (
+                  <div>
+                    <Image
+                      src={noticia.imagen_3}
+                      alt="Imagen 3"
+                      height={1000}
+                      width={1000}
+                    />
+                    <h5 className="pt-4 text-gray-700">{noticia.epigrafe}</h5>
+                  </div>
+                )}
               </div>
 
-              <div className="p-8 flex justify-center items-center">
+              {/* <div className="border-t border-pageColor p-8 flex justify-center items-center">
                 <p className="border border-pageColor w-full h-full">
                   Comentarios
                 </p>
-              </div>
+              </div> */}
             </div>
             <div className="col-start-3 col-end-4 row-span-2 border border-pageColor rounded-3xl ml-12 flex items-center justify-center h-min display_none">
               <MasRecientesDeCategoria categoria={noticia.categoria} />

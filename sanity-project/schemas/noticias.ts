@@ -81,13 +81,22 @@ export default {
 
     {
       name: 'imagen_2',
-      type: 'string',
       title: 'Segunda Imagen',
-    },
-    {
-      name: `epigrafe_2`,
-      type: `string`,
-      title: `Segundo epigrafe`,
+      type: 'object',
+      fields: [
+        {
+          name: 'imagen',
+          type: 'image',
+          title: 'Imagen',
+          validation: (Rule: any) => Rule.required().error('La "Imagen" es obligatoria'),
+        },
+        {
+          name: 'epigrafe',
+          type: 'string',
+          title: 'Epígrafe',
+          validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
+        },
+      ],
     },
     {
       name: 'YouTubeCode_1',
@@ -117,13 +126,22 @@ export default {
 
     {
       name: 'imagen_3',
-      type: 'string',
       title: 'Tercer Imagen',
-    },
-    {
-      name: `epigrafe_3`,
-      type: `string`,
-      title: `Tercer epigrafe`,
+      type: 'object',
+      fields: [
+        {
+          name: 'imagen',
+          type: 'image',
+          title: 'Imagen',
+          validation: (Rule: any) => Rule.required().error('La "Imagen" es obligatoria'),
+        },
+        {
+          name: 'epigrafe',
+          type: 'string',
+          title: 'Epígrafe',
+          validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
+        },
+      ],
     },
     {
       name: 'YouTubeCode_2',
@@ -153,8 +171,22 @@ export default {
 
     {
       name: 'imagen_4',
-      type: 'string',
       title: 'Cuarta Imagen',
+      type: 'object',
+      fields: [
+        {
+          name: 'imagen',
+          type: 'image',
+          title: 'Imagen',
+          validation: (Rule: any) => Rule.required().error('La "Imagen" es obligatoria'),
+        },
+        {
+          name: 'epigrafe',
+          type: 'string',
+          title: 'Epígrafe',
+          validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
+        },
+      ],
     },
     {
       name: 'YouTubeCode_3',
@@ -184,8 +216,22 @@ export default {
 
     {
       name: 'imagen_5',
-      type: 'string',
       title: 'Quinta Imagen',
+      type: 'object',
+      fields: [
+        {
+          name: 'imagen',
+          type: 'image',
+          title: 'Imagen',
+          validation: (Rule: any) => Rule.required().error('La "Imagen" es obligatoria'),
+        },
+        {
+          name: 'epigrafe',
+          type: 'string',
+          title: 'Epígrafe',
+          validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
+        },
+      ],
     },
     {
       name: 'YouTubeCode_4',
@@ -214,8 +260,27 @@ export default {
     },
     {
       name: 'imagenes_array',
-      type: 'string',
+      type: 'array',
       title: 'Lista de Imágenes',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'imagen',
+              type: 'image',
+              title: 'Imagen',
+              validation: (Rule: any) =>
+                Rule.required().error('La imagen en la lista es obligatoria'),
+            },
+            {
+              name: 'epigrafe',
+              type: 'string',
+              title: 'Epígrafe',
+            },
+          ],
+        },
+      ],
     },
   ],
 }
