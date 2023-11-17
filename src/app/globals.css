@@ -44,6 +44,14 @@ body {
   text-decoration: underline;
 }
 
+.ultimasNoticias_link:hover .noticias_title {
+  text-decoration: underline;
+}
+
+.principal_page_ultimasNoticias_link:hover .noticias_title {
+  text-decoration: underline;
+}
+
 .fotos_title {
   display: none;
 }

@@ -50,7 +50,7 @@ export default async function CategoryPage({ params }: any) {
               return (
                 <Link
                   href={`/pages/noticepage/${noticia.title}`}
-                  className="w-full h-min grid grid-cols-2 border rounded-3xl border-pageColor py-8 my-8 noticias_title ultimasNoticias_link"
+                  className="w-full h-min grid grid-cols-2 border rounded-3xl border-pageColor py-8 my-8 ultimasNoticias_link"
                   key={index}
                 >
                   <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor ultimasNoticias_image_content">
@@ -65,7 +65,7 @@ export default async function CategoryPage({ params }: any) {
                   <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-4 ultimasNoticias_title_component">
                     <h1
                       className={
-                        "text-3xl mb-8 font-bold ultimasNoticias_title"
+                        "text-3xl mb-8 font-bold noticias_title ultimasNoticias_title"
                       }
                     >
                       {noticia.title}
