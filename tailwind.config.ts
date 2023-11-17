@@ -19,6 +19,7 @@ const config: Config = {
         backgraundColor: "#ebebe3",
       },
       width: {
+        "69rem": "69rem",
         "65rem": "65rem",
         "60rem": "60rem",
       },

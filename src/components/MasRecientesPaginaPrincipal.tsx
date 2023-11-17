@@ -20,7 +20,7 @@ export default async function MasRecientes() {
   });
 
   return (
-    <article className="col-start-2 col-end-6 grid grid-cols-2 rounded-3xl m-8 border border-pageColor masRecientes_main_section">
+    <article className="col-start-2 col-end-6 grid grid-cols-2 rounded-3xl m-8 border border-pageColor masRecientes_main_section w-69rem">
       {noticias.map((noticia: Noticia, index: number) => {
         const noticeImageUrl = noticeImageUrls[index];
         if (index >= 5) {
@@ -43,33 +43,31 @@ export default async function MasRecientes() {
           >
             <Link
               href={`/pages/noticepage/${noticia.title}`}
-              className="w-full h-full grid grid-cols-2 border rounded-3xl border-pageColor py-8 noticias_title principal_page_ultimasNoticias_link"
+              className="w-full h-full flex flex-col border rounded-3xl border-pageColor principal_page_ultimasNoticias_link"
             >
-              <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor ultimasNoticias_image_content">
-                <Image
-                  className={
-                    index === 0
-                      ? "max-h-350px max-w-min ultimasNoticias_image"
-                      : "max-h-130px max-w-min ultimasNoticias_image"
-                  }
-                  src={noticeImageUrl}
-                  alt={noticia.title}
-                  height={index === 0 ? 250 : 130}
-                  width={index === 0 ? 500 : 220}
-                />
-              </div>
-              <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-4 ultimasNoticias_title_component">
+              <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-4 px-4 ultimasNoticias_title_component">
                 <h1
                   className={
                     index === 0
-                      ? "text-5xl mb-8 font-bold principal_page_title"
-                      : "text-2xl font-bold principal_page_title"
+                      ? "text-4xl font-bold principal_page_title noticias_title"
+                      : "text-2xl font-bold principal_page_title noticias_title"
                   }
                 >
                   {noticia.title}
                 </h1>
+                <Image
+                  className={
+                    index === 0
+                      ? "main_section_image"
+                      : "max-h-130px max-w-min ultimasNoticias_image"
+                  }
+                  src={noticeImageUrl}
+                  alt={noticia.title}
+                  height={index === 0 ? 100 : 130}
+                  width={index === 0 ? 1000 : 220}
+                />
                 {index === 0 && (
-                  <h2 className="text-3xl principal_page_bajada">
+                  <h2 className="text-2xl principal_page_bajada">
                     {noticia.bajada}
                   </h2>
                 )}

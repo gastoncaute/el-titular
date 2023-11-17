@@ -35,7 +35,7 @@ export default async function Noticia() {
       {Object.keys(noticiasPorCategoria).map((categoria) => (
         <article
           key={categoria}
-          className="col-start-2 col-end-6 rounded-3xl m-8 border border-pageColor category_section"
+          className="col-start-2 col-end-6 rounded-3xl m-8 border border-pageColor category_section w-69rem"
         >
           <div className="m-4 pb-2 flex items-center justify-center mb-4 border-b border-pageColor category_button_section">
             <Link
@@ -70,33 +70,31 @@ export default async function Noticia() {
                 >
                   <Link
                     href={`/pages/noticepage/${noticia.title}`}
-                    className="w-full h-full grid grid-cols-2 border rounded-3xl border-pageColor py-8 noticias_title main_section_notice"
+                    className="w-full h-full flex flex-col border rounded-3xl border-pageColor main_section_notice"
                   >
-                    <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor category_section_image_content">
-                      <Image
-                        className={
-                          index === 0
-                            ? "max-h-350px max-w-min category_section_image"
-                            : "max-h-130px max-w-min category_section_image"
-                        }
-                        src={imageUrl}
-                        alt={noticia.title}
-                        height={index === 0 ? 250 : 130}
-                        width={index === 0 ? 500 : 220}
-                      />
-                    </div>
-                    <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-4 ultimasNoticias_title_component">
+                    <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-4 px-4 ultimasNoticias_title_component">
                       <h1
                         className={
                           index === 0
-                            ? "text-5xl mb-8 font-bold principal_page_title"
-                            : "text-2xl font-bold principal_page_title"
+                            ? "text-4xl font-bold principal_page_title noticias_title"
+                            : "text-2xl font-bold principal_page_title noticias_title"
                         }
                       >
                         {noticia.title}
                       </h1>
+                      <Image
+                        className={
+                          index === 0
+                            ? "main_section_image"
+                            : "max-h-130px max-w-min"
+                        }
+                        src={imageUrl}
+                        alt={noticia.title}
+                        height={index === 0 ? 500 : 130}
+                        width={index === 0 ? 1000 : 220}
+                      />
                       {index === 0 && (
-                        <h2 className="text-3xl principal_page_bajada">
+                        <h2 className="text-2xl principal_page_bajada">
                           {noticia.bajada}
                         </h2>
                       )}
