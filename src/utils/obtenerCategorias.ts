@@ -2,7 +2,7 @@ import { Noticia } from "@/types/componentes.types";
 
 export async function obtenerCategorias() {
   const res = await fetch(
-    "https://lrwm6m86.api.sanity.io/v2022-03-07/data/query/production?query=*[_type == 'noticias']{categoria} | order(_createdAt desc)",
+    "https://lrwm6m86.api.sanity.io/v2022-03-07/data/query/production?query=*[_type == 'noticias']{categoria, _createdAt} | order(_createdAt desc)",
     {
       method: "GET",
       cache: "no-store",
