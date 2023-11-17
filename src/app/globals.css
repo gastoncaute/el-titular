@@ -52,6 +52,10 @@ body {
   text-decoration: underline;
 }
 
+.noticepage_masRecientes_notices:hover .noticias_title {
+  text-decoration: underline;
+}
+
 .fotos_title {
   display: none;
 }

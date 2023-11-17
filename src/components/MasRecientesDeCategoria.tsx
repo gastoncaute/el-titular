@@ -49,7 +49,7 @@ export default async function MasRecientesDeCategoria({
             <Link
               href={`/pages/noticepage/${noticia.title}`}
               key={noticia._id}
-              className="flex p-4 m-2 border border-pageColor rounded-3xl noticias_title"
+              className="flex p-4 m-2 border border-pageColor rounded-3xl noticepage_masRecientes_notices"
             >
               <Image
                 className="mx-4 max-h-130px max-w-min"
@@ -58,9 +58,9 @@ export default async function MasRecientesDeCategoria({
                 width={150}
                 height={100}
               />
-              <p className="text-lg font-bold pl-4 border-l border-pageColor flex items-center">
+              <h1 className="text-lg font-bold pl-4 border-l border-pageColor flex items-center noticias_title">
                 {noticia.title}
-              </p>
+              </h1>
             </Link>
           );
         })}

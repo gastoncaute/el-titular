@@ -36,7 +36,7 @@ export default async function NoticiasMasRecientes() {
           <Link
             href={`/pages/noticepage/${noticia.title}`}
             key={noticia._id}
-            className="flex p-4 my-2 border border-pageColor rounded-3xl noticias_title noticepage_masRecientes_notices"
+            className="flex p-4 my-2 border border-pageColor rounded-3xl noticepage_masRecientes_notices"
           >
             <Image
               className="mx-4 max-h-130px max-w-min noticepage_masRecientes_image"
@@ -45,9 +45,9 @@ export default async function NoticiasMasRecientes() {
               width={150}
               height={100}
             />
-            <p className="text-lg font-bold pl-4 border-l border-pageColor flex items-center noticepage_masRecientes_title">
+            <h1 className="text-lg font-bold pl-4 border-l border-pageColor flex items-center noticias_title noticepage_masRecientes_title">
               {noticia.title}
-            </p>
+            </h1>
           </Link>
         );
       })}
