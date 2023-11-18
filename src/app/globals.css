@@ -317,7 +317,7 @@ body {
   }
 
   .masRecientes_main_section {
-    width: min-content;
+    width: 365px;
     display: flex;
     flex-direction: column;
     margin: 1rem;
