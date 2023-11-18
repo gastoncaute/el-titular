@@ -9,6 +9,7 @@ import { Noticia, Autor } from "@/types/componentes.types";
 import { obtenerAutor } from "@/utils/autor";
 import { repalceParams } from "@/utils/replaceParams";
 import MasRecientesDeCategoria from "@/components/MasRecientesDeCategoria";
+import { PortableText } from "@portabletext/react";
 
 export default async function Page({ params }: any) {
   const noticias = await obtenerNoticias();
@@ -122,7 +123,7 @@ export default async function Page({ params }: any) {
                 })}
 
                 <p className="text-2xl py-4 noticepage_parrafo">
-                  {noticia.copete}
+                  <PortableText value={noticia?.copete} />
                 </p>
                 <p className="text-2xl py-4 noticepage_parrafo">
                   {noticia.parrafo_1}

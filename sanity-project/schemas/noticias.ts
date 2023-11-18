@@ -65,8 +65,13 @@ export default {
     },
     {
       name: 'copete',
-      type: 'string',
+      type: 'array',
       title: 'Copete',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
     },
     {
       name: 'parrafo_1',

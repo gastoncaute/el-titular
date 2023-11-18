@@ -11,7 +11,7 @@ export interface Noticia {
   categoria: string;
   title: string;
   bajada: string;
-  copete: string;
+  copete: any;
   image_principal: {
     epigrafe: string;
     imagen: {
