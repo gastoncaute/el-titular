@@ -2,13 +2,13 @@ import Header from "@/components/HeaderComponents/Header";
 import Footer from "@/components/FooterComponents/Footer";
 import Image from "next/image";
 import { Tweet } from "react-tweet";
-import NoticiasMasRecientes from "@/components/MasRecientesVentana";
+import NoticiasMasRecientes from "@/components/pagesComponents/MasRecientesVentana";
 import Link from "next/link";
 import { obtenerNoticias } from "@/utils/noticia";
 import { Noticia, Autor } from "@/types/componentes.types";
 import { obtenerAutor } from "@/utils/autor";
 import { repalceParams } from "@/utils/replaceParams";
-import MasRecientesDeCategoria from "@/components/MasRecientesDeCategoria";
+import MasRecientesDeCategoria from "@/components/pagesComponents/MasRecientesDeCategoria";
 import { PortableText } from "@portabletext/react";
 
 export default async function Page({ params }: any) {

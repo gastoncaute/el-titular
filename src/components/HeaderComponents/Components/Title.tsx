@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import CategoriesButton from "../../CategoriesButton";
+import CategoriesButton from "../../Buttons/CategoriesButton";
 import Link from "next/link";
 import Image from "next/image";
 import "@/app/globals.css";

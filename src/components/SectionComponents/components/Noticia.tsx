@@ -1,4 +1,4 @@
-import MasRecientes from "@/components/MasRecientesPaginaPrincipal";
+import MasRecientes from "@/components/SectionComponents/components/MasRecientesPaginaPrincipal";
 import Image from "next/image";
 import Link from "next/link";
 import { Noticia } from "@/types/componentes.types";

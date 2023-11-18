@@ -1,6 +1,6 @@
 import Link from "next/link";
-import CategoriesButton from "./CategoriesButton";
-import SocialButtons from "./HeaderComponents/HeaderButtons/SocialButtons";
+import CategoriesButton from "./Buttons/CategoriesButton";
+import SocialButtons from "./Buttons/SocialButtons";
 
 export default function NavBar() {
   return (

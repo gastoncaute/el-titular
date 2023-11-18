@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import BurgerButton from "./HeaderButtons/BurgerButton";
-import SocialButtons from "./HeaderButtons/SocialButtons";
+import BurgerButton from "../Buttons/BurgerButton";
+import SocialButtons from "../Buttons/SocialButtons";
 import Title from "./Components/Title";
 import Link from "next/link";
 import Image from "next/image";
