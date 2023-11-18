@@ -1,29 +1,11 @@
 import MasRecientes from "@/components/SectionComponents/components/MasRecientesPaginaPrincipal";
-import Image from "next/image";
 import Link from "next/link";
-import { Noticia } from "@/types/componentes.types";
-import { obtenerNoticias } from "@/utils/noticia";
 import { obtenerCategorias } from "@/utils/obtenerCategorias";
 import NoticiasPorCategoria from "./NoticiasPorCategoria";
 
 export default async function Noticia() {
   const categorias = await obtenerCategorias();
-  const noticias = await obtenerNoticias();
-
-  // Eliminar duplicados usando un Set y luego convertirlo a un array
   const categoriasUnicas = Array.from(new Set(categorias));
-
-  const ref = noticias.map(
-    (noticia: Noticia) => noticia.image_principal.imagen.asset._ref
-  );
-  const imageUrls = ref.map((ref: any) => {
-    const modifiedRef = String(ref)
-      .replace("image-", "")
-      .replace("-jpg", ".jpg")
-      .replace("-webp", ".webp");
-    const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
-    return baseUrl + modifiedRef;
-  });
 
   return (
     <>
