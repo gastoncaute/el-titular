@@ -36,16 +36,16 @@ export default async function NoticiasMasRecientes() {
           <Link
             href={`/pages/noticepage/${noticia.title}`}
             key={noticia._id}
-            className="flex p-4 my-2 border border-pageColor rounded-3xl noticepage_masRecientes_notices"
+            className="grid grid-cols-2 p-4 my-2 border border-pageColor rounded-3xl noticepage_masRecientes_notices"
           >
             <Image
-              className="mx-4 max-h-130px max-w-min noticepage_masRecientes_image"
+              className="col-start-1 col-end-2 flex items-center justify-center mx-4 max-h-130px max-w-sm noticepage_masRecientes_image"
               src={noticeImageUrl}
               alt={noticia.title}
               width={150}
               height={100}
             />
-            <h1 className="text-lg font-bold pl-4 border-l border-pageColor flex items-center noticias_title noticepage_masRecientes_title">
+            <h1 className="col-start-2 col-end-3 text-lg font-bold pl-4 border-l border-pageColor flex items-center noticias_title noticepage_masRecientes_title max-w-sm">
               {noticia.title}
             </h1>
           </Link>
