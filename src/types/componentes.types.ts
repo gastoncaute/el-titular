@@ -11,7 +11,6 @@ export interface Noticia {
   categoria: string;
   title: string;
   bajada: string;
-  copete: any;
   image_principal: {
     epigrafe: string;
     imagen: {
@@ -22,16 +21,61 @@ export interface Noticia {
       };
     };
   };
-  epigrafe: string;
-  parrafo_1: string;
-  parrafo_2: string;
-  imagen_2: string;
-  parrafo_3: string;
-  parrafo_4: string;
-  imagen_3: string;
-
-  YouTubeCode_1: any;
+  copete: any;
+  imagen_2: {
+    imagen: {
+      _type: any;
+      asset: {
+        _ref: string;
+        _type: string;
+      };
+    };
+    epigrafe: string;
+  };
+  YouTubeCode_1: string;
   TwitterID_1: string;
+  segundo_bloque: any;
+  imagen_3: {
+    imagen: {
+      _type: any;
+      asset: {
+        _ref: string;
+        _type: string;
+      };
+    };
+    epigrafe: string;
+  };
+  YouTubeCode_2: string;
+  TwitterID_2: string;
+  tercer_bloque: any;
+  imagen_4: {
+    imagen: {
+      _type: any;
+      asset: {
+        _ref: string;
+        _type: string;
+      };
+    };
+    epigrafe: string;
+  };
+  YouTubeCode_3: string;
+  TwitterID_3: string;
+  cuarto_bloque: any;
+  imagen_5: {
+    imagen: {
+      _type: any;
+      asset: {
+        _ref: string;
+        _type: string;
+      };
+    };
+    epigrafe: string;
+  };
+  YouTubeCode_4: string;
+  TwitterID_4: string;
+  quinto_bloque: any;
+
+  imagenes_array: any;
 }
 
 export interface Autor {

@@ -95,11 +95,13 @@ export default {
     },
     {
       name: 'YouTubeCode_1',
+      description: 'Colocar Link del Video',
       type: 'string',
       title: 'Primer Video de YouTube',
     },
     {
       name: 'TwitterID_1',
+      description: 'Colocar ID de la Publicacion',
       type: 'string',
       title: 'Primer ID de Twitter',
     },
@@ -135,12 +137,14 @@ export default {
     },
     {
       name: 'YouTubeCode_2',
+      description: 'Colocar Link del Video',
       type: 'string',
       title: 'Segundo Video de YouTube',
     },
     {
       name: 'TwitterID_2',
-      type: 'number',
+      description: 'Colocar ID de la Publicacion',
+      type: 'string',
       title: 'Segundo ID de Twitter',
     },
     {
@@ -175,12 +179,14 @@ export default {
     },
     {
       name: 'YouTubeCode_3',
+      description: 'Colocar Link del Video',
       type: 'string',
       title: 'Tercer Video de YouTube',
     },
     {
       name: 'TwitterID_3',
-      type: 'number',
+      description: 'Colocar ID de la Publicacion',
+      type: 'string',
       title: 'Tercer ID de Twitter',
     },
     {
@@ -215,12 +221,14 @@ export default {
     },
     {
       name: 'YouTubeCode_4',
+      description: 'Colocar Link del Video',
       type: 'string',
       title: 'Cuarto Video de YouTube',
     },
     {
       name: 'TwitterID_4',
-      type: 'number',
+      description: 'Colocar ID de la Publicacion',
+      type: 'string',
       title: 'Cuarto ID de Twitter',
     },
     {
@@ -252,6 +260,7 @@ export default {
               name: 'epigrafe',
               type: 'string',
               title: 'Epígrafe',
+              validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
             },
           ],
         },

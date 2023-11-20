@@ -33,14 +33,18 @@ export default async function Page({ params }: any) {
   const noticeRef = datosDeNoticiaSeleccionada.map(
     (noticia: Noticia) => noticia.image_principal.imagen.asset._ref
   );
-  const noticeImageUrls = noticeRef.map((ref: any) => {
-    const modifiedRef = String(ref)
+  const modifyImageUrl = (imageRef: any) => {
+    const modifiedRef = String(imageRef)
       .replace("image-", "")
       .replace("-jpg", ".jpg")
       .replace("-webp", ".webp");
     const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
     return baseUrl + modifiedRef;
-  });
+  };
+
+  const modifyVideoCode = (videoCode: string | undefined) => {
+    return videoCode ? videoCode.replace("https://youtu.be/", "") : "";
+  };
 
   const formatCreatedAt = (createdAt: string) => {
     const date = new Date(createdAt);
@@ -53,7 +57,28 @@ export default async function Page({ params }: any) {
     <>
       <Header />
       {datosDeNoticiaSeleccionada.map((noticia: Noticia, index: number) => {
-        const noticeImageUrl = noticeImageUrls[index];
+        const noticeImageUrl = modifyImageUrl(
+          noticia.image_principal.imagen.asset._ref
+        );
+        const image2Url =
+          noticia.imagen_2 &&
+          modifyImageUrl(noticia.imagen_2.imagen.asset._ref);
+
+        const image3Url =
+          noticia.imagen_3 &&
+          modifyImageUrl(noticia.imagen_3.imagen.asset._ref);
+
+        const image4Url =
+          noticia.imagen_4 &&
+          modifyImageUrl(noticia.imagen_4.imagen.asset._ref);
+
+        const image5Url =
+          noticia.imagen_5 &&
+          modifyImageUrl(noticia.imagen_5.imagen.asset._ref);
+        const modifiedVideoCode1 = modifyVideoCode(noticia.YouTubeCode_1);
+        const modifiedVideoCode2 = modifyVideoCode(noticia.YouTubeCode_2);
+        const modifiedVideoCode3 = modifyVideoCode(noticia.YouTubeCode_3);
+        const modifiedVideoCode4 = modifyVideoCode(noticia.YouTubeCode_4);
         return (
           <article
             className="grid grid-cols-3 mx-48 my-24 text-black noticepage_main_section"
@@ -74,10 +99,10 @@ export default async function Page({ params }: any) {
             <div className="col-start-1 col-end-3 row-span-2 border border-pageColor rounded-3xl p-4 ">
               <div className="row-start-1 row-end-2">
                 <h1 className="text-5xl font-bold mb-4 noticepage_title">
-                  {noticia.title}
+                  {noticia?.title}
                 </h1>
                 <h3 className="text-2xl border-b border-pageColor pb-4 noticepage_bajada">
-                  {noticia.bajada}
+                  {noticia?.bajada}
                 </h3>
                 <h5 className="flex justify-end py-4 border-b border-pageColor noticepage_fecha">
                   {formatCreatedAt(noticia._createdAt)}
@@ -87,7 +112,7 @@ export default async function Page({ params }: any) {
                 <Image
                   className="noticepage_image"
                   src={noticeImageUrl}
-                  alt={noticia.title}
+                  alt={noticia?.title}
                   width={1000}
                   height={250}
                 />
@@ -125,46 +150,137 @@ export default async function Page({ params }: any) {
                 <p className="text-2xl py-4 noticepage_parrafo">
                   <PortableText value={noticia?.copete} />
                 </p>
-                <p className="text-2xl py-4 noticepage_parrafo">
-                  {noticia.parrafo_1}
-                </p>
-                <p className="text-2xl py-4 noticepage_parrafo">
-                  {noticia.parrafo_2}
-                </p>
-                {noticia.YouTubeCode_1}
-                {noticia.TwitterID_1 && <Tweet id={noticia.TwitterID_1} />}
                 {noticia.imagen_2 && (
                   <div>
                     <Image
-                      src={noticia.imagen_2}
+                      src={image2Url}
                       alt="Imagen 2"
                       height={1000}
                       width={1000}
                     />
-                    <h5 className="py-4 text-gray-700">{noticia.epigrafe}</h5>
+                    <h5 className="py-4 text-gray-700">
+                      {noticia.imagen_2.epigrafe}
+                    </h5>
                   </div>
                 )}
-
-                {noticia.parrafo_3 && (
-                  <p className="text-2xl py-4 noticepage_parrafo">
-                    {noticia.parrafo_3}
-                  </p>
+                {modifiedVideoCode1 && (
+                  <div className="py-4">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src={`https://www.youtube.com/embed/${modifiedVideoCode1}`}
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
                 )}
-                {noticia.parrafo_4 && (
+                {noticia.TwitterID_1 && <Tweet id={noticia.TwitterID_1} />}
+
+                {noticia.segundo_bloque && (
                   <p className="text-2xl py-4 noticepage_parrafo">
-                    {noticia.parrafo_4}
+                    <PortableText value={noticia.segundo_bloque} />
                   </p>
                 )}
                 {noticia.imagen_3 && (
                   <div>
                     <Image
-                      src={noticia.imagen_3}
+                      src={image3Url}
                       alt="Imagen 3"
                       height={1000}
                       width={1000}
                     />
-                    <h5 className="pt-4 text-gray-700">{noticia.epigrafe}</h5>
+                    <h5 className="pt-4 text-gray-700">
+                      {noticia.imagen_3.epigrafe}
+                    </h5>
                   </div>
+                )}
+                {modifiedVideoCode2 && (
+                  <div className="py-4">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src={`https://www.youtube.com/embed/${modifiedVideoCode2}`}
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                )}
+                {noticia.TwitterID_2 && <Tweet id={noticia.TwitterID_2} />}
+
+                {noticia.tercer_bloque && (
+                  <p className="text-2xl py-4 noticepage_parrafo">
+                    <PortableText value={noticia.tercer_bloque} />
+                  </p>
+                )}
+                {noticia.imagen_4 && (
+                  <div>
+                    <Image
+                      src={image4Url}
+                      alt="Imagen 4"
+                      height={1000}
+                      width={1000}
+                    />
+                    <h5 className="pt-4 text-gray-700">
+                      {noticia.imagen_4.epigrafe}
+                    </h5>
+                  </div>
+                )}
+                {modifiedVideoCode3 && (
+                  <div className="py-4">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src={`https://www.youtube.com/embed/${modifiedVideoCode3}`}
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                )}
+                {noticia.TwitterID_3 && <Tweet id={noticia.TwitterID_3} />}
+
+                {noticia.cuarto_bloque && (
+                  <p className="text-2xl py-4 noticepage_parrafo">
+                    <PortableText value={noticia.cuarto_bloque} />
+                  </p>
+                )}
+                {noticia.imagen_5 && (
+                  <div>
+                    <Image
+                      src={image5Url}
+                      alt="Imagen 5"
+                      height={1000}
+                      width={1000}
+                    />
+                    <h5 className="pt-4 text-gray-700">
+                      {noticia.imagen_5.epigrafe}
+                    </h5>
+                  </div>
+                )}
+                {modifiedVideoCode4 && (
+                  <div className="py-4">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src={`https://www.youtube.com/embed/${modifiedVideoCode4}`}
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                )}
+                {noticia.TwitterID_4 && <Tweet id={noticia.TwitterID_4} />}
+
+                {noticia.quinto_bloque && (
+                  <p className="text-2xl py-4 noticepage_parrafo">
+                    <PortableText value={noticia.quinto_bloque} />
+                  </p>
                 )}
               </div>
 
