@@ -66,22 +66,12 @@ export default {
     {
       name: 'copete',
       type: 'array',
-      title: 'Copete',
+      title: 'Copete + Desarrollo',
       of: [
         {
           type: 'block',
         },
       ],
-    },
-    {
-      name: 'parrafo_1',
-      type: 'string',
-      title: 'Párrafo 1',
-    },
-    {
-      name: 'parrafo_2',
-      type: 'string',
-      title: 'Párrafo 2',
     },
 
     {
@@ -114,19 +104,14 @@ export default {
       title: 'Primer ID de Twitter',
     },
     {
-      name: 'parrafo_3',
-      type: 'string',
-      title: 'Párrafo 3',
-    },
-    {
-      name: 'parrafo_4',
-      type: 'string',
-      title: 'Párrafo 4',
-    },
-    {
-      name: 'parrafo_5',
-      type: 'string',
-      title: 'Párrafo 5',
+      name: 'segundo_bloque',
+      type: 'array',
+      title: 'Segundo Bloque',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
     },
 
     {
@@ -159,19 +144,14 @@ export default {
       title: 'Segundo ID de Twitter',
     },
     {
-      name: 'parrafo_36',
-      type: 'string',
-      title: 'Párrafo 6',
-    },
-    {
-      name: 'parrafo_7',
-      type: 'string',
-      title: 'Párrafo 7',
-    },
-    {
-      name: 'parrafo_8',
-      type: 'string',
-      title: 'Párrafo 8',
+      name: 'tercer_bloque',
+      type: 'array',
+      title: 'Tercer Bloque',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
     },
 
     {
@@ -204,19 +184,14 @@ export default {
       title: 'Tercer ID de Twitter',
     },
     {
-      name: 'parrafo_9',
-      type: 'string',
-      title: 'Párrafo 9',
-    },
-    {
-      name: 'parrafo_10',
-      type: 'string',
-      title: 'Párrafo 10',
-    },
-    {
-      name: 'parrafo_11',
-      type: 'string',
-      title: 'Párrafo 11',
+      name: 'cuarto_bloque',
+      type: 'array',
+      title: 'Cuarto Bloque',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
     },
 
     {
@@ -249,19 +224,14 @@ export default {
       title: 'Cuarto ID de Twitter',
     },
     {
-      name: 'parrafo_12',
-      type: 'string',
-      title: 'Párrafo 12',
-    },
-    {
-      name: 'parrafo_13',
-      type: 'string',
-      title: 'Párrafo 13',
-    },
-    {
-      name: 'parrafo_14',
-      type: 'string',
-      title: 'Párrafo 14',
+      name: 'quinto_bloque',
+      type: 'array',
+      title: 'Quinto Bloque',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
     },
     {
       name: 'imagenes_array',
