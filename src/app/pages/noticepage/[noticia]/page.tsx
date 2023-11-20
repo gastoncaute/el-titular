@@ -29,10 +29,6 @@ export default async function Page({ params }: any) {
     const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
     return baseUrl + modifiedRef;
   });
-
-  const noticeRef = datosDeNoticiaSeleccionada.map(
-    (noticia: Noticia) => noticia.image_principal.imagen.asset._ref
-  );
   const modifyImageUrl = (imageRef: any) => {
     const modifiedRef = String(imageRef)
       .replace("image-", "")
