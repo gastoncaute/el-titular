@@ -22,58 +22,66 @@ export interface Noticia {
     };
   };
   copete: any;
-  imagen_2: {
-    imagen: {
-      _type: any;
-      asset: {
-        _ref: string;
-        _type: string;
+  segundo_bloque: {
+    imagen_2: {
+      imagen: {
+        _type: any;
+        asset: {
+          _ref: string;
+          _type: string;
+        };
       };
+      epigrafe: string;
     };
-    epigrafe: string;
+    YouTubeCode_1: string;
+    TwitterID_1: string;
+    segunda_descripcion: any;
   };
-  YouTubeCode_1: string;
-  TwitterID_1: string;
-  segundo_bloque: any;
-  imagen_3: {
-    imagen: {
-      _type: any;
-      asset: {
-        _ref: string;
-        _type: string;
+  tercer_bloque: {
+    imagen_3: {
+      imagen: {
+        _type: any;
+        asset: {
+          _ref: string;
+          _type: string;
+        };
       };
+      epigrafe: string;
     };
-    epigrafe: string;
+    YouTubeCode_2: string;
+    TwitterID_2: string;
+    tercera_descripcion: any;
   };
-  YouTubeCode_2: string;
-  TwitterID_2: string;
-  tercer_bloque: any;
-  imagen_4: {
-    imagen: {
-      _type: any;
-      asset: {
-        _ref: string;
-        _type: string;
+  cuarto_bloque: {
+    imagen_4: {
+      imagen: {
+        _type: any;
+        asset: {
+          _ref: string;
+          _type: string;
+        };
       };
+      epigrafe: string;
     };
-    epigrafe: string;
+    YouTubeCode_3: string;
+    TwitterID_3: string;
+    cuarta_descripcion: any;
   };
-  YouTubeCode_3: string;
-  TwitterID_3: string;
-  cuarto_bloque: any;
-  imagen_5: {
-    imagen: {
-      _type: any;
-      asset: {
-        _ref: string;
-        _type: string;
+  quinto_bloque: {
+    imagen_5: {
+      imagen: {
+        _type: any;
+        asset: {
+          _ref: string;
+          _type: string;
+        };
       };
+      epigrafe: string;
     };
-    epigrafe: string;
+    YouTubeCode_4: string;
+    TwitterID_4: string;
+    quinta_descripcion: any;
   };
-  YouTubeCode_4: string;
-  TwitterID_4: string;
-  quinto_bloque: any;
 
   imagenes_array: any;
 }

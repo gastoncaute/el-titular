@@ -75,172 +75,201 @@ export default {
     },
 
     {
-      name: 'imagen_2',
-      title: 'Segunda Imagen',
+      name: 'segundo_bloque',
+      title: 'Segundo Bloque',
       type: 'object',
       fields: [
         {
-          name: 'imagen',
-          type: 'image',
+          name: 'imagen_2',
           title: 'Imagen',
-          validation: (Rule: any) => Rule.required().error('La "Imagen" es obligatoria'),
+          type: 'object',
+          fields: [
+            {
+              name: 'imagen',
+              type: 'image',
+              title: 'Imagen',
+              validation: (Rule: any) => Rule.required().error('La "Imagen" es obligatoria'),
+            },
+            {
+              name: 'epigrafe',
+              type: 'string',
+              title: 'Epígrafe',
+              validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
+            },
+          ],
         },
         {
-          name: 'epigrafe',
+          name: 'YouTubeCode_1',
+          description: 'Colocar Link del Video',
           type: 'string',
-          title: 'Epígrafe',
-          validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
+          title: 'Video de YouTube',
         },
-      ],
-    },
-    {
-      name: 'YouTubeCode_1',
-      description: 'Colocar Link del Video',
-      type: 'string',
-      title: 'Primer Video de YouTube',
-    },
-    {
-      name: 'TwitterID_1',
-      description: 'Colocar ID de la Publicacion',
-      type: 'string',
-      title: 'Primer ID de Twitter',
-    },
-    {
-      name: 'segundo_bloque',
-      type: 'array',
-      title: 'Segundo Bloque',
-      of: [
         {
-          type: 'block',
+          name: 'TwitterID_1',
+          description: 'Colocar ID de la Publicacion',
+          type: 'string',
+          title: 'ID de Twitter',
+        },
+        {
+          name: 'segunda_descripcion',
+          type: 'array',
+          title: 'Descripcion',
+          of: [
+            {
+              type: 'block',
+            },
+          ],
         },
       ],
     },
 
-    {
-      name: 'imagen_3',
-      title: 'Tercer Imagen',
-      type: 'object',
-      fields: [
-        {
-          name: 'imagen',
-          type: 'image',
-          title: 'Imagen',
-          validation: (Rule: any) => Rule.required().error('La "Imagen" es obligatoria'),
-        },
-        {
-          name: 'epigrafe',
-          type: 'string',
-          title: 'Epígrafe',
-          validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
-        },
-      ],
-    },
-    {
-      name: 'YouTubeCode_2',
-      description: 'Colocar Link del Video',
-      type: 'string',
-      title: 'Segundo Video de YouTube',
-    },
-    {
-      name: 'TwitterID_2',
-      description: 'Colocar ID de la Publicacion',
-      type: 'string',
-      title: 'Segundo ID de Twitter',
-    },
     {
       name: 'tercer_bloque',
-      type: 'array',
       title: 'Tercer Bloque',
-      of: [
+      type: 'object',
+      fields: [
         {
-          type: 'block',
+          name: 'imagen_3',
+          title: 'Imagen',
+          type: 'object',
+          fields: [
+            {
+              name: 'imagen',
+              type: 'image',
+              title: 'Imagen',
+              validation: (Rule: any) => Rule.required().error('La "Imagen" es obligatoria'),
+            },
+            {
+              name: 'epigrafe',
+              type: 'string',
+              title: 'Epígrafe',
+              validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
+            },
+          ],
+        },
+        {
+          name: 'YouTubeCode_2',
+          description: 'Colocar Link del Video',
+          type: 'string',
+          title: 'Video de YouTube',
+        },
+        {
+          name: 'TwitterID_2',
+          description: 'Colocar ID de la Publicacion',
+          type: 'string',
+          title: 'ID de Twitter',
+        },
+        {
+          name: 'tercera_descripcion',
+          type: 'array',
+          title: 'Descripcion',
+          of: [
+            {
+              type: 'block',
+            },
+          ],
         },
       ],
     },
 
-    {
-      name: 'imagen_4',
-      title: 'Cuarta Imagen',
-      type: 'object',
-      fields: [
-        {
-          name: 'imagen',
-          type: 'image',
-          title: 'Imagen',
-          validation: (Rule: any) => Rule.required().error('La "Imagen" es obligatoria'),
-        },
-        {
-          name: 'epigrafe',
-          type: 'string',
-          title: 'Epígrafe',
-          validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
-        },
-      ],
-    },
-    {
-      name: 'YouTubeCode_3',
-      description: 'Colocar Link del Video',
-      type: 'string',
-      title: 'Tercer Video de YouTube',
-    },
-    {
-      name: 'TwitterID_3',
-      description: 'Colocar ID de la Publicacion',
-      type: 'string',
-      title: 'Tercer ID de Twitter',
-    },
     {
       name: 'cuarto_bloque',
-      type: 'array',
       title: 'Cuarto Bloque',
-      of: [
+      type: 'object',
+      fields: [
         {
-          type: 'block',
+          name: 'imagen_4',
+          title: 'Imagen',
+          type: 'object',
+          fields: [
+            {
+              name: 'imagen',
+              type: 'image',
+              title: 'Imagen',
+              validation: (Rule: any) => Rule.required().error('La "Imagen" es obligatoria'),
+            },
+            {
+              name: 'epigrafe',
+              type: 'string',
+              title: 'Epígrafe',
+              validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
+            },
+          ],
+        },
+        {
+          name: 'YouTubeCode_3',
+          description: 'Colocar Link del Video',
+          type: 'string',
+          title: 'Video de YouTube',
+        },
+        {
+          name: 'TwitterID_3',
+          description: 'Colocar ID de la Publicacion',
+          type: 'string',
+          title: 'ID de Twitter',
+        },
+        {
+          name: 'cuarta_descripcion',
+          type: 'array',
+          title: 'Descripcion',
+          of: [
+            {
+              type: 'block',
+            },
+          ],
         },
       ],
     },
 
     {
-      name: 'imagen_5',
-      title: 'Quinta Imagen',
+      name: 'quinto_bloque',
+      title: 'Quinto Bloque',
       type: 'object',
       fields: [
         {
-          name: 'imagen',
-          type: 'image',
+          name: 'imagen_5',
           title: 'Imagen',
-          validation: (Rule: any) => Rule.required().error('La "Imagen" es obligatoria'),
+          type: 'object',
+          fields: [
+            {
+              name: 'imagen',
+              type: 'image',
+              title: 'Imagen',
+              validation: (Rule: any) => Rule.required().error('La "Imagen" es obligatoria'),
+            },
+            {
+              name: 'epigrafe',
+              type: 'string',
+              title: 'Epígrafe',
+              validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
+            },
+          ],
         },
         {
-          name: 'epigrafe',
+          name: 'YouTubeCode_4',
+          description: 'Colocar Link del Video',
           type: 'string',
-          title: 'Epígrafe',
-          validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
+          title: 'Video de YouTube',
         },
-      ],
-    },
-    {
-      name: 'YouTubeCode_4',
-      description: 'Colocar Link del Video',
-      type: 'string',
-      title: 'Cuarto Video de YouTube',
-    },
-    {
-      name: 'TwitterID_4',
-      description: 'Colocar ID de la Publicacion',
-      type: 'string',
-      title: 'Cuarto ID de Twitter',
-    },
-    {
-      name: 'quinto_bloque',
-      type: 'array',
-      title: 'Quinto Bloque',
-      of: [
         {
-          type: 'block',
+          name: 'TwitterID_4',
+          description: 'Colocar ID de la Publicacion',
+          type: 'string',
+          title: 'ID de Twitter',
+        },
+        {
+          name: 'quinta_descripcion',
+          type: 'array',
+          title: 'Descripcion',
+          of: [
+            {
+              type: 'block',
+            },
+          ],
         },
       ],
     },
+
     {
       name: 'imagenes_array',
       type: 'array',
