@@ -35,7 +35,7 @@ export default async function page({ params }: any) {
           >
             {categoriaSeleccionada}
           </Link>
-          <section className="border border-black bg-gradient-to-b from-pageColor to-gradientColor text-white flex flex-col w-40rem rounded-3xl mt-4 p-4 px-12 text-2xl font-bold fotos_div_link">
+          <section className="border border-black bg-gradient-to-b from-pageColor to-gradientColor text-white flex flex-col w-40rem rounded-3xl mt-4 p-4 px-12 text-2xl font-bold fotos_section_autor">
             <h1 className="m-auto">Autora:</h1>
             <h2 className="flex items-center justify-around">
               <Image

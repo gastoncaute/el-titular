@@ -570,6 +570,14 @@ body {
     padding-right: 2rem;
   }
 
+  .fotos_section_autor {
+    font-size: 16px;
+    padding: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: min-content;
+  }
+
   .fotos_main_article {
     display: flex;
     flex-direction: column;
