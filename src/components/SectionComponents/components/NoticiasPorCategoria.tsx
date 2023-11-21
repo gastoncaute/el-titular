@@ -33,9 +33,9 @@ export default async function NoticiasPorCategoria({ categoria }: any) {
               key={noticia._id}
               className={
                 index === 0
-                  ? "col-start-1 col-end-3 row-start-1 row-end-3 p-4"
+                  ? "col-start-1 col-end-3 row-start-1 row-end-3 p-4 section_notice"
                   : index === 1
-                  ? "col-start-3 col-end-4 row-start-1 row-end-2 p-4 second_section_notice"
+                  ? "col-start-3 col-end-4 row-start-1 row-end-2 p-4 section_notice"
                   : index === 2
                   ? "col-start-3 col-end-4 row-start-2 row-end-3 p-4 section_notice_none"
                   : index === 3

@@ -361,8 +361,8 @@ body {
     max-width: min-content;
   }
 
-  .second_section_notice {
-    grid-column: 1 / 3;
+  .section_notice {
+    grid-column: 1 / 4;
   }
 
   .section_notice_none {
