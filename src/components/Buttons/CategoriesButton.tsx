@@ -10,6 +10,7 @@ export default function CategoriesButton() {
     "Tendencias",
     "Internacional",
     "Infografias",
+    "Fotografias",
   ];
   return (
     <>
