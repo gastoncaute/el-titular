@@ -15,12 +15,6 @@ export default function NavBar() {
         <li className="py-4 text-xl w-40 navbar_li navbar_categories">
           Categorias
           <CategoriesButton />
-          <Link
-            href={"/pages/fotospage/Fotografias"}
-            className="flex items-center p-3 border-x h-2 headersButtons category_nav_li"
-          >
-            Fotografias
-          </Link>
         </li>
         <li className="py-4 text-xl headersButtons w-min navbar_li navbar_infografia">
           <Link href={"/pages/fotospage/Infografias"}>Infografias</Link>
