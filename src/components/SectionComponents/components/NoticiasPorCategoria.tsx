@@ -22,7 +22,7 @@ export default async function NoticiasPorCategoria({ categoria }: any) {
   });
   return (
     <>
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-3">
         {noticiasDeCategoria.map((noticia: Noticia, index: number) => {
           const imageUrl = imageUrls[index];
           if (index >= 5) {
@@ -35,12 +35,14 @@ export default async function NoticiasPorCategoria({ categoria }: any) {
                 index === 0
                   ? "col-start-1 col-end-3 row-start-1 row-end-3 p-4"
                   : index === 1
-                  ? "col-start-1 col-end-2 row-start-3 row-end-4 p-4 second_section_notice"
+                  ? "col-start-3 col-end-4 row-start-1 row-end-2 p-4 second_section_notice"
                   : index === 2
-                  ? "col-start-2 col-end-3 row-start-3 row-end-4 p-4 section_notice_none"
+                  ? "col-start-3 col-end-4 row-start-2 row-end-3 p-4 section_notice_none"
                   : index === 3
-                  ? "col-start-1 col-end-2 row-start-4 row-end-5 p-4 section_notice_none"
-                  : "col-start-2 col-end-3 row-start-4 row-end-5 p-4 section_notice_none"
+                  ? "col-start-1 col-end-2 row-start-3 row-end-4 p-4 section_notice_none"
+                  : index === 4
+                  ? "col-start-2 col-end-3 row-start-3 row-end-4 p-4 section_notice_none"
+                  : "col-start-3 col-end-4 row-start-3 row-end-4 p-4 section_notice_none"
               }
             >
               <Link

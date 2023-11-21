@@ -13,7 +13,7 @@ export default async function Noticia() {
       {categoriasUnicas.map((categoria: any) => (
         <article
           key={categoria}
-          className="col-start-2 col-end-6 rounded-3xl m-8 border border-pageColor category_section w-69rem"
+          className="col-start-2 col-end-7 rounded-3xl m-8 border border-pageColor category_section"
         >
           <div className="m-4 pb-2 flex items-center justify-center mb-4 border-b border-pageColor category_button_section">
             <Link

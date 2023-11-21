@@ -20,10 +20,10 @@ export default async function MasRecientes() {
   });
 
   return (
-    <article className="col-start-2 col-end-6 grid grid-cols-2 rounded-3xl m-8 border border-pageColor masRecientes_main_section w-69rem">
+    <article className="col-start-2 col-end-7 grid grid-cols-3 rounded-3xl m-8 border border-pageColor masRecientes_main_section">
       {noticias.map((noticia: Noticia, index: number) => {
         const noticeImageUrl = noticeImageUrls[index];
-        if (index >= 5) {
+        if (index >= 6) {
           return null;
         }
         return (
@@ -33,12 +33,14 @@ export default async function MasRecientes() {
               index === 0
                 ? "col-start-1 col-end-3 row-start-1 row-end-3 p-4"
                 : index === 1
-                ? "col-start-1 col-end-2 row-start-3 row-end-4 p-4"
+                ? "col-start-3 col-end-4 row-start-1 row-end-2 p-4"
                 : index === 2
-                ? "col-start-2 col-end-3 row-start-3 row-end-4 p-4"
+                ? "col-start-3 col-end-4 row-start-2 row-end-3 p-4"
                 : index === 3
-                ? "col-start-1 col-end-2 row-start-4 row-end-5 p-4"
-                : "col-start-2 col-end-3 row-start-4 row-end-5 p-4"
+                ? "col-start-1 col-end-2 row-start-3 row-end-4 p-4"
+                : index === 4
+                ? "col-start-2 col-end-3 row-start-3 row-end-4 p-4"
+                : "col-start-3 col-end-4 row-start-3 row-end-4 p-4"
             }
           >
             <Link
