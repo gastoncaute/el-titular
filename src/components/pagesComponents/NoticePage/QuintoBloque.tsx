@@ -21,6 +21,12 @@ export default function QuintoBloque({
   const modifyVideoCode = (videoCode: string | undefined) => {
     return videoCode ? videoCode.replace("https://youtu.be/", "") : "";
   };
+  const modifyTweetCode = (tweetCode: string | undefined) => {
+    return tweetCode
+      ? tweetCode.replace("https://twitter.com/Exbigote_/status/", "")
+      : "";
+  };
+
   return (
     <section>
       {quintoBloque?.imagen_5 && (
@@ -35,6 +41,11 @@ export default function QuintoBloque({
             {quintoBloque?.imagen_5.epigrafe}
           </h5>
         </div>
+      )}
+      {quintoBloque?.quinta_descripcion && (
+        <p className="text-2xl py-4 noticepage_parrafo">
+          <PortableText value={quintoBloque?.quinta_descripcion} />
+        </p>
       )}
       {modifyVideoCode(quintoBloque?.YouTubeCode_4) && (
         <div className="py-4 video-container">
@@ -52,11 +63,8 @@ export default function QuintoBloque({
           ></iframe>
         </div>
       )}
-      {quintoBloque?.TwitterID_4 && <Tweet id={quintoBloque?.TwitterID_4} />}
-      {quintoBloque?.quinta_descripcion && (
-        <p className="text-2xl py-4 noticepage_parrafo">
-          <PortableText value={quintoBloque?.quinta_descripcion} />
-        </p>
+      {quintoBloque?.TwitterID_4 && (
+        <Tweet id={modifyTweetCode(quintoBloque?.TwitterID_4)} />
       )}
     </section>
   );

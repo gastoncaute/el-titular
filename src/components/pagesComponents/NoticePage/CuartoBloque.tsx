@@ -18,9 +18,13 @@ export default function CuartoBloque({
     const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
     return baseUrl + modifiedRef;
   };
-
   const modifyVideoCode = (videoCode: string | undefined) => {
     return videoCode ? videoCode.replace("https://youtu.be/", "") : "";
+  };
+  const modifyTweetCode = (tweetCode: string | undefined) => {
+    return tweetCode
+      ? tweetCode.replace("https://twitter.com/Exbigote_/status/", "")
+      : "";
   };
 
   return (
@@ -38,6 +42,11 @@ export default function CuartoBloque({
           </h5>
         </div>
       )}
+      {cuartoBloque && (
+        <p className="text-2xl py-4 noticepage_parrafo">
+          <PortableText value={cuartoBloque.cuarta_descripcion} />
+        </p>
+      )}
       {modifyVideoCode(cuartoBloque?.YouTubeCode_3) && (
         <div className="py-4 video-container">
           <iframe
@@ -54,11 +63,8 @@ export default function CuartoBloque({
           ></iframe>
         </div>
       )}
-      {cuartoBloque?.TwitterID_3 && <Tweet id={cuartoBloque?.TwitterID_3} />}
-      {cuartoBloque && (
-        <p className="text-2xl py-4 noticepage_parrafo">
-          <PortableText value={cuartoBloque.cuarta_descripcion} />
-        </p>
+      {cuartoBloque?.TwitterID_3 && (
+        <Tweet id={modifyTweetCode(cuartoBloque.TwitterID_3)} />
       )}
     </section>
   );

@@ -18,9 +18,13 @@ export default async function SegundoBloque({
     const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
     return baseUrl + modifiedRef;
   };
-
   const modifyVideoCode = (videoCode: string | undefined) => {
     return videoCode ? videoCode.replace("https://youtu.be/", "") : "";
+  };
+  const modifyTweetCode = (tweetCode: string | undefined) => {
+    return tweetCode
+      ? tweetCode.replace("https://twitter.com/Exbigote_/status/", "")
+      : "";
   };
 
   return (
@@ -38,6 +42,11 @@ export default async function SegundoBloque({
           </h5>
         </div>
       )}
+      {segundoBloque?.segunda_descripcion && (
+        <p className="text-2xl py-4 noticepage_parrafo">
+          <PortableText value={segundoBloque?.segunda_descripcion} />
+        </p>
+      )}
       {modifyVideoCode(segundoBloque?.YouTubeCode_1) && (
         <div className="py-4 video-container">
           <iframe
@@ -54,11 +63,8 @@ export default async function SegundoBloque({
           ></iframe>
         </div>
       )}
-      {segundoBloque?.TwitterID_1 && <Tweet id={segundoBloque?.TwitterID_1} />}
-      {segundoBloque?.segunda_descripcion && (
-        <p className="text-2xl py-4 noticepage_parrafo">
-          <PortableText value={segundoBloque?.segunda_descripcion} />
-        </p>
+      {segundoBloque?.TwitterID_1 && (
+        <Tweet id={modifyTweetCode(segundoBloque?.TwitterID_1)} />
       )}
     </section>
   );
