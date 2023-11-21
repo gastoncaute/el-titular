@@ -154,7 +154,7 @@ export default async function Page({ params }: any) {
                   <PortableText value={noticia?.copete} />
                 </p>
 
-                {noticia.segundo_bloque.imagen_2 && (
+                {noticia.segundo_bloque?.imagen_2 && (
                   <div>
                     <Image
                       src={image2Url}
@@ -163,7 +163,7 @@ export default async function Page({ params }: any) {
                       width={1000}
                     />
                     <h5 className="py-4 text-gray-700">
-                      {noticia.segundo_bloque.imagen_2.epigrafe}
+                      {noticia.segundo_bloque?.imagen_2.epigrafe}
                     </h5>
                   </div>
                 )}
@@ -180,18 +180,18 @@ export default async function Page({ params }: any) {
                     ></iframe>
                   </div>
                 )}
-                {noticia.segundo_bloque.TwitterID_1 && (
-                  <Tweet id={noticia.segundo_bloque.TwitterID_1} />
+                {noticia.segundo_bloque?.TwitterID_1 && (
+                  <Tweet id={noticia.segundo_bloque?.TwitterID_1} />
                 )}
-                {noticia.segundo_bloque && (
+                {noticia.segundo_bloque?.segunda_descripcion && (
                   <p className="text-2xl py-4 noticepage_parrafo">
                     <PortableText
-                      value={noticia.segundo_bloque.segunda_descripcion}
+                      value={noticia.segundo_bloque?.segunda_descripcion}
                     />
                   </p>
                 )}
 
-                {noticia.tercer_bloque.imagen_3 && (
+                {noticia.tercer_bloque?.imagen_3 && (
                   <div>
                     <Image
                       src={image3Url}
@@ -200,7 +200,7 @@ export default async function Page({ params }: any) {
                       width={1000}
                     />
                     <h5 className="pt-4 text-gray-700">
-                      {noticia.tercer_bloque.imagen_3.epigrafe}
+                      {noticia.tercer_bloque?.imagen_3.epigrafe}
                     </h5>
                   </div>
                 )}
@@ -217,13 +217,13 @@ export default async function Page({ params }: any) {
                     ></iframe>
                   </div>
                 )}
-                {noticia.tercer_bloque.TwitterID_2 && (
-                  <Tweet id={noticia.tercer_bloque.TwitterID_2} />
+                {noticia.tercer_bloque?.TwitterID_2 && (
+                  <Tweet id={noticia.tercer_bloque?.TwitterID_2} />
                 )}
-                {noticia.tercer_bloque && (
+                {noticia.tercer_bloque?.tercera_descripcion && (
                   <p className="text-2xl py-4 noticepage_parrafo">
                     <PortableText
-                      value={noticia.tercer_bloque.tercera_descripcion}
+                      value={noticia.tercer_bloque?.tercera_descripcion}
                     />
                   </p>
                 )}
