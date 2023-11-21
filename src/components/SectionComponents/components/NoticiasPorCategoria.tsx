@@ -49,7 +49,7 @@ export default async function NoticiasPorCategoria({ categoria }: any) {
                 href={`/pages/noticepage/${noticia.title}`}
                 className="w-full h-full flex flex-col border rounded-3xl border-pageColor main_section_notice"
               >
-                <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-4 px-4 ultimasNoticias_title_component">
+                <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-auto p-4 ultimasNoticias_title_component">
                   <h1
                     className={
                       index === 0
@@ -61,14 +61,12 @@ export default async function NoticiasPorCategoria({ categoria }: any) {
                   </h1>
                   <Image
                     className={
-                      index === 0
-                        ? "main_section_image"
-                        : "max-h-130px max-w-min"
+                      index === 0 ? "main_section_image" : "main_section_image"
                     }
                     src={imageUrl}
                     alt={noticia.title}
                     height={index === 0 ? 500 : 130}
-                    width={index === 0 ? 1000 : 220}
+                    width={index === 0 ? 1000 : 350}
                   />
                 </div>
               </Link>

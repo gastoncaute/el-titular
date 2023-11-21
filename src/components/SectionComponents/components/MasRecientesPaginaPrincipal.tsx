@@ -47,7 +47,7 @@ export default async function MasRecientes() {
               href={`/pages/noticepage/${noticia.title}`}
               className="w-full h-full flex flex-col border rounded-3xl border-pageColor principal_page_ultimasNoticias_link"
             >
-              <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-4 px-4 ultimasNoticias_title_component">
+              <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-auto p-4 ultimasNoticias_title_component">
                 <h1
                   className={
                     index === 0
@@ -59,14 +59,12 @@ export default async function MasRecientes() {
                 </h1>
                 <Image
                   className={
-                    index === 0
-                      ? "main_section_image"
-                      : "max-h-130px max-w-min ultimasNoticias_image"
+                    index === 0 ? "main_section_image" : "main_section_image"
                   }
                   src={noticeImageUrl}
                   alt={noticia.title}
                   height={index === 0 ? 100 : 130}
-                  width={index === 0 ? 1000 : 220}
+                  width={index === 0 ? 1000 : 350}
                 />
                 {index === 0 && (
                   <h2 className="text-2xl principal_page_bajada">
