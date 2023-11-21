@@ -14,7 +14,8 @@ export default async function NoticiasMasRecientes() {
     const modifiedRef = String(ref)
       .replace("image-", "")
       .replace("-jpg", ".jpg")
-      .replace("-webp", ".webp");
+      .replace("-webp", ".webp")
+      .replace("-png", ".png");
     const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
     return baseUrl + modifiedRef;
   });
@@ -39,11 +40,11 @@ export default async function NoticiasMasRecientes() {
             className="grid grid-cols-2 p-4 my-2 border border-pageColor rounded-3xl noticepage_masRecientes_notices"
           >
             <Image
-              className="col-start-1 col-end-2 flex items-center justify-center mx-4 max-h-130px max-w-sm noticepage_masRecientes_image"
+              className="col-start-1 col-end-2 flex items-center justify-center mx-4 noticepage_masRecientes_image"
               src={noticeImageUrl}
               alt={noticia.title}
-              width={150}
-              height={100}
+              width={1000}
+              height={1000}
             />
             <h1 className="col-start-2 col-end-3 text-lg font-bold pl-4 border-l border-pageColor flex items-center noticias_title noticepage_masRecientes_title max-w-sm">
               {noticia.title}

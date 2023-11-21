@@ -83,6 +83,12 @@ body {
   max-width: 600px;
 }
 
+.noticepage_masRecientes_image {
+  margin: auto;
+  height: 170px;
+  width: min-content;
+}
+
 @media screen and (min-width: 1025px) and (max-width: 1500px) {
   body {
     font-size: 12px;
