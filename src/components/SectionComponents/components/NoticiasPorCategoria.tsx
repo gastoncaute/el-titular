@@ -68,11 +68,6 @@ export default async function NoticiasPorCategoria({ categoria }: any) {
                     height={index === 0 ? 500 : 130}
                     width={index === 0 ? 1000 : 220}
                   />
-                  {index === 0 && (
-                    <h2 className="text-2xl principal_page_bajada">
-                      {noticia.bajada}
-                    </h2>
-                  )}
                 </div>
               </Link>
             </div>
