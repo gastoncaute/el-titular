@@ -45,10 +45,6 @@ export default async function Page({ params }: any) {
     return baseUrl + modifiedRef;
   };
 
-  const modifyVideoCode = (videoCode: string | undefined) => {
-    return videoCode ? videoCode.replace("https://youtu.be/", "") : "";
-  };
-
   const formatCreatedAt = (createdAt: string) => {
     const date = new Date(createdAt);
     const day = date.getDate();
