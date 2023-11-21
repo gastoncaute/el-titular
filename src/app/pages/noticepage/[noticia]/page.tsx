@@ -168,10 +168,11 @@ export default async function Page({ params }: any) {
                   </div>
                 )}
                 {modifiedVideoCode1 && (
-                  <div className="py-4">
+                  <div className="py-4 video-container">
                     <iframe
-                      width="560"
+                      width="100%"
                       height="315"
+                      className="video-iframe"
                       src={`https://www.youtube.com/embed/${modifiedVideoCode1}`}
                       title="YouTube video player"
                       frameBorder="0"
