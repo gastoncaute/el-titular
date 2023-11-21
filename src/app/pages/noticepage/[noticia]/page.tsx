@@ -206,10 +206,11 @@ export default async function Page({ params }: any) {
                   </div>
                 )}
                 {modifiedVideoCode2 && (
-                  <div className="py-4">
+                  <div className="py-4 video-container">
                     <iframe
-                      width="560"
+                      width="100%"
                       height="315"
+                      className="video-iframe"
                       src={`https://www.youtube.com/embed/${modifiedVideoCode2}`}
                       title="YouTube video player"
                       frameBorder="0"
@@ -243,10 +244,11 @@ export default async function Page({ params }: any) {
                   </div>
                 )}
                 {modifiedVideoCode3 && (
-                  <div className="py-4">
+                  <div className="py-4 video-container">
                     <iframe
-                      width="560"
+                      width="100%"
                       height="315"
+                      className="video-iframe"
                       src={`https://www.youtube.com/embed/${modifiedVideoCode3}`}
                       title="YouTube video player"
                       frameBorder="0"
@@ -280,10 +282,11 @@ export default async function Page({ params }: any) {
                   </div>
                 )}
                 {modifiedVideoCode4 && (
-                  <div className="py-4">
+                  <div className="py-4 video-container">
                     <iframe
-                      width="560"
+                      width="100%"
                       height="315"
+                      className="video-iframe"
                       src={`https://www.youtube.com/embed/${modifiedVideoCode4}`}
                       title="YouTube video player"
                       frameBorder="0"
