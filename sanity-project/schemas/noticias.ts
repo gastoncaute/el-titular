@@ -22,7 +22,6 @@ export default {
           {title: 'Economia', value: 'Economia'},
           {title: 'Sociedad', value: 'Sociedad'},
           {title: 'Deporte', value: 'Deporte'},
-          {title: 'Cultura', value: 'Cultura'},
           {title: 'Tendencias', value: 'Tendencias'},
           {title: 'Internacional', value: 'Internacional'},
         ],
@@ -113,7 +112,7 @@ export default {
         {
           name: 'segunda_descripcion',
           type: 'array',
-          title: 'Descripcion',
+          title: 'Desarrollo',
           of: [
             {
               type: 'block',
@@ -162,7 +161,7 @@ export default {
         {
           name: 'tercera_descripcion',
           type: 'array',
-          title: 'Descripcion',
+          title: 'Desarrollo',
           of: [
             {
               type: 'block',
@@ -211,7 +210,7 @@ export default {
         {
           name: 'cuarta_descripcion',
           type: 'array',
-          title: 'Descripcion',
+          title: 'Desarrollo',
           of: [
             {
               type: 'block',
@@ -260,7 +259,7 @@ export default {
         {
           name: 'quinta_descripcion',
           type: 'array',
-          title: 'Descripcion',
+          title: 'Desarrollo',
           of: [
             {
               type: 'block',
