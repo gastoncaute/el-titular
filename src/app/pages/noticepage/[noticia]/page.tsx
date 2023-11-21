@@ -57,24 +57,32 @@ export default async function Page({ params }: any) {
           noticia.image_principal.imagen.asset._ref
         );
         const image2Url =
-          noticia.imagen_2 &&
-          modifyImageUrl(noticia.imagen_2.imagen.asset._ref);
+          noticia.segundo_bloque?.imagen_2 &&
+          modifyImageUrl(noticia.segundo_bloque.imagen_2.imagen.asset._ref);
 
         const image3Url =
-          noticia.imagen_3 &&
-          modifyImageUrl(noticia.imagen_3.imagen.asset._ref);
+          noticia.tercer_bloque?.imagen_3 &&
+          modifyImageUrl(noticia.tercer_bloque.imagen_3.imagen.asset._ref);
 
         const image4Url =
-          noticia.imagen_4 &&
-          modifyImageUrl(noticia.imagen_4.imagen.asset._ref);
+          noticia.cuarto_bloque?.imagen_4 &&
+          modifyImageUrl(noticia.cuarto_bloque.imagen_4.imagen.asset._ref);
 
         const image5Url =
-          noticia.imagen_5 &&
-          modifyImageUrl(noticia.imagen_5.imagen.asset._ref);
-        const modifiedVideoCode1 = modifyVideoCode(noticia.YouTubeCode_1);
-        const modifiedVideoCode2 = modifyVideoCode(noticia.YouTubeCode_2);
-        const modifiedVideoCode3 = modifyVideoCode(noticia.YouTubeCode_3);
-        const modifiedVideoCode4 = modifyVideoCode(noticia.YouTubeCode_4);
+          noticia.quinto_bloque?.imagen_5 &&
+          modifyImageUrl(noticia.quinto_bloque.imagen_5.imagen.asset._ref);
+        const modifiedVideoCode1 = modifyVideoCode(
+          noticia.segundo_bloque?.YouTubeCode_1
+        );
+        const modifiedVideoCode2 = modifyVideoCode(
+          noticia.tercer_bloque?.YouTubeCode_2
+        );
+        const modifiedVideoCode3 = modifyVideoCode(
+          noticia.cuarto_bloque?.YouTubeCode_3
+        );
+        const modifiedVideoCode4 = modifyVideoCode(
+          noticia.quinto_bloque?.YouTubeCode_4
+        );
         return (
           <article
             className="grid grid-cols-3 mx-48 my-24 text-black noticepage_main_section"
@@ -142,11 +150,11 @@ export default async function Page({ params }: any) {
                   }
                   return null;
                 })}
-
                 <p className="text-2xl py-4 noticepage_parrafo">
                   <PortableText value={noticia?.copete} />
                 </p>
-                {noticia.imagen_2 && (
+
+                {noticia.segundo_bloque.imagen_2 && (
                   <div>
                     <Image
                       src={image2Url}
@@ -155,7 +163,7 @@ export default async function Page({ params }: any) {
                       width={1000}
                     />
                     <h5 className="py-4 text-gray-700">
-                      {noticia.imagen_2.epigrafe}
+                      {noticia.segundo_bloque.imagen_2.epigrafe}
                     </h5>
                   </div>
                 )}
@@ -172,14 +180,18 @@ export default async function Page({ params }: any) {
                     ></iframe>
                   </div>
                 )}
-                {noticia.TwitterID_1 && <Tweet id={noticia.TwitterID_1} />}
-
+                {noticia.segundo_bloque.TwitterID_1 && (
+                  <Tweet id={noticia.segundo_bloque.TwitterID_1} />
+                )}
                 {noticia.segundo_bloque && (
                   <p className="text-2xl py-4 noticepage_parrafo">
-                    <PortableText value={noticia.segundo_bloque} />
+                    <PortableText
+                      value={noticia.segundo_bloque.segunda_descripcion}
+                    />
                   </p>
                 )}
-                {noticia.imagen_3 && (
+
+                {noticia.tercer_bloque.imagen_3 && (
                   <div>
                     <Image
                       src={image3Url}
@@ -188,7 +200,7 @@ export default async function Page({ params }: any) {
                       width={1000}
                     />
                     <h5 className="pt-4 text-gray-700">
-                      {noticia.imagen_3.epigrafe}
+                      {noticia.tercer_bloque.imagen_3.epigrafe}
                     </h5>
                   </div>
                 )}
@@ -205,14 +217,18 @@ export default async function Page({ params }: any) {
                     ></iframe>
                   </div>
                 )}
-                {noticia.TwitterID_2 && <Tweet id={noticia.TwitterID_2} />}
-
+                {noticia.tercer_bloque.TwitterID_2 && (
+                  <Tweet id={noticia.tercer_bloque.TwitterID_2} />
+                )}
                 {noticia.tercer_bloque && (
                   <p className="text-2xl py-4 noticepage_parrafo">
-                    <PortableText value={noticia.tercer_bloque} />
+                    <PortableText
+                      value={noticia.tercer_bloque.tercera_descripcion}
+                    />
                   </p>
                 )}
-                {noticia.imagen_4 && (
+
+                {noticia.cuarto_bloque?.imagen_4 && (
                   <div>
                     <Image
                       src={image4Url}
@@ -221,7 +237,7 @@ export default async function Page({ params }: any) {
                       width={1000}
                     />
                     <h5 className="pt-4 text-gray-700">
-                      {noticia.imagen_4.epigrafe}
+                      {noticia.cuarto_bloque?.imagen_4.epigrafe}
                     </h5>
                   </div>
                 )}
@@ -238,14 +254,18 @@ export default async function Page({ params }: any) {
                     ></iframe>
                   </div>
                 )}
-                {noticia.TwitterID_3 && <Tweet id={noticia.TwitterID_3} />}
-
-                {noticia.cuarto_bloque && (
+                {noticia.cuarto_bloque?.TwitterID_3 && (
+                  <Tweet id={noticia.cuarto_bloque?.TwitterID_3} />
+                )}
+                {noticia?.cuarto_bloque && (
                   <p className="text-2xl py-4 noticepage_parrafo">
-                    <PortableText value={noticia.cuarto_bloque} />
+                    <PortableText
+                      value={noticia?.cuarto_bloque.cuarta_descripcion}
+                    />
                   </p>
                 )}
-                {noticia.imagen_5 && (
+
+                {noticia.quinto_bloque?.imagen_5 && (
                   <div>
                     <Image
                       src={image5Url}
@@ -254,7 +274,7 @@ export default async function Page({ params }: any) {
                       width={1000}
                     />
                     <h5 className="pt-4 text-gray-700">
-                      {noticia.imagen_5.epigrafe}
+                      {noticia.quinto_bloque?.imagen_5.epigrafe}
                     </h5>
                   </div>
                 )}
@@ -271,11 +291,14 @@ export default async function Page({ params }: any) {
                     ></iframe>
                   </div>
                 )}
-                {noticia.TwitterID_4 && <Tweet id={noticia.TwitterID_4} />}
-
-                {noticia.quinto_bloque && (
+                {noticia.quinto_bloque?.TwitterID_4 && (
+                  <Tweet id={noticia.quinto_bloque?.TwitterID_4} />
+                )}
+                {noticia.quinto_bloque?.quinta_descripcion && (
                   <p className="text-2xl py-4 noticepage_parrafo">
-                    <PortableText value={noticia.quinto_bloque} />
+                    <PortableText
+                      value={noticia.quinto_bloque?.quinta_descripcion}
+                    />
                   </p>
                 )}
               </div>
