@@ -22,6 +22,7 @@ const config: Config = {
         "69rem": "69rem",
         "65rem": "65rem",
         "60rem": "60rem",
+        "40rem": "40rem",
       },
       maxWidth: {
         "500px": "500px",
