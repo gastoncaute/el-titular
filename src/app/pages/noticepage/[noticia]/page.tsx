@@ -141,7 +141,7 @@ export default async function Page({ params }: any) {
                 </p>
               </div> */}
             </div>
-            <div className="col-start-3 col-end-4 row-span-2 border border-pageColor rounded-3xl ml-12 flex items-center justify-center h-min display_none">
+            <div className="col-start-3 col-end-4 row-span-2 border border-pageColor rounded-3xl ml-12 h-min display_none">
               <MasRecientesDeCategoria categoria={noticia.categoria} />
             </div>
             <div className="col-span-2 row-span-3 mt-12">
