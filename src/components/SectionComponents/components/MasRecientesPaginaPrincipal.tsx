@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Noticia } from "@/types/componentes.types";
 import { obtenerNoticias } from "@/utils/noticia";
+import Videos from "./ComponentesEntreSecciones/Videos";
 
 export default async function MasRecientes() {
   const noticias = await obtenerNoticias();
@@ -78,6 +79,7 @@ export default async function MasRecientes() {
           );
         })}
       </article>
+      <Videos />
     </>
   );
 }
