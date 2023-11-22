@@ -1,5 +1,5 @@
 import { Foto } from "@/types/componentes.types";
-import { modifyImageUrl } from "@/utils/modifyImageUrl";
+import { modifyImageUrl } from "@/utils/modifyCodes";
 import { obtenerFotos } from "@/utils/obtenerFotos";
 import Image from "next/image";
 import React from "react";

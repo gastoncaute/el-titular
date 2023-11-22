@@ -13,7 +13,7 @@ import SegundoBloque from "@/components/pagesComponents/NoticePage/SegundoBloque
 import TercerBloque from "@/components/pagesComponents/NoticePage/TercerBloque";
 import CuartoBloque from "@/components/pagesComponents/NoticePage/CuartoBloque";
 import QuintoBloque from "@/components/pagesComponents/NoticePage/QuintoBloque";
-import { modifyImageUrl } from "@/utils/modifyImageUrl";
+import { modifyImageUrl } from "@/utils/modifyCodes";
 
 export default async function Page({ params }: any) {
   const noticias = await obtenerNoticias();

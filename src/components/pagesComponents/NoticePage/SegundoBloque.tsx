@@ -1,5 +1,5 @@
 import { Noticia } from "@/types/componentes.types";
-import { modifyImageUrl } from "@/utils/modifyImageUrl";
+import { modifyImageUrl } from "@/utils/modifyCodes";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import React from "react";
