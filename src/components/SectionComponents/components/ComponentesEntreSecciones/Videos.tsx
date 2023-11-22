@@ -28,15 +28,16 @@ export default async function Videos({ categoria }: { categoria: any }) {
       {selectedVideo && (
         <section
           key={selectedVideo.categoria}
-          className="col-start-2 col-end-7 bg-gradient-to-b from-pageColor to-gradientColor m-auto p-8 border border-pageColor rounded-3xl masRecientes_main_section text-white"
+          className="col-start-2 col-end-7 bg-gradient-to-b from-pageColor to-gradientColor m-auto p-8 border border-pageColor rounded-3xl videos_main_section text-white"
         >
-          <h1 className="flex justify-center text-4xl font-bold pb-4">
+          <h1 className="flex justify-center text-4xl font-bold pb-4 videos_title">
             <PortableText value={selectedVideo.title} />
           </h1>
-          <article>
+          <article className="video-container">
             <iframe
-              width="900"
-              height="500"
+              width="100%"
+              height="315"
+              className="video-iframe"
               src={`https://www.youtube.com/embed/${modifyVideoCode(
                 selectedVideo.link_video
               )}`}
