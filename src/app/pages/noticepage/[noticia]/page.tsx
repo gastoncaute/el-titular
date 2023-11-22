@@ -13,6 +13,7 @@ import SegundoBloque from "@/components/pagesComponents/NoticePage/SegundoBloque
 import TercerBloque from "@/components/pagesComponents/NoticePage/TercerBloque";
 import CuartoBloque from "@/components/pagesComponents/NoticePage/CuartoBloque";
 import QuintoBloque from "@/components/pagesComponents/NoticePage/QuintoBloque";
+import { modifyImageUrl } from "@/utils/modifyImageUrl";
 
 export default async function Page({ params }: any) {
   const noticias = await obtenerNoticias();
@@ -33,16 +34,6 @@ export default async function Page({ params }: any) {
     const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
     return baseUrl + modifiedRef;
   });
-
-  const modifyImageUrl = (imageRef: any) => {
-    const modifiedRef = String(imageRef)
-      .replace("image-", "")
-      .replace("-jpg", ".jpg")
-      .replace("-webp", ".webp")
-      .replace("-png", ".png");
-    const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
-    return baseUrl + modifiedRef;
-  };
 
   const formatCreatedAt = (createdAt: string) => {
     const date = new Date(createdAt);
