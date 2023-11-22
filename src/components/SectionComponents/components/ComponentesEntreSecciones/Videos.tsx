@@ -1,13 +1,11 @@
 import { Video } from "@/types/componentes.types";
+import { modifyVideoCode } from "@/utils/modifyCodes";
 import { obtenerVideos } from "@/utils/obtenerVideos";
 import { PortableText } from "@portabletext/react";
 import React from "react";
 
 export default async function Videos({ categoria }: { categoria: any }) {
   const videos = await obtenerVideos();
-  const modifyVideoCode = (videoCode: string | undefined) => {
-    return videoCode ? videoCode.replace("https://youtu.be/", "") : "";
-  };
 
   let filteredVideos;
 

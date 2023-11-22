@@ -1,5 +1,9 @@
 import { Noticia } from "@/types/componentes.types";
-import { modifyImageUrl } from "@/utils/modifyCodes";
+import {
+  modifyImageUrl,
+  modifyTweetCode,
+  modifyVideoCode,
+} from "@/utils/modifyCodes";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import React from "react";
@@ -10,15 +14,6 @@ export default function QuintoBloque({
 }: {
   quintoBloque: Noticia["quinto_bloque"];
 }) {
-  const modifyVideoCode = (videoCode: string | undefined) => {
-    return videoCode ? videoCode.replace("https://youtu.be/", "") : "";
-  };
-  const modifyTweetCode = (tweetCode: string | undefined) => {
-    return tweetCode
-      ? tweetCode.replace("https://twitter.com/Exbigote_/status/", "")
-      : "";
-  };
-
   return (
     <section>
       {quintoBloque?.imagen_5 && (
