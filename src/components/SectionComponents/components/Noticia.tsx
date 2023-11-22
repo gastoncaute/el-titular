@@ -24,7 +24,7 @@ export default async function Noticia() {
             </div>
             <NoticiasPorCategoria categoria={categoria} />
           </article>
-          <section className="w-min m-auto">
+          <section className="m-auto">
             {categoria === "Policiales" && <Videos categoria={categoria} />}
           </section>
         </section>
