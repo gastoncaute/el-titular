@@ -6,7 +6,19 @@ import Videos from "./ComponentesEntreSecciones/Videos";
 
 export default async function Noticia() {
   const categorias = await obtenerCategorias();
-  const categoriasUnicas = Array.from(new Set(categorias));
+  const ordenCategorias = [
+    "Policiales",
+    "Politica",
+    "Economia",
+    "Sociedad",
+    "Deporte",
+    "Tendencias",
+    "Internacional",
+  ];
+
+  const categoriasUnicas = Array.from(new Set(categorias)).sort(
+    (a: any, b: any) => ordenCategorias.indexOf(a) - ordenCategorias.indexOf(b)
+  );
 
   return (
     <>
@@ -24,7 +36,7 @@ export default async function Noticia() {
             </div>
             <NoticiasPorCategoria categoria={categoria} />
           </article>
-          <section className="m-auto">
+          <section className="w-min m-auto">
             {categoria === "Policiales" && <Videos categoria={categoria} />}
           </section>
         </section>
