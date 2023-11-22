@@ -3,6 +3,10 @@ import Link from "next/link";
 import { obtenerCategorias } from "@/utils/obtenerCategorias";
 import NoticiasPorCategoria from "./NoticiasPorCategoria";
 import Videos from "./ComponentesEntreSecciones/Videos";
+import Fotos from "./ComponentesEntreSecciones/Fotos";
+import Dolar from "./ComponentesEntreSecciones/Dolar";
+import Feriados from "./ComponentesEntreSecciones/Feriados";
+import RedesSociales from "./ComponentesEntreSecciones/RedesSociales";
 
 export default async function Noticia() {
   const categorias = await obtenerCategorias();
@@ -38,6 +42,12 @@ export default async function Noticia() {
           </article>
           <section className="w-min m-auto">
             {categoria === "Policiales" && <Videos categoria={categoria} />}
+            {categoria === "Politica" || categoria === "Sociedad" ? (
+              <Fotos categoria={categoria} />
+            ) : null}
+            {categoria === "Economia" && <Dolar />}
+            {categoria === "Deporte" && <Feriados />}
+            {categoria === "Tendencias" && <RedesSociales />}
           </section>
         </section>
       ))}
