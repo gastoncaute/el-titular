@@ -15,13 +15,13 @@ export default async function Fotos({ categoria }: { categoria: any }) {
   const title = categoria === "Politica" ? "Infografias" : "Fotografias";
 
   return (
-    <section className="col-start-2 col-end-7 flex flex-col bg-gradient-to-b from-pageColor to-gradientColor w-max m-auto p-8 pt-4 border border-pageColor rounded-3xl masRecientes_main_section text-white">
+    <section className="col-start-2 col-end-7 flex flex-col bg-gradient-to-b from-pageColor to-gradientColor w-max m-auto p-8 pt-4 border border-pageColor rounded-3xl fotos_widget_section text-white">
       <h1 className="m-auto pb-2 text-3xl font-bold">{title}</h1>
       <section className="flex">
         {fotosFiltradas.map((foto: Foto, index: number) => (
           <article
             key={index}
-            className="px-4 m-auto flex flex-col items-center noticias_title"
+            className="px-4 m-auto flex flex-col items-center noticias_title fotos_widget_article"
           >
             <Image
               className="rounded-xl"
