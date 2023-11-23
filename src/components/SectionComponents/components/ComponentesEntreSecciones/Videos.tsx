@@ -28,7 +28,7 @@ export default async function Videos({ categoria }: { categoria: any }) {
       {selectedVideo && (
         <section
           key={selectedVideo.categoria}
-          className="col-start-2 col-end-7 bg-gradient-to-b from-pageColor to-gradientColor m-auto p-8 border border-pageColor rounded-3xl videos_main_section text-white"
+          className="col-start-2 col-end-7 bg-gradient-to-b from-pageColor to-gradientColor w-40rem m-auto p-8 border border-pageColor rounded-3xl videos_main_section text-white"
         >
           <h1 className="flex justify-center text-4xl font-bold pb-4 videos_title">
             <PortableText value={selectedVideo.title} />
