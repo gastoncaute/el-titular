@@ -127,16 +127,16 @@ export default async function page({ params }: any) {
                 key={index}
                 className={
                   index === 0
-                    ? "mx-8 m-4 col-start-1 col-end-2 row-start-1 row-end-2 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor fotos_image_article"
+                    ? "mx-8 m-4 col-start-1 col-end-2 row-start-1 row-end-2 px-2 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor fotos_image_article"
                     : index === 1
-                    ? "mx-8 m-4 col-start-2 col-end-3 row-start-1 row-end-2 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor fotos_image_article"
+                    ? "mx-8 m-4 col-start-2 col-end-3 row-start-1 row-end-2 px-2 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor fotos_image_article"
                     : index === 2
-                    ? "mx-8 m-4 col-start-1 col-end-2 row-start-2 row-end-3 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor fotos_image_article"
+                    ? "mx-8 m-4 col-start-1 col-end-2 row-start-2 row-end-3 px-2 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor fotos_image_article"
                     : index === 3
-                    ? "mx-8 m-4 col-start-2 col-end-3 row-start-2 row-end-3 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor fotos_image_article"
+                    ? "mx-8 m-4 col-start-2 col-end-3 row-start-2 row-end-3 px-2 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor fotos_image_article"
                     : index === 4
-                    ? "mx-8 m-4 col-start-1 col-end-2 row-start-3 row-end-4 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor fotos_image_article"
-                    : "mx-8 m-4 col-start-2 col-end-3 row-start-3 row-end-4 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor fotos_image_article"
+                    ? "mx-8 m-4 col-start-1 col-end-2 row-start-3 row-end-4 px-2 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor fotos_image_article"
+                    : "mx-8 m-4 col-start-2 col-end-3 row-start-3 row-end-4 px-2 py-8 noticias_title flex flex-col justify-center items-center border rounded-3xl border-pageColor fotos_image_article"
                 }
               >
                 <div className="flex justify-center items-center">
