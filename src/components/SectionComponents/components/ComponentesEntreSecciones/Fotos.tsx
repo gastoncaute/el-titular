@@ -20,7 +20,7 @@ export default async function Fotos({ categoria }: { categoria: any }) {
         {title}
       </h1>
       <section className="flex">
-        {fotosFiltradas.slice(0, 2).map((foto: Foto, index: number) => (
+        {fotosFiltradas.slice(0, 3).map((foto: Foto, index: number) => (
           <article
             key={index}
             className="px-4 m-auto flex flex-col items-center noticias_title fotos_widget_article"
