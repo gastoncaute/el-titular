@@ -4,7 +4,7 @@ import Header from "@/components/HeaderComponents/Header";
 import Link from "next/link";
 import Image from "next/image";
 import NoticiasMasRecientes from "@/components/pagesComponents/MasRecientesVentana";
-import { obtenerNoticias } from "@/utils/noticia";
+import { obtenerNoticias } from "@/utils/obtenerNoticia";
 import { Noticia } from "@/types/componentes.types";
 
 export default async function CategoryPage({ params }: any) {

@@ -3,7 +3,7 @@ import Footer from "@/components/FooterComponents/Footer";
 import Header from "@/components/HeaderComponents/Header";
 import Link from "next/link";
 import Image from "next/image";
-import { obtenerNoticias } from "@/utils/noticia";
+import { obtenerNoticias } from "@/utils/obtenerNoticia";
 import { Noticia } from "@/types/componentes.types";
 
 export default async function page() {
