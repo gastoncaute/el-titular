@@ -14,11 +14,11 @@ export default async function Dolar() {
             className="flex flex-col w-max mx-2 p-2 border rounded-xl dolar_article"
           >
             <h1 className="border-b mb-1">{dolar.casa.nombre}</h1>
-            <h2>Compra: $ {dolar.casa.compra}</h2>
+            <h2 className="text-xs">Compra: $ {dolar.casa.compra}</h2>
             {typeof dolar.casa.venta === "object" ? (
               <p>Venta: No Disponible</p>
             ) : (
-              <h3>Venta: $ {dolar.casa.venta}</h3>
+              <h3 className="text-xs">Venta: $ {dolar.casa.venta}</h3>
             )}
           </article>
         ))}
