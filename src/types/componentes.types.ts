@@ -129,3 +129,15 @@ export interface Video {
   _type: string;
   link_video: string;
 }
+
+export interface Dolar {
+  casa: {
+    compra: number;
+    venta: number;
+    agencia: number;
+    nombre: string;
+    variacion: number;
+    ventaCero: string;
+    decimales: number;
+  };
+}
