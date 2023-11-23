@@ -133,7 +133,7 @@ export interface Video {
 export interface Dolar {
   casa: {
     compra: number;
-    venta: number;
+    venta: any;
     agencia: number;
     nombre: string;
     variacion: number;
