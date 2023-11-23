@@ -1,24 +1,39 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { modifyImageUrl } from "@/utils/modifyCodes";
 
 export default function Autor({ categoria }: { categoria: any }) {
-  const autorName = categoria === "Fotografias" ? "Juana Monti" : "sda";
+  const autorName =
+    categoria === "Infografias" ? "Juana Monti" : "Valentina Dodero";
+  const autorImage = categoria === "Infografias" ? "" : "";
+  const autorRedes =
+    categoria === "Infografias"
+      ? [
+          "https://instagram.com/rorolopez02/",
+          "https://instagram.com/rorolopez02/",
+          "https://instagram.com/rorolopez02/",
+        ]
+      : [
+          "https://instagram.com/gastoncauteruccio/",
+          "https://twitter.com/Gastoncaute",
+          "https://twitter.com/Gastoncaute",
+        ];
 
   return (
     <section className="border border-black bg-gradient-to-b from-pageColor to-gradientColor text-white flex flex-col w-40rem rounded-3xl mt-4 p-4 px-12 text-2xl font-bold fotos_section_autor">
       <h1 className="m-auto">Autora: {autorName}</h1>
       <h2 className="flex items-center justify-around">
         <Image
-          src={""}
-          alt={""}
+          src={modifyImageUrl(autorImage)}
+          alt={autorName}
           width={70}
           height={70}
-          className="border border-white rounded-full mr-2 left-0 noticepage_autor_image"
+          className="border border-white text-xs rounded-full mr-2 left-0 noticepage_autor_image"
         />
         <ul className="flex justify-around">
           <li className="mx-2">
-            <Link href="https://www.instagram.com/rorolopez02/" target="#">
+            <Link href={autorRedes[0]} target="#">
               <svg
                 width="44"
                 height="44"
@@ -38,7 +53,7 @@ export default function Autor({ categoria }: { categoria: any }) {
             </Link>
           </li>
           <li className="mx-2">
-            <Link href="https://www.instagram.com/rorolopez02/" target="#">
+            <Link href={autorRedes[1]} target="#">
               <svg
                 width="44"
                 height="44"
@@ -56,7 +71,7 @@ export default function Autor({ categoria }: { categoria: any }) {
             </Link>
           </li>
           <li className="mx-2">
-            <Link href="https://www.instagram.com/rorolopez02/" target="#">
+            <Link href={autorRedes[2]} target="#">
               <svg
                 width="44"
                 height="44"
