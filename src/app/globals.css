@@ -159,6 +159,23 @@ body {
 
   /* SECTION */
 
+  .dolar_widget_container {
+    margin-right: 10px;
+    width: 100%;
+    max-width: 70rem;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .dolar_scroll {
+    display: flex;
+  }
+
+  .dolar_article {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
   /* CATEGORYPAGE */
 
   .main_section_ultimasNoticias {
