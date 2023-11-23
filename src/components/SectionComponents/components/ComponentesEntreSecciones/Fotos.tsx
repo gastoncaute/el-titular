@@ -16,7 +16,9 @@ export default async function Fotos({ categoria }: { categoria: any }) {
 
   return (
     <section className="col-start-2 col-end-7 flex flex-col bg-gradient-to-b from-pageColor to-gradientColor w-max m-auto p-8 pt-4 border border-pageColor rounded-3xl fotos_widget_section text-white">
-      <h1 className="m-auto pb-2 text-3xl font-bold">{title}</h1>
+      <h1 className="m-auto pb-2 text-3xl font-bold fotos_widget_title">
+        {title}
+      </h1>
       <section className="flex">
         {fotosFiltradas.map((foto: Foto, index: number) => (
           <article

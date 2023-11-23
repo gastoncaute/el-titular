@@ -339,7 +339,12 @@ body {
     flex-direction: column;
     margin: 1rem;
     padding: 1rem;
+    padding-top: 0.5rem;
     padding-bottom: 2rem;
+  }
+
+  .fotos_widget_title {
+    font-size: 24px;
   }
 
   .fotos_widget_article {
