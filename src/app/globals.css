@@ -339,6 +339,7 @@ body {
     flex-direction: column;
     margin: 1rem;
     padding: 1rem;
+    padding-bottom: 2rem;
   }
 
   .fotos_widget_article {
