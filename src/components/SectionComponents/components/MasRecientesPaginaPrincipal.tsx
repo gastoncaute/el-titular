@@ -61,7 +61,9 @@ export default async function MasRecientes() {
                   </h1>
                   <Image
                     className={
-                      index === 0 ? "main_section_image" : "main_section_image"
+                      index === 0
+                        ? "main_section_image"
+                        : "main_section_image_second"
                     }
                     src={noticeImageUrl}
                     alt={noticia.title}
