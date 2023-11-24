@@ -42,7 +42,7 @@ export default async function page() {
                 className="w-full h-min grid grid-cols-2 border rounded-3xl border-pageColor py-8 my-8 ultimasNoticias_link"
                 key={index}
               >
-                <div className="col-start-1 col-end-2 flex justify-center items-center ultimasNoticias_image_content">
+                <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor ultimasNoticias_image_content">
                   <Image
                     className="max-h-300px max-w-min ultimasNoticias_image"
                     src={noticeImageUrl}

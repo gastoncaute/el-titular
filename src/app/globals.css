@@ -603,6 +603,10 @@ body {
     flex-direction: column;
   }
 
+  .ultimasNoticias_image_content {
+    border-right: none;
+  }
+
   .ultimasNoticias_image {
     max-height: 150px;
     max-width: min-content;
