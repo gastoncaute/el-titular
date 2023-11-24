@@ -17,24 +17,12 @@ import { modifyImageUrl } from "@/utils/modifyCodes";
 
 export default async function Page({ params }: any) {
   const noticias = await obtenerNoticias();
+  const autor = await obtenerAutor();
   const noticiaSeleccionada = params.noticia;
   const noticiaSeleccionadaArreglada = repalceParams(noticiaSeleccionada);
   const datosDeNoticiaSeleccionada = noticias.filter(
     (noticia: Noticia) => noticia.title === noticiaSeleccionadaArreglada
   );
-
-  const autor = await obtenerAutor();
-  const ref = autor.map((item: Autor) => item.photo.asset._ref);
-  const imageUrls = ref.map((ref: any) => {
-    const modifiedRef = String(ref)
-      .replace("image-", "")
-      .replace("-jpg", ".jpg")
-      .replace("-webp", ".webp")
-      .replace("-png", ".png");
-    const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
-    return baseUrl + modifiedRef;
-  });
-
   const formatCreatedAt = (createdAt: string) => {
     const date = new Date(createdAt);
     const day = date.getDate();
@@ -46,9 +34,6 @@ export default async function Page({ params }: any) {
     <>
       <Header />
       {datosDeNoticiaSeleccionada.map((noticia: Noticia, index: number) => {
-        const noticeImageUrl = modifyImageUrl(
-          noticia.image_principal.imagen.asset._ref
-        );
         return (
           <article
             className="grid grid-cols-3 mx-48 my-24 text-black noticepage_main_section"
@@ -81,7 +66,9 @@ export default async function Page({ params }: any) {
               <div className="mt-8 noticepage_div_image">
                 <Image
                   className="noticepage_image"
-                  src={noticeImageUrl}
+                  src={modifyImageUrl(
+                    noticia.image_principal.imagen.asset._ref
+                  )}
                   alt={noticia?.title}
                   width={1000}
                   height={250}
@@ -92,15 +79,17 @@ export default async function Page({ params }: any) {
               </div>
               <div className="pb-4">
                 {autor.map((item: Autor, index: number) => {
-                  const imageUrl = imageUrls[index];
-                  if (item._id === noticia.autor._ref && imageUrl) {
+                  if (
+                    item._id === noticia.autor._ref &&
+                    modifyImageUrl(item.photo.asset._ref)
+                  ) {
                     return (
                       <article
                         className="my-8 border border-pageColor rounded-xl p-2 w-52 text-sm flex items-center noticepage_autor"
                         key={item._id}
                       >
                         <Image
-                          src={imageUrl}
+                          src={modifyImageUrl(item.photo.asset._ref)}
                           alt={item.name}
                           width={50}
                           height={50}
