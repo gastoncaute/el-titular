@@ -2,6 +2,7 @@ import { Foto } from "@/types/componentes.types";
 import { modifyImageUrl } from "@/utils/modifyCodes";
 import { obtenerFotos } from "@/utils/obtenerFotos";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default async function Fotos({ categoria }: { categoria: any }) {
@@ -16,10 +17,13 @@ export default async function Fotos({ categoria }: { categoria: any }) {
 
   return (
     <section className="col-start-2 col-end-7 flex flex-col bg-gradient-to-b from-pageColor to-gradientColor w-max m-auto p-8 pt-4 border border-pageColor rounded-3xl fotos_widget_section text-white">
-      <h1 className="m-auto pb-2 text-3xl font-bold fotos_widget_title">
+      <Link
+        href={`/pages/fotospage/${title}`}
+        className="m-auto p-2 text-3xl font-bold fotos_widget_title border border-transparent rounded-3xl fotos_widget_buttons"
+      >
         {title}
-      </h1>
-      <section className="flex">
+      </Link>
+      <section className="flex mt-2">
         {fotosFiltradas.slice(0, 3).map((foto: Foto, index: number) => (
           <article
             key={index}
