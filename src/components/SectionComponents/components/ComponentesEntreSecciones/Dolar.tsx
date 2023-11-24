@@ -4,7 +4,6 @@ import React from "react";
 
 export default async function Dolar() {
   const dolarHoy = await obtenerDolar();
-  console.log(dolarHoy);
   return (
     <section className="col-start-2 col-end-7 flex bg-gradient-to-b from-pageColor to-gradientColor w-max max-w-97.5rem m-auto p-4 border border-pageColor rounded-3xl dolar_widget_container text-white text-sm">
       <div className="flex dolar_scroll">
