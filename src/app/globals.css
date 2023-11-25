@@ -44,6 +44,19 @@ body {
   border-color: #000;
 }
 
+.widget_socials_link:hover {
+  font-weight: bold;
+  color: #000;
+  stroke: #000;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.widget_socials_link:hover .widget_socials_svg {
+  stroke: #000;
+}
+
 .title_hover:hover {
   text-decoration: underline;
   transform: scale(1.1);
