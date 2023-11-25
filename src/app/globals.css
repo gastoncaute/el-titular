@@ -458,6 +458,11 @@ body {
     grid-column: 1 / 4;
   }
 
+  .second_section_notice {
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+  }
+
   .section_notice_none {
     display: none;
   }
