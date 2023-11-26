@@ -419,6 +419,17 @@ body {
   .dolar_article {
     flex: 0 0 auto;
     width: auto;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .dolar_title {
+    font-size: 16px;
+  }
+
+  .dolar_subtitle {
+    font-size: 12px;
   }
 
   .widget_socials_title {
