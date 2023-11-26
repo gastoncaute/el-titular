@@ -363,6 +363,9 @@ body {
   }
 
   /* SECTION */
+  .mainPage_noticia_section {
+    margin: auto;
+  }
 
   .main_section {
     display: flex;
@@ -379,7 +382,7 @@ body {
     width: 365px;
     display: flex;
     flex-direction: column;
-    margin: 1rem;
+    margin: auto;
   }
 
   .fotos_widget_section {
@@ -405,7 +408,6 @@ body {
   }
 
   .dolar_widget_container {
-    margin-right: 10px;
     width: 100%;
     max-width: 90vw;
     overflow-x: auto;
@@ -419,6 +421,17 @@ body {
   .dolar_article {
     flex: 0 0 auto;
     width: auto;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .dolar_title {
+    font-size: 16px;
+  }
+
+  .dolar_subtitle {
+    font-size: 12px;
   }
 
   .widget_socials_title {
