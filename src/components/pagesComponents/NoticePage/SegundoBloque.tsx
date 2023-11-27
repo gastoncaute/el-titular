@@ -31,9 +31,18 @@ export default async function SegundoBloque({
       )}
       {segundoBloque?.segunda_descripcion && (
         <p className="text-2xl py-4 noticepage_parrafo">
-          <PortableText value={segundoBloque?.segunda_descripcion} />
+          <PortableText
+            value={segundoBloque?.segunda_descripcion.map((item: any) => ({
+              ...item,
+              children: item.children.map((child: any) => ({
+                ...child,
+                text: child.text.replace(/&/g, "\n"),
+              })),
+            }))}
+          />
         </p>
       )}
+
       {modifyVideoCode(segundoBloque?.YouTubeCode_1) && (
         <div className="py-4 video-container">
           <iframe

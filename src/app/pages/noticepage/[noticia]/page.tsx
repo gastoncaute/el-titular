@@ -106,7 +106,15 @@ export default async function Page({ params }: any) {
                   return null;
                 })}
                 <p className="text-2xl py-4 noticepage_parrafo">
-                  <PortableText value={noticia?.copete} />
+                  <PortableText
+                    value={noticia?.copete.map((item: any) => ({
+                      ...item,
+                      children: item.children.map((child: any) => ({
+                        ...child,
+                        text: child.text.replace(/&/g, "\n"),
+                      })),
+                    }))}
+                  />
                 </p>
                 <SegundoBloque segundoBloque={noticia.segundo_bloque} />
                 <TercerBloque tercerBloque={noticia.tercer_bloque} />

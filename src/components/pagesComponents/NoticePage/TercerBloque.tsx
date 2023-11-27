@@ -31,7 +31,15 @@ export default function TercerBloque({
       )}
       {tercerBloque?.tercera_descripcion && (
         <p className="text-2xl py-4 noticepage_parrafo">
-          <PortableText value={tercerBloque?.tercera_descripcion} />
+          <PortableText
+            value={tercerBloque?.tercera_descripcion.map((item: any) => ({
+              ...item,
+              children: item.children.map((child: any) => ({
+                ...child,
+                text: child.text.replace(/&/g, "\n"),
+              })),
+            }))}
+          />
         </p>
       )}
       {modifyVideoCode(tercerBloque?.YouTubeCode_2) && (

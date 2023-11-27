@@ -31,7 +31,15 @@ export default function CuartoBloque({
       )}
       {cuartoBloque && (
         <p className="text-2xl py-4 noticepage_parrafo">
-          <PortableText value={cuartoBloque.cuarta_descripcion} />
+          <PortableText
+            value={cuartoBloque.cuarta_descripcion.map((item: any) => ({
+              ...item,
+              children: item.children.map((child: any) => ({
+                ...child,
+                text: child.text.replace(/&/g, "\n"),
+              })),
+            }))}
+          />
         </p>
       )}
       {modifyVideoCode(cuartoBloque?.YouTubeCode_3) && (

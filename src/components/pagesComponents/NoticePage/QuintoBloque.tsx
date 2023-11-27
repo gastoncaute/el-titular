@@ -31,7 +31,15 @@ export default function QuintoBloque({
       )}
       {quintoBloque?.quinta_descripcion && (
         <p className="text-2xl py-4 noticepage_parrafo">
-          <PortableText value={quintoBloque?.quinta_descripcion} />
+          <PortableText
+            value={quintoBloque?.quinta_descripcion.map((item: any) => ({
+              ...item,
+              children: item.children.map((child: any) => ({
+                ...child,
+                text: child.text.replace(/&/g, "\n"),
+              })),
+            }))}
+          />
         </p>
       )}
       {modifyVideoCode(quintoBloque?.YouTubeCode_4) && (
