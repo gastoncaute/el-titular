@@ -46,7 +46,7 @@ export default async function NoticiasMasRecientes() {
               width={1000}
               height={1000}
             />
-            <h1 className="col-start-2 col-end-3 text-lg font-bold pl-4 border-l border-pageColor flex items-center noticias_title noticepage_masRecientes_title max-w-sm">
+            <h1 className="col-start-2 col-end-3 text-4xl font-bold pl-4 border-l border-pageColor flex items-center noticias_title noticepage_masRecientes_title max-w-sm">
               {noticia.title}
             </h1>
           </Link>
