@@ -5,21 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";
 import { Noticia } from "@/types/componentes.types";
+import { modifyImageUrl } from "@/utils/modifyCodes";
 
 export default async function page() {
   const noticias = await obtenerNoticias();
-
-  const noticeRef = noticias.map(
-    (noticia: Noticia) => noticia.image_principal.imagen.asset._ref
-  );
-  const noticeImageUrls = noticeRef.map((ref: any) => {
-    const modifiedRef = String(ref)
-      .replace("image-", "")
-      .replace("-jpg", ".jpg")
-      .replace("-webp", ".webp");
-    const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
-    return baseUrl + modifiedRef;
-  });
 
   return (
     <>
@@ -35,7 +24,6 @@ export default async function page() {
         </div>
         <article className="col-start-1 col-end-3 border border-pageColor rounded-3xl h-min p-4 flex flex-col items-center ultimasNoticias_article">
           {noticias.slice(0, 5).map((noticia: Noticia, index: number) => {
-            const noticeImageUrl = noticeImageUrls[index];
             return (
               <Link
                 href={`/pages/noticepage/${noticia.title}`}
@@ -45,7 +33,9 @@ export default async function page() {
                 <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor ultimasNoticias_image_content">
                   <Image
                     className="max-h-300px max-w-min ultimasNoticias_image"
-                    src={noticeImageUrl}
+                    src={modifyImageUrl(
+                      noticia.image_principal.imagen.asset._ref
+                    )}
                     alt={noticia.title}
                     height={250}
                     width={400}

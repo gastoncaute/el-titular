@@ -22,7 +22,7 @@ export default async function CategoryPage({ params }: any) {
   return (
     <>
       <Header />
-      <section className="grid grid-cols-3 mx-48 my-24 text-black main_section_ultimasNoticias">
+      <section className="grid grid-cols-3 mx-12 my-24 text-black main_section_ultimasNoticias">
         <div className="row-span-1 flex items-center mt-12 mb-4">
           <Link
             href={""}
