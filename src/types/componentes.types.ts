@@ -12,7 +12,7 @@ export interface Noticia {
   title: string;
   bajada: string;
   image_principal: {
-    epigrafe: string;
+    epigrafe: any;
     imagen: {
       _type: any;
       asset: {
@@ -31,7 +31,7 @@ export interface Noticia {
           _type: string;
         };
       };
-      epigrafe: string;
+      epigrafe: any;
     };
     YouTubeCode_1: string;
     TwitterID_1: string;
@@ -46,7 +46,7 @@ export interface Noticia {
           _type: string;
         };
       };
-      epigrafe: string;
+      epigrafe: any;
     };
     YouTubeCode_2: string;
     TwitterID_2: string;
@@ -61,7 +61,7 @@ export interface Noticia {
           _type: string;
         };
       };
-      epigrafe: string;
+      epigrafe: any;
     };
     YouTubeCode_3: string;
     TwitterID_3: string;
@@ -76,7 +76,7 @@ export interface Noticia {
           _type: string;
         };
       };
-      epigrafe: string;
+      epigrafe: any;
     };
     YouTubeCode_4: string;
     TwitterID_4: string;

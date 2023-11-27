@@ -25,7 +25,7 @@ export default function TercerBloque({
             width={1000}
           />
           <h5 className="py-4 text-gray-700">
-            {tercerBloque?.imagen_3.epigrafe}
+            <PortableText value={tercerBloque?.imagen_3.epigrafe} />
           </h5>
         </div>
       )}

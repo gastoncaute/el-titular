@@ -25,7 +25,7 @@ export default function QuintoBloque({
             width={1000}
           />
           <h5 className="pt-4 text-gray-700">
-            {quintoBloque?.imagen_5.epigrafe}
+            <PortableText value={quintoBloque?.imagen_5.epigrafe} />
           </h5>
         </div>
       )}

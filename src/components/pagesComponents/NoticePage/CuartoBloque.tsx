@@ -25,7 +25,7 @@ export default function CuartoBloque({
             width={1000}
           />
           <h5 className="pt-4 text-gray-700">
-            {cuartoBloque?.imagen_4.epigrafe}
+            <PortableText value={cuartoBloque?.imagen_4.epigrafe} />
           </h5>
         </div>
       )}

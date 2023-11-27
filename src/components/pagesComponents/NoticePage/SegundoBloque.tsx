@@ -25,7 +25,7 @@ export default async function SegundoBloque({
             width={1000}
           />
           <h5 className="py-4 text-gray-700">
-            {segundoBloque?.imagen_2.epigrafe}
+            <PortableText value={segundoBloque?.imagen_2.epigrafe} />
           </h5>
         </div>
       )}

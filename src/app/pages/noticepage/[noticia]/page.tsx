@@ -74,11 +74,11 @@ export default async function Page({ params }: any) {
                   height={250}
                 />
                 <h5 className="py-4 text-gray-700 border-b border-pageColor noticepage_epigrafe">
-                  {noticia.image_principal.epigrafe}
+                  <PortableText value={noticia.image_principal.epigrafe} />
                 </h5>
               </div>
               <div className="pb-4">
-                {autor.map((item: Autor, index: number) => {
+                {autor.map((item: Autor) => {
                   if (
                     item._id === noticia.autor._ref &&
                     modifyImageUrl(item.photo.asset._ref)
