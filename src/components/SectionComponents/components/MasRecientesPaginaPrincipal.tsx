@@ -41,8 +41,8 @@ export default async function MasRecientes() {
                   <h1
                     className={
                       index === 0
-                        ? "text-4xl font-bold principal_page_title noticias_title"
-                        : "text-2xl font-bold principal_page_title noticias_title"
+                        ? "text-4xl font-bold principal_page_title noticias_title mb-2"
+                        : "text-2xl font-bold principal_page_title noticias_title mb-2"
                     }
                   >
                     {noticia.title}

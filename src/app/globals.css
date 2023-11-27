@@ -504,15 +504,15 @@ body {
   }
 
   .principal_page_title {
-    text-align: justify;
-    font-size: 18px;
+    text-align: start;
+    font-size: 26px;
     line-height: 1.1;
     margin-bottom: 0.3rem;
   }
 
   .principal_page_bajada {
     text-align: justify;
-    font-size: 14px;
+    font-size: 20px;
     margin-top: 0.3rem;
     line-height: 1.25;
   }
