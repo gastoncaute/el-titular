@@ -4,27 +4,15 @@ import Link from "next/link";
 import { Noticia } from "@/types/componentes.types";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";
 import Videos from "./ComponentesEntreSecciones/Videos";
+import { modifyImageUrl } from "@/utils/modifyCodes";
 
 export default async function MasRecientes() {
   const noticias = await obtenerNoticias();
-
-  const noticeRef = noticias.map(
-    (noticia: Noticia) => noticia.image_principal.imagen.asset._ref
-  );
-  const noticeImageUrls = noticeRef.map((ref: any) => {
-    const modifiedRef = String(ref)
-      .replace("image-", "")
-      .replace("-jpg", ".jpg")
-      .replace("-webp", ".webp");
-    const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
-    return baseUrl + modifiedRef;
-  });
 
   return (
     <>
       <article className="col-start-2 col-end-7 grid grid-cols-3 rounded-3xl m-8 border border-pageColor masRecientes_main_section">
         {noticias.map((noticia: Noticia, index: number) => {
-          const noticeImageUrl = noticeImageUrls[index];
           if (index >= 6) {
             return null;
           }
@@ -65,7 +53,9 @@ export default async function MasRecientes() {
                         ? "main_section_image"
                         : "main_section_image_second"
                     }
-                    src={noticeImageUrl}
+                    src={modifyImageUrl(
+                      noticia.image_principal.imagen.asset._ref
+                    )}
                     alt={noticia.title}
                     height={index === 0 ? 100 : 130}
                     width={index === 0 ? 1000 : 350}

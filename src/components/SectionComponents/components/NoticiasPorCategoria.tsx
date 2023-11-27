@@ -3,28 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { Noticia } from "@/types/componentes.types";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";
+import { modifyImageUrl } from "@/utils/modifyCodes";
 
 export default async function NoticiasPorCategoria({ categoria }: any) {
   const noticias = await obtenerNoticias();
   const noticiasDeCategoria = noticias.filter(
     (noticia: Noticia) => noticia.categoria === categoria
   );
-  const ref = noticiasDeCategoria.map(
-    (noticia: Noticia) => noticia.image_principal.imagen.asset._ref
-  );
-  const imageUrls = ref.map((ref: any) => {
-    const modifiedRef = String(ref)
-      .replace("image-", "")
-      .replace("-jpg", ".jpg")
-      .replace("-webp", ".webp");
-    const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
-    return baseUrl + modifiedRef;
-  });
+
   return (
     <>
       <div className="grid grid-cols-3">
         {noticiasDeCategoria.map((noticia: Noticia, index: number) => {
-          const imageUrl = imageUrls[index];
           if (index >= 5) {
             return null;
           }
@@ -65,7 +55,9 @@ export default async function NoticiasPorCategoria({ categoria }: any) {
                         ? "main_section_image"
                         : "main_section_image_second"
                     }
-                    src={imageUrl}
+                    src={modifyImageUrl(
+                      noticia.image_principal.imagen.asset._ref
+                    )}
                     alt={noticia.title}
                     height={index === 0 ? 500 : 130}
                     width={index === 0 ? 1000 : 350}

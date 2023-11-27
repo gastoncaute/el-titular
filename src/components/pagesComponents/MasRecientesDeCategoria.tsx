@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Noticia } from "@/types/componentes.types";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";
+import { modifyImageUrl } from "@/utils/modifyCodes";
 
 export default async function MasRecientesDeCategoria({
   categoria,
@@ -14,18 +15,6 @@ export default async function MasRecientesDeCategoria({
   const noticiasDeCadaCategoria = noticias.filter(
     (noticia: Noticia) => noticia.categoria === categoriaSeleccionada
   );
-
-  const noticeRef = noticiasDeCadaCategoria.map(
-    (noticia: Noticia) => noticia.image_principal.imagen.asset._ref
-  );
-  const noticeImageUrls = noticeRef.map((ref: any) => {
-    const modifiedRef = String(ref)
-      .replace("image-", "")
-      .replace("-jpg", ".jpg")
-      .replace("-webp", ".webp");
-    const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
-    return baseUrl + modifiedRef;
-  });
 
   return (
     <article className="flex flex-col item-center p-4">
@@ -44,7 +33,6 @@ export default async function MasRecientesDeCategoria({
       {noticiasDeCadaCategoria
         .slice(0, 5)
         .map((noticia: Noticia, index: number) => {
-          const noticeImageUrl = noticeImageUrls[index];
           return (
             <Link
               href={`/pages/noticepage/${noticia.title}`}
@@ -53,7 +41,7 @@ export default async function MasRecientesDeCategoria({
             >
               <Image
                 className="mx-4 max-h-130px max-w-min"
-                src={noticeImageUrl}
+                src={modifyImageUrl(noticia.image_principal.imagen.asset._ref)}
                 alt={noticia.title}
                 width={150}
                 height={100}
