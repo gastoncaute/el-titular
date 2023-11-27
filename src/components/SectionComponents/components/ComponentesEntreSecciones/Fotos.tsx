@@ -14,6 +14,9 @@ export default async function Fotos({ categoria }: { categoria: any }) {
     );
   });
   const title = categoria === "Politica" ? "Infografias" : "Fotografias";
+  if (fotosFiltradas.length === 0) {
+    return null;
+  }
 
   return (
     <section className="col-start-2 col-end-7 flex flex-col bg-gradient-to-b from-pageColor to-gradientColor w-max m-auto p-8 pt-4 border border-pageColor rounded-3xl fotos_widget_section text-white">
