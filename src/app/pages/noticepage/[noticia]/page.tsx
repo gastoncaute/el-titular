@@ -65,7 +65,7 @@ export default async function Page({ params }: any) {
               </div>
               <div className="mt-8 noticepage_div_image">
                 <Image
-                  className="noticepage_image"
+                  className="m-auto noticepage_image"
                   src={modifyImageUrl(
                     noticia.image_principal.imagen.asset._ref
                   )}
