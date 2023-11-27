@@ -36,7 +36,7 @@ export default async function Page({ params }: any) {
       {datosDeNoticiaSeleccionada.map((noticia: Noticia, index: number) => {
         return (
           <article
-            className="grid grid-cols-3 mx-48 my-24 text-black noticepage_main_section"
+            className="grid grid-cols-3 mx-12 my-24 text-black noticepage_main_section"
             key={index}
           >
             <div className="row-span-1 flex items-center mt-12 mb-4">
