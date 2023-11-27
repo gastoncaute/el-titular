@@ -6,6 +6,7 @@ import Image from "next/image";
 import NoticiasMasRecientes from "@/components/pagesComponents/MasRecientesVentana";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";
 import { Noticia } from "@/types/componentes.types";
+import { modifyImageUrl } from "@/utils/modifyCodes";
 
 export default async function CategoryPage({ params }: any) {
   const noticias = await obtenerNoticias();
@@ -17,18 +18,6 @@ export default async function CategoryPage({ params }: any) {
   const noticiasDeCadaCategoria = noticias.filter(
     (noticia: Noticia) => noticia.categoria === categoriaSeleccionadaArreglada
   );
-
-  const noticeRef = noticiasDeCadaCategoria.map(
-    (noticia: Noticia) => noticia.image_principal.imagen.asset._ref
-  );
-  const noticeImageUrls = noticeRef.map((ref: any) => {
-    const modifiedRef = String(ref)
-      .replace("image-", "")
-      .replace("-jpg", ".jpg")
-      .replace("-webp", ".webp");
-    const baseUrl = "https://cdn.sanity.io/images/lrwm6m86/production/";
-    return baseUrl + modifiedRef;
-  });
 
   return (
     <>
@@ -46,7 +35,6 @@ export default async function CategoryPage({ params }: any) {
           {noticiasDeCadaCategoria
             .slice(0, 5)
             .map((noticia: Noticia, index: number) => {
-              const noticeImageUrl = noticeImageUrls[index];
               return (
                 <Link
                   href={`/pages/noticepage/${noticia.title}`}
@@ -55,8 +43,10 @@ export default async function CategoryPage({ params }: any) {
                 >
                   <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor ultimasNoticias_image_content">
                     <Image
-                      className="max-h-220px max-w-min ultimasNoticias_image"
-                      src={noticeImageUrl}
+                      className="max-h-250px max-w-min ultimasNoticias_image"
+                      src={modifyImageUrl(
+                        noticia.image_principal.imagen.asset._ref
+                      )}
                       alt={noticia.title}
                       height={250}
                       width={400}
