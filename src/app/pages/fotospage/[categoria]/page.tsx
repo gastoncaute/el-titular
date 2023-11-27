@@ -32,7 +32,7 @@ export default async function page({ params }: any) {
 
         <article className="col-start-1 col-end-3 grid grid-cols-2 border border-pageColor rounded-3xl h-min p-4 fotos_main_article">
           {fotosDeCategoria.map((foto: Foto, index: number) => {
-            if (index >= 6) {
+            if (index >= 21) {
               return null;
             }
             return (
@@ -71,11 +71,11 @@ export default async function page({ params }: any) {
             );
           })}
           <div className="col-start-1 col-end-3 flex justify-center items-center w-full pt-4">
-            {fotosDeCategoria.length > 6 && (
+            {/* {fotosDeCategoria.length > 6 && (
               <button className="border border-pageColor rounded-3xl p-2 w-60 text-xl font-bold button">
                 VER MAS
               </button>
-            )}
+            )} */}
           </div>
         </article>
       </section>

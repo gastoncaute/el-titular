@@ -23,7 +23,7 @@ export default async function page() {
           </Link>
         </div>
         <article className="col-start-1 col-end-3 border border-pageColor rounded-3xl h-min p-4 flex flex-col items-center ultimasNoticias_article">
-          {noticias.slice(0, 5).map((noticia: Noticia, index: number) => {
+          {noticias.slice(0, 20).map((noticia: Noticia, index: number) => {
             return (
               <Link
                 href={`/pages/noticepage/${noticia.title}`}
@@ -54,11 +54,11 @@ export default async function page() {
               </Link>
             );
           })}
-          {noticias.length > 5 && (
+          {/* {noticias.length > 5 && (
             <button className="border border-pageColor rounded-3xl p-2 w-60 text-xl font-bold button">
               VER MAS
             </button>
-          )}
+          )} */}
         </article>
       </section>
       <Footer />

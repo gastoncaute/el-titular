@@ -33,7 +33,7 @@ export default async function CategoryPage({ params }: any) {
         </div>
         <article className="col-start-1 col-end-3 border border-pageColor rounded-3xl h-min p-4 flex flex-col items-center ultimasNoticias_article">
           {noticiasDeCadaCategoria
-            .slice(0, 5)
+            .slice(0, 20)
             .map((noticia: Noticia, index: number) => {
               return (
                 <Link
@@ -67,11 +67,11 @@ export default async function CategoryPage({ params }: any) {
                 </Link>
               );
             })}
-          {noticiasDeCadaCategoria.length > 5 && (
+          {/* {noticiasDeCadaCategoria.length > 5 && (
             <button className="border border-pageColor rounded-3xl p-2 w-60 text-xl font-bold button">
               VER MAS
             </button>
-          )}
+          )} */}
         </article>
         <div className="col-start-3 col-end-4 ml-12 flex items-center justify-center h-min display_none">
           <NoticiasMasRecientes />
