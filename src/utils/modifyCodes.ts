@@ -13,7 +13,11 @@ export const modifyVideoCode = (videoCode: string | undefined) => {
 };
 
 export const modifyTweetCode = (tweetCode: string | undefined) => {
-  return tweetCode
-    ? tweetCode.replace("https://twitter.com/Exbigote_/status/", "")
-    : "";
+  if (tweetCode) {
+    // Utilizar una expresión regular para eliminar la parte constante de la URL de Twitter
+    const regex = /https:\/\/twitter\.com\/[^\/]+\/status\//;
+    return tweetCode.replace(regex, "");
+  } else {
+    return "";
+  }
 };
