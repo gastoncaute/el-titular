@@ -47,6 +47,11 @@ export default async function MasRecientes() {
                   >
                     {noticia.title}
                   </h1>
+                  {index === 0 && (
+                    <h2 className="text-2xl principal_page_bajada">
+                      {noticia.bajada}
+                    </h2>
+                  )}
                   <div
                     className={
                       index === 0
@@ -65,11 +70,6 @@ export default async function MasRecientes() {
                       height={index === 0 ? 100 : 130}
                     />
                   </div>
-                  {index === 0 && (
-                    <h2 className="text-2xl principal_page_bajada">
-                      {noticia.bajada}
-                    </h2>
-                  )}
                 </div>
               </Link>
             </div>
