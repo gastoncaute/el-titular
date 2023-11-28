@@ -33,7 +33,7 @@ export default {
       title: 'Título',
       validation: (Rule: any) => [
         Rule.required().error('El "Título" es obligatorio'),
-        Rule.max(90).error('El "Título" debe tener 90 caracteres como máximo'),
+        Rule.max(110).error('El "Título" debe tener 110 caracteres como máximo'),
       ],
     },
     {
