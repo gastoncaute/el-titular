@@ -39,7 +39,7 @@ export default async function NoticiasPorCategoria({ categoria }: any) {
                 href={`/pages/noticepage/${noticia.title}`}
                 className="w-full h-full flex flex-col border rounded-3xl border-pageColor main_section_notice"
               >
-                <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-auto p-4 ultimasNoticias_title_component">
+                <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-auto p-4 px-8 ultimasNoticias_title_component">
                   <h1
                     className={
                       index === 0
@@ -49,19 +49,29 @@ export default async function NoticiasPorCategoria({ categoria }: any) {
                   >
                     {noticia.title}
                   </h1>
-                  <Image
+                  <div
                     className={
                       index === 0
                         ? "main_section_image"
                         : "main_section_image_second"
                     }
-                    src={modifyImageUrl(
-                      noticia.image_principal.imagen.asset._ref
-                    )}
-                    alt={noticia.title}
-                    height={index === 0 ? 500 : 130}
-                    width={index === 0 ? 1000 : 350}
-                  />
+                    style={{ maxWidth: "100%", width: "100%" }}
+                  >
+                    <Image
+                      src={modifyImageUrl(
+                        noticia.image_principal.imagen.asset._ref
+                      )}
+                      alt={noticia.title}
+                      layout="responsive"
+                      width={1000}
+                      height={index === 0 ? 100 : 130}
+                      style={{
+                        objectFit: "cover",
+                        maxWidth: "100%",
+                        maxHeight: "100%",
+                      }}
+                    />
+                  </div>
                 </div>
               </Link>
             </div>

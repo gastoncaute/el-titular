@@ -474,16 +474,6 @@ body {
     padding-bottom: 0.5rem;
   }
 
-  .main_section_image {
-    max-height: 150px;
-    max-width: min-content;
-  }
-
-  .main_section_image_second {
-    max-height: 150px;
-    max-width: min-content;
-  }
-
   .section_notice {
     grid-column: 1 / 4;
   }
@@ -662,9 +652,9 @@ body {
   }
 
   .ultimasNoticias_title_component {
-    margin: 0;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    padding: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .ultimasNoticias_title {
