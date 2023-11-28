@@ -20,7 +20,6 @@ export default async function Videos({ categoria }: { categoria: any }) {
   } else {
     filteredVideos = videos;
   }
-
   const selectedVideo = filteredVideos.length > 0 ? filteredVideos[0] : null;
 
   return (
@@ -28,7 +27,8 @@ export default async function Videos({ categoria }: { categoria: any }) {
       {selectedVideo && (
         <section
           key={selectedVideo.categoria}
-          className="col-start-2 col-end-7 bg-gradient-to-b from-pageColor to-gradientColor w-40rem m-auto p-8 border border-pageColor rounded-3xl videos_main_section text-white"
+          className="col-start-2 col-end-7 bg-gradient-to-b from-pageColor to-gradientColor w-60rem h-full m-auto p-8 border border-pageColor rounded-3xl videos_main_section text-white"
+          style={{ aspectRatio: "16 / 9" }}
         >
           <h1 className="flex justify-center text-4xl font-bold pb-4 videos_title">
             <PortableText value={selectedVideo.title} />
@@ -36,7 +36,7 @@ export default async function Videos({ categoria }: { categoria: any }) {
           <article className="video-container">
             <iframe
               width="100%"
-              height="315"
+              height="100%"
               className="video-iframe rounded-xl"
               src={`https://www.youtube.com/embed/${modifyVideoCode(
                 selectedVideo.link_video

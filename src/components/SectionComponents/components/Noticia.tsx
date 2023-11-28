@@ -43,7 +43,7 @@ export default async function Noticia() {
             </div>
             <NoticiasPorCategoria categoria={categoria} />
           </article>
-          <section className="w-min m-auto">
+          <section>
             {categoria === "Policiales" && <Videos categoria={categoria} />}
             {categoria === "Politica" || categoria === "Sociedad" ? (
               <Fotos categoria={categoria} />
