@@ -30,7 +30,13 @@ export default async function Fotos({ categoria }: { categoria: any }) {
         {fotosFiltradas.slice(0, 3).map((foto: Foto, index: number) => (
           <article
             key={index}
-            className="px-4 m-auto flex flex-col items-center noticias_title fotos_widget_article"
+            className={
+              index === 0
+                ? "px-4 m-auto flex flex-col items-center noticias_title fotos_widget_article"
+                : index === 1
+                ? "px-4 m-auto flex flex-col items-center noticias_title fotos_widget_article display_none"
+                : "px-4 m-auto flex flex-col items-center noticias_title fotos_widget_article display_none"
+            }
           >
             <Image
               className="rounded-xl"
