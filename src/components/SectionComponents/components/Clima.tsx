@@ -7,7 +7,10 @@ export default function Clima() {
           data-use-service-core
           defer
         ></script>
-        <div className="elfsight-app-66436da0-3a38-4ce2-aab9-d960428edf1c"></div>
+        <div
+          className="elfsight-app-dcc69813-9b79-4e63-adc5-e08be520222b"
+          data-elfsight-app-lazy
+        ></div>
       </div>
     </div>
   );
