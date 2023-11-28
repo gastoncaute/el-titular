@@ -29,7 +29,7 @@ export default async function Page({ params }: any) {
     const month = date.toLocaleString("default", { month: "long" });
     return `${day} de ${month}`;
   };
-  // comentario
+
   return (
     <>
       <Header />

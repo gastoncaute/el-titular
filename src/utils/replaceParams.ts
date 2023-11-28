@@ -1,6 +1,6 @@
 export const repalceParams = (param: string): string => {
   return param.replace(
-    /%20|%2C|%E2%80%93|%C3%81|%C3%A1|%C3%89|%C3%A9|%C3%8D|%C3%AD|%C3%93|%C3%B3|%C3%9A|%C3%BA/g,
+    /%20|%2C|%E2%80%93|%24|%C3%81|%C3%A1|%C3%89|%C3%A9|%C3%8D|%C3%AD|%C3%93|%C3%B3|%C3%9A|%C3%BA/g,
     (match: string) => {
       switch (match) {
         case "%20":
@@ -9,6 +9,8 @@ export const repalceParams = (param: string): string => {
           return ",";
         case "%E2%80%93":
           return "-";
+        case "%24":
+          return "$";
 
         case "%C3%81":
           return "Á";
