@@ -121,7 +121,10 @@ export default async function Page({ params }: any) {
                 <TercerBloque tercerBloque={noticia.tercer_bloque} />
                 <CuartoBloque cuartoBloque={noticia.cuarto_bloque} />
                 <QuintoBloque quintoBloque={noticia.quinto_bloque} />
-                <ArrayImages arrayImages={noticia.imagenes_array} />
+                {noticia.imagenes_array &&
+                  noticia.imagenes_array.length > 0 && (
+                    <ArrayImages arrayImages={noticia.imagenes_array} />
+                  )}
               </div>
 
               {/* <div className="border-t border-pageColor p-8 flex justify-center items-center">

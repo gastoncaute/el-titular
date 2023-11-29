@@ -6,7 +6,7 @@ import React from "react";
 export default function ArrayImages({ arrayImages }: { arrayImages: any }) {
   return (
     <section className="flex pt-8 border border-pageColor rounded-xl">
-      {arrayImages.map((imagen: any) => (
+      {arrayImages?.map((imagen: any) => (
         <div key={imagen._key} className="m-auto">
           <Image
             className="m-auto noticepage_image"
