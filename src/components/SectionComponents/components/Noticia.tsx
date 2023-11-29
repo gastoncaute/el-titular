@@ -49,7 +49,7 @@ export default async function Noticia() {
               <Fotos categoria={categoria} />
             ) : null}
             {categoria === "Economia" && <Dolar />}
-            {categoria === "Deporte" && <Feriados />}
+            {/* {categoria === "Deporte" && <Feriados />} */}
             {categoria === "Tendencias" && <RedesSociales />}
           </section>
         </section>
