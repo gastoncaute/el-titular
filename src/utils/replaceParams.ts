@@ -1,42 +1,161 @@
 export const repalceParams = (param: string): string => {
   return param.replace(
-    /%20|%2C|%E2%80%93|%24|%C3%81|%C3%A1|%C3%89|%C3%A9|%C3%8D|%C3%AD|%C3%93|%C3%B3|%C3%9A|%C3%BA/g,
+    /%20|%40|%23|%24|%5F|%E2%80%94|%C2%B7|%E2%80%93|%2B|%28|%29|%2F|%2A|%E2%80%9D|%E2%80%9C|%22|%C2%AB|%C2%BB|%E2%80%99|%E2%80%98|%27|%E2%80%B9|%E2%80%A9|%E2%80%82|%2C|%7E|%7C|%E2%80%A2|%CF%80|%F7|%C3%97|%C2%A3|%E2%82%AC|%5E|%E2%86%90|%E2%86%91|%E2%86%93|%E2%86%92|%E2%80%B2|%E2%80%B3|%C2%B0|%3D|%E2%88%9E|%E2%89%88|%7B|%7D|%5C|%25|%C2%A9|%C2%AE|%E2%84%A2|%E2%9C%93|%5B|%5D|%3E|%3C|%2E|%2C|%40|%23|%24|%5F|%E2%80%94|%C2%B7|%E2%80%93|%2B|%28|%29|%2F|%2A|%E2%80%9D|%E2%80%9C|%22|%C2%AB|%C2%BB|%E2%80%99|%E2%80%98|%27|%E2%80%B9|%E2%80%A9|%E2%80%82|%2C|%3A|%3B|%C2%A1|%21|%C2%BF|%3F|%3A|%3B|%C2%A1|%21|%C2%BF|%3F|%C3%81|%C3%A1|%C3%89|%C3%A9|%C3%8D|%C3%AD|%C3%93|%C3%B3|%C3%9A|%C3%BA|%C3%B1|%C3%91/g,
     (match: string) => {
       switch (match) {
         case "%20":
           return " ";
-        case "%2C":
-          return ",";
-        case "%E2%80%93":
-          return "-";
+        case "%40":
+          return "@";
+        case "%23":
+          return "#";
         case "%24":
           return "$";
+        case "%5F":
+          return "_";
+        case "%E2%80%94":
+          return "—";
+        case "%C2%B7":
+          return "·";
+        case "%E2%80%93":
+          return "–";
+        case "%2B":
+          return "+";
+        case "%28":
+          return "(";
+        case "%29":
+          return ")";
+        case "%2F":
+          return "/";
+        case "%2A":
+          return "*";
+        case "%E2%80%9D":
+          return "”";
+        case "%E2%80%9C":
+          return "“";
+        case "%22":
+          return '"';
+        case "%C2%AB":
+          return "«";
+        case "%C2%BB":
+          return "»";
+        case "%E2%80%99":
+          return "’";
+        case "%E2%80%98":
+          return "‘";
+        case "%27":
+          return "'";
+        case "%E2%80%B9":
+          return "‹";
+        case "%E2%80%A9":
+          return "›";
+        case "%E2%80%82":
+          return " ";
+        case "%2C":
+          return ",";
+        case "%3A":
+          return ":";
+        case "%3B":
+          return ";";
+        case "%C2%A1":
+          return "¡";
+        case "%21":
+          return "!";
+        case "%C2%BF":
+          return "¿";
+        case "%3F":
+          return "?";
+        case "%7E":
+          return "~";
+        case "%7C":
+          return "|";
+        case "%E2%80%A2":
+          return "•";
+        case "%CF%80":
+          return "π";
+        case "%F7":
+          return "÷";
+        case "%C3%97":
+          return "×";
+        case "%C2%A3":
+          return "£";
+        case "%E2%82%AC":
+          return "€";
+        case "%5E":
+          return "^";
+        case "%E2%86%90":
+          return "←";
+        case "%E2%86%91":
+          return "↑";
+        case "%E2%86%93":
+          return "↓";
+        case "%E2%86%92":
+          return "→";
+        case "%E2%80%B2":
+          return "′";
+        case "%E2%80%B3":
+          return "″";
+        case "%C2%B0":
+          return "°";
+        case "%3D":
+          return "=";
+        case "%E2%88%9E":
+          return "∞";
+        case "%E2%89%88":
+          return "≈";
+        case "%7B":
+          return "{";
+        case "%7D":
+          return "}";
+        case "%5C":
+          return "\\";
+        case "%25":
+          return "%";
+        case "%C2%A9":
+          return "©";
+        case "%C2%AE":
+          return "®";
+        case "%E2%84%A2":
+          return "™";
+        case "%E2%9C%93":
+          return "✓";
+        case "%5B":
+          return "[";
+        case "%5D":
+          return "]";
+        case "%3E":
+          return ">";
+        case "%3C":
+          return "<";
+        case "%2E":
+          return ".";
+        case "%2C":
+          return ",";
 
         case "%C3%81":
           return "Á";
         case "%C3%A1":
           return "á";
-
         case "%C3%89":
           return "É";
         case "%C3%A9":
           return "é";
-
         case "%C3%8D":
           return "Í";
         case "%C3%AD":
           return "í";
-
         case "%C3%93":
           return "Ó";
         case "%C3%B3":
           return "ó";
-
         case "%C3%9A":
           return "Ú";
-
         case "%C3%BA":
           return "ú";
+        case "%C3%B1":
+          return "ñ";
+        case "%C3%91":
+          return "Ñ";
         default:
           return match;
       }
