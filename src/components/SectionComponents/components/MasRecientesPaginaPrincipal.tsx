@@ -37,7 +37,7 @@ export default async function MasRecientes() {
                 href={`/pages/noticepage/${noticia.title}`}
                 className="w-full h-full flex flex-col border rounded-3xl border-pageColor principal_page_ultimasNoticias_link"
               >
-                <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-auto p-4 px-8 ultimasNoticias_title_component">
+                <div className="col-start-2 col-end-3 flex flex-col items-center justify-center p-4 px-8 ultimasNoticias_title_component">
                   <h1
                     className={
                       index === 0
