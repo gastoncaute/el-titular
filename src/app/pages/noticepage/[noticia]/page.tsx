@@ -14,6 +14,7 @@ import TercerBloque from "@/components/pagesComponents/NoticePage/TercerBloque";
 import CuartoBloque from "@/components/pagesComponents/NoticePage/CuartoBloque";
 import QuintoBloque from "@/components/pagesComponents/NoticePage/QuintoBloque";
 import { modifyImageUrl } from "@/utils/modifyCodes";
+import ArrayImages from "@/components/pagesComponents/NoticePage/ArrayImages";
 
 export default async function Page({ params }: any) {
   const noticias = await obtenerNoticias();
@@ -120,6 +121,7 @@ export default async function Page({ params }: any) {
                 <TercerBloque tercerBloque={noticia.tercer_bloque} />
                 <CuartoBloque cuartoBloque={noticia.cuarto_bloque} />
                 <QuintoBloque quintoBloque={noticia.quinto_bloque} />
+                <ArrayImages arrayImages={noticia.imagenes_array} />
               </div>
 
               {/* <div className="border-t border-pageColor p-8 flex justify-center items-center">
