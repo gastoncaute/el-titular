@@ -36,7 +36,7 @@ export default async function NoticiasPorCategoria({ categoria }: any) {
               }
             >
               <Link
-                href={`/pages/noticepage/${noticia.title}`}
+                href={`/pages/noticepage/${encodeURIComponent(noticia.title)}`}
                 className="w-full h-full flex flex-col border rounded-3xl border-pageColor main_section_notice"
               >
                 <div className="col-start-2 col-end-3 flex flex-col items-center justify-center p-4 px-8 ultimasNoticias_title_component">

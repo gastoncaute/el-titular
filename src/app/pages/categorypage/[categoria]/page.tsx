@@ -37,7 +37,9 @@ export default async function CategoryPage({ params }: any) {
             .map((noticia: Noticia, index: number) => {
               return (
                 <Link
-                  href={`/pages/noticepage/${noticia.title}`}
+                  href={`/pages/noticepage/${encodeURIComponent(
+                    noticia.title
+                  )}`}
                   className="w-full h-min grid grid-cols-2 border rounded-3xl border-pageColor py-8 my-8 ultimasNoticias_link"
                   key={index}
                 >

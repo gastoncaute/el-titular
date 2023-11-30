@@ -6,7 +6,6 @@ import Link from "next/link";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";
 import { Noticia, Autor } from "@/types/componentes.types";
 import { obtenerAutor } from "@/utils/obtenerAutor";
-import { repalceParams } from "@/utils/replaceParams";
 import MasRecientesDeCategoria from "@/components/pagesComponents/MasRecientesDeCategoria";
 import { PortableText } from "@portabletext/react";
 import SegundoBloque from "@/components/pagesComponents/NoticePage/SegundoBloque";
@@ -19,10 +18,9 @@ import ArrayImages from "@/components/pagesComponents/NoticePage/ArrayImages";
 export default async function Page({ params }: any) {
   const noticias = await obtenerNoticias();
   const autor = await obtenerAutor();
-  const noticiaSeleccionada = params.noticia;
-  const noticiaSeleccionadaArreglada = repalceParams(noticiaSeleccionada);
+  const noticiaSeleccionada = decodeURIComponent(params.noticia);
   const datosDeNoticiaSeleccionada = noticias.filter(
-    (noticia: Noticia) => noticia.title === noticiaSeleccionadaArreglada
+    (noticia: Noticia) => noticia.title === noticiaSeleccionada
   );
   const formatCreatedAt = (createdAt: string) => {
     const date = new Date(createdAt);

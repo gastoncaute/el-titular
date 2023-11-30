@@ -35,7 +35,7 @@ export default async function NoticiasMasRecientes() {
         const noticeImageUrl = noticeImageUrls[index];
         return (
           <Link
-            href={`/pages/noticepage/${noticia.title}`}
+            href={`/pages/noticepage/${encodeURIComponent(noticia.title)}`}
             key={noticia._id}
             className="grid grid-cols-2 p-4 my-2 border border-pageColor rounded-3xl noticepage_masRecientes_notices"
           >

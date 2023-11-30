@@ -35,7 +35,7 @@ export default async function MasRecientesDeCategoria({
         .map((noticia: Noticia, index: number) => {
           return (
             <Link
-              href={`/pages/noticepage/${noticia.title}`}
+              href={`/pages/noticepage/${encodeURIComponent(noticia.title)}`}
               key={noticia._id}
               className="flex p-4 m-2 border border-pageColor rounded-3xl noticepage_masRecientes_notices"
             >
