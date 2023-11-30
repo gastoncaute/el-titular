@@ -65,7 +65,6 @@ export default async function MasRecientes() {
                         noticia.image_principal.imagen.asset._ref
                       )}
                       alt={noticia.title}
-                      layout="responsive"
                       width={1000}
                       height={index === 0 ? 100 : 130}
                     />

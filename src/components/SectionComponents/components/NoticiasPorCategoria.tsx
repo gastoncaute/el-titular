@@ -62,7 +62,6 @@ export default async function NoticiasPorCategoria({ categoria }: any) {
                         noticia.image_principal.imagen.asset._ref
                       )}
                       alt={noticia.title}
-                      layout="responsive"
                       width={1000}
                       height={index === 0 ? 100 : 130}
                       style={{
