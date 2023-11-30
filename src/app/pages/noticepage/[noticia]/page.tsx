@@ -135,7 +135,7 @@ export default async function Page({ params }: any) {
               <MasRecientesDeCategoria categoria={noticia.categoria} />
             </div>
             <div className="col-span-2 row-span-3 mt-12">
-              <NoticiasMasRecientes />
+              <NoticiasMasRecientes context="noticePage" />
             </div>
           </article>
         );

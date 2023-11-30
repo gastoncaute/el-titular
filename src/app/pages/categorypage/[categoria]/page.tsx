@@ -11,12 +11,8 @@ import { modifyImageUrl } from "@/utils/modifyCodes";
 export default async function CategoryPage({ params }: any) {
   const noticias = await obtenerNoticias();
   const categoriaSeleccionada = params.categoria;
-  const categoriaSeleccionadaArreglada = categoriaSeleccionada.replace(
-    /%20/g,
-    " "
-  );
   const noticiasDeCadaCategoria = noticias.filter(
-    (noticia: Noticia) => noticia.categoria === categoriaSeleccionadaArreglada
+    (noticia: Noticia) => noticia.categoria === categoriaSeleccionada
   );
 
   return (
@@ -28,7 +24,7 @@ export default async function CategoryPage({ params }: any) {
             href={""}
             className="border border-pageColor rounded-3xl p-2 px-4 font-bold button"
           >
-            {categoriaSeleccionadaArreglada}
+            {categoriaSeleccionada}
           </Link>
         </div>
         <article className="col-start-1 col-end-3 border border-pageColor rounded-3xl h-min p-4 flex flex-col items-center ultimasNoticias_article">
@@ -76,7 +72,7 @@ export default async function CategoryPage({ params }: any) {
           )} */}
         </article>
         <div className="col-start-3 col-end-4 ml-12 flex items-center justify-center h-min display_none">
-          <NoticiasMasRecientes />
+          <NoticiasMasRecientes context={"categoryPage"} />
         </div>
       </section>
       <Footer />
