@@ -37,16 +37,16 @@ export default async function MasRecientesDeCategoria({
             <Link
               href={`/pages/noticepage/${encodeURIComponent(noticia.title)}`}
               key={noticia._id}
-              className="flex p-4 m-2 border border-pageColor rounded-3xl noticepage_masRecientes_notices"
+              className="flex flex-col p-4 m-2 border border-pageColor rounded-3xl noticepage_masRecientes_notices"
             >
               <Image
-                className="mx-4 max-h-130px max-w-min"
+                className="flex items-center justify-center mx-4 noticepage_masRecientes_image"
                 src={modifyImageUrl(noticia.image_principal.imagen.asset._ref)}
                 alt={noticia.title}
                 width={150}
                 height={100}
               />
-              <h1 className="text-lg font-bold pl-4 border-l border-pageColor flex items-center noticias_title">
+              <h1 className="text-lg font-bold mt-4 pl-4 flex items-center noticias_title">
                 {noticia.title}
               </h1>
             </Link>
