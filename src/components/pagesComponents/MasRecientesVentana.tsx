@@ -46,7 +46,7 @@ export default async function NoticiasMasRecientes({
               className={`${
                 context === noticePage
                   ? "col-start-2 col-end-3 text-4xl font-bold pl-4 border-l border-pageColor flex items-center noticias_title noticepage_masRecientes_title max-w-sm"
-                  : "col-start-2 col-end-3 text-4xl font-bold mt-4 pl-4 flex items-center noticias_title noticepage_masRecientes_title max-w-sm"
+                  : "col-start-2 col-end-3 text-2xl font-bold mt-4 pl-4 flex items-center noticias_title noticepage_masRecientes_title max-w-sm"
               }`}
             >
               {noticia.title}
