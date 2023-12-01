@@ -11,7 +11,7 @@ export default function Autor({ categoria }: { categoria: any }) {
     categoria === "Infografias"
       ? [
           "https://www.instagram.com/juanaamonti/",
-          "https://www.montijuana1@gmail.com",
+          "mailto:montijuana1@gmail.com",
           "https://wa.me/5491164522101",
         ]
       : [
