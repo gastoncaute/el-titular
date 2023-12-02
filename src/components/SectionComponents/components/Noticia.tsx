@@ -4,7 +4,7 @@ import { obtenerCategorias } from "@/utils/obtenerCategorias";
 import NoticiasPorCategoria from "./NoticiasPorCategoria";
 import Videos from "./ComponentesEntreSecciones/Videos";
 import Fotos from "./ComponentesEntreSecciones/Fotos";
-import Dolar from "./ComponentesEntreSecciones/Dolar";
+// import Dolar from "./ComponentesEntreSecciones/Dolar";
 import Feriados from "./ComponentesEntreSecciones/Feriados";
 import RedesSociales from "./ComponentesEntreSecciones/RedesSociales";
 
@@ -48,7 +48,7 @@ export default async function Noticia() {
             {categoria === "Politica" || categoria === "Sociedad" ? (
               <Fotos categoria={categoria} />
             ) : null}
-            {categoria === "Economia" && <Dolar />}
+            {/* {categoria === "Economia" && <Dolar />} */}
             {/* {categoria === "Deporte" && <Feriados />} */}
             {categoria === "Tendencias" && <RedesSociales />}
           </section>
