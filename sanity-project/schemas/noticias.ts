@@ -28,6 +28,20 @@ export default {
       },
     },
     {
+      name: 'etiquetas',
+      type: 'array',
+      title: 'Etiquetas',
+      validation: (Rule: any) => Rule.required().error('Las "Etiquetas" son obligatorias'),
+      of: [
+        {
+          type: 'string',
+        },
+      ],
+      options: {
+        layout: 'tags',
+      },
+    },
+    {
       name: 'title',
       type: 'string',
       title: 'Título',
