@@ -43,8 +43,8 @@ export default async function NoticiasPorCategoria({ categoria }: any) {
                   <h1
                     className={
                       index === 0
-                        ? "h-20 text-5xl font-bold principal_page_title noticias_title mb-8"
-                        : "h-32 text-2xl font-bold principal_page_title principal_page_title_2 noticias_title mb-2"
+                        ? "text-5xl font-bold principal_page_title noticias_title mb-8"
+                        : "text-2xl font-bold principal_page_title principal_page_title_2 noticias_title mb-2"
                     }
                   >
                     {noticia.title}
