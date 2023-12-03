@@ -64,6 +64,10 @@ body {
   z-index: 1;
 }
 
+.principal_page_title_2 {
+  font-size: 28px;
+}
+
 .main_section_notice:hover .noticias_title {
   text-decoration: underline;
 }
