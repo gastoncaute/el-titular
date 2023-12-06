@@ -41,14 +41,14 @@ export default async function MasRecientes() {
                   <h1
                     className={
                       index === 0
-                        ? "h-20 text-5xl font-bold principal_page_title noticias_title mb-8"
-                        : "h-32 text-2xl font-bold principal_page_title principal_page_title_2 noticias_title mb-2"
+                        ? "h-32 text-5xl font-bold principal_page_title noticias_title mb-8"
+                        : "h-24 text-2xl font-bold principal_page_title principal_page_title_2 noticias_title mb-2"
                     }
                   >
                     {noticia.title}
                   </h1>
                   {index === 0 && (
-                    <h2 className="h-24 text-2xl principal_page_bajada">
+                    <h2 className="h-20 text-2xl principal_page_bajada">
                       {noticia.bajada}
                     </h2>
                   )}
