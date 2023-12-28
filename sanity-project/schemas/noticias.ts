@@ -22,25 +22,25 @@ export default {
           {title: 'Economia', value: 'Economia'},
           {title: 'Sociedad', value: 'Sociedad'},
           {title: 'Deporte', value: 'Deporte'},
-          {title: 'Tendencias', value: 'Tendencias'},
+          {title: 'Cultura', value: 'Cultura'},
           {title: 'Internacional', value: 'Internacional'},
         ],
       },
     },
-    {
-      name: 'etiquetas',
-      type: 'array',
-      title: 'Etiquetas',
-      validation: (Rule: any) => Rule.required().error('Las "Etiquetas" son obligatorias'),
-      of: [
-        {
-          type: 'string',
-        },
-      ],
-      options: {
-        layout: 'tags',
-      },
-    },
+    // {
+    //   name: 'etiquetas',
+    //   type: 'array',
+    //   title: 'Etiquetas',
+    //   validation: (Rule: any) => Rule.required().error('Las "Etiquetas" son obligatorias'),
+    //   of: [
+    //     {
+    //       type: 'string',
+    //     },
+    //   ],
+    //   options: {
+    //     layout: 'tags',
+    //   },
+    // },
     {
       name: 'title',
       type: 'string',

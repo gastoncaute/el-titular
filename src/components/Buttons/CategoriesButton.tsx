@@ -7,7 +7,7 @@ export default function CategoriesButton() {
     "Economia",
     "Sociedad",
     "Deporte",
-    "Tendencias",
+    "Cultura",
     "Internacional",
     "Infografias",
     "Fotografias",
