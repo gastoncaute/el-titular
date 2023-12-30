@@ -15,9 +15,9 @@ export default function Autor({ categoria }: { categoria: any }) {
           "https://wa.me/5491164522101",
         ]
       : [
-          "https://instagram.com/gastoncauteruccio/",
-          "https://twitter.com/Gastoncaute",
-          "https://twitter.com/Gastoncaute",
+          "https://instagram.com/valend.ph/",
+          "mailto:valentinadodero26@gmail.com",
+          "https://wa.me/5492236331390",
         ];
 
   return (
@@ -75,16 +75,16 @@ export default function Autor({ categoria }: { categoria: any }) {
                   width="44"
                   height="44"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="#fff"
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="headersButtons social_buttons"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
-                  <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                  <path d="M3 7l9 6l9 -6" />
                 </svg>
               )}
             </Link>
@@ -112,16 +112,16 @@ export default function Autor({ categoria }: { categoria: any }) {
                   width="44"
                   height="44"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="#fff"
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="headersButtons social_buttons"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
-                  <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
                 </svg>
               )}
             </Link>
