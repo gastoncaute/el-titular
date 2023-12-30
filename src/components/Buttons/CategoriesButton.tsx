@@ -5,7 +5,7 @@ export default function CategoriesButton() {
     "Policiales",
     "Politica",
     "Economia",
-    "Sociedad",
+    "Actualidad",
     "Deporte",
     "Cultura",
     "Internacional",

@@ -20,7 +20,7 @@ export default {
           {title: 'Policiales', value: 'Policiales'},
           {title: 'Politica', value: 'Politica'},
           {title: 'Economia', value: 'Economia'},
-          {title: 'Sociedad', value: 'Sociedad'},
+          {title: 'Actualidad', value: 'Actualidad'},
           {title: 'Deporte', value: 'Deporte'},
           {title: 'Cultura', value: 'Cultura'},
           {title: 'Internacional', value: 'Internacional'},
