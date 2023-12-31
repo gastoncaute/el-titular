@@ -54,7 +54,11 @@ export default function Footer() {
             </svg>
             eltitularmdp@gmail.com
           </p>
-          <p className="p-4 text-2xl flex items-center footer_contact_p">
+          <Link
+            href={"https://wa.me/5492234544870"}
+            target="#"
+            className="p-4 text-2xl flex items-center footer_contact_p"
+          >
             <svg
               className="footer_contact_svg"
               width="28"
@@ -69,8 +73,8 @@ export default function Footer() {
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
             </svg>
-            (223) xd
-          </p>
+            +54 9 223 454-4870
+          </Link>
         </h3>
         <h5 className="p-4 border-t w-full flex justify-center items-center">
           <Link

@@ -4,7 +4,7 @@ export default function SocialButtons() {
   return (
     <>
       <Link
-        href="https://www.instagram.com/rorolopez02/"
+        href="https://www.instagram.com/eltitularmdp/"
         target="#"
         className="m-2 flex items-center"
       >
@@ -26,7 +26,7 @@ export default function SocialButtons() {
         </svg>
       </Link>
       <Link
-        href="https://twitter.com/home"
+        href="https://twitter.com/eltitularmdp"
         target="#"
         className="m-2 flex items-center"
       >
@@ -47,7 +47,7 @@ export default function SocialButtons() {
         </svg>
       </Link>
       <Link
-        href="https://www.tiktok.com/"
+        href="https://www.tiktok.com/@eltitularmdp"
         target="#"
         className="m-2 flex items-center"
       >
@@ -67,7 +67,7 @@ export default function SocialButtons() {
         </svg>
       </Link>
       <Link
-        href="https://www.youtube.com/"
+        href="https://www.youtube.com/channel/UC_y5jK1WRWZPcJTTDJEqmhA"
         target="#"
         className="m-2 flex items-center"
       >
@@ -88,7 +88,7 @@ export default function SocialButtons() {
         </svg>
       </Link>
       <Link
-        href="https://www.facebook.com/"
+        href="https://www.facebook.com/people/El-Titular/61554885631629/"
         target="#"
         className="m-2 flex items-center"
       >
