@@ -36,7 +36,11 @@ export default function Footer() {
           </li>
         </ul>
         <h3 className="w-full flex justify-center m-4 footer_contact">
-          <p className="p-4 text-2xl flex items-center footer_contact_p">
+          <Link
+            href={"mailto:eltitularmdp@gmail.com"}
+            target="#"
+            className="p-4 text-2xl flex items-center footer_contact_p headersButtons"
+          >
             <svg
               className="footer_contact_svg"
               width="28"
@@ -53,11 +57,11 @@ export default function Footer() {
               <path d="M3 7l9 6l9 -6" />
             </svg>
             eltitularmdp@gmail.com
-          </p>
+          </Link>
           <Link
             href={"https://wa.me/5492234544870"}
             target="#"
-            className="p-4 text-2xl flex items-center footer_contact_p"
+            className="p-4 text-2xl flex items-center footer_contact_p headersButtons"
           >
             <svg
               className="footer_contact_svg"

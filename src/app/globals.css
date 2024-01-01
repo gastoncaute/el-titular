@@ -33,6 +33,10 @@ body {
   z-index: 1;
 }
 
+.headersButtons:hover svg {
+  stroke: #000;
+}
+
 .fotos_widget_buttons:hover {
   font-weight: bold;
   color: #000;

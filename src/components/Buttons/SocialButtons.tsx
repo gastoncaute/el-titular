@@ -88,7 +88,7 @@ export default function SocialButtons() {
         </svg>
       </Link>
       <Link
-        href="https://www.facebook.com/people/El-Titular/61554885631629/"
+        href="https://www.facebook.com/people/El-Titular/61555169820286/"
         target="#"
         className="m-2 flex items-center"
       >
