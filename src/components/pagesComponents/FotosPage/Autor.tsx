@@ -12,7 +12,6 @@ export default async function Autor({ categoria }: { categoria: any }) {
   const autorSeleccionado = autor.filter(
     (autor: Autor) => autor.name === autorName
   );
-  console.log(autorSeleccionado);
   const autorRedes =
     categoria === "Infografias"
       ? [
@@ -33,11 +32,11 @@ export default async function Autor({ categoria }: { categoria: any }) {
           key={index}
           className="border border-black bg-gradient-to-b from-pageColor to-gradientColor text-white flex flex-col w-40rem rounded-3xl mt-4 p-4 px-12 text-2xl font-bold fotos_section_autor"
         >
-          <h1 className="m-auto">Autora: {autorName}</h1>
+          <h1 className="m-auto">Autora: {item.name}</h1>
           <h2 className="flex items-center justify-around">
             <Image
               src={modifyImageUrl(item.photo.asset._ref)}
-              alt={autorName}
+              alt={item.name}
               width={70}
               height={70}
               className="border border-white text-xs rounded-full mr-2 left-0 noticepage_autor_image"
