@@ -48,7 +48,7 @@ export default async function MasRecientes() {
                     {noticia.title}
                   </h1>
                   {index === 0 && (
-                    <h2 className="h-20 text-2xl principal_page_bajada">
+                    <h2 className="h-min text-2xl principal_page_bajada">
                       {noticia.bajada}
                     </h2>
                   )}
