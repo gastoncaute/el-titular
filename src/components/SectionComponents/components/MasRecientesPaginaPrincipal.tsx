@@ -67,6 +67,11 @@ export default async function MasRecientes() {
                       alt={noticia.title}
                       width={1000}
                       height={index === 0 ? 100 : 130}
+                      style={{
+                        objectFit: "cover",
+                        maxWidth: "100%",
+                        maxHeight: "100%",
+                      }}
                     />
                   </div>
                 </div>
