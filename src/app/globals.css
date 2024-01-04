@@ -527,6 +527,7 @@ body {
     font-size: 26px;
     line-height: 1.1;
     margin-bottom: 0.3rem;
+    height: min-content;
   }
 
   .principal_page_bajada {
