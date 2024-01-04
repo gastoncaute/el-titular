@@ -5,8 +5,6 @@ import NoticiasPorCategoria from "./NoticiasPorCategoria";
 import Videos from "./ComponentesEntreSecciones/Videos";
 import Fotos from "./ComponentesEntreSecciones/Fotos";
 // import Dolar from "./ComponentesEntreSecciones/Dolar";
-import Feriados from "./ComponentesEntreSecciones/Feriados";
-import RedesSociales from "./ComponentesEntreSecciones/RedesSociales";
 
 export default async function Noticia() {
   const categorias = await obtenerCategorias();
@@ -14,10 +12,8 @@ export default async function Noticia() {
     "Policiales",
     "Politica",
     "Economia",
-    "Sociedad",
+    "Actualidad",
     "Deporte",
-    "Tendencias",
-    "Internacional",
   ];
 
   const categoriasUnicas = Array.from(new Set(categorias)).sort(
@@ -50,7 +46,6 @@ export default async function Noticia() {
             ) : null}
             {/* {categoria === "Economia" && <Dolar />} */}
             {/* {categoria === "Deporte" && <Feriados />} */}
-            {categoria === "Tendencias" && <RedesSociales />}
           </section>
         </section>
       ))}
