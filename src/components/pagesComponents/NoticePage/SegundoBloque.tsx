@@ -46,7 +46,7 @@ export default async function SegundoBloque({
       {modifyVideoCode(segundoBloque?.YouTubeCode_1) && (
         <div className="py-4 video-container">
           <iframe
-            width="100%"
+            width="50%"
             height="315"
             className="video-iframe"
             src={`https://www.youtube.com/embed/${modifyVideoCode(

@@ -45,7 +45,7 @@ export default function QuintoBloque({
       {modifyVideoCode(quintoBloque?.YouTubeCode_4) && (
         <div className="py-4 video-container">
           <iframe
-            width="100%"
+            width="50%"
             height="315"
             className="video-iframe"
             src={`https://www.youtube.com/embed/${modifyVideoCode(
