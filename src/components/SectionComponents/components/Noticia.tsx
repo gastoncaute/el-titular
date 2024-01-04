@@ -41,7 +41,7 @@ export default async function Noticia() {
           </article>
           <section>
             {categoria === "Policiales" && <Videos categoria={categoria} />}
-            {categoria === "Politica" || categoria === "Sociedad" ? (
+            {categoria === "Politica" || categoria === "Actualidad" ? (
               <Fotos categoria={categoria} />
             ) : null}
             {/* {categoria === "Economia" && <Dolar />} */}

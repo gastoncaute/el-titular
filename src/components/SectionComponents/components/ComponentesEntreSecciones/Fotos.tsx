@@ -10,7 +10,7 @@ export default async function Fotos({ categoria }: { categoria: any }) {
   const fotosFiltradas = fotos.filter((foto: Foto) => {
     return (
       (categoria === "Politica" && foto.categoria === "Infografias") ||
-      (categoria === "Sociedad" && foto.categoria === "Fotografias")
+      (categoria === "Actualidad" && foto.categoria === "Fotografias")
     );
   });
   const title = categoria === "Politica" ? "Infografias" : "Fotografias";
