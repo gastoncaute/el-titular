@@ -15,9 +15,10 @@ export const modifyVideoCode = (videoCode: string | undefined) => {
 export const modifyTweetCode = (tweetCode: string | undefined) => {
   if (tweetCode) {
     // Utilizar una expresión regular para eliminar la parte constante de la URL de Twitter
-    const regex = /https:\/\/x\.com\/[^\/]+\/status\/(\d+)(?:\?.+)?/;
+    const regex =
+      /https:\/\/(x\.com|twitter\.com)\/[^\/]+\/status\/(\d+)(?:\?.+)?/;
     const match = tweetCode.match(regex);
-    return match ? match[1] : ""; // Devolver la ID del tweet si hay coincidencia
+    return match ? match[2] : ""; // Devolver la ID del tweet si hay coincidencia
   } else {
     return "";
   }
