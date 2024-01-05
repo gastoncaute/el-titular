@@ -4,7 +4,7 @@ import { obtenerCategorias } from "@/utils/obtenerCategorias";
 import NoticiasPorCategoria from "./NoticiasPorCategoria";
 import Videos from "./ComponentesEntreSecciones/Videos";
 import Fotos from "./ComponentesEntreSecciones/Fotos";
-// import Dolar from "./ComponentesEntreSecciones/Dolar";
+import Dolar from "./ComponentesEntreSecciones/Dolar";
 
 export default async function Noticia() {
   const categorias = await obtenerCategorias();
@@ -44,7 +44,7 @@ export default async function Noticia() {
             {categoria === "Politica" || categoria === "Actualidad" ? (
               <Fotos categoria={categoria} />
             ) : null}
-            {/* {categoria === "Economia" && <Dolar />} */}
+            {categoria === "Economia" && <Dolar />}
             {/* {categoria === "Deporte" && <Feriados />} */}
           </section>
         </section>

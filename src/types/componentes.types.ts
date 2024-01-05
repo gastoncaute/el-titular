@@ -131,13 +131,10 @@ export interface Video {
 }
 
 export interface Dolar {
-  casa: {
-    compra: number;
-    venta: any;
-    agencia: number;
-    nombre: string;
-    variacion: number;
-    ventaCero: string;
-    decimales: number;
-  };
+  moneda: string;
+  casa: string;
+  nombre: string;
+  compra: number;
+  venta: any;
+  fechaActualizacion: any;
 }
