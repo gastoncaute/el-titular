@@ -35,22 +35,103 @@ export default function Clima() {
 //         {clima ? (
 //           <ul>
 //             <li className="clima-widget-title">
-//               <h1>Clima en {clima.name}</h1>
+//               <svg
+//                 xmlns="http://www.w3.org/2000/svg"
+//                 className="icon icon-tabler icon-tabler-map-pin"
+//                 width="20"
+//                 height="20"
+//                 viewBox="0 0 24 24"
+//                 stroke-width="1.5"
+//                 stroke="#fff"
+//                 fill="none"
+//                 stroke-linecap="round"
+//                 stroke-linejoin="round"
+//               >
+//                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+//                 <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+//                 <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+//               </svg>
+//               {clima.name}
 //             </li>
 //             <li className="clima-widget-description">
-//               Clima: {clima.weather[0].description}
+//               <svg
+//                 xmlns="http://www.w3.org/2000/svg"
+//                 className="icon icon-tabler icon-tabler-brand-soundcloud"
+//                 width="64"
+//                 height="64"
+//                 viewBox="0 0 24 24"
+//                 stroke-width="1"
+//                 stroke="#fff"
+//                 fill="none"
+//                 stroke-linecap="round"
+//                 stroke-linejoin="round"
+//               >
+//                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+//                 <path d="M17 11h1c1.38 0 3 1.274 3 3c0 1.657 -1.5 3 -3 3l-6 0v-10c3 0 4.5 1.5 5 4z" />
+//                 <path d="M9 8l0 9" />
+//                 <path d="M6 17l0 -7" />
+//                 <path d="M3 16l0 -2" />
+//               </svg>
 //             </li>
 //             <li className="clima-widget-temp">
-//               Temperatura: {Math.ceil(clima.main.temp - 273.15)}ºC
-//             </li>
-//             <li className="clima-widget-tempSens">
-//               Sensación Térmica: {Math.ceil(clima.main.feels_like - 273.15)}ºC
+//               <svg
+//                 xmlns="http://www.w3.org/2000/svg"
+//                 className="icon icon-tabler icon-tabler-temperature"
+//                 width="32"
+//                 height="32"
+//                 viewBox="0 0 24 24"
+//                 stroke-width="1"
+//                 stroke="#fff"
+//                 fill="none"
+//                 stroke-linecap="round"
+//                 stroke-linejoin="round"
+//               >
+//                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+//                 <path d="M10 13.5a4 4 0 1 0 4 0v-8.5a2 2 0 0 0 -4 0v8.5" />
+//                 <path d="M10 9l4 0" />
+//               </svg>{" "}
+//               {Math.ceil(clima.main.temp - 273.15)}ºC
 //             </li>
 //             <li className="clima-widget-maxTemp">
-//               Temperatura Máxima: {Math.ceil(clima.main.temp_max - 273.15)}ºC
+//               <svg
+//                 xmlns="http://www.w3.org/2000/svg"
+//                 className="icon icon-tabler icon-tabler-temperature-plus"
+//                 width="32"
+//                 height="32"
+//                 viewBox="0 0 24 24"
+//                 stroke-width="1"
+//                 stroke="#fff"
+//                 fill="none"
+//                 stroke-linecap="round"
+//                 stroke-linejoin="round"
+//               >
+//                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+//                 <path d="M8 13.5a4 4 0 1 0 4 0v-8.5a2 2 0 0 0 -4 0v8.5" />
+//                 <path d="M8 9l4 0" />
+//                 <path d="M16 9l6 0" />
+//                 <path d="M19 6l0 6" />
+//               </svg>
+//               {Math.ceil(clima.main.temp_max - 273.15)}ºC
 //             </li>
 //             <li className="clima-widget-minTemp">
-//               Temperatura Mínima: {Math.ceil(clima.main.temp_min - 273.15)}ºC
+//               <svg
+//                 xmlns="http://www.w3.org/2000/svg"
+//                 className="icon icon-tabler icon-tabler-temperature-minus"
+//                 width="32"
+//                 height="32"
+//                 viewBox="0 0 24 24"
+//                 stroke-width="1"
+//                 stroke="#fff"
+//                 fill="none"
+//                 stroke-linecap="round"
+//                 stroke-linejoin="round"
+//               >
+//                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+//                 <path d="M8 13.5a4 4 0 1 0 4 0v-8.5a2 2 0 0 0 -4 0v8.5" />
+//                 <path d="M8 9l4 0" />
+//                 <path d="M16 9l6 0" />
+//               </svg>{" "}
+//               {Math.ceil(clima.main.temp_min - 273.15)}ºC
 //             </li>
 //             <li className="clima-widget-hum">
 //               Humedad: {clima.main.humidity}%
@@ -58,7 +139,6 @@ export default function Clima() {
 //             <li className="clima-widget-wind">
 //               Viento: {Math.ceil(clima.wind.speed * 3.6)} k/h{" "}
 //             </li>
-//             <li>Amanecer: {clima.sys.sunrise}</li>
 //           </ul>
 //         ) : (
 //           <p>Cargando...</p>
