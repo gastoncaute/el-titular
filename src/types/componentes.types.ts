@@ -140,6 +140,10 @@ export interface Dolar {
 }
 
 export interface Clima {
+  coord: {
+    lon: number;
+    lat: number;
+  };
   weather: [
     {
       id: number;
