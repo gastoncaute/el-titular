@@ -7,6 +7,6 @@ export async function obtenerDolar() {
     const data = await res.json();
     return data;
   } else {
-    throw new Error("Error al obtener la API");
+    console.error("Error al obtener la API");
   }
 }

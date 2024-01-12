@@ -14,6 +14,6 @@ export async function obtenerVideos() {
       return [];
     }
   } else {
-    throw new Error("Error al obtener videos de la API");
+    console.error("Error al obtener videos de la API");
   }
 }

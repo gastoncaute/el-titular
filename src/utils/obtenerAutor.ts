@@ -14,6 +14,6 @@ export async function obtenerAutor() {
       return [];
     }
   } else {
-    throw new Error("Error al obtener el autor del servidor");
+    console.error("Error al obtener el autor del servidor");
   }
 }

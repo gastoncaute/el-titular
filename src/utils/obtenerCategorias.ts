@@ -19,6 +19,6 @@ export async function obtenerCategorias() {
       return [];
     }
   } else {
-    throw new Error("Error al obtener categorías de la API");
+    console.error("Error al obtener categorías de la API");
   }
 }

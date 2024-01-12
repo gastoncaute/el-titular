@@ -14,6 +14,6 @@ export async function obtenerFotos() {
       return [];
     }
   } else {
-    throw new Error("Error al obtener fotos de la API");
+    console.error("Error al obtener fotos de la API");
   }
 }
