@@ -9,11 +9,11 @@ export default async function Fotos({ categoria }: { categoria: any }) {
   const fotos = await obtenerFotos();
   const fotosFiltradas = fotos.filter((foto: Foto) => {
     return (
-      (categoria === "Politica" && foto.categoria === "Infografias") ||
+      (categoria === "Policiales" && foto.categoria === "Infografias") ||
       (categoria === "Actualidad" && foto.categoria === "Fotografias")
     );
   });
-  const title = categoria === "Politica" ? "Infografias" : "Fotografias";
+  const title = categoria === "Policiales" ? "Infografias" : "Fotografias";
   if (fotosFiltradas.length === 0) {
     return null;
   }

@@ -5,6 +5,7 @@ import NoticiasPorCategoria from "./NoticiasPorCategoria";
 import Videos from "./ComponentesEntreSecciones/Videos";
 import Fotos from "./ComponentesEntreSecciones/Fotos";
 import Dolar from "./ComponentesEntreSecciones/Dolar";
+import Waze from "./ComponentesEntreSecciones/Waze";
 
 export default async function Noticia() {
   const categorias = await obtenerCategorias();
@@ -40,12 +41,11 @@ export default async function Noticia() {
             <NoticiasPorCategoria categoria={categoria} />
           </article>
           <section>
-            {categoria === "Policiales" && <Videos categoria={categoria} />}
-            {categoria === "Politica" || categoria === "Actualidad" ? (
+            {categoria === "Policiales" || categoria === "Actualidad" ? (
               <Fotos categoria={categoria} />
             ) : null}
-            {categoria === "Economia" && <Dolar />}
-            {/* {categoria === "Deporte" && <Feriados />} */}
+            {categoria === "Politica" && <Dolar />}
+            {categoria === "Economia" && <Waze />}
           </section>
         </section>
       ))}
