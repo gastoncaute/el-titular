@@ -18,11 +18,11 @@ export default async function Clima() {
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
-                stroke-width="1.8"
+                strokeWidth="1.8"
                 stroke="#fff"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
@@ -45,11 +45,11 @@ export default async function Clima() {
                 width="40"
                 height="40"
                 viewBox="0 0 24 24"
-                stroke-width="1.3"
+                strokeWidth="1.3"
                 stroke="#fff"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M10 13.5a4 4 0 1 0 4 0v-8.5a2 2 0 0 0 -4 0v8.5" />
@@ -64,11 +64,11 @@ export default async function Clima() {
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
-                stroke-width="1"
+                strokeWidth="1"
                 stroke="#fff"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M8 13.5a4 4 0 1 0 4 0v-8.5a2 2 0 0 0 -4 0v8.5" />
@@ -83,11 +83,11 @@ export default async function Clima() {
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
-                stroke-width="1"
+                strokeWidth="1"
                 stroke="#fff"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M8 13.5a4 4 0 1 0 4 0v-8.5a2 2 0 0 0 -4 0v8.5" />
@@ -103,11 +103,11 @@ export default async function Clima() {
                 width="32"
                 height="32"
                 viewBox="0 0 24 24"
-                stroke-width="1"
+                strokeWidth="1"
                 stroke="#fff"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M5 8h8.5a2.5 2.5 0 1 0 -2.34 -3.24" />
@@ -123,11 +123,11 @@ export default async function Clima() {
                 width="20"
                 height="20"
                 viewBox="0 0 24 24"
-                stroke-width="1"
+                strokeWidth="1"
                 stroke="#fff"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
@@ -142,11 +142,11 @@ export default async function Clima() {
                 width="20"
                 height="20"
                 viewBox="0 0 24 24"
-                stroke-width="1"
+                strokeWidth="1"
                 stroke="#ffffff"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M4.072 20.3a2.999 2.999 0 0 0 3.856 0a3.002 3.002 0 0 0 .67 -3.798l-2.095 -3.227a.6 .6 0 0 0 -1.005 0l-2.098 3.227a3.003 3.003 0 0 0 .671 3.798z" />
