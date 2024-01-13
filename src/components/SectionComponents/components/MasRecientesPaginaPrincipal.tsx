@@ -80,7 +80,7 @@ export default async function MasRecientes() {
           );
         })}
       </article>
-      <Videos categoria={"masRecientes"} />
+      <Videos />
     </>
   );
 }

@@ -4,29 +4,15 @@ import { obtenerVideos } from "@/utils/obtenerVideos";
 import { PortableText } from "@portabletext/react";
 import React from "react";
 
-export default async function Videos({ categoria }: { categoria: any }) {
+export default async function Videos() {
   const videos = await obtenerVideos();
-
-  let filteredVideos;
-
-  if (categoria === "masRecientes") {
-    filteredVideos = videos.filter(
-      (video: Video) => video.categoria === "Entrevistas"
-    );
-  } else if (categoria === "Policiales") {
-    filteredVideos = videos.filter(
-      (video: Video) => video.categoria === "Recorridos"
-    );
-  } else {
-    filteredVideos = videos;
-  }
-  const selectedVideo = filteredVideos.length > 0 ? filteredVideos[0] : null;
+  const selectedVideo = videos.length > 0 ? videos[0] : null;
 
   return (
     <>
-      {selectedVideo && (
+      {(selectedVideo as Video) && (
         <section
-          key={selectedVideo.categoria}
+          key={selectedVideo._id}
           className="col-start-2 col-end-7 bg-gradient-to-b from-pageColor to-gradientColor w-60rem h-full m-auto p-8 border border-pageColor rounded-3xl videos_main_section text-white"
           style={{ aspectRatio: "16 / 9" }}
         >
