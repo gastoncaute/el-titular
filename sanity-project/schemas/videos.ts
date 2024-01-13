@@ -4,18 +4,6 @@ export default {
   title: 'Videos',
   fields: [
     {
-      name: 'categoria',
-      type: 'string',
-      title: 'Categoria',
-      validation: (Rule: any) => Rule.required().error('La "Categoría" es obligatoria'),
-      options: {
-        list: [
-          {title: 'Entrevistas', value: 'Entrevistas'},
-          {title: 'Recorridos', value: 'Recorridos'},
-        ],
-      },
-    },
-    {
       name: 'title',
       type: 'array',
       title: 'Título',
