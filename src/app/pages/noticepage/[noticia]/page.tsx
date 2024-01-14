@@ -69,8 +69,13 @@ export default async function Page({ params }: any) {
                     noticia.image_principal.imagen.asset._ref
                   )}
                   alt={noticia?.title}
-                  width={1000}
-                  height={250}
+                  height={800}
+                  width={800}
+                  style={{
+                    maxHeight: "600px",
+                    maxWidth: "100%",
+                    width: "auto",
+                  }}
                 />
                 <h5 className="py-4 text-gray-700 border-b border-pageColor noticepage_epigrafe">
                   <PortableText value={noticia.image_principal.epigrafe} />
