@@ -34,7 +34,7 @@ export default function TercerBloque({
       {tercerBloque?.tercera_descripcion && (
         <p className="text-2xl py-4 noticepage_parrafo">
           <PortableText
-            value={tercerBloque?.tercera_descripcion.map((item: any) => ({
+            value={tercerBloque?.tercera_descripcion?.map((item: any) => ({
               ...item,
               children: item.children.map((child: any) => ({
                 ...child,
