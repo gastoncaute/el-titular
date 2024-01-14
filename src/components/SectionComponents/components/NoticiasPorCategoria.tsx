@@ -15,7 +15,7 @@ export default async function NoticiasPorCategoria({ categoria }: any) {
     <>
       <div className="grid grid-cols-3">
         {noticiasDeCategoria.map((noticia: Noticia, index: number) => {
-          if (index >= 5) {
+          if (index >= 6) {
             return null;
           }
           return (
