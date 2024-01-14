@@ -10,9 +10,8 @@ export default function Waze() {
         target="#"
         className="flex flex-col items-center bg-gradient-to-b from-pageColor to-gradientColor w-max m-auto p-8 border border-pageColor rounded-3xl fotos_widget_section text-white text-3xl font-bold"
       >
-        <h1>Cortes de Tránsito en Mar del Plata</h1>
         <Image
-          className="mt-4 rounded-xl"
+          className="rounded-xl"
           src="/WazeWidget.png"
           alt=""
           height={600}
