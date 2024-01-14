@@ -27,7 +27,7 @@ export default async function Fotos({ categoria }: { categoria: any }) {
         {title}
       </Link>
       <section className="flex mt-2">
-        {fotosFiltradas.slice(0, 3).map((foto: Foto, index: number) => (
+        {fotosFiltradas.slice(0, 2).map((foto: Foto, index: number) => (
           <article
             key={index}
             className={
