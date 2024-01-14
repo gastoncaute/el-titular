@@ -17,12 +17,14 @@ export default function TercerBloque({
   return (
     <section>
       {tercerBloque?.imagen_3 && (
-        <div>
+        <div className="noticepage_div_image flex flex-col items-center">
           <Image
+            className="m-auto noticepage_image"
             src={modifyImageUrl(tercerBloque?.imagen_3.imagen.asset._ref)}
             alt={tercerBloque?.imagen_3.epigrafe}
-            height={1000}
-            width={1000}
+            height={800}
+            width={800}
+            style={{ maxHeight: "600px", maxWidth: "100%", width: "auto" }}
           />
           <h5 className="py-4 text-gray-700">
             <PortableText value={tercerBloque?.imagen_3.epigrafe} />
