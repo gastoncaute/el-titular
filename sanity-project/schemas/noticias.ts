@@ -106,7 +106,6 @@ export default {
           options: {
             accept: 'video/mp4,video/webm,video/ogg',
           },
-          validation: (Rule: any) => Rule.required().error('El video es obligatorio'),
         },
         {
           name: 'segunda_descripcion',
@@ -166,7 +165,6 @@ export default {
           options: {
             accept: 'video/mp4,video/webm,video/ogg',
           },
-          validation: (Rule: any) => Rule.required().error('El video es obligatorio'),
         },
         {
           name: 'tercera_descripcion',
@@ -226,7 +224,6 @@ export default {
           options: {
             accept: 'video/mp4,video/webm,video/ogg',
           },
-          validation: (Rule: any) => Rule.required().error('El video es obligatorio'),
         },
         {
           name: 'cuarta_descripcion',
@@ -286,7 +283,6 @@ export default {
           options: {
             accept: 'video/mp4,video/webm,video/ogg',
           },
-          validation: (Rule: any) => Rule.required().error('El video es obligatorio'),
         },
         {
           name: 'quinta_descripcion',
