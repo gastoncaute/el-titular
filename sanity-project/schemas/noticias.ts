@@ -22,25 +22,9 @@ export default {
           {title: 'Economia', value: 'Economia'},
           {title: 'Actualidad', value: 'Actualidad'},
           {title: 'Deporte', value: 'Deporte'},
-          {title: 'Cultura', value: 'Cultura'},
-          {title: 'Internacional', value: 'Internacional'},
         ],
       },
     },
-    // {
-    //   name: 'etiquetas',
-    //   type: 'array',
-    //   title: 'Etiquetas',
-    //   validation: (Rule: any) => Rule.required().error('Las "Etiquetas" son obligatorias'),
-    //   of: [
-    //     {
-    //       type: 'string',
-    //     },
-    //   ],
-    //   options: {
-    //     layout: 'tags',
-    //   },
-    // },
     {
       name: 'title',
       type: 'string',
@@ -115,6 +99,16 @@ export default {
           ],
         },
         {
+          name: 'video',
+          title: 'Video',
+          type: 'file',
+          description: 'Sube tu video aquí (formatos permitidos: mp4, webm, ogg)',
+          options: {
+            accept: 'video/mp4,video/webm,video/ogg',
+          },
+          validation: (Rule: any) => Rule.required().error('El video es obligatorio'),
+        },
+        {
           name: 'segunda_descripcion',
           type: 'array',
           title: 'Desarrollo',
@@ -163,6 +157,16 @@ export default {
               validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
             },
           ],
+        },
+        {
+          name: 'video',
+          title: 'Video',
+          type: 'file',
+          description: 'Sube tu video aquí (formatos permitidos: mp4, webm, ogg)',
+          options: {
+            accept: 'video/mp4,video/webm,video/ogg',
+          },
+          validation: (Rule: any) => Rule.required().error('El video es obligatorio'),
         },
         {
           name: 'tercera_descripcion',
@@ -215,6 +219,16 @@ export default {
           ],
         },
         {
+          name: 'video',
+          title: 'Video',
+          type: 'file',
+          description: 'Sube tu video aquí (formatos permitidos: mp4, webm, ogg)',
+          options: {
+            accept: 'video/mp4,video/webm,video/ogg',
+          },
+          validation: (Rule: any) => Rule.required().error('El video es obligatorio'),
+        },
+        {
           name: 'cuarta_descripcion',
           type: 'array',
           title: 'Desarrollo',
@@ -263,6 +277,16 @@ export default {
               validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
             },
           ],
+        },
+        {
+          name: 'video',
+          title: 'Video',
+          type: 'file',
+          description: 'Sube tu video aquí (formatos permitidos: mp4, webm, ogg)',
+          options: {
+            accept: 'video/mp4,video/webm,video/ogg',
+          },
+          validation: (Rule: any) => Rule.required().error('El video es obligatorio'),
         },
         {
           name: 'quinta_descripcion',

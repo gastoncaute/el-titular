@@ -3,6 +3,7 @@ import {
   modifyImageUrl,
   modifyTweetCode,
   modifyVideoCode,
+  modifyVideoFileUrl,
 } from "@/utils/modifyCodes";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
@@ -29,6 +30,17 @@ export default function CuartoBloque({
           <h5 className="pt-4 text-gray-700">
             <PortableText value={cuartoBloque?.imagen_4.epigrafe} />
           </h5>
+        </div>
+      )}
+      {cuartoBloque?.video && (
+        <div className="flex w-full justify-center py-4 video-container">
+          <video controls width="75%" height="315">
+            <source
+              src={modifyVideoFileUrl(cuartoBloque?.video?.asset._ref)}
+              type="video/mp4"
+            />
+            Tu navegador no soporta el tag de video.
+          </video>
         </div>
       )}
       {cuartoBloque && (

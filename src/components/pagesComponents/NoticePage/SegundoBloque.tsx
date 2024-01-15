@@ -3,6 +3,7 @@ import {
   modifyImageUrl,
   modifyTweetCode,
   modifyVideoCode,
+  modifyVideoFileUrl,
 } from "@/utils/modifyCodes";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
@@ -29,6 +30,17 @@ export default async function SegundoBloque({
           <h5 className="py-4 text-gray-700">
             <PortableText value={segundoBloque?.imagen_2.epigrafe} />
           </h5>
+        </div>
+      )}
+      {segundoBloque?.video && (
+        <div className="flex w-full justify-center py-4 video-container">
+          <video controls width="75%" height="315">
+            <source
+              src={modifyVideoFileUrl(segundoBloque?.video?.asset._ref)}
+              type="video/mp4"
+            />
+            Tu navegador no soporta el tag de video.
+          </video>
         </div>
       )}
       {segundoBloque?.segunda_descripcion && (

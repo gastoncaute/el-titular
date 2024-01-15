@@ -8,6 +8,16 @@ export const modifyImageUrl = (imageRef: any) => {
   return baseUrl + modifiedRef;
 };
 
+export const modifyVideoFileUrl = (fileCode: any) => {
+  const modifiedRef = String(fileCode)
+    .replace("file-", "")
+    .replace("-mp4", ".mp4")
+    .replace("-webm", ".webm")
+    .replace("-ogg", ".ogg");
+  const baseUrl = "https://cdn.sanity.io/files/lrwm6m86/production/";
+  return baseUrl + modifiedRef;
+};
+
 export const modifyVideoCode = (videoCode: string | undefined) => {
   return videoCode ? videoCode.replace("https://youtu.be/", "") : "";
 };

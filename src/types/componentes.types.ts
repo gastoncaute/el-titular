@@ -33,6 +33,13 @@ export interface Noticia {
       };
       epigrafe: any;
     };
+    video: {
+      _type: any;
+      asset: {
+        _ref: string;
+        _type: string;
+      };
+    };
     YouTubeCode_1: string;
     TwitterID_1: string;
     segunda_descripcion: any;
@@ -47,6 +54,13 @@ export interface Noticia {
         };
       };
       epigrafe: any;
+    };
+    video: {
+      _type: any;
+      asset: {
+        _ref: string;
+        _type: string;
+      };
     };
     YouTubeCode_2: string;
     TwitterID_2: string;
@@ -63,6 +77,13 @@ export interface Noticia {
       };
       epigrafe: any;
     };
+    video: {
+      _type: any;
+      asset: {
+        _ref: string;
+        _type: string;
+      };
+    };
     YouTubeCode_3: string;
     TwitterID_3: string;
     cuarta_descripcion: any;
@@ -77,6 +98,13 @@ export interface Noticia {
         };
       };
       epigrafe: any;
+    };
+    video: {
+      _type: any;
+      asset: {
+        _ref: string;
+        _type: string;
+      };
     };
     YouTubeCode_4: string;
     TwitterID_4: string;
