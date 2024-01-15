@@ -724,6 +724,11 @@ body {
     border-top-width: 1px;
   }
 
+  .notice-video-container video {
+    width: 100%;
+    height: auto;
+  }
+
   .video-container {
     position: relative;
     padding-bottom: 56.25%;

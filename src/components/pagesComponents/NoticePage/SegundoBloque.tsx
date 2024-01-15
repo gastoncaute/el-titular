@@ -33,7 +33,7 @@ export default async function SegundoBloque({
         </div>
       )}
       {segundoBloque?.video && (
-        <div className="flex w-full justify-center py-4 video-container">
+        <div className="flex w-full justify-center py-4 notice-video-container">
           <video controls width="75%" height="315">
             <source
               src={modifyVideoFileUrl(segundoBloque?.video?.asset._ref)}
