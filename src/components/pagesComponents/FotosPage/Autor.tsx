@@ -8,7 +8,7 @@ import { Autor } from "@/types/componentes.types";
 export default async function Autor({ categoria }: { categoria: any }) {
   const autor = await obtenerAutor();
   const autorName =
-    categoria === "Infografias" ? "Juana Monti" : "Valentina Dodero";
+    categoria === "Infografias" ? "Juana Monti" : "Lola Torrecilla";
   const autorSeleccionado = autor.filter(
     (autor: Autor) => autor.name === autorName
   );
@@ -20,9 +20,9 @@ export default async function Autor({ categoria }: { categoria: any }) {
           "https://wa.me/5491164522101",
         ]
       : [
-          "https://instagram.com/valend.ph/",
-          "mailto:valentinadodero26@gmail.com",
-          "https://wa.me/5492236331390",
+          "https://instagram.com/fotosvonlola/",
+          "mailto:lolatorrecilla.av@gmail.com",
+          "https://wa.me/5492235628923",
         ];
 
   return (
