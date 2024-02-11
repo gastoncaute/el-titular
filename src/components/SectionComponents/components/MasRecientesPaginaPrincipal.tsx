@@ -42,7 +42,7 @@ export default async function MasRecientes() {
                     className={
                       index === 0
                         ? "h-32 text-5xl font-bold principal_page_title noticias_title mb-8"
-                        : "h-32 text-2xl font-bold principal_page_title principal_page_title_2 noticias_title mb-2"
+                        : "h-40 text-2xl font-bold principal_page_title principal_page_title_2 noticias_title mb-2"
                     }
                   >
                     {noticia.title}
