@@ -6,6 +6,7 @@ import Videos from "./ComponentesEntreSecciones/Videos";
 import Fotos from "./ComponentesEntreSecciones/Fotos";
 import Dolar from "./ComponentesEntreSecciones/Dolar";
 import Waze from "./ComponentesEntreSecciones/Waze";
+import NoticiasImportantes from "./NoticiasImportantes";
 
 export default async function Noticia() {
   const categorias = await obtenerCategorias();
@@ -23,6 +24,7 @@ export default async function Noticia() {
 
   return (
     <>
+      <NoticiasImportantes />
       <MasRecientes />
       {categoriasUnicas.map((categoria: any) => (
         <section
