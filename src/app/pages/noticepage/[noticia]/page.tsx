@@ -12,7 +12,7 @@ import SegundoBloque from "@/components/pagesComponents/NoticePage/SegundoBloque
 import TercerBloque from "@/components/pagesComponents/NoticePage/TercerBloque";
 import CuartoBloque from "@/components/pagesComponents/NoticePage/CuartoBloque";
 import QuintoBloque from "@/components/pagesComponents/NoticePage/QuintoBloque";
-import { modifyImageUrl } from "@/utils/modifyCodes";
+import { modifyImageUrl, modifyVideoFileUrl } from "@/utils/modifyCodes";
 import ArrayImages from "@/components/pagesComponents/NoticePage/ArrayImages";
 
 export default async function Page({ params }: any) {
@@ -77,6 +77,35 @@ export default async function Page({ params }: any) {
                     width: "auto",
                   }}
                 />
+                {noticia.image_principal && noticia.image_principal.imagen && (
+                  <Image
+                    className="m-auto noticepage_image"
+                    src={modifyImageUrl(
+                      noticia.image_principal.imagen.asset._ref
+                    )}
+                    alt={noticia.image_principal.epigrafe}
+                    height={800}
+                    width={800}
+                    style={{
+                      maxHeight: "600px",
+                      maxWidth: "100%",
+                      width: "auto",
+                    }}
+                  />
+                )}
+                {(!noticia.image_principal ||
+                  !noticia.image_principal.imagen) &&
+                  noticia.image_principal?.video && (
+                    <video controls className="m-auto noticepage_image">
+                      <source
+                        src={modifyVideoFileUrl(
+                          noticia.image_principal.video.asset._ref
+                        )}
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                  )}
                 <h5 className="py-4 text-gray-700 border-b border-pageColor noticepage_epigrafe">
                   <PortableText value={noticia.image_principal.epigrafe} />
                 </h5>

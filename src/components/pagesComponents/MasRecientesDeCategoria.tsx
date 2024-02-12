@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Noticia } from "@/types/componentes.types";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";
-import { modifyImageUrl } from "@/utils/modifyCodes";
+import { modifyImageUrl, modifyVideoFileUrl } from "@/utils/modifyCodes";
 
 export default async function MasRecientesDeCategoria({
   categoria,
@@ -39,13 +39,34 @@ export default async function MasRecientesDeCategoria({
               key={noticia._id}
               className="flex flex-col p-4 m-2 border border-pageColor rounded-3xl noticepage_masRecientes_notices"
             >
-              <Image
-                className="flex items-center justify-center mx-4 noticepage_masRecientes_image"
-                src={modifyImageUrl(noticia.image_principal.imagen.asset._ref)}
-                alt={noticia.title}
-                width={150}
-                height={100}
-              />
+              {noticia.image_principal && noticia.image_principal.imagen && (
+                <Image
+                  className="flex items-center justify-center mx-4 noticepage_masRecientes_image"
+                  src={modifyImageUrl(
+                    noticia.image_principal.imagen.asset._ref
+                  )}
+                  alt={noticia.image_principal.epigrafe}
+                  height={150}
+                  width={100}
+                  style={{
+                    maxHeight: "600px",
+                    maxWidth: "100%",
+                    width: "auto",
+                  }}
+                />
+              )}
+              {(!noticia.image_principal || !noticia.image_principal.imagen) &&
+                noticia.image_principal?.video && (
+                  <video controls>
+                    <source
+                      src={modifyVideoFileUrl(
+                        noticia.image_principal.video.asset._ref
+                      )}
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
               <h1 className="text-lg font-bold mt-4 pl-4 flex items-center noticias_title">
                 {noticia.title}
               </h1>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { Noticia } from "@/types/componentes.types";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";
-import { modifyImageUrl } from "@/utils/modifyCodes";
+import { modifyImageUrl, modifyVideoFileUrl } from "@/utils/modifyCodes";
 
 export default async function NoticiasMasRecientes({
   context,
@@ -35,13 +35,32 @@ export default async function NoticiasMasRecientes({
                 : "flex flex-col p-4 my-2 border border-pageColor rounded-3xl noticepage_masRecientes_notices"
             }`}
           >
-            <Image
-              className="col-start-1 col-end-2 flex items-center justify-center mx-4 noticepage_masRecientes_image"
-              src={modifyImageUrl(noticia.image_principal.imagen.asset._ref)}
-              alt={noticia.title}
-              width={1000}
-              height={1000}
-            />
+            {noticia.image_principal && noticia.image_principal.imagen && (
+              <Image
+                className="col-start-1 col-end-2 flex items-center justify-center mx-4 noticepage_masRecientes_image"
+                src={modifyImageUrl(noticia.image_principal.imagen.asset._ref)}
+                alt={noticia.image_principal.epigrafe}
+                width={1000}
+                height={1000}
+              />
+            )}
+            {(!noticia.image_principal || !noticia.image_principal.imagen) &&
+              noticia.image_principal?.video && (
+                <video
+                  controls
+                  width={1000}
+                  height={1000}
+                  className="col-start-1 col-end-2 flex items-center justify-center mx-4 noticepage_masRecientes_image"
+                >
+                  <source
+                    src={modifyVideoFileUrl(
+                      noticia.image_principal.video.asset._ref
+                    )}
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              )}
             <h1
               className={`${
                 context === noticePage

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Noticia } from "@/types/componentes.types";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";
-import { modifyImageUrl } from "@/utils/modifyCodes";
+import { modifyImageUrl, modifyVideoFileUrl } from "@/utils/modifyCodes";
 
 export default async function NoticiasPorCategoria({ categoria }: any) {
   const noticias = await obtenerNoticias();
@@ -57,19 +57,44 @@ export default async function NoticiasPorCategoria({ categoria }: any) {
                     }
                     style={{ maxWidth: "100%", width: "100%" }}
                   >
-                    <Image
-                      src={modifyImageUrl(
-                        noticia.image_principal.imagen.asset._ref
+                    {noticia.image_principal &&
+                      noticia.image_principal.imagen && (
+                        <Image
+                          src={modifyImageUrl(
+                            noticia.image_principal.imagen.asset._ref
+                          )}
+                          alt={noticia.image_principal.epigrafe}
+                          width={1000}
+                          height={index === 0 ? 100 : 130}
+                          style={{
+                            objectFit: "cover",
+                            maxWidth: "100%",
+                            maxHeight: "100%",
+                          }}
+                        />
                       )}
-                      alt={noticia.title}
-                      width={1000}
-                      height={index === 0 ? 100 : 130}
-                      style={{
-                        objectFit: "cover",
-                        maxWidth: "100%",
-                        maxHeight: "100%",
-                      }}
-                    />
+                    {(!noticia.image_principal ||
+                      !noticia.image_principal.imagen) &&
+                      noticia.image_principal?.video && (
+                        <video
+                          controls
+                          width={1000}
+                          height={index === 0 ? 100 : 130}
+                          style={{
+                            objectFit: "cover",
+                            maxWidth: "100%",
+                            maxHeight: "100%",
+                          }}
+                        >
+                          <source
+                            src={modifyVideoFileUrl(
+                              noticia.image_principal.video.asset._ref
+                            )}
+                            type="video/mp4"
+                          />
+                          Your browser does not support the video tag.
+                        </video>
+                      )}
                   </div>
                 </div>
               </Link>

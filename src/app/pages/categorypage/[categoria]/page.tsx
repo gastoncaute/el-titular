@@ -6,7 +6,7 @@ import Image from "next/image";
 import NoticiasMasRecientes from "@/components/pagesComponents/MasRecientesVentana";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";
 import { Noticia } from "@/types/componentes.types";
-import { modifyImageUrl } from "@/utils/modifyCodes";
+import { modifyImageUrl, modifyVideoFileUrl } from "@/utils/modifyCodes";
 
 export default async function CategoryPage({ params }: any) {
   const noticias = await obtenerNoticias();
@@ -40,15 +40,35 @@ export default async function CategoryPage({ params }: any) {
                   key={index}
                 >
                   <div className="col-start-1 col-end-2 flex justify-center items-center border-r border-pageColor ultimasNoticias_image_content">
-                    <Image
-                      className="max-h-250px max-w-min ultimasNoticias_image"
-                      src={modifyImageUrl(
-                        noticia.image_principal.imagen.asset._ref
+                    {noticia.image_principal &&
+                      noticia.image_principal.imagen && (
+                        <Image
+                          src={modifyImageUrl(
+                            noticia.image_principal.imagen.asset._ref
+                          )}
+                          alt={noticia.image_principal.epigrafe}
+                          height={800}
+                          width={800}
+                          style={{
+                            maxHeight: "600px",
+                            maxWidth: "100%",
+                            width: "auto",
+                          }}
+                        />
                       )}
-                      alt={noticia.title}
-                      height={250}
-                      width={400}
-                    />
+                    {(!noticia.image_principal ||
+                      !noticia.image_principal.imagen) &&
+                      noticia.image_principal?.video && (
+                        <video controls>
+                          <source
+                            src={modifyVideoFileUrl(
+                              noticia.image_principal.video.asset._ref
+                            )}
+                            type="video/mp4"
+                          />
+                          Your browser does not support the video tag.
+                        </video>
+                      )}
                   </div>
                   <div className="col-start-2 col-end-3 flex flex-col items-center justify-center m-4 ultimasNoticias_title_component">
                     <h1
