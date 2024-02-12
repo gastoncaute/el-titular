@@ -63,20 +63,6 @@ export default async function Page({ params }: any) {
                 </h5>
               </div>
               <div className="mt-8 noticepage_div_image">
-                <Image
-                  className="m-auto noticepage_image"
-                  src={modifyImageUrl(
-                    noticia.image_principal.imagen.asset._ref
-                  )}
-                  alt={noticia?.title}
-                  height={800}
-                  width={800}
-                  style={{
-                    maxHeight: "600px",
-                    maxWidth: "100%",
-                    width: "auto",
-                  }}
-                />
                 {noticia.image_principal && noticia.image_principal.imagen && (
                   <Image
                     className="m-auto noticepage_image"
