@@ -42,24 +42,36 @@ export default {
     },
     {
       name: 'image_principal',
-      title: 'Imagen Principal',
+      title: 'Imagen o Video Principal',
+      description: 'SUBIR SOLO UN TIPO DE ARCHIVO',
       type: 'object',
       fields: [
         {
           name: 'imagen',
           type: 'image',
           title: 'Imagen',
-          validation: (Rule: any) => Rule.required().error('La "Imagen" es obligatoria'),
         },
         {
           name: 'epigrafe',
           type: 'array',
           title: 'Epígrafe',
           of: [{type: 'block'}],
-          validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
+        },
+        {
+          name: 'video',
+          type: 'file',
+          description: 'Subir solo videos (formatos permitidos: mp4, webm, ogg)',
+          title: 'Video Principal',
+        },
+        {
+          name: 'video_epigrafe',
+          type: 'array',
+          title: 'Epígrafe',
+          of: [{type: 'block'}],
         },
       ],
-      validation: (Rule: any) => Rule.required().error('La "Imagen Principal" es obligatoria'),
+      validation: (Rule: any) =>
+        Rule.required().error('La "Imagen o Video Principal" es obligatoria'),
     },
     {
       name: 'copete',

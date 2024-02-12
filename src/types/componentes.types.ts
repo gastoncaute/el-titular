@@ -20,6 +20,14 @@ export interface Noticia {
         _type: string;
       };
     };
+    video_epigrafe: any;
+    video: {
+      _type: any;
+      asset: {
+        _ref: string;
+        _type: string;
+      };
+    };
   };
   copete: any;
   segundo_bloque: {
