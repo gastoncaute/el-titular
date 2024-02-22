@@ -13,7 +13,7 @@ export default async function Videos() {
       {(selectedVideo as Video) && (
         <section
           key={selectedVideo._id}
-          className="col-start-2 col-end-7 bg-gradient-to-b from-pageColor to-gradientColor w-60rem h-full m-auto p-8 border border-pageColor rounded-3xl videos_main_section text-white"
+          className="col-start-2 col-end-7 bg-gradient-to-b from-pageColor to-gradientColor w-60rem h-full m-auto mb-8 p-8 border border-pageColor rounded-3xl videos_main_section text-white"
           style={{ aspectRatio: "16 / 9" }}
         >
           <h1 className="flex justify-center text-4xl font-bold pb-4 videos_title">

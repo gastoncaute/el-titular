@@ -19,7 +19,7 @@ export default async function Fotos({ categoria }: { categoria: any }) {
   }
 
   return (
-    <section className="col-start-2 col-end-7 flex flex-col bg-gradient-to-b from-pageColor to-gradientColor w-max m-auto p-8 pt-4 border border-pageColor rounded-3xl fotos_widget_section text-white">
+    <section className="col-start-2 col-end-7 flex flex-col bg-gradient-to-b from-pageColor to-gradientColor w-max m-auto mb-8 p-8 pt-4 border border-pageColor rounded-3xl fotos_widget_section text-white">
       <Link
         href={`/pages/fotospage/${title}`}
         className="m-auto p-2 text-3xl font-bold fotos_widget_title border border-transparent rounded-3xl fotos_widget_buttons"
