@@ -11,6 +11,7 @@ export default async function MasRecientes() {
 
   return (
     <>
+      <div className="banner-2"></div>
       <article className="col-start-2 col-end-7 grid grid-cols-3 rounded-3xl m-8 border border-pageColor masRecientes_main_section">
         {noticias.map((noticia: Noticia, index: number) => {
           if (index >= 6) {

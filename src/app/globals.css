@@ -48,12 +48,18 @@ body {
   border-color: #000;
 }
 
+.clima_widget {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+
 .clima-widget-image {
   background-image: url("/ClimaMdp.jpeg");
   background-size: cover;
   background-position: center;
   margin: -2rem 1rem 2rem 1rem;
-  position: fixed;
+  position: relative;
   width: 240px;
   height: 580px;
   border-radius: 1rem;
@@ -231,6 +237,89 @@ body {
   flex: 0 0 auto;
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+/* .pop-up-container {
+  position: fixed;
+  z-index: 11;
+  width: 100vw;
+  height: 100vh;
+  background: #000000bb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pop-up {
+  margin: auto;
+  z-index: 5;
+  width: 40rem;
+  height: 40rem;
+  background: linear-gradient(to bottom, #86082e, #a32d41);
+} */
+
+.banner-1 {
+  background: linear-gradient(to bottom, #86082e, #a32d41);
+  border-radius: 1rem;
+  margin: 1rem;
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-2 {
+  grid-column: 2 / 7;
+  margin: auto;
+  border-radius: 1.5rem;
+  background: linear-gradient(to bottom, #86082e, #a32d41);
+  width: 90%;
+  height: 6rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-3 {
+  grid-column: 1 / 4;
+  margin: auto;
+  margin-top: 3rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(to bottom, #86082e, #a32d41);
+  width: 90%;
+  height: 6rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-4 {
+  grid-column: 1 / 4;
+  margin: 2rem auto;
+  border-radius: 1.5rem;
+  background: linear-gradient(to bottom, #86082e, #a32d41);
+  width: 90%;
+  height: 6rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-5 {
+  margin: 2rem auto;
+  border-radius: 1.5rem;
+  background: linear-gradient(to bottom, #86082e, #a32d41);
+  width: 18rem;
+  height: 18rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1600px) {

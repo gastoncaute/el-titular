@@ -35,10 +35,11 @@ export default async function Page({ params }: any) {
       {datosDeNoticiaSeleccionada.map((noticia: Noticia, index: number) => {
         return (
           <article
-            className="grid grid-cols-3 mx-12 my-24 text-black noticepage_main_section"
+            className="grid grid-cols-3 mx-12 mt-24 text-black noticepage_main_section"
             key={index}
           >
-            <div className="row-span-1 flex items-center mt-12 mb-4">
+            <div className="banner-3"></div>
+            <div className="row-span-1 flex items-center my-4">
               <Link
                 href={
                   noticia.categoria === "Infografias"
@@ -151,8 +152,14 @@ export default async function Page({ params }: any) {
                 </p>
               </div> */}
             </div>
-            <div className="col-start-3 col-end-4 row-span-2 border border-pageColor rounded-3xl ml-12 h-min display_none">
-              <MasRecientesDeCategoria categoria={noticia.categoria} />
+
+            <div className="col-start-3 col-end-4 row-span-2">
+              <div className="border border-pageColor rounded-3xl ml-12 h-min display_none">
+                <MasRecientesDeCategoria categoria={noticia.categoria} />
+              </div>
+              <div className="banner-5 ml-12 display_none"></div>
+              <div className="banner-5 ml-12 display_none"></div>
+              <div className="banner-5 ml-12 display_none"></div>
             </div>
             <div className="col-span-2 row-span-3 mt-12">
               <NoticiasMasRecientes context="noticePage" />
@@ -160,6 +167,7 @@ export default async function Page({ params }: any) {
           </article>
         );
       })}
+      <div className="banner-4"></div>
       <Footer />
     </>
   );

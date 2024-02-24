@@ -160,6 +160,9 @@ export default async function Clima() {
           <p>Cargando...</p>
         )}
       </div>
+      <div className="banner-1"></div>
+      <div className="banner-1"></div>
+      <div className="banner-1"></div>
     </div>
   );
 }
