@@ -94,7 +94,7 @@ body {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -107,7 +107,7 @@ body {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   font-size: 1.7rem;
 }
@@ -120,14 +120,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .clima-widget-wind {
   grid-row: 3 / 4;
   grid-column: 2 / 3;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   font-size: 1.3rem;
 }
 
