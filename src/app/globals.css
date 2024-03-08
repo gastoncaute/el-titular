@@ -258,7 +258,7 @@ body {
   background: linear-gradient(to bottom, #86082e, #a32d41);
 } */
 
-.banner-1 {
+/* .banner-1 {
   background: linear-gradient(to bottom, #86082e, #a32d41);
   border-radius: 1rem;
   margin: 1rem;
@@ -320,7 +320,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 @media screen and (min-width: 1025px) and (max-width: 1600px) {
   body {
