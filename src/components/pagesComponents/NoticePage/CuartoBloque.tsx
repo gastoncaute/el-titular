@@ -34,7 +34,15 @@ export default function CuartoBloque({
       )}
       {cuartoBloque?.video && (
         <div className="flex w-full justify-center py-4 video-container">
-          <video controls width="75%" height="315">
+          <video
+            controls
+            className="m-auto noticepage_video"
+            style={{
+              maxHeight: "600px",
+              maxWidth: "100%",
+              width: "auto",
+            }}
+          >
             <source
               src={modifyVideoFileUrl(cuartoBloque?.video?.asset._ref)}
               type="video/mp4"

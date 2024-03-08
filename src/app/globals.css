@@ -752,6 +752,11 @@ body {
     width: min-content;
   }
 
+  .noticepage_video {
+    max-height: 600px;
+    width: min-content;
+  }
+
   .noticepage_epigrafe {
     width: 100%;
     padding-top: 0.25rem;
