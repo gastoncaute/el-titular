@@ -120,6 +120,12 @@ export default {
           },
         },
         {
+          name: 'video_epigrafe',
+          type: 'array',
+          title: 'Epígrafe de Video',
+          of: [{type: 'block'}],
+        },
+        {
           name: 'segunda_descripcion',
           type: 'array',
           title: 'Desarrollo',
@@ -177,6 +183,12 @@ export default {
           options: {
             accept: 'video/mp4,video/webm,video/ogg',
           },
+        },
+        {
+          name: 'video_epigrafe',
+          type: 'array',
+          title: 'Epígrafe de Video',
+          of: [{type: 'block'}],
         },
         {
           name: 'tercera_descripcion',
@@ -238,6 +250,12 @@ export default {
           },
         },
         {
+          name: 'video_epigrafe',
+          type: 'array',
+          title: 'Epígrafe de Video',
+          of: [{type: 'block'}],
+        },
+        {
           name: 'cuarta_descripcion',
           type: 'array',
           title: 'Desarrollo',
@@ -295,6 +313,12 @@ export default {
           options: {
             accept: 'video/mp4,video/webm,video/ogg',
           },
+        },
+        {
+          name: 'video_epigrafe',
+          type: 'array',
+          title: 'Epígrafe de Video',
+          of: [{type: 'block'}],
         },
         {
           name: 'quinta_descripcion',
