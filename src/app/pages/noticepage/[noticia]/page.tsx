@@ -16,7 +16,7 @@ import { modifyImageUrl, modifyVideoFileUrl } from "@/utils/modifyCodes";
 import ArrayImages from "@/components/pagesComponents/NoticePage/ArrayImages";
 import SextoBloque from "@/components/pagesComponents/NoticePage/SextoBloque";
 import SeptimoBloque from "@/components/pagesComponents/NoticePage/SeptimoBloque";
-import OctavoBloque from "@/components/pagesComponents/NoticePage/octavoBloque";
+import OctavoBloque from "@/components/pagesComponents/NoticePage/OctavoBloque";
 
 export default async function Page({ params }: any) {
   const noticias = await obtenerNoticias();
