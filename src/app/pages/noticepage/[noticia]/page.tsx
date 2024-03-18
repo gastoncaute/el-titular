@@ -14,6 +14,9 @@ import CuartoBloque from "@/components/pagesComponents/NoticePage/CuartoBloque";
 import QuintoBloque from "@/components/pagesComponents/NoticePage/QuintoBloque";
 import { modifyImageUrl, modifyVideoFileUrl } from "@/utils/modifyCodes";
 import ArrayImages from "@/components/pagesComponents/NoticePage/ArrayImages";
+import SextoBloque from "@/components/pagesComponents/NoticePage/SextoBloque";
+import SeptimoBloque from "@/components/pagesComponents/NoticePage/SeptimoBloque";
+import OctavoBloque from "@/components/pagesComponents/NoticePage/octavoBloque";
 
 export default async function Page({ params }: any) {
   const noticias = await obtenerNoticias();
@@ -140,6 +143,9 @@ export default async function Page({ params }: any) {
                 <TercerBloque tercerBloque={noticia.tercer_bloque} />
                 <CuartoBloque cuartoBloque={noticia.cuarto_bloque} />
                 <QuintoBloque quintoBloque={noticia.quinto_bloque} />
+                <SextoBloque sextoBloque={noticia.sexto_bloque} />
+                <SeptimoBloque septimoBloque={noticia.septimo_bloque} />
+                <OctavoBloque octavoBloque={noticia.octavo_bloque} />
                 {noticia.imagenes_array &&
                   noticia.imagenes_array.length > 0 && (
                     <ArrayImages arrayImages={noticia.imagenes_array} />

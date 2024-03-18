@@ -118,6 +118,72 @@ export interface Noticia {
     TwitterID_4: string;
     quinta_descripcion: any;
   };
+  sexto_bloque: {
+    imagen_5: {
+      imagen: {
+        _type: any;
+        asset: {
+          _ref: string;
+          _type: string;
+        };
+      };
+      epigrafe: any;
+    };
+    video: {
+      _type: any;
+      asset: {
+        _ref: string;
+        _type: string;
+      };
+    };
+    YouTubeCode_4: string;
+    TwitterID_4: string;
+    quinta_descripcion: any;
+  };
+  septimo_bloque: {
+    imagen_5: {
+      imagen: {
+        _type: any;
+        asset: {
+          _ref: string;
+          _type: string;
+        };
+      };
+      epigrafe: any;
+    };
+    video: {
+      _type: any;
+      asset: {
+        _ref: string;
+        _type: string;
+      };
+    };
+    YouTubeCode_4: string;
+    TwitterID_4: string;
+    quinta_descripcion: any;
+  };
+  octavo_bloque: {
+    imagen_5: {
+      imagen: {
+        _type: any;
+        asset: {
+          _ref: string;
+          _type: string;
+        };
+      };
+      epigrafe: any;
+    };
+    video: {
+      _type: any;
+      asset: {
+        _ref: string;
+        _type: string;
+      };
+    };
+    YouTubeCode_4: string;
+    TwitterID_4: string;
+    quinta_descripcion: any;
+  };
 
   imagenes_array: any;
 }

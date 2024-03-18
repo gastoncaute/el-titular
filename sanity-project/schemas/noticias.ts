@@ -346,6 +346,201 @@ export default {
     },
 
     {
+      name: 'sexto_bloque',
+      title: 'Sexto Bloque',
+      type: 'object',
+      fields: [
+        {
+          name: 'imagen_5',
+          title: 'Imagen',
+          type: 'object',
+          fields: [
+            {
+              name: 'imagen',
+              type: 'image',
+              title: 'Imagen',
+              validation: (Rule: any) => Rule.required().error('La "Imagen" es obligatoria'),
+            },
+            {
+              name: 'epigrafe',
+              type: 'array',
+              title: 'Epígrafe',
+              of: [{type: 'block'}],
+              validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
+            },
+          ],
+        },
+        {
+          name: 'video',
+          title: 'Video',
+          type: 'file',
+          description: 'Sube tu video aquí (formatos permitidos: mp4, webm, ogg)',
+          options: {
+            accept: 'video/mp4,video/webm,video/ogg',
+          },
+        },
+        {
+          name: 'video_epigrafe',
+          type: 'array',
+          title: 'Epígrafe de Video',
+          of: [{type: 'block'}],
+        },
+        {
+          name: 'quinta_descripcion',
+          type: 'array',
+          title: 'Desarrollo',
+          of: [
+            {
+              type: 'block',
+            },
+          ],
+        },
+        {
+          name: 'YouTubeCode_4',
+          description: 'Colocar Link del Video',
+          type: 'string',
+          title: 'Video de YouTube',
+        },
+        {
+          name: 'TwitterID_4',
+          description: 'Colocar Link del Tweet',
+          type: 'string',
+          title: 'Tweet',
+        },
+      ],
+    },
+
+    {
+      name: 'septimo_bloque',
+      title: 'Septimo Bloque',
+      type: 'object',
+      fields: [
+        {
+          name: 'imagen_5',
+          title: 'Imagen',
+          type: 'object',
+          fields: [
+            {
+              name: 'imagen',
+              type: 'image',
+              title: 'Imagen',
+              validation: (Rule: any) => Rule.required().error('La "Imagen" es obligatoria'),
+            },
+            {
+              name: 'epigrafe',
+              type: 'array',
+              title: 'Epígrafe',
+              of: [{type: 'block'}],
+              validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
+            },
+          ],
+        },
+        {
+          name: 'video',
+          title: 'Video',
+          type: 'file',
+          description: 'Sube tu video aquí (formatos permitidos: mp4, webm, ogg)',
+          options: {
+            accept: 'video/mp4,video/webm,video/ogg',
+          },
+        },
+        {
+          name: 'video_epigrafe',
+          type: 'array',
+          title: 'Epígrafe de Video',
+          of: [{type: 'block'}],
+        },
+        {
+          name: 'quinta_descripcion',
+          type: 'array',
+          title: 'Desarrollo',
+          of: [
+            {
+              type: 'block',
+            },
+          ],
+        },
+        {
+          name: 'YouTubeCode_4',
+          description: 'Colocar Link del Video',
+          type: 'string',
+          title: 'Video de YouTube',
+        },
+        {
+          name: 'TwitterID_4',
+          description: 'Colocar Link del Tweet',
+          type: 'string',
+          title: 'Tweet',
+        },
+      ],
+    },
+
+    {
+      name: 'octavo_bloque',
+      title: 'Octavo Bloque',
+      type: 'object',
+      fields: [
+        {
+          name: 'imagen_5',
+          title: 'Imagen',
+          type: 'object',
+          fields: [
+            {
+              name: 'imagen',
+              type: 'image',
+              title: 'Imagen',
+              validation: (Rule: any) => Rule.required().error('La "Imagen" es obligatoria'),
+            },
+            {
+              name: 'epigrafe',
+              type: 'array',
+              title: 'Epígrafe',
+              of: [{type: 'block'}],
+              validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
+            },
+          ],
+        },
+        {
+          name: 'video',
+          title: 'Video',
+          type: 'file',
+          description: 'Sube tu video aquí (formatos permitidos: mp4, webm, ogg)',
+          options: {
+            accept: 'video/mp4,video/webm,video/ogg',
+          },
+        },
+        {
+          name: 'video_epigrafe',
+          type: 'array',
+          title: 'Epígrafe de Video',
+          of: [{type: 'block'}],
+        },
+        {
+          name: 'quinta_descripcion',
+          type: 'array',
+          title: 'Desarrollo',
+          of: [
+            {
+              type: 'block',
+            },
+          ],
+        },
+        {
+          name: 'YouTubeCode_4',
+          description: 'Colocar Link del Video',
+          type: 'string',
+          title: 'Video de YouTube',
+        },
+        {
+          name: 'TwitterID_4',
+          description: 'Colocar Link del Tweet',
+          type: 'string',
+          title: 'Tweet',
+        },
+      ],
+    },
+
+    {
       name: 'imagenes_array',
       type: 'array',
       title: 'Lista de Imágenes',
