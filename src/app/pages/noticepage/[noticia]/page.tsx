@@ -42,7 +42,7 @@ export default async function Page({ params }: any) {
             key={index}
           >
             <div className="banner-3"></div>
-            <div className="row-span-1 flex items-center my-4">
+            <div className="row-span-1 flex items-center mt-8 mb-4">
               <Link
                 href={
                   noticia.categoria === "Infografias"
