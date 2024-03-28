@@ -22,7 +22,7 @@ export default async function Videos() {
           <article className="video-container">
             <iframe
               width="100%"
-              height="100%"
+              height="85%"
               className="video-iframe rounded-xl"
               src={`https://www.youtube.com/embed/${modifyVideoCode(
                 selectedVideo.link_video
