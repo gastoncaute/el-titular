@@ -560,7 +560,6 @@ export default {
               type: 'array',
               title: 'Epígrafe',
               of: [{type: 'block'}],
-              validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
             },
           ],
         },
