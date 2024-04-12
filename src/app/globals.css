@@ -547,8 +547,8 @@ body {
   }
 
   .burgerButton {
-    margin-top: 1.5rem;
-    margin-left: 10rem;
+    margin-top: 0.3rem;
+    margin-left: 0.5rem;
     width: 32px;
     height: 32px;
   }
@@ -591,7 +591,6 @@ body {
   }
 
   .navbar {
-    margin-left: 8.75rem;
     width: 15rem;
     height: 100vh;
     margin-top: 1px;
