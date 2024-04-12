@@ -4,7 +4,7 @@ import SocialButtons from "./Buttons/SocialButtons";
 
 export default function NavBar() {
   return (
-    <nav className="bg-gradient-to-b from-pageColor to-gradientColor w-96 h-screen flex flex-col justify-evenly absolute p-7 -ml-12 -mt-6 navbar">
+    <nav className="bg-gradient-to-b from-pageColor to-gradientColor w-96 h-screen flex flex-col justify-evenly absolute p-7 navbar">
       <ul className="flex flex-col h-full m-3 mt-8 navbar_ul">
         <li className="py-4 text-xl headersButtons w-min navbar_li">
           <Link href="/">Inicio</Link>
