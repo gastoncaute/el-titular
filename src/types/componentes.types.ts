@@ -285,3 +285,9 @@ export interface Clima {
   name: string;
   cod: number;
 }
+
+export interface SearchPageProps {
+  params: {
+    searchpage: string;
+  };
+}

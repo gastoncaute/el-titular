@@ -568,6 +568,10 @@ body {
     transform: none;
   }
 
+  .input-busqueda {
+    display: none;
+  }
+
   .title {
     width: 13rem;
     height: 2.5rem;

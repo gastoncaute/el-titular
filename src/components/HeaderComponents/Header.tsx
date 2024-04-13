@@ -5,6 +5,7 @@ import SocialButtons from "../Buttons/SocialButtons";
 import Title from "./Components/Title";
 import Link from "next/link";
 import Image from "next/image";
+import InputBusqueda from "./Components/InputBusqueda";
 
 export default function Header() {
   const [scrollY, setScrollY] = useState(0);
@@ -25,14 +26,14 @@ export default function Header() {
     <header className="flex justify-center text-white">
       <div className=" bg-gradient-to-b from-pageColor to-gradientColor w-screen h-14 fixed z-10 header">
         <ul className="grid grid-cols-4">
-          <li className="flex justify-center items-center col-start-1 col-end-2">
+          <li>
             <BurgerButton />
+          </li>
+          <li className="col-start-1 col-end-2 flex flex-col items-center">
             <Link
               href="/"
-              className={`
-              flex items-center justify-center text-2xl transform transition-transform duration-1000 subtitle_transform title_hover
-                ${scrollY ? "translate-y-0" : "-translate-y-20"}
-              `}
+              className={`mt-3 text-2xl subtitle_transform title_hover transform transition-transform duration-1000
+              ${scrollY ? "translate-y-0" : "-translate-y-20"}`}
             >
               <Image
                 src={"/eltitularwhite.png"}
@@ -41,8 +42,9 @@ export default function Header() {
                 width={100}
               />
             </Link>
+            <InputBusqueda />
           </li>
-          <li className="flex justify-center col-start-4 col-end-5 header_social_buttons">
+          <li className="flex justify-center col-start-4 col-end-5 header_social_buttons h-min">
             <SocialButtons />
           </li>
         </ul>

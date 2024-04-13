@@ -40,6 +40,7 @@ const config: Config = {
       },
       translate: {
         "200": "200%",
+        "18px": "18px",
       },
     },
   },
