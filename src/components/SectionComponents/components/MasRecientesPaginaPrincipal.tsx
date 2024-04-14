@@ -65,7 +65,7 @@ export default async function MasRecientes() {
                       noticia.image_principal.imagen && (
                         <Image
                           src={modifyImageUrl(
-                            noticia.image_principal.imagen.asset._ref
+                            noticia.image_principal.imagen?.asset?._ref
                           )}
                           alt={noticia.image_principal.epigrafe}
                           width={1000}

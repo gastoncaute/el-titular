@@ -38,7 +38,9 @@ export default async function NoticiasMasRecientes({
             {noticia.image_principal && noticia.image_principal.imagen && (
               <Image
                 className="col-start-1 col-end-2 flex items-center justify-center mx-4 noticepage_masRecientes_image"
-                src={modifyImageUrl(noticia.image_principal.imagen.asset._ref)}
+                src={modifyImageUrl(
+                  noticia.image_principal.imagen?.asset?._ref
+                )}
                 alt={noticia.image_principal.epigrafe}
                 width={1000}
                 height={1000}
