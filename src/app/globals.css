@@ -37,6 +37,10 @@ body {
   stroke: #000;
 }
 
+.input-busqueda-navbar {
+  display: none;
+}
+
 .fotos_widget_buttons:hover {
   font-weight: bold;
   color: #000;
@@ -363,6 +367,10 @@ body {
     height: 32px;
   }
 
+  .input-busqueda-navbar {
+    display: none;
+  }
+
   .navbar {
     margin-left: 0;
     width: 19.2rem;
@@ -570,6 +578,11 @@ body {
 
   .input-busqueda {
     display: none;
+  }
+
+  .input-busqueda-navbar {
+    display: flex;
+    align-items: center;
   }
 
   .title {
