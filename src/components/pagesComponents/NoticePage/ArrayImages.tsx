@@ -14,7 +14,11 @@ export default function ArrayImages({ arrayImages }: { arrayImages: any }) {
           <Image
             className="m-auto noticepage_image"
             src={modifyImageUrl(imagen.imagen.asset._ref)}
-            alt={imagen.epigrafe[0]}
+            alt={
+              imagen.epigrafe && imagen.epigrafe.length > 0
+                ? imagen.epigrafe[0]
+                : ""
+            }
             height={800}
             width={800}
             style={{ maxHeight: "600px", maxWidth: "100%", width: "auto" }}
