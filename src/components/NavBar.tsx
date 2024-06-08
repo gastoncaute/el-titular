@@ -23,9 +23,6 @@ export default function NavBar() {
         <li className="py-4 text-xl headersButtons w-min navbar_li navbar_infografia">
           <Link href={"/pages/fotospage/Infografias"}>Infografias</Link>
         </li>
-        <li className="py-4 text-xl headersButtons w-min navbar_li navbar_fotografia">
-          <Link href={"/pages/fotospage/Fotografias"}>Fotografias</Link>
-        </li>
       </ul>
       <ul className="navbar_social_buttons text-xl">
         <li className="flex justify-center">Síguenos en nuestras redes</li>
