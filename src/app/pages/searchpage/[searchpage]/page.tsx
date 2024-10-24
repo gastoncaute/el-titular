@@ -41,7 +41,7 @@ export default async function searchPage({ params }: SearchPageProps) {
                       noticia.image_principal.imagen && (
                         <Image
                           src={modifyImageUrl(
-                            noticia.image_principal.imagen.asset._ref
+                            noticia.image_principal.imagen?.asset?._ref
                           )}
                           alt={noticia.image_principal.epigrafe}
                           height={800}
