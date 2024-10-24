@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("../styles/adds/Adds.css");
+@import url("../styles/widget/ClimaWidget.css");
+@import url("../styles/widget/Fotos.css");
+
 @font-face {
   font-family: "Serithai";
   font-style: normal;
@@ -35,131 +39,6 @@ body {
 
 .headersButtons:hover svg {
   stroke: #000;
-}
-
-.fotos_widget_buttons:hover {
-  font-weight: bold;
-  color: #000;
-  stroke: #000;
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
-  z-index: 1;
-  background: #ebebe3;
-  border-color: #000;
-}
-
-.clima_widget {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-}
-
-.clima-widget-image {
-  background-image: url("/ClimaMdp.jpeg");
-  background-size: cover;
-  background-position: center;
-  margin: -2rem 1rem 2rem 1rem;
-  position: relative;
-  width: 240px;
-  height: 580px;
-  border-radius: 1rem;
-}
-
-.clima-widget-image ul {
-  width: 100%;
-  height: min-content;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  align-items: center;
-}
-
-.clima-widget-title {
-  grid-column: 1 / 3;
-  grid-row: 1 / 2;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  height: min-content;
-  display: flex;
-  justify-content: center;
-  font-size: 1.7rem;
-  font-weight: bold;
-}
-
-.clima-widget-title svg {
-  margin-left: 0.5rem;
-}
-
-.clima-widget-description {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-  display: flex;
-  justify-content: flex-flex-end;
-  align-items: center;
-}
-
-.clima-widget-icon {
-  height: 90px;
-  width: 90px;
-}
-
-.clima-widget-temp {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  font-size: 1.7rem;
-}
-
-.clima-widget-maxMinTemp {
-  grid-row: 3 / 4;
-  grid-column: 1 / 2;
-  font-size: 0.7rem;
-  padding-right: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.clima-widget-wind {
-  grid-row: 3 / 4;
-  grid-column: 2 / 3;
-  display: flex;
-  justify-content: flex-start;
-  font-size: 1.3rem;
-}
-
-.clima-widget-wind svg {
-  margin-right: 0.3rem;
-}
-
-.clima-widget-vis {
-  grid-row: 4 / 5;
-  grid-column: 1 / 3;
-  margin-top: 0.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-}
-
-.clima-widget-vis svg {
-  margin-right: 0.3rem;
-}
-
-.clima-widget-hum {
-  grid-row: 5 / 6;
-  grid-column: 1 / 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-}
-
-.clima-widget-hum svg {
-  margin-right: 0.3rem;
 }
 
 .title_hover:hover {
@@ -238,116 +117,6 @@ body {
   margin-left: 1rem;
   margin-right: 1rem;
 }
-
-/* .pop-up-container {
-  position: fixed;
-  z-index: 11;
-  width: 100vw;
-  height: 100vh;
-  background: #000000bb;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.pop-up {
-  width: 40rem;
-  height: 40rem;
-  background: linear-gradient(to bottom, #86082e, #a32d41);
-  display: grid;
-  grid-template-rows: 10% 90%;
-}
-
-.close-button {
-  margin: auto;
-  color: #fff;
-  display: flex;
-  justify-content: flex-end;
-  width: 90%;
-}
-
-.close-button:hover {
-  font-weight: bold;
-  color: #000;
-}
-
-.close-button:hover svg {
-  stroke: #000;
-}
-
-.adds-container {
-  margin: auto;
-  color: #fff;
-  width: 90%;
-  height: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-
-/* .banner-1 {
-  background: linear-gradient(to bottom, #86082e, #a32d41);
-  border-radius: 1rem;
-  margin: 1rem;
-  position: relative;
-  width: 15rem;
-  height: 15rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.banner-2 {
-  grid-column: 2 / 7;
-  margin: auto;
-  border-radius: 1.5rem;
-  background: linear-gradient(to bottom, #86082e, #a32d41);
-  width: 90%;
-  height: 6rem;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.banner-3 {
-  grid-column: 1 / 4;
-  margin: auto;
-  margin-top: 3rem;
-  border-radius: 1.5rem;
-  background: linear-gradient(to bottom, #86082e, #a32d41);
-  width: 90%;
-  height: 6rem;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.banner-4 {
-  grid-column: 1 / 4;
-  margin: 2rem auto;
-  border-radius: 1.5rem;
-  background: linear-gradient(to bottom, #86082e, #a32d41);
-  width: 90%;
-  height: 6rem;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.banner-5 {
-  margin: 2rem auto;
-  border-radius: 1.5rem;
-  background: linear-gradient(to bottom, #86082e, #a32d41);
-  width: 18rem;
-  height: 18rem;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 @media screen and (min-width: 1025px) and (max-width: 1600px) {
   body {
@@ -508,33 +277,6 @@ body {
 /* ----------o----------o----------o----------o----------o----------o----------o----------o----------o----------o----------o---------- */
 
 @media screen and (max-width: 600px) {
-  /* .pop-up-container {
-    position: fixed;
-    z-index: 11;
-    width: 100%;
-    height: 100%;
-    background: #000000bb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .pop-up {
-    width: 20rem;
-    height: 20rem;
-    background: linear-gradient(to bottom, #86082e, #a32d41);
-    display: grid;
-    grid-template-rows: 10% 90%;
-  }
-
-  .close-button {
-    margin: auto;
-    margin-top: 0.5rem;
-    color: #fff;
-    display: flex;
-    justify-content: flex-end;
-  } */
-
   .display_none {
     display: none;
   }

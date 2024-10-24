@@ -1,0 +1,10 @@
+.fotos_widget_buttons:hover {
+  font-weight: bold;
+  color: #000;
+  stroke: #000;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  z-index: 1;
+  background: #ebebe3;
+  border-color: #000;
+}
