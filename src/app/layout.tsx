@@ -13,6 +13,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* Script de Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-TN9LGG25FT"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-TN9LGG25FT');
+            `,
+          }}
+        />
+      </head>
       <body>
         {children}
         <meta
