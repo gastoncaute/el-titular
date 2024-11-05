@@ -79,6 +79,13 @@ export default function Footer() {
             </svg>
             +54 9 223 454-4870
           </Link>
+          <Link
+            href={"/pages/terminosycondiciones"}
+            target="#"
+            className="p-4 text-2xl flex items-center footer_contact_p headersButtons"
+          >
+            Términos y condiciones
+          </Link>
         </h3>
         <h5 className="p-4 border-t w-full flex justify-center items-center">
           <Link
