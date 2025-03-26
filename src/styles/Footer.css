@@ -1,14 +1,10 @@
-/* footer {
+footer {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   width: 100%;
   color: #fff;
   position: absolute;
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-  --tw-gradient-from: #86082e var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(134 8 46 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #a32d41 var(--tw-gradient-to-position);
+  background-image: linear-gradient(to bottom, #86082e, #a32d41);
 }
 
 footer article {
@@ -26,16 +22,66 @@ footer article h1 {
 }
 
 footer article h1 a {
-  display: flex;
-  justify-content: center;
-  padding: 3rem;
-  width: 100%;
-  font-size: 4.5rem;
-  line-height: 1;
-  font-weight: 700;
+  padding: 2rem;
 }
 
-footer article ul {
+.footer_socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  padding-bottom: 0;
+  border-top: solid 1px;
+}
+
+.footer_socials li {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer_category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.footer_category li {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.footer_slogan {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin: 1rem;
+}
+
+footer article h3 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0.5rem;
+}
+
+footer article h3 a {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+footer article h3 a svg {
+  width: 20px;
+  height: 20px;
+}
+
+footer article h5 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,13 +90,50 @@ footer article ul {
   border-top: solid 1px;
 }
 
-footer article ul li {
-  display: flex;
-  justify-content: space-evenly;
+footer article h5 a {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
-footer article h2 {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  margin: 1rem;
-} */
+@media screen and (max-width: 600px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer article h1 a {
+    width: 100%;
+    height: 2.5rem;
+    padding-top: 1.25rem;
+    padding-bottom: 2rem;
+  }
+
+  .footer_image {
+    height: 1rem;
+    width: min-content;
+  }
+
+  .footer_socials {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
+
+  .footer_slogan {
+    margin: 0rem;
+    font-size: 1rem;
+  }
+
+  .footer_category {
+    display: none;
+  }
+
+  footer article h3 a {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+
+  footer article h3 a svg {
+    width: 18px;
+    height: 18px;
+  }
+}

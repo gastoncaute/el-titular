@@ -5,13 +5,10 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="w-full grid grid-cols-4 bg-gradient-to-b from-pageColor to-gradientColor text-white absolute footer">
-      <article className="col-start-2 col-end-4 flex flex-col justify-center items-center">
-        <h1 className="flex justify-center items-center">
-          <Link
-            href="/"
-            className="text-7xl font-bold w-full flex justify-center p-12 footer_title"
-          >
+    <footer>
+      <article>
+        <h1>
+          <Link href="/">
             <Image
               className="title_hover footer_image"
               src={"/eltitularwhite.png"}
@@ -21,28 +18,27 @@ export default function Footer() {
             />
           </Link>
         </h1>
-        <ul className="w-full flex justify-center items-center p-4 border-t footer_socials">
-          <li className="flex justify-evenly">
+        <ul className="footer_socials">
+          <li>
             <SocialButtons />
           </li>
         </ul>
-        <h2 className="text-4xl m-4 footer_slogan">
+        <h2 className="footer_slogan">
           {/* eslint-disable-next-line react/no-unescaped-entities */}
           "NOTICIAS QUE MARCAN LA DIFERENCIA"
         </h2>
-        <ul className="w-full flex justify-center items-center m-4 footer_category">
-          <li className="w-full flex justify-evenly">
+        <ul className="footer_category">
+          <li>
             <CategoriesButton />
           </li>
         </ul>
-        <h3 className="w-full flex justify-center m-4 footer_contact">
+        <h3>
           <Link
             href={"mailto:eltitularmdp@gmail.com"}
             target="#"
-            className="p-4 text-2xl flex items-center footer_contact_p headersButtons"
+            className="headersButtons"
           >
             <svg
-              className="footer_contact_svg"
               width="28"
               height="28"
               viewBox="0 0 24 24"
@@ -61,10 +57,9 @@ export default function Footer() {
           <Link
             href={"https://wa.me/5492234544870"}
             target="#"
-            className="p-4 text-2xl flex items-center footer_contact_p headersButtons"
+            className="headersButtons"
           >
             <svg
-              className="footer_contact_svg"
               width="28"
               height="28"
               viewBox="0 0 24 24"
@@ -82,16 +77,16 @@ export default function Footer() {
           <Link
             href={"/pages/terminosycondiciones"}
             target="#"
-            className="p-4 text-2xl flex items-center footer_contact_p headersButtons"
+            className="headersButtons"
           >
             Términos y condiciones
           </Link>
         </h3>
-        <h5 className="p-4 border-t w-full flex justify-center items-center">
+        <h5>
           <Link
             href="https://www.linkedin.com/in/gaston-cauteruccio/"
             target="#"
-            className="text-xs title_hover footer_created"
+            className="title_hover"
           >
             Página creada por Gaston Cauteruccio
           </Link>
