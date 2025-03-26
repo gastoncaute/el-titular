@@ -21,7 +21,7 @@ export default function Footer() {
             />
           </Link>
         </h1>
-        <ul className="flex justify-center items-center p-4 footer_socials border-t w-full">
+        <ul className="w-full flex justify-center items-center p-4 border-t footer_socials">
           <li className="flex justify-evenly">
             <SocialButtons />
           </li>
@@ -30,7 +30,7 @@ export default function Footer() {
           {/* eslint-disable-next-line react/no-unescaped-entities */}
           "NOTICIAS QUE MARCAN LA DIFERENCIA"
         </h2>
-        <ul className="w-full flex items-center justify-center m-4 footer_category">
+        <ul className="w-full flex justify-center items-center m-4 footer_category">
           <li className="w-full flex justify-evenly">
             <CategoriesButton />
           </li>
