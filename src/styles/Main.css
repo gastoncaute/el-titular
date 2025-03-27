@@ -1,0 +1,11 @@
+main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+  margin: 0.5rem;
+}
+
+.section-1 {
+  display: flex;
+  justify-content: space-between;
+}
