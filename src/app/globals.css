@@ -74,14 +74,6 @@ body {
   display: block;
 }
 
-.navbar_categories {
-  display: none;
-}
-
-.navbar_social_buttons {
-  display: none;
-}
-
 .main_section_image {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -122,24 +114,6 @@ body {
     color: #86082e;
     background: #ebebe3;
     font-family: "Serithai", sans-serif;
-  }
-
-  .navbar {
-    margin-left: 0;
-    width: 19.2rem;
-  }
-
-  .navbar_categories {
-    display: none;
-  }
-
-  .navbar_ul {
-    margin-left: -0.25rem;
-  }
-
-  .navbar_li {
-    font-size: 16px;
-    padding: 0.5rem;
   }
 
   .category_nav_li {
@@ -215,38 +189,6 @@ body {
     border-bottom-width: 1px;
     border-left: none;
     border-right: none;
-  }
-
-  .navbar {
-    width: 15rem;
-    height: 100vh;
-    margin-top: 1px;
-    padding: 0.75rem;
-    padding-top: 1.5rem;
-  }
-
-  .navbar_categories {
-    display: block;
-  }
-
-  .navbar_li {
-    font-size: 14px;
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
-  }
-
-  .navbar_infografia {
-    display: none;
-  }
-
-  .navbar_fotografia {
-    display: none;
-  }
-
-  .navbar_social_buttons {
-    display: block;
-    margin-bottom: 3rem;
-    font-size: 14px;
   }
 
   .social_buttons {

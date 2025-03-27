@@ -1,27 +1,26 @@
 "use client";
-import { useState } from "react";
-import NavBar from "../NavBar";
+import { useEffect } from "react";
 
-export default function BurgerButton() {
-  const [menuVisible, setMenuVisible] = useState(false);
+interface BurgerButtonProps {
+  setMenuVisible: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export default function BurgerButton({ setMenuVisible }: BurgerButtonProps) {
   const toggleBurgerButton = () => {
-    setMenuVisible(!menuVisible);
+    setMenuVisible((prev) => !prev);
   };
-  async function BurgerButtonStyle() {
-    if (typeof document !== "undefined") {
-      const handleEscKey = (event: any) => {
-        if (menuVisible && event.keyCode === 27) {
-          toggleBurgerButton();
-        }
-      };
-      document.addEventListener("keydown", handleEscKey);
 
-      return () => {
-        document.removeEventListener("keydown", handleEscKey);
-      };
-    }
-  }
-  BurgerButtonStyle();
+  useEffect(() => {
+    const handleEscKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMenuVisible(false);
+      }
+    };
+    document.addEventListener("keydown", handleEscKey);
+    return () => {
+      document.removeEventListener("keydown", handleEscKey);
+    };
+  }, [setMenuVisible]);
 
   return (
     <button onClick={toggleBurgerButton}>
@@ -42,11 +41,5 @@ export default function BurgerButton() {
         <path d="M4 18l16 0" />
       </svg>
     </button>
-    // <div
-    //   className={`transform transition-transform duration-1500
-    //   ${menuVisible ? "-translate-x-0" : "translate-x-full"} w-96`}
-    // >
-    //   <NavBar />
-    // </div>
   );
 }
