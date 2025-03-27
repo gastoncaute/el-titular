@@ -24,6 +24,7 @@
 .dolar_scroll {
   display: flex;
   overflow-x: auto;
+  scrollbar-color: #fff transparent;
 }
 
 .dolar_article {
