@@ -24,34 +24,29 @@ export default function BurgerButton() {
   BurgerButtonStyle();
 
   return (
-    <div className="absolute z-30">
-      <button
-        onClick={toggleBurgerButton}
-        className={`z-10 absolute top-1 transform transition-transform duration-1500`}
+    <button onClick={toggleBurgerButton}>
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        strokeWidth="1.5"
+        stroke="#ffffff"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="headersButtons"
       >
-        <svg
-          width="36"
-          height="36"
-          viewBox="0 0 24 24"
-          strokeWidth="1.5"
-          stroke="#ffffff"
-          fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="headersButtons burgerButton"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M4 6l16 0" />
-          <path d="M4 12l16 0" />
-          <path d="M4 18l16 0" />
-        </svg>
-      </button>
-      <div
-        className={`transform transition-transform duration-1500
-        ${menuVisible ? "translate-x-0" : "-translate-x-full"} w-96`}
-      >
-        <NavBar />
-      </div>
-    </div>
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M4 6l16 0" />
+        <path d="M4 12l16 0" />
+        <path d="M4 18l16 0" />
+      </svg>
+    </button>
+    // <div
+    //   className={`transform transition-transform duration-1500
+    //   ${menuVisible ? "-translate-x-0" : "translate-x-full"} w-96`}
+    // >
+    //   <NavBar />
+    // </div>
   );
 }

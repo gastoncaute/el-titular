@@ -3,4 +3,5 @@
 @import url("../styles/widget/ClimaWidget.css");
 @import url("../styles/widget/Fotos.css");
 /* -------------------------------------------------------------- widgets styles -------------------------------------------------------------- */
+@import url("../styles/Header.css");
 @import url("../styles/Footer.css");
