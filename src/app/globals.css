@@ -156,23 +156,6 @@ body {
 
   /* SECTION */
 
-  .dolar_widget_container {
-    margin-right: 10px;
-    width: 100%;
-    max-width: 70rem;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  .dolar_scroll {
-    display: flex;
-  }
-
-  .dolar_article {
-    flex: 0 0 auto;
-    width: auto;
-  }
-
   .main_section_image {
     max-width: 90%;
   }
@@ -314,33 +297,6 @@ body {
   .fotos_widget_article {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-  }
-
-  .dolar_widget_container {
-    width: 100%;
-    max-width: 90vw;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  .dolar_scroll {
-    display: flex;
-  }
-
-  .dolar_article {
-    flex: 0 0 auto;
-    width: auto;
-    padding: 0.5rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-  }
-
-  .dolar_title {
-    font-size: 16px;
-  }
-
-  .dolar_subtitle {
-    font-size: 12px;
   }
 
   .category_section {
