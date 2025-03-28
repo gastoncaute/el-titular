@@ -4,7 +4,7 @@ header {
   position: fixed;
   width: 100%;
   padding-left: 0.5rem;
-  z-index: 1000;
+  z-index: 2;
   gap: 2rem;
 }
 
