@@ -9,6 +9,12 @@ export default function InputBusqueda() {
     setBusqueda(e.target.value);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter" && busqueda.trim() !== "") {
+      window.location.href = `/pages/searchpage/${busqueda.trim()}`;
+    }
+  };
+
   return (
     <>
       <Link
@@ -36,6 +42,7 @@ export default function InputBusqueda() {
         className="search-input"
         value={busqueda}
         onChange={handleChange}
+        onKeyDown={handleKeyDown}
       />
     </>
   );
