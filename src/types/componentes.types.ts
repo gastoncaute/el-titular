@@ -221,17 +221,6 @@ export interface Foto {
   };
 }
 
-export interface Video {
-  _id: string;
-  title: any;
-  categoria: string;
-  _createdAt: string;
-  _updatedAt: string;
-  _rev: string;
-  _type: string;
-  link_video: string;
-}
-
 export interface Dolar {
   moneda: string;
   casa: string;

@@ -220,19 +220,6 @@ body {
     font-size: 20px;
   }
 
-  .videos_main_section {
-    width: 365px;
-    display: flex;
-    flex-direction: column;
-    margin: 1rem;
-    padding-top: 1rem;
-  }
-
-  .videos_title {
-    font-size: 24px;
-    padding-bottom: 0;
-  }
-
   .main_section_notice {
     display: flex;
     flex-direction: column;
