@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "@/components/FooterComponents/Footer";
-import Header from "@/components/HeaderComponents/Header";
+import Footer from "@/components/Footer/Footer";
+import Header from "@/components/Header/Header";
 import Link from "next/link";
 import Image from "next/image";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";

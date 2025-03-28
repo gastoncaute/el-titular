@@ -1,22 +1,22 @@
-import Header from "@/components/HeaderComponents/Header";
-import Footer from "@/components/FooterComponents/Footer";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 import Image from "next/image";
-import NoticiasMasRecientes from "@/components/pagesComponents/MasRecientesVentana";
+import NoticiasMasRecientes from "@/components/Pages/MasRecientesVentana";
 import Link from "next/link";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";
 import { Noticia, Autor } from "@/types/componentes.types";
 import { obtenerAutor } from "@/utils/obtenerAutor";
-import MasRecientesDeCategoria from "@/components/pagesComponents/MasRecientesDeCategoria";
+import MasRecientesDeCategoria from "@/components/Pages/MasRecientesDeCategoria";
 import { PortableText } from "@portabletext/react";
-import SegundoBloque from "@/components/pagesComponents/NoticePage/SegundoBloque";
-import TercerBloque from "@/components/pagesComponents/NoticePage/TercerBloque";
-import CuartoBloque from "@/components/pagesComponents/NoticePage/CuartoBloque";
-import QuintoBloque from "@/components/pagesComponents/NoticePage/QuintoBloque";
+import SegundoBloque from "@/components/Pages/NoticePage/SegundoBloque";
+import TercerBloque from "@/components/Pages/NoticePage/TercerBloque";
+import CuartoBloque from "@/components/Pages/NoticePage/CuartoBloque";
+import QuintoBloque from "@/components/Pages/NoticePage/QuintoBloque";
 import { modifyImageUrl, modifyVideoFileUrl } from "@/utils/modifyCodes";
-import ArrayImages from "@/components/pagesComponents/NoticePage/ArrayImages";
-import SextoBloque from "@/components/pagesComponents/NoticePage/SextoBloque";
-import SeptimoBloque from "@/components/pagesComponents/NoticePage/SeptimoBloque";
-import OctavoBloque from "@/components/pagesComponents/NoticePage/OctavoBloque";
+import ArrayImages from "@/components/Pages/NoticePage/ArrayImages";
+import SextoBloque from "@/components/Pages/NoticePage/SextoBloque";
+import SeptimoBloque from "@/components/Pages/NoticePage/SeptimoBloque";
+import OctavoBloque from "@/components/Pages/NoticePage/OctavoBloque";
 
 export default async function Page({ params }: any) {
   const noticias = await obtenerNoticias();

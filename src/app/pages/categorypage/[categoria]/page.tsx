@@ -1,9 +1,9 @@
 import React from "react";
-import Footer from "@/components/FooterComponents/Footer";
-import Header from "@/components/HeaderComponents/Header";
+import Footer from "@/components/Footer/Footer";
+import Header from "@/components/Header/Header";
 import Link from "next/link";
 import Image from "next/image";
-import NoticiasMasRecientes from "@/components/pagesComponents/MasRecientesVentana";
+import NoticiasMasRecientes from "@/components/Pages/MasRecientesVentana";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";
 import { Noticia } from "@/types/componentes.types";
 import { modifyImageUrl, modifyVideoFileUrl } from "@/utils/modifyCodes";
