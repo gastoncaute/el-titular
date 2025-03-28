@@ -46,35 +46,12 @@ body {
   z-index: 1;
 }
 
-.principal_page_title_2 {
-  font-size: 28px;
-}
-
-.main_section_notice:hover .noticias_title {
-  text-decoration: underline;
-}
-
 .ultimasNoticias_link:hover .noticias_title {
-  text-decoration: underline;
-}
-
-.principal_page_ultimasNoticias_link:hover .noticias_title {
   text-decoration: underline;
 }
 
 .noticepage_masRecientes_notices:hover .noticias_title {
   text-decoration: underline;
-}
-
-.noticias_title:hover {
-  display: block;
-}
-
-.main_section_image {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  max-height: 500px;
-  max-width: min-content;
 }
 
 .video-container {
@@ -88,22 +65,6 @@ body {
   width: min-content;
 }
 
-.array_image_container {
-  width: 100%;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.array_image_scroll {
-  display: flex;
-}
-
-.array_image_article {
-  flex: 0 0 auto;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 @media screen and (min-width: 1025px) and (max-width: 1600px) {
   body {
     font-size: 12px;
@@ -112,27 +73,12 @@ body {
     font-family: "Serithai", sans-serif;
   }
 
-  .category_nav_li {
-    padding: 0.5rem;
-    padding-top: 0.7rem;
-    padding-bottom: 0.5rem;
-    font-size: 14px;
-  }
-
   .social_buttons {
     width: 28px;
     height: 28px;
   }
 
   /* SECTION */
-
-  .main_section_image {
-    max-width: 90%;
-  }
-
-  .main_section_image_second {
-    max-width: 90%;
-  }
 
   .noticepage_masRecientes_title {
     font-size: 30px;
@@ -164,101 +110,18 @@ body {
     font-family: "Serithai", sans-serif;
   }
 
-  .input-busqueda {
-    display: none;
-  }
-
-  .category_nav_li {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-    border-bottom-width: 1px;
-    border-left: none;
-    border-right: none;
-  }
-
   .social_buttons {
     width: 20px;
     height: 20px;
   }
 
   /* SECTION */
-  .mainPage_noticia_section {
-    margin: auto;
-  }
 
   .main_section {
     display: flex;
     flex-direction: column;
     padding-top: 4rem;
     padding-bottom: 2rem;
-  }
-
-  .clima_widget {
-    display: none;
-  }
-
-  .masRecientes_main_section {
-    width: 365px;
-    display: flex;
-    flex-direction: column;
-    margin: 1rem auto;
-  }
-
-  .category_section {
-    width: 365px;
-    margin: 1rem;
-  }
-
-  .category_button_section {
-    margin: 0;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    padding: 0;
-  }
-
-  .category_button_section_link {
-    font-size: 20px;
-  }
-
-  .main_section_notice {
-    display: flex;
-    flex-direction: column;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-
-  .section_notice {
-    grid-column: 1 / 4;
-  }
-
-  .second_section_notice {
-    grid-column: 1 / 4;
-    grid-row: 3 / 4;
-  }
-
-  .section_notice_none {
-    display: none;
-  }
-
-  .principal_page_ultimasNoticias_link {
-    padding: 0.5rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .principal_page_title {
-    text-align: start;
-    font-size: 26px;
-    line-height: 1.1;
-    margin-bottom: 0.3rem;
-    height: min-content;
-  }
-
-  .principal_page_bajada {
-    text-align: justify;
-    font-size: 20px;
-    margin-top: 0.3rem;
-    line-height: 1.25;
   }
 
   /* NOTICEPAGE */
@@ -423,11 +286,6 @@ body {
   .ultimasNoticias_image {
     max-height: 150px;
     max-width: min-content;
-  }
-
-  .ultimasNoticias_title_component {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
   }
 
   .ultimasNoticias_title {

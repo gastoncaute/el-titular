@@ -6,14 +6,12 @@ import Noticia from "./Noticias/Noticia";
 export default function Main() {
   return (
     <main>
-      <section className="section-1">
+      <section className="widgets-section">
         <Clima />
         <Image src={"/LogoET.png"} alt="ElTitular" width={224} height={100} />
         <Dolar />
       </section>
-      <section>
-        <Noticia />
-      </section>
+      <Noticia />
     </main>
   );
 }

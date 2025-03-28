@@ -2,14 +2,16 @@ import Link from "next/link";
 import { obtenerCategorias } from "@/utils/obtenerCategorias";
 import NoticiasPorCategoria from "./NoticiasPorCategoria";
 import MasRecientes from "./MasRecientesPaginaPrincipal";
+import Image from "next/image";
+import Socials from "../Widgets/Socials";
 
 export default async function Noticia() {
   const categorias = await obtenerCategorias();
   const ordenCategorias = [
-    "Policiales",
     "Politica",
-    "Economia",
     "Actualidad",
+    "Policiales",
+    "Economia",
     "Deporte",
   ];
 
@@ -17,24 +19,35 @@ export default async function Noticia() {
     (a: any, b: any) => ordenCategorias.indexOf(a) - ordenCategorias.indexOf(b)
   );
 
+  const imagenesPorCategoria: { [key: string]: string } = {
+    Politica: "/Politica.webp",
+    Actualidad: "/Actualidad.jpg",
+    Policiales: "/Policiales.avif",
+    Economia: "/Economia.jpg",
+    Deporte: "/Deportes.jpg",
+  };
+
   return (
     <>
       <MasRecientes />
+      <Socials />
       {categoriasUnicas.map((categoria: any) => (
-        <section
-          key={categoria}
-          className="col-start-2 col-end-7 mainPage_noticia_section"
-        >
+        <section key={categoria} className="noticia-section">
+          <Link href={`/pages/categorypage/${categoria}`}>
+            <Image
+              src={imagenesPorCategoria[categoria]}
+              alt={categoria}
+              width={1500}
+              height={600}
+              style={{
+                objectFit: "cover",
+                maxWidth: "100%",
+                maxHeight: "600px",
+              }}
+            />
+          </Link>
           <div className="banner-2"></div>
-          <article className="rounded-3xl m-8 border border-pageColor category_section">
-            <div className="m-4 pb-2 flex items-center justify-center mb-4 border-b border-pageColor category_button_section">
-              <Link
-                href={`/pages/categorypage/${categoria}`}
-                className="flex justify-center text-2xl font-bold rounded-3xl p-2 border border-transparent button category_button_section_link"
-              >
-                {categoria}
-              </Link>
-            </div>
+          <article>
             <NoticiasPorCategoria categoria={categoria} />
           </article>
         </section>
