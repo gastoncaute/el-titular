@@ -66,11 +66,7 @@ body {
   text-decoration: underline;
 }
 
-.fotos_title {
-  display: none;
-}
-
-.noticias_title:hover .fotos_title {
+.noticias_title:hover {
   display: block;
 }
 
@@ -151,17 +147,6 @@ body {
 
   .ultimasNoticias_image {
     max-height: 12rem;
-  }
-
-  .fotos_main_section {
-    margin-left: 6rem;
-    margin-right: 6rem;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-  }
-
-  .fotos_title {
-    font-size: 20px;
   }
 }
 
@@ -472,46 +457,5 @@ body {
     line-height: 1.5;
     font-size: 13px;
     margin: 0.25rem;
-  }
-
-  /* FOTOS RESPONSIVE */
-
-  .fotos_main_section {
-    display: flex;
-    flex-direction: column;
-    margin: 1rem;
-  }
-
-  .fotos_div_category_link {
-    margin-top: 3rem;
-  }
-
-  .fotos_div_link {
-    font-size: 16px;
-    padding: 0.5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .fotos_section_autor {
-    font-size: 16px;
-    padding: 0.5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    width: min-content;
-  }
-
-  .fotos_main_article {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-  }
-
-  .fotos_image_article {
-    margin: 1rem;
-  }
-
-  .fotos_title {
-    font-size: 16px;
   }
 }
