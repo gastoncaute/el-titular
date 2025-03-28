@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Clima from "./Widgets/Clima";
 import Dolar from "./Widgets/Dolar";
-import Noticia from "./components/Noticia";
+import Noticia from "./Noticias/Noticia";
 
 export default function Main() {
   return (

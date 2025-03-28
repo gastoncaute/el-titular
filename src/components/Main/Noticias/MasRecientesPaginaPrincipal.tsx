@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Noticia } from "@/types/componentes.types";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";
 import { modifyImageUrl, modifyVideoFileUrl } from "@/utils/modifyCodes";
-import Socials from "../Widgets/Socials";
+import Socials from "../../Main/Widgets/Socials";
 
 export default async function MasRecientes() {
   const noticias = await obtenerNoticias();

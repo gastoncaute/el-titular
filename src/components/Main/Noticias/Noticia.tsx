@@ -1,7 +1,7 @@
-import MasRecientes from "@/components/SectionComponents/components/MasRecientesPaginaPrincipal";
 import Link from "next/link";
 import { obtenerCategorias } from "@/utils/obtenerCategorias";
 import NoticiasPorCategoria from "./NoticiasPorCategoria";
+import MasRecientes from "./MasRecientesPaginaPrincipal";
 
 export default async function Noticia() {
   const categorias = await obtenerCategorias();
