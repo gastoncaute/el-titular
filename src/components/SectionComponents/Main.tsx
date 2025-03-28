@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Clima from "./components/Clima";
-import Dolar from "./components/ComponentesEntreSecciones/Dolar";
+import Clima from "./components/Widgets/Clima";
+import Dolar from "./components/Widgets/Dolar";
 import Noticia from "./components/Noticia";
 
 export default function Main() {
