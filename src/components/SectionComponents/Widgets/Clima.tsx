@@ -33,8 +33,5 @@ export default async function Clima() {
         </ul>
       </section>
     </>
-    // {/* <div className="banner-1"></div>
-    // <div className="banner-1"></div>
-    // <div className="banner-1"></div> */}
   );
 }

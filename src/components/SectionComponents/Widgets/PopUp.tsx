@@ -38,3 +38,7 @@ export default function PopUp() {
     </>
   );
 }
+
+// <div className="banner-1"></div>
+// <div className="banner-1"></div>
+// <div className="banner-1"></div>
