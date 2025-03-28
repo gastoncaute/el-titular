@@ -219,28 +219,6 @@ body {
     margin: 1rem auto;
   }
 
-  .fotos_widget_section {
-    width: 365px;
-    display: flex;
-    flex-direction: column;
-    margin: 1rem;
-    padding: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 2rem;
-  }
-
-  .fotos_widget_title {
-    font-size: 20px;
-    padding: 0.5rem;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .fotos_widget_article {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
   .category_section {
     width: 365px;
     margin: 1rem;

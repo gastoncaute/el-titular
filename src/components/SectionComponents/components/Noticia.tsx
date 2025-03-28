@@ -2,10 +2,6 @@ import MasRecientes from "@/components/SectionComponents/components/MasRecientes
 import Link from "next/link";
 import { obtenerCategorias } from "@/utils/obtenerCategorias";
 import NoticiasPorCategoria from "./NoticiasPorCategoria";
-import Videos from "./ComponentesEntreSecciones/Videos";
-import Fotos from "./ComponentesEntreSecciones/Fotos";
-import Dolar from "./ComponentesEntreSecciones/Dolar";
-import Waze from "./ComponentesEntreSecciones/Waze";
 
 export default async function Noticia() {
   const categorias = await obtenerCategorias();
@@ -41,13 +37,6 @@ export default async function Noticia() {
             </div>
             <NoticiasPorCategoria categoria={categoria} />
           </article>
-          <section>
-            {categoria === "Policiales" || categoria === "Actualidad" ? (
-              <Fotos categoria={categoria} />
-            ) : null}
-            {categoria === "Politica" && <Dolar />}
-            {categoria === "Economia" && <Waze />}
-          </section>
         </section>
       ))}
     </>

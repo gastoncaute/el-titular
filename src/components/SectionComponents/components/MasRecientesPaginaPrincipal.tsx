@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Noticia } from "@/types/componentes.types";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";
-import Videos from "./ComponentesEntreSecciones/Videos";
+import Videos from "./Widgets/Videos";
 import { modifyImageUrl, modifyVideoFileUrl } from "@/utils/modifyCodes";
 
 export default async function MasRecientes() {
