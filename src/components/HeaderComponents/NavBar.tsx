@@ -1,6 +1,6 @@
 import Link from "next/link";
-import CategoriesButton from "./Buttons/CategoriesButton";
-import SeacrhInputButton from "./Buttons/SeacrhInputButton";
+import SeacrhInputButton from "../Buttons/SeacrhInputButton";
+import CategoriesButton from "../Buttons/CategoriesButton";
 
 interface NavBarProps {
   isOpen: boolean;

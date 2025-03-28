@@ -4,7 +4,7 @@ import BurgerButton from "../Buttons/BurgerButton";
 import Link from "next/link";
 import Image from "next/image";
 import InputBusqueda from "./InputBusqueda";
-import NavBar from "../NavBar";
+import NavBar from "./NavBar";
 
 export default function Header() {
   const [menuVisible, setMenuVisible] = useState(false);
