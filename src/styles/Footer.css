@@ -5,7 +5,7 @@
     width: 100%;
     color: #fff;
     position: absolute;
-    background-image: linear-gradient(to bottom, #86082e, #a32d41);
+    background: #86082e;
   }
 
   footer article {
