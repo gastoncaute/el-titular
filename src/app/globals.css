@@ -73,11 +73,6 @@ body {
     font-family: "Serithai", sans-serif;
   }
 
-  .social_buttons {
-    width: 28px;
-    height: 28px;
-  }
-
   /* SECTION */
 
   .noticepage_masRecientes_title {
@@ -110,7 +105,7 @@ body {
     font-family: "Serithai", sans-serif;
   }
 
-  .social_buttons {
+  .button:hover svg {
     width: 20px;
     height: 20px;
   }
