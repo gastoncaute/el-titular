@@ -22,6 +22,15 @@ export default function NavBar({ isOpen }: NavBarProps) {
         <li className="w-min navbar_categories">
           <CategoriesButton />
         </li>
+        <li>
+          <Link
+            className="headersButtons"
+            target="#"
+            href={"https://wa.me/5492234544870"}
+          >
+            Contacto
+          </Link>
+        </li>
       </ul>
     </nav>
   );
