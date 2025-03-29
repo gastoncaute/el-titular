@@ -222,9 +222,3 @@ export interface Clima {
   };
   icono: string;
 }
-
-export interface SearchPageProps {
-  params: {
-    searchpage: string;
-  };
-}
