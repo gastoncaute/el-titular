@@ -10,7 +10,7 @@ export default function Footer() {
         <h1>
           <Link href="/">
             <Image
-              className="title_hover footer_image"
+              className="title_hover"
               src={"/eltitularwhite.png"}
               alt="EL TITULAR"
               height={80}
@@ -18,16 +18,16 @@ export default function Footer() {
             />
           </Link>
         </h1>
-        <ul className="footer_socials">
+        <h2>
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
+          "NOTICIAS QUE MARCAN LA DIFERENCIA"
+        </h2>
+        <ul>
           <li>
             <SocialButtons />
           </li>
         </ul>
-        <h2 className="footer_slogan">
-          {/* eslint-disable-next-line react/no-unescaped-entities */}
-          "NOTICIAS QUE MARCAN LA DIFERENCIA"
-        </h2>
-        <ul className="footer_category">
+        <ul>
           <CategoriesButton />
         </ul>
         <h3>
@@ -84,7 +84,7 @@ export default function Footer() {
           <Link
             href="https://www.linkedin.com/in/gaston-cauteruccio/"
             target="#"
-            className="title_hover"
+            className="button"
           >
             Página creada por Gaston Cauteruccio
           </Link>
