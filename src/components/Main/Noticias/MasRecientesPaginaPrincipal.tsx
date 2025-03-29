@@ -13,7 +13,7 @@ export default async function MasRecientes() {
   return (
     <>
       <section key={ultimaNoticia._id} className="noticia-section">
-        <Link href={`/pages/categorypage/${ultimaNoticia.title}`}>
+        <Link href={`/pages/noticepage/${ultimaNoticia.title}`}>
           <div className="image-container">
             {ultimaNoticia.image_principal &&
               ultimaNoticia.image_principal.imagen && (
