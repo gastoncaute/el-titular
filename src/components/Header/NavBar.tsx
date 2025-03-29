@@ -14,15 +14,15 @@ export default function NavBar({ isOpen }: NavBarProps) {
           <SeacrhInputButton />
         </li>
         <li className="button">
-          <Link href="/">Inicio</Link>
+          <Link href="/">INICIO</Link>
         </li>
-        <li className="w-40 button">
-          <Link href={"/pages/masrecientes"}>Últimas Noticias</Link>
+        <li className="w-44 button">
+          <Link href={"/pages/masrecientes"}>ULTIMAS NOTICIAS</Link>
         </li>
         <CategoriesButton />
         <li className="button">
           <Link target="#" href={"https://wa.me/5492234544870"}>
-            Contacto
+            CONTACTO
           </Link>
         </li>
       </ul>

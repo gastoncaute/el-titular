@@ -28,15 +28,13 @@ export default function Footer() {
           "NOTICIAS QUE MARCAN LA DIFERENCIA"
         </h2>
         <ul className="footer_category">
-          <li>
-            <CategoriesButton />
-          </li>
+          <CategoriesButton />
         </ul>
         <h3>
           <Link
             href={"mailto:eltitularmdp@gmail.com"}
             target="#"
-            className="headersButtons"
+            className="button"
           >
             <svg
               width="28"
@@ -57,7 +55,7 @@ export default function Footer() {
           <Link
             href={"https://wa.me/5492234544870"}
             target="#"
-            className="headersButtons"
+            className="button"
           >
             <svg
               width="28"
@@ -77,7 +75,7 @@ export default function Footer() {
           <Link
             href={"/pages/terminosycondiciones"}
             target="#"
-            className="headersButtons"
+            className="button"
           >
             Términos y condiciones
           </Link>

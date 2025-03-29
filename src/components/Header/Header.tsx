@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import InputBusqueda from "./InputBusqueda";
 import NavBar from "./NavBar";
+import CategoriesButton from "../Buttons/CategoriesButton";
 
 export default function Header() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -23,33 +24,10 @@ export default function Header() {
             />
           </Link>
           <ul>
+            <CategoriesButton />
             <li>
               <Link
-                className="headersButtons"
-                href={`/pages/categorypage/Politica`}
-              >
-                POLITICA
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="headersButtons"
-                href={`/pages/categorypage/Actualidad`}
-              >
-                ACTUALIDAD
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="headersButtons"
-                href={`/pages/categorypage/Policiales`}
-              >
-                POLICIALES
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="headersButtons"
+                className="button"
                 target="#"
                 href={"https://wa.me/5492234544870"}
               >
