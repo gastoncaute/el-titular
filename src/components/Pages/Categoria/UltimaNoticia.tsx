@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default async function UltimaNoticiaCategoria({ params }: any) {
+export default async function UltimaNoticia({ params }: any) {
   const noticias = await obtenerNoticias();
   const categoriaSeleccionada = params.categoria;
   const noticiasDeCadaCategoria = noticias.filter(

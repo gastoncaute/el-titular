@@ -6,7 +6,7 @@ import { Noticia } from "@/types/componentes.types";
 import Socials from "@/components/Main/Widgets/Socials";
 import Noticias from "@/components/Pages/Categoria/Noticias";
 import MasRecientes from "@/components/Main/Noticias/MasRecientesPaginaPrincipal";
-import UltimaNoticiaCategoria from "@/components/Pages/Categoria/UltimaNoticiaCategoria";
+import UltimaNoticia from "@/components/Pages/Categoria/UltimaNoticia";
 
 export default async function CategoryPage({ params }: any) {
   const noticias = await obtenerNoticias();
@@ -21,7 +21,7 @@ export default async function CategoryPage({ params }: any) {
       <Header />
       <main className="category-main">
         <section key={ultimaNoticiaDeCategoria._id} className="noticia-section">
-          <UltimaNoticiaCategoria params={params} />
+          <UltimaNoticia params={params} />
           <Socials />
           <Noticias params={params} />
         </section>
