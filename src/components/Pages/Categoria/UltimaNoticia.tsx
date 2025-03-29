@@ -11,7 +11,7 @@ export default async function UltimaNoticia({ params }: any) {
   const noticiasDeCadaCategoria = noticias.filter(
     (noticia: Noticia) => noticia.categoria === categoriaSeleccionada
   );
-  const ultimaNoticiaDeCategoria = noticiasDeCadaCategoria[0];
+
   return (
     <Link
       href={`/pages/noticepage/${encodeURIComponent(

@@ -21,6 +21,9 @@ export default async function CategoryPage({ params }: any) {
       <Header />
       <main className="category-main">
         <section key={ultimaNoticiaDeCategoria._id} className="noticia-section">
+          <section className="pages-title">
+            <h1>{categoriaSeleccionada}</h1>
+          </section>
           <UltimaNoticia params={params} />
           <Socials />
           <Noticias params={params} />
