@@ -18,7 +18,7 @@ export default async function NoticiasMasRecientes({
       <h1 className="flex justify-center border-b border-pageColor pb-2 mb-2">
         <Link
           href={"/pages/masrecientes"}
-          className="p-2 px-4 text-2xl font-bold button rounded-3xl border border-transparent noticepage_masRecientes_category"
+          className="p-2 px-4 text-2xl font-bold page-button rounded-3xl border border-transparent noticepage_masRecientes_category"
         >
           Más Recientes
         </Link>

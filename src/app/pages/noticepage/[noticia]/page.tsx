@@ -49,7 +49,7 @@ export default async function Page({ params }: any) {
                     ? `/pages/infografiaspage/${noticia.categoria}`
                     : `/pages/categorypage/${noticia.categoria}`
                 }
-                className="border border-pageColor rounded-3xl p-2 px-4 font-bold button"
+                className="border border-pageColor rounded-3xl p-2 px-4 font-bold page-button"
               >
                 {noticia.categoria}
               </Link>

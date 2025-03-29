@@ -25,7 +25,7 @@ export default async function MasRecientesDeCategoria({
               ? `/pages/infografiaspage/${categoriaSeleccionada}`
               : `/pages/categorypage/${categoriaSeleccionada}`
           }
-          className="p-2 px-4 text-2xl font-bold button rounded-3xl border border-transparent"
+          className="p-2 px-4 text-2xl font-bold page-button rounded-3xl border border-transparent"
         >
           Más recientes de {categoriaSeleccionada}
         </Link>

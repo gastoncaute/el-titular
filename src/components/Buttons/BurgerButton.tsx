@@ -33,7 +33,7 @@ export default function BurgerButton({ setMenuVisible }: BurgerButtonProps) {
         fill="none"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="headersButtons"
+        className="button"
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <path d="M4 6l16 0" />
