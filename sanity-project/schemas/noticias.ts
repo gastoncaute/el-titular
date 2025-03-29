@@ -19,9 +19,7 @@ export default {
         list: [
           {title: 'Policiales', value: 'Policiales'},
           {title: 'Politica', value: 'Politica'},
-          {title: 'Economia', value: 'Economia'},
           {title: 'Actualidad', value: 'Actualidad'},
-          {title: 'Deporte', value: 'Deporte'},
         ],
       },
     },

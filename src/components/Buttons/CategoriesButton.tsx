@@ -1,13 +1,7 @@
 import Link from "next/link";
 
 export default function CategoriesButton() {
-  const categorias = [
-    "Politica",
-    "Actualidad",
-    "Policiales",
-    "Economia",
-    "Deporte",
-  ];
+  const categorias = ["Politica", "Actualidad", "Policiales"];
   return (
     <>
       {categorias.map((categoria: string) => (

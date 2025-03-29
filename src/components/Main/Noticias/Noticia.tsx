@@ -7,24 +7,19 @@ import Socials from "../Widgets/Socials";
 
 export default async function Noticia() {
   const categorias = await obtenerCategorias();
-  const ordenCategorias = [
-    "Politica",
-    "Actualidad",
-    "Policiales",
-    "Economia",
-    "Deporte",
-  ];
+  const ordenCategorias = ["Politica", "Actualidad", "Policiales"];
 
-  const categoriasUnicas = Array.from(new Set(categorias)).sort(
-    (a: any, b: any) => ordenCategorias.indexOf(a) - ordenCategorias.indexOf(b)
-  );
+  const categoriasUnicas = Array.from(new Set(categorias))
+    .filter((categoria: any) => ordenCategorias.includes(categoria))
+    .sort(
+      (a: any, b: any) =>
+        ordenCategorias.indexOf(a) - ordenCategorias.indexOf(b)
+    );
 
   const imagenesPorCategoria: { [key: string]: string } = {
     Politica: "/Politica.webp",
     Actualidad: "/Actualidad.jpg",
     Policiales: "/Policiales.avif",
-    Economia: "/Economia.jpg",
-    Deporte: "/Deportes.jpg",
   };
 
   return (
