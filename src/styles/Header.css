@@ -1,9 +1,9 @@
 header {
-  display: grid;
-  grid-template-columns: 70% 30%;
+  display: flex;
+  justify-content: space-around;
   position: fixed;
   width: 100%;
-  padding-left: 0.5rem;
+  padding: 0 0.5rem;
   z-index: 2;
   gap: 2rem;
 }
@@ -18,7 +18,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
 }
 
 .header-article button {
@@ -43,7 +42,7 @@ header article ul li {
   align-items: center;
   background: #86082eb2;
   border-radius: 8px;
-  width: 90%;
+  width: 40%;
   padding: 5px 10px;
   height: 4rem;
   transition: all 0.3s ease-in-out;
