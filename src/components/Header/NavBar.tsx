@@ -1,6 +1,6 @@
 import Link from "next/link";
-import SeacrhInputButton from "../Buttons/SeacrhInputButton";
-import CategoriesButton from "../Buttons/CategoriesButton";
+import SeacrhInput from "../Buttons/SeacrhInput";
+import Categories from "../Buttons/Categories";
 
 interface NavBarProps {
   isOpen: boolean;
@@ -11,7 +11,7 @@ export default function NavBar({ isOpen }: NavBarProps) {
     <nav className={`navbar ${isOpen ? "open" : "closed"}`}>
       <ul>
         <li className="search-input">
-          <SeacrhInputButton />
+          <SeacrhInput />
         </li>
         <li className="button">
           <Link href="/">INICIO</Link>
@@ -19,7 +19,7 @@ export default function NavBar({ isOpen }: NavBarProps) {
         <li className="w-44 button">
           <Link href={"/pages/masrecientes"}>ULTIMAS NOTICIAS</Link>
         </li>
-        <CategoriesButton />
+        <Categories />
         <li className="button">
           <Link target="#" href={"https://wa.me/5492234544870"}>
             CONTACTO

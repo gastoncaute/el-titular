@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function CategoriesButton() {
+export default function Categories() {
   const categorias = ["POLITICA", "ACTUALIDAD", "POLICIALES"];
 
   return (

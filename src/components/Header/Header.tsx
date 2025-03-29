@@ -1,11 +1,11 @@
 "use client";
 import { useState } from "react";
-import BurgerButton from "../Buttons/BurgerButton";
+import Burger from "../Buttons/Burger";
 import Link from "next/link";
 import Image from "next/image";
 import InputBusqueda from "./InputBusqueda";
 import NavBar from "./NavBar";
-import CategoriesButton from "../Buttons/CategoriesButton";
+import Categories from "../Buttons/Categories";
 
 export default function Header() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -14,7 +14,7 @@ export default function Header() {
     <>
       <header>
         <article className="header-article">
-          <BurgerButton setMenuVisible={setMenuVisible} />
+          <Burger setMenuVisible={setMenuVisible} />
           <Link href="/" className={`title-hover`}>
             <Image
               src={"/eltitularwhite.png"}
@@ -24,7 +24,7 @@ export default function Header() {
             />
           </Link>
           <ul>
-            <CategoriesButton />
+            <Categories />
             <li>
               <Link
                 className="button"

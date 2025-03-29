@@ -1,12 +1,12 @@
 "use client";
 import { useEffect } from "react";
 
-interface BurgerButtonProps {
+interface BurgerProps {
   setMenuVisible: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function BurgerButton({ setMenuVisible }: BurgerButtonProps) {
-  const toggleBurgerButton = () => {
+export default function Burger({ setMenuVisible }: BurgerProps) {
+  const toggleBurger = () => {
     setMenuVisible((prev) => !prev);
   };
 
@@ -23,7 +23,7 @@ export default function BurgerButton({ setMenuVisible }: BurgerButtonProps) {
   }, [setMenuVisible]);
 
   return (
-    <button onClick={toggleBurgerButton}>
+    <button onClick={toggleBurger}>
       <svg
         width="40"
         height="40"

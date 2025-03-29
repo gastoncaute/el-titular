@@ -1,4 +1,4 @@
-import SocialButtons from "@/components/Buttons/SocialButtons";
+import Social from "@/components/Buttons/Social";
 import React from "react";
 
 export default function Socials() {
@@ -8,7 +8,7 @@ export default function Socials() {
       <div className=""></div>
       <ul>
         <li>
-          <SocialButtons />
+          <Social />
         </li>
       </ul>
     </section>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function SocialButtons() {
+export default function Social() {
   return (
     <>
       <Link

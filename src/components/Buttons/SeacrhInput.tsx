@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 
-export default function SeacrhInputButton() {
+export default function SeacrhInput() {
   const [busqueda, setBusqueda] = useState("");
   const handleChange = (e: any) => {
     setBusqueda(e.target.value);

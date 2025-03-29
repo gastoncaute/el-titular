@@ -1,6 +1,6 @@
 import Link from "next/link";
-import CategoriesButton from "../Buttons/CategoriesButton";
-import SocialButtons from "../Buttons/SocialButtons";
+import Social from "../Buttons/Social";
+import Categories from "../Buttons/Categories";
 import Image from "next/image";
 
 export default function Footer() {
@@ -24,11 +24,11 @@ export default function Footer() {
         </h2>
         <ul>
           <li>
-            <SocialButtons />
+            <Social />
           </li>
         </ul>
         <ul>
-          <CategoriesButton />
+          <Categories />
         </ul>
         <h3>
           <Link
