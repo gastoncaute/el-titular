@@ -39,7 +39,7 @@ body {
   stroke: #000;
 }
 
-.title_hover:hover {
+.title-hover:hover {
   text-decoration: underline;
   transform: scale(1.1);
   transition: transform 0.3s ease;

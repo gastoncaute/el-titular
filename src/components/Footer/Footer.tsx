@@ -10,7 +10,7 @@ export default function Footer() {
         <h1>
           <Link href="/">
             <Image
-              className="title_hover"
+              className="title-hover"
               src={"/eltitularwhite.png"}
               alt="EL TITULAR"
               height={80}

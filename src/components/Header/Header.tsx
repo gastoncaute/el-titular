@@ -15,7 +15,7 @@ export default function Header() {
       <header>
         <article className="header-article">
           <BurgerButton setMenuVisible={setMenuVisible} />
-          <Link href="/" className={`title_hover`}>
+          <Link href="/" className={`title-hover`}>
             <Image
               src={"/eltitularwhite.png"}
               alt="EL TITULAR"
