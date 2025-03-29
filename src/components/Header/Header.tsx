@@ -36,7 +36,7 @@ export default function Header() {
             </li>
           </ul>
         </article>
-        <article className="input-busqueda">
+        <article className="input-article">
           <InputBusqueda />
         </article>
       </header>

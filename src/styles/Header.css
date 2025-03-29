@@ -38,7 +38,7 @@ header article ul li {
   border-radius: 8px;
 }
 
-.input-busqueda {
+.input-article {
   display: flex;
   align-items: center;
   background: #86082eb2;
@@ -86,7 +86,7 @@ header article ul li {
     justify-content: center;
   }
 
-  .input-busqueda {
+  .input-article {
     margin-top: 0.5rem;
   }
 }
@@ -101,7 +101,7 @@ header article ul li {
     display: none;
   }
 
-  .input-busqueda input {
+  .input-article input {
     width: 150px;
   }
 }
