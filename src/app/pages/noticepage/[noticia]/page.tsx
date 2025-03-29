@@ -1,22 +1,22 @@
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import Image from "next/image";
-import NoticiasMasRecientes from "@/components/Pages/MasRecientesVentana";
+import NoticiasMasRecientes from "@/components/Pages/Noticia/Ventanas/Recientes";
 import Link from "next/link";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";
 import { Noticia, Autor } from "@/types/componentes.types";
 import { obtenerAutor } from "@/utils/obtenerAutor";
-import MasRecientesDeCategoria from "@/components/Pages/MasRecientesDeCategoria";
+import MasRecientesDeCategoria from "@/components/Pages/Noticia/Ventanas/Categoria";
 import { PortableText } from "@portabletext/react";
-import SegundoBloque from "@/components/Pages/NoticePage/SegundoBloque";
-import TercerBloque from "@/components/Pages/NoticePage/TercerBloque";
-import CuartoBloque from "@/components/Pages/NoticePage/CuartoBloque";
-import QuintoBloque from "@/components/Pages/NoticePage/QuintoBloque";
+import SegundoBloque from "@/components/Pages/Noticia/Bloques/Segundo";
+import TercerBloque from "@/components/Pages/Noticia/Bloques/Tercer";
+import CuartoBloque from "@/components/Pages/Noticia/Bloques/Cuarto";
+import QuintoBloque from "@/components/Pages/Noticia/Bloques/Quinto";
 import { modifyImageUrl, modifyVideoFileUrl } from "@/utils/modifyCodes";
-import ArrayImages from "@/components/Pages/NoticePage/ArrayImages";
-import SextoBloque from "@/components/Pages/NoticePage/SextoBloque";
-import SeptimoBloque from "@/components/Pages/NoticePage/SeptimoBloque";
-import OctavoBloque from "@/components/Pages/NoticePage/OctavoBloque";
+import ArrayImages from "@/components/Pages/Noticia/Bloques/ArrayImages";
+import SextoBloque from "@/components/Pages/Noticia/Bloques/Sexto";
+import SeptimoBloque from "@/components/Pages/Noticia/Bloques/Septimo";
+import OctavoBloque from "@/components/Pages/Noticia/Bloques/Octavo";
 
 export default async function Page({ params }: any) {
   const noticias = await obtenerNoticias();
