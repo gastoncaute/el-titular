@@ -49,9 +49,10 @@ main {
 }
 
 .noticia-section article {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
   margin-top: 2rem;
 }
 
@@ -61,12 +62,17 @@ main {
   justify-content: space-between;
   width: 400px;
   max-width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
 .noticia-section article a h1 {
   font-size: 1.3rem;
   font-weight: bold;
-  margin: 5px 0 1.5rem;
+  margin: 0.2rem 0.5rem 1.5rem;
   color: #000;
 }
 
@@ -86,6 +92,18 @@ main {
 .noticia-section article a:hover img,
 .noticia-section article a:hover video {
   transform: scale(1.1);
+}
+
+.category-main {
+  padding-top: 3rem;
+}
+
+.category-section-h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #000;
+  border-bottom: 2px #000 solid;
+  width: 65%;
 }
 
 @media screen and (max-width: 1024px) {
