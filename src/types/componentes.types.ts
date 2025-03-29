@@ -204,23 +204,6 @@ export interface Autor {
   };
 }
 
-export interface Foto {
-  _id: string;
-  title: string;
-  categoria: string;
-  _createdAt: string;
-  _updatedAt: string;
-  _rev: string;
-  _type: string;
-  photo: {
-    _type: string;
-    asset: {
-      _type: string;
-      _ref: string;
-    };
-  };
-}
-
 export interface Dolar {
   moneda: string;
   casa: string;
