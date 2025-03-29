@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { obtenerCategorias } from "@/utils/obtenerCategorias";
-import NoticiasPorCategoria from "./NoticiasPorCategoria";
-import MasRecientes from "./MasRecientesPaginaPrincipal";
+import Categoria from "./Categoria";
+import Recientes from "./Recientes";
 import Image from "next/image";
 import Socials from "../Widgets/Socials";
 
@@ -24,7 +24,7 @@ export default async function Noticia() {
 
   return (
     <>
-      <MasRecientes />
+      <Recientes />
       <Socials />
       {categoriasUnicas.map((categoria: any) => (
         <section key={categoria} className="noticia-section">
@@ -43,7 +43,7 @@ export default async function Noticia() {
           </Link>
           <div className="banner-2"></div>
           <article>
-            <NoticiasPorCategoria categoria={categoria} />
+            <Categoria categoria={categoria} />
           </article>
         </section>
       ))}

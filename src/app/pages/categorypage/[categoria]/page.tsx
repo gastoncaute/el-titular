@@ -5,7 +5,7 @@ import { obtenerNoticias } from "@/utils/obtenerNoticia";
 import { Noticia } from "@/types/componentes.types";
 import Socials from "@/components/Main/Widgets/Socials";
 import Noticias from "@/components/Pages/Categoria/Noticias";
-import MasRecientes from "@/components/Main/Noticias/MasRecientesPaginaPrincipal";
+import Recientes from "@/components/Main/Noticias/Recientes";
 import UltimaNoticia from "@/components/Pages/Categoria/UltimaNoticia";
 
 export default async function CategoryPage({ params }: any) {
@@ -30,7 +30,7 @@ export default async function CategoryPage({ params }: any) {
         </section>
         <section className="noticia-section">
           <h1 className="category-section-h1">Ultimas Noticias</h1>
-          <MasRecientes />
+          <Recientes />
         </section>
       </main>
       <Footer />

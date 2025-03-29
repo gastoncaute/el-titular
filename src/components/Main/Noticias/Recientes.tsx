@@ -5,7 +5,7 @@ import { Noticia } from "@/types/componentes.types";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";
 import { modifyImageUrl, modifyVideoFileUrl } from "@/utils/modifyCodes";
 
-export default async function MasRecientes() {
+export default async function Recientes() {
   const noticias = await obtenerNoticias();
   const ultimaNoticia = noticias[0];
   const siguientesNoticias = noticias.slice(1, 5);

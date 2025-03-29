@@ -5,11 +5,7 @@ import { Noticia } from "@/types/componentes.types";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";
 import { modifyImageUrl, modifyVideoFileUrl } from "@/utils/modifyCodes";
 
-export default async function NoticiasPorCategoria({
-  categoria,
-}: {
-  categoria: string;
-}) {
+export default async function Categoria({ categoria }: { categoria: string }) {
   const noticias = await obtenerNoticias();
   const noticiasDeCategoria = noticias.filter(
     (noticia: Noticia) => noticia.categoria === categoria
