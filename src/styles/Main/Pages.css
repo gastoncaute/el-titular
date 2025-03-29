@@ -10,6 +10,21 @@
   width: 65%;
 }
 
+.pages-title {
+  display: flex;
+  align-items: center;
+  background: #86082e;
+  border-radius: 8px;
+  color: #fff;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.pages-title h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 .terminos-main {
   max-width: 800px;
   margin: 0.5rem auto;
