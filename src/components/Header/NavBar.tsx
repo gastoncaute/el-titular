@@ -13,21 +13,15 @@ export default function NavBar({ isOpen }: NavBarProps) {
         <li className="search-input">
           <SeacrhInputButton />
         </li>
-        <li className="w-min headersButtons">
+        <li className="button">
           <Link href="/">Inicio</Link>
         </li>
-        <li className="w-40 headersButtons">
+        <li className="w-40 button">
           <Link href={"/pages/masrecientes"}>Últimas Noticias</Link>
         </li>
-        <li className="w-min navbar_categories">
-          <CategoriesButton />
-        </li>
-        <li>
-          <Link
-            className="headersButtons"
-            target="#"
-            href={"https://wa.me/5492234544870"}
-          >
+        <CategoriesButton />
+        <li className="button">
+          <Link target="#" href={"https://wa.me/5492234544870"}>
             Contacto
           </Link>
         </li>

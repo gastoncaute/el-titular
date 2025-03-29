@@ -32,19 +32,13 @@ nav ul .search-input {
   display: none;
 }
 
-.navbar_categories {
-  padding-top: 0;
+nav ul li {
+  width: min-content;
 }
 
-.navbar_categories a {
+nav ul li a {
   display: flex;
   flex-direction: column;
-  padding: 1rem 0;
-}
-
-.navbar_li a {
-  color: white;
-  text-decoration: none;
 }
 
 @media screen and (max-width: 1024px) {
@@ -54,7 +48,7 @@ nav ul .search-input {
     padding-top: 1.5rem;
   }
 
-  .navbar_li {
+  nav ul li {
     font-size: 14px;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;

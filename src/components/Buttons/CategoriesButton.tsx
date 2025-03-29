@@ -5,13 +5,9 @@ export default function CategoriesButton() {
   return (
     <>
       {categorias.map((categoria: string) => (
-        <Link
-          key={categoria}
-          className="headersButtons"
-          href={`/pages/categorypage/${categoria}`}
-        >
-          {categoria}
-        </Link>
+        <li className="button" key={categoria}>
+          <Link href={`/pages/categorypage/${categoria}`}>{categoria}</Link>
+        </li>
       ))}
     </>
   );
