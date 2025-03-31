@@ -19,9 +19,9 @@ export default function ArrayImages({ arrayImages }: { arrayImages: any }) {
             width={800}
             style={{ maxHeight: "600px", maxWidth: "100%", width: "auto" }}
           />
-          <h5 className="py-4 w-max m-auto array_image_noticepage_epigrafe">
+          <p>
             <PortableText value={imagen.epigrafe} />
-          </h5>
+          </p>
         </div>
       ))}
     </section>
