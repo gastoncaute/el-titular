@@ -17,47 +17,46 @@ export default async function MasRecientesDeCategoria({
   );
 
   return (
-    <article className="flex flex-col item-center p-4">
-      <h1 className="flex justify-center border-b border-pageColor pb-2 mb-2">
-        <Link
-          href={
-            categoriaSeleccionada === "Infografias"
-              ? `/pages/infografiaspage/${categoriaSeleccionada}`
-              : `/pages/categorypage/${categoriaSeleccionada}`
-          }
-          className="p-2 px-4 text-2xl font-bold page-button rounded-3xl border border-transparent"
-        >
-          Más recientes de {categoriaSeleccionada}
-        </Link>
+    <>
+      <h1 className="ventana-section-h1">
+        Más recientes de {categoriaSeleccionada}
       </h1>
-      {noticiasDeCadaCategoria
-        .slice(0, 5)
-        .map((noticia: Noticia, index: number) => {
+      <article>
+        {noticiasDeCadaCategoria.slice(0, 8).map((noticia: Noticia) => {
           return (
             <Link
               href={`/pages/noticepage/${encodeURIComponent(noticia.title)}`}
               key={noticia._id}
-              className="flex flex-col p-4 m-2 border border-pageColor rounded-3xl noticepage_masRecientes_notices"
+              className="noticia-card"
             >
+              <h2 className="ventana-section-h2">{noticia.title}</h2>
               {noticia.image_principal && noticia.image_principal.imagen && (
                 <Image
-                  className="flex items-center justify-center mx-4 noticepage_masRecientes_image"
                   src={modifyImageUrl(
                     noticia.image_principal.imagen.asset._ref
                   )}
                   alt={noticia.image_principal.epigrafe}
+                  width={400}
                   height={150}
-                  width={100}
                   style={{
-                    maxHeight: "600px",
+                    objectFit: "cover",
                     maxWidth: "100%",
-                    width: "auto",
+                    maxHeight: "150px",
                   }}
                 />
               )}
               {(!noticia.image_principal || !noticia.image_principal.imagen) &&
                 noticia.image_principal?.video && (
-                  <video controls>
+                  <video
+                    controls
+                    width={400}
+                    height={150}
+                    style={{
+                      objectFit: "cover",
+                      maxWidth: "100%",
+                      maxHeight: "150px",
+                    }}
+                  >
                     <source
                       src={modifyVideoFileUrl(
                         noticia.image_principal.video.asset._ref
@@ -67,12 +66,10 @@ export default async function MasRecientesDeCategoria({
                     Your browser does not support the video tag.
                   </video>
                 )}
-              <h1 className="text-lg font-bold mt-4 pl-4 flex items-center noticias_title">
-                {noticia.title}
-              </h1>
             </Link>
           );
         })}
-    </article>
+      </article>
+    </>
   );
 }
