@@ -16,7 +16,7 @@ export default function SextoBloque({
   sextoBloque: Noticia["sexto_bloque"];
 }) {
   return (
-    <section>
+    <section className="contenido-bloque">
       {sextoBloque?.imagen_5 && (
         <div className="bloque-imagen">
           <Image

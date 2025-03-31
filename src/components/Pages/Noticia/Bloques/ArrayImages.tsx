@@ -5,7 +5,7 @@ import React from "react";
 
 export default function ArrayImages({ arrayImages }: { arrayImages: any }) {
   return (
-    <section>
+    <section className="contenido-bloque">
       {arrayImages?.map((imagen: any) => (
         <div key={imagen._key} className="bloque-imagen">
           <Image

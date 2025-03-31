@@ -16,7 +16,7 @@ export default function CuartoBloque({
   cuartoBloque: Noticia["cuarto_bloque"];
 }) {
   return (
-    <section>
+    <section className="contenido-bloque">
       {cuartoBloque?.imagen_4 && (
         <div className="bloque-imagen">
           <Image
