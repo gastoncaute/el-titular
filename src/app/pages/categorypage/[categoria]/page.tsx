@@ -29,7 +29,7 @@ export default async function CategoryPage({ params }: any) {
           <Noticias params={params} />
         </section>
         <section className="noticia-section">
-          <h1 className="category-section-h1">Ultimas Noticias</h1>
+          <h1 className="ventana-section-h1">Ultimas Noticias</h1>
           <Recientes />
         </section>
       </main>

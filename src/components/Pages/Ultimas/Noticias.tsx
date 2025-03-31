@@ -9,7 +9,7 @@ export default async function Noticias() {
   const noticias = await obtenerNoticias();
 
   return (
-    <article className="noticias-grid">
+    <article>
       {noticias.slice(1, 17).map((noticia: Noticia, index: number) => {
         return (
           <Link

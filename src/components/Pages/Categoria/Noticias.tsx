@@ -12,7 +12,7 @@ export default async function Noticias({ params }: any) {
     (noticia: Noticia) => noticia.categoria === categoriaSeleccionada
   );
   return (
-    <article className="noticias-grid">
+    <article>
       {noticiasDeCadaCategoria.slice(1, 17).map((noticia: Noticia) => (
         <Link
           href={`/pages/noticepage/${encodeURIComponent(noticia.title)}`}

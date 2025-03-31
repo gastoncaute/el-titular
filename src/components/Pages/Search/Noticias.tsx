@@ -16,7 +16,7 @@ export default async function Noticias({ params }: any) {
         <section className="pages-title">
           <h1>Relacionado a tu búsqueda: "{busqueda}"</h1>
         </section>
-        <article className="noticias-grid">
+        <article>
           {noticias
             .filter((noticia: Noticia) =>
               noticia.title.toLowerCase().includes(busqueda.toLowerCase())
