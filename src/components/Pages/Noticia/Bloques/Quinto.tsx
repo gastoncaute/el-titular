@@ -56,7 +56,7 @@ export default function QuintoBloque({
               ...item,
               children: item.children.map((child: any) => ({
                 ...child,
-                text: child.text.replace(/&/g, "\n"),
+                text: child.text.replace(/&/g, ""),
               })),
             }))}
           />

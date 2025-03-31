@@ -45,6 +45,10 @@
   text-align: justify;
 }
 
+.bloque-descripcion p {
+  margin-bottom: 1rem;
+}
+
 .bloque-video-iframe {
   position: relative;
   padding-bottom: 56.25%;

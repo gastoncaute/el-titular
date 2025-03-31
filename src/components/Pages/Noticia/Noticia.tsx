@@ -55,7 +55,7 @@ const Noticias = ({ noticia }: NoticiasProps) => {
               ...item,
               children: item.children.map((child: any) => ({
                 ...child,
-                text: child.text.replace(/&/g, "\n"),
+                text: child.text.replace(/&/g, ""),
               })),
             }))}
           />

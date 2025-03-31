@@ -72,6 +72,10 @@
   font-size: 1.4rem;
 }
 
+.noticia-copete p {
+  margin-bottom: 1.2rem;
+}
+
 .notice-aside {
   width: 30%;
   padding-left: 20px;
