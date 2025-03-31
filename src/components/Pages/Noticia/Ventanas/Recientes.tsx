@@ -10,7 +10,9 @@ export default async function Noticias() {
 
   return (
     <>
-      <h1 className="ventana-section-h1">Ultimas Noticias</h1>
+      <Link href={"/pages/masrecientes"} className="ventana-section-h1">
+        Ultimas Noticias
+      </Link>
       <section>
         {noticias.slice(0, 5).map((noticia: Noticia, index: number) => {
           return (

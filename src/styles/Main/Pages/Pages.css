@@ -10,6 +10,10 @@
   width: 65%;
 }
 
+.ventana-section-h1:hover {
+  color: #86082e;
+}
+
 .pages-title {
   display: flex;
   align-items: center;

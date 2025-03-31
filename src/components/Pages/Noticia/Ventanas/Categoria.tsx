@@ -18,9 +18,12 @@ export default async function MasRecientesDeCategoria({
 
   return (
     <>
-      <h1 className="ventana-section-h1">
+      <Link
+        href={`/pages/categorypage/${categoriaSeleccionada}`}
+        className="ventana-section-h1"
+      >
         Más recientes de {categoriaSeleccionada}
-      </h1>
+      </Link>
       <article>
         {noticiasDeCadaCategoria.slice(0, 8).map((noticia: Noticia) => {
           return (

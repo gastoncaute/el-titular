@@ -7,6 +7,7 @@ import Socials from "@/components/Main/Widgets/Socials";
 import Noticias from "@/components/Pages/Categoria/Noticias";
 import Recientes from "@/components/Main/Noticias/Recientes";
 import UltimaNoticia from "@/components/Pages/Categoria/UltimaNoticia";
+import Link from "next/link";
 
 export default async function CategoryPage({ params }: any) {
   const noticias = await obtenerNoticias();
@@ -29,7 +30,9 @@ export default async function CategoryPage({ params }: any) {
           <Noticias params={params} />
         </section>
         <section className="noticia-section">
-          <h1 className="ventana-section-h1">Ultimas Noticias</h1>
+          <Link href={"/pages/masrecientes"} className="ventana-section-h1">
+            Ultimas Noticias
+          </Link>
           <Recientes />
         </section>
       </main>
