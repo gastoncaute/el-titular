@@ -16,27 +16,25 @@ export default async function SegundoBloque({
   segundoBloque: Noticia["segundo_bloque"];
 }) {
   return (
-    <section>
+    <section className="contenido-bloque">
       {segundoBloque?.imagen_2 && (
-        <div className="noticepage_div_image flex flex-col items-center">
+        <div className="bloque-imagen">
           <Image
-            className="m-auto noticepage_image"
             src={modifyImageUrl(segundoBloque?.imagen_2.imagen.asset._ref)}
             alt={segundoBloque?.imagen_2.epigrafe}
             height={800}
             width={800}
             style={{ maxHeight: "600px", maxWidth: "100%", width: "auto" }}
           />
-          <h5 className="py-4 text-gray-700">
+          <p>
             <PortableText value={segundoBloque?.imagen_2.epigrafe} />
-          </h5>
+          </p>
         </div>
       )}
       {segundoBloque?.video && (
-        <div className="flex w-full justify-center py-4 notice-video-container">
+        <div className="bloque-video">
           <video
             controls
-            className="m-auto noticepage_video"
             style={{
               maxHeight: "600px",
               maxWidth: "100%",
@@ -52,7 +50,7 @@ export default async function SegundoBloque({
         </div>
       )}
       {segundoBloque?.segunda_descripcion && (
-        <p className="text-2xl py-4 noticepage_parrafo">
+        <p className="bloque-descripcion">
           <PortableText
             value={segundoBloque?.segunda_descripcion?.map((item: any) => ({
               ...item,
@@ -66,11 +64,10 @@ export default async function SegundoBloque({
       )}
 
       {modifyVideoCode(segundoBloque?.YouTubeCode_1) && (
-        <div className="py-4 video-container">
+        <div className="bloque-video-iframe">
           <iframe
             width="50%"
             height="315"
-            className="video-iframe"
             src={`https://www.youtube.com/embed/${modifyVideoCode(
               segundoBloque?.YouTubeCode_1
             )}`}

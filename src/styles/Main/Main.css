@@ -1,5 +1,6 @@
 @import url("Pages/Pages.css");
 @import url("Pages/Noticia.css");
+@import url("Pages/Bloques.css");
 
 main {
   display: flex;

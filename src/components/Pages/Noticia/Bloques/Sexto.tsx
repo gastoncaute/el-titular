@@ -18,25 +18,23 @@ export default function SextoBloque({
   return (
     <section>
       {sextoBloque?.imagen_5 && (
-        <div className="noticepage_div_image flex flex-col items-center">
+        <div className="bloque-imagen">
           <Image
-            className="m-auto noticepage_image"
             src={modifyImageUrl(sextoBloque?.imagen_5.imagen.asset._ref)}
             alt={sextoBloque?.imagen_5.epigrafe}
             height={800}
             width={800}
             style={{ maxHeight: "600px", maxWidth: "100%", width: "auto" }}
           />
-          <h5 className="pt-4 text-gray-700">
+          <p>
             <PortableText value={sextoBloque?.imagen_5.epigrafe} />
-          </h5>
+          </p>
         </div>
       )}
       {sextoBloque?.video && (
-        <div className="flex w-full justify-center py-4 video-container">
+        <div className="bloque-video">
           <video
             controls
-            className="m-auto noticepage_video"
             style={{
               maxHeight: "600px",
               maxWidth: "100%",
@@ -52,7 +50,7 @@ export default function SextoBloque({
         </div>
       )}
       {sextoBloque?.quinta_descripcion && (
-        <p className="text-2xl py-4 noticepage_parrafo">
+        <p className="bloque-descripcion">
           <PortableText
             value={sextoBloque?.quinta_descripcion?.map((item: any) => ({
               ...item,
@@ -65,7 +63,7 @@ export default function SextoBloque({
         </p>
       )}
       {modifyVideoCode(sextoBloque?.YouTubeCode_4) && (
-        <div className="py-4 video-container">
+        <div className="bloque-video-iframe">
           <iframe
             width="50%"
             height="315"

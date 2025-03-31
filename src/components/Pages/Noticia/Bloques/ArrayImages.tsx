@@ -7,12 +7,8 @@ export default function ArrayImages({ arrayImages }: { arrayImages: any }) {
   return (
     <section>
       {arrayImages?.map((imagen: any) => (
-        <div
-          key={imagen._key}
-          className="noticepage_div_image flex flex-col items-center"
-        >
+        <div key={imagen._key} className="bloque-imagen">
           <Image
-            className="m-auto noticepage_image"
             src={modifyImageUrl(imagen.imagen.asset._ref)}
             alt={
               imagen.epigrafe && imagen.epigrafe.length > 0
