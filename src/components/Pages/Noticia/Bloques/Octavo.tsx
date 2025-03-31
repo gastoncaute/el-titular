@@ -15,6 +15,8 @@ export default function OctavoBloque({
 }: {
   octavoBloque: Noticia["octavo_bloque"];
 }) {
+  if (!octavoBloque) return null;
+
   return (
     <section className="contenido-bloque">
       {octavoBloque?.imagen_5 && (

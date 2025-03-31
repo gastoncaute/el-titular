@@ -15,6 +15,8 @@ export default function TercerBloque({
 }: {
   tercerBloque: Noticia["tercer_bloque"];
 }) {
+  if (!tercerBloque) return null;
+
   return (
     <section className="contenido-bloque">
       {tercerBloque?.imagen_3 && (

@@ -15,6 +15,8 @@ export default function SextoBloque({
 }: {
   sextoBloque: Noticia["sexto_bloque"];
 }) {
+  if (!sextoBloque) return null;
+
   return (
     <section className="contenido-bloque">
       {sextoBloque?.imagen_5 && (

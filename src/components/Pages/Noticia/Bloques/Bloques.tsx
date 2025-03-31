@@ -14,6 +14,18 @@ type NoticiasProps = {
 };
 
 export default function Bloques({ noticia }: NoticiasProps) {
+  const tieneBloques =
+    noticia.segundo_bloque ||
+    noticia.tercer_bloque ||
+    noticia.cuarto_bloque ||
+    noticia.quinto_bloque ||
+    noticia.sexto_bloque ||
+    noticia.septimo_bloque ||
+    noticia.octavo_bloque ||
+    (noticia.imagenes_array?.length ?? 0) > 0;
+
+  if (!tieneBloques) return null;
+
   return (
     <>
       <SegundoBloque segundoBloque={noticia.segundo_bloque} />

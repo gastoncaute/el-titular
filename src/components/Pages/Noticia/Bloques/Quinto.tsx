@@ -15,6 +15,8 @@ export default function QuintoBloque({
 }: {
   quintoBloque: Noticia["quinto_bloque"];
 }) {
+  if (!quintoBloque) return null;
+
   return (
     <section className="contenido-bloque">
       {quintoBloque?.imagen_5 && (

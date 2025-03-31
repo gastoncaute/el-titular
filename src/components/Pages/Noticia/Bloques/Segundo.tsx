@@ -15,6 +15,8 @@ export default async function SegundoBloque({
 }: {
   segundoBloque: Noticia["segundo_bloque"];
 }) {
+  if (!segundoBloque) return null;
+
   return (
     <section className="contenido-bloque">
       {segundoBloque?.imagen_2 && (

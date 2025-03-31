@@ -15,6 +15,8 @@ export default function SeptimoBloque({
 }: {
   septimoBloque: Noticia["septimo_bloque"];
 }) {
+  if (!septimoBloque) return null;
+
   return (
     <section className="contenido-bloque">
       {septimoBloque?.imagen_5 && (
