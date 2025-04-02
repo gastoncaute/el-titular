@@ -14,6 +14,11 @@ main {
   justify-content: space-between;
 }
 
+.widgets-section img {
+  background: #86082eb2;
+  border-radius: 8px;
+}
+
 .noticia-section {
   width: 100%;
   max-width: 1500px;
