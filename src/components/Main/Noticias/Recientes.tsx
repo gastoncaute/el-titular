@@ -13,35 +13,39 @@ export default async function Recientes() {
   return (
     <section className="noticia-grid">
       <div className="noticia-destacada">
-        <Link href={`/pages/noticepage/${ultimaNoticia.title}`}>
-          <div className="image-container">
-            {ultimaNoticia.image_principal?.imagen && (
-              <Image
-                src={modifyImageUrl(
-                  ultimaNoticia.image_principal.imagen?.asset?._ref
+        <div className="image-container">
+          {ultimaNoticia.image_principal?.imagen && (
+            <Image
+              src={modifyImageUrl(
+                ultimaNoticia.image_principal.imagen?.asset?._ref
+              )}
+              alt={ultimaNoticia.image_principal.epigrafe}
+              width={1500}
+              height={600}
+              className="noticia-imagen"
+            />
+          )}
+          {ultimaNoticia.image_principal?.video && (
+            <video controls className="noticia-imagen">
+              <source
+                src={modifyVideoFileUrl(
+                  ultimaNoticia.image_principal.video.asset._ref
                 )}
-                alt={ultimaNoticia.image_principal.epigrafe}
-                width={1500}
-                height={600}
-                className="noticia-imagen"
+                type="video/mp4"
               />
-            )}
-            {ultimaNoticia.image_principal?.video && (
-              <video controls className="noticia-imagen">
-                <source
-                  src={modifyVideoFileUrl(
-                    ultimaNoticia.image_principal.video.asset._ref
-                  )}
-                  type="video/mp4"
-                />
-              </video>
-            )}
-            <div className="text-overlay">
-              <h1>{ultimaNoticia.title}</h1>
-              <h2>{ultimaNoticia.bajada}</h2>
-            </div>
+            </video>
+          )}
+          <div className="text-overlay">
+            <h1>{ultimaNoticia.title}</h1>
+            <h2>{ultimaNoticia.bajada}</h2>
+            <Link
+              href={`/pages/noticepage/${ultimaNoticia.title}`}
+              className="leer-noticia"
+            >
+              LEER NOTICIA
+            </Link>
           </div>
-        </Link>
+        </div>
       </div>
 
       <div className="noticias-secundarias">

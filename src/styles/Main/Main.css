@@ -77,6 +77,24 @@ main {
   object-fit: cover;
 }
 
+.leer-noticia {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.leer-noticia:hover {
+  background-color: #8d004f;
+  font-weight: 900;
+  color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
 .noticias-secundarias {
   display: flex;
   flex-direction: column;
