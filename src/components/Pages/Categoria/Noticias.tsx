@@ -13,7 +13,7 @@ export default async function Noticias({ params }: any) {
   );
   return (
     <article>
-      {noticiasDeCadaCategoria.slice(1, 17).map((noticia: Noticia) => (
+      {noticiasDeCadaCategoria.slice(0, 16).map((noticia: Noticia) => (
         <Link
           href={`/pages/noticepage/${encodeURIComponent(noticia.title)}`}
           key={noticia._id}

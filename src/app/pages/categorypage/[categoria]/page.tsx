@@ -6,7 +6,7 @@ import { Noticia } from "@/types/componentes.types";
 import Socials from "@/components/Main/Widgets/Socials";
 import Noticias from "@/components/Pages/Categoria/Noticias";
 import Recientes from "@/components/Main/Noticias/Recientes";
-import UltimaNoticia from "@/components/Pages/Categoria/UltimaNoticia";
+import TituloCategoria from "@/components/Pages/Categoria/TituloCategoria";
 import Link from "next/link";
 
 export default async function CategoryPage({ params }: any) {
@@ -22,10 +22,7 @@ export default async function CategoryPage({ params }: any) {
       <Header />
       <main className="category-main">
         <section key={ultimaNoticiaDeCategoria._id} className="noticia-section">
-          <section className="pages-title">
-            <h1>{categoriaSeleccionada}</h1>
-          </section>
-          <UltimaNoticia params={params} />
+          <TituloCategoria params={params} />
           <Socials />
           <Noticias params={params} />
         </section>
