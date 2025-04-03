@@ -7,9 +7,35 @@ import React from "react";
 
 export default async function Noticias() {
   const noticias = await obtenerNoticias();
+  const categorias = ["POLITICA", "ACTUALIDAD", "POLICIALES"];
+
+  const imagenesPorCategoria: { [key: string]: string } = {
+    POLITICA: "/Banner_politica.png",
+    ACTUALIDAD: "/Banner_actualidad.png",
+    POLICIALES: "/Banner_policiales.png",
+  };
 
   return (
     <>
+      <ul>
+        {categorias.map((categoria) => {
+          const categoriaFormateada =
+            categoria.charAt(0).toUpperCase() +
+            categoria.slice(1).toLowerCase();
+          return (
+            <li key={categoria}>
+              <Link href={`/pages/categorypage/${categoriaFormateada}`}>
+                <Image
+                  src={imagenesPorCategoria[categoria]}
+                  alt={categoria}
+                  width={500}
+                  height={100}
+                />
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
       <Link href={"/pages/masrecientes"} className="ventana-section-h1">
         Ultimas Noticias
       </Link>

@@ -81,6 +81,17 @@
   padding-left: 20px;
 }
 
+.notice-aside ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.notice-aside ul li img {
+  width: 100%;
+}
+
 .notice-aside section {
   display: flex;
   flex-direction: column;
