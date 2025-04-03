@@ -4,7 +4,7 @@ import Recientes from "@/components/Pages/Noticia/Ventanas/Recientes";
 import Categoria from "@/components/Pages/Noticia/Ventanas/Categoria";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";
 import { Noticia } from "@/types/componentes.types";
-import Socials from "@/components/Main/Widgets/Socials";
+import Socials from "@/components/Pages/Noticia/Ventanas/Socials";
 import Noticias from "@/components/Pages/Noticia/Noticia";
 
 export default async function Page({ params }: any) {
