@@ -8,8 +8,8 @@ export default function Home() {
     <>
       {/* <PopUp /> */}
       <Header />
-      {/* <Main />
-      <Footer /> */}
+      <Main />
+      <Footer />
     </>
   );
 }
