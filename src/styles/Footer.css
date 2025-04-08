@@ -37,6 +37,15 @@
     border-top: solid 1px;
   }
 
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem;
+  }
+
   footer article ul {
     display: flex;
     justify-content: center;
@@ -66,11 +75,6 @@
     padding: 0.5rem;
     font-size: 1rem;
     line-height: 2rem;
-  }
-
-  footer article h3 a svg {
-    width: 20px;
-    height: 20px;
   }
 
   footer article h5 {

@@ -22,11 +22,9 @@ export default function Footer() {
           {/* eslint-disable-next-line react/no-unescaped-entities */}
           "NOTICIAS QUE MARCAN LA DIFERENCIA"
         </h2>
-        <ul>
-          <li>
-            <Social />
-          </li>
-        </ul>
+        <div className="footer-socials">
+          <Social />
+        </div>
         <ul>
           <Categories />
         </ul>
