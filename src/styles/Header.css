@@ -104,3 +104,26 @@ header article ul li {
     width: 150px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .header-article {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header article ul {
+    display: none;
+  }
+
+  .input-article {
+    display: none;
+  }
+
+  .header-article button {
+    margin-left: 0.5rem;
+  }
+
+  .header-article a {
+    margin-right: 0.5rem;
+  }
+}

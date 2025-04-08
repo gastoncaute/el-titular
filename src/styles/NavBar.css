@@ -62,3 +62,35 @@ nav ul li a {
 .navbar.closed {
   transform: translateX(-110%);
 }
+
+@media screen and (max-width: 600px) {
+  nav {
+    justify-content: flex-start;
+    padding-top: 1rem;
+    height: 100vh;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  nav ul .search-input {
+    display: block;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  nav ul .search-input input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+  }
+
+  nav ul .search-input svg {
+    display: none;
+  }
+}
