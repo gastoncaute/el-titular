@@ -38,6 +38,7 @@ export default function Socials() {
 
   return (
     <section className={"ventana-socials"}>
+      <h3>Nuestras Redes</h3>
       <ul>
         {socialLinks.map(({ href, img, alt }) => (
           <li key={alt}>
