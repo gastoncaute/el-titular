@@ -140,11 +140,22 @@ main {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-image: url("/CategoriaBG.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 1.5rem;
+}
+
+.politica-bg {
+  background-image: url("/PoliticaBG.png");
+}
+
+.actualidad-bg {
+  background-image: url("/ActualidadBG.png");
+}
+
+.policiales-bg {
+  background-image: url("/PolicialesBG.png");
 }
 
 .category-text-overlay {

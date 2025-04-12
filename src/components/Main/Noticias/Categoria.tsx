@@ -15,7 +15,17 @@ export default async function Categoria({ categoria }: { categoria: string }) {
   return (
     <>
       <section key={ultimaNoticia._id} className="noticia-section">
-        <div className="category-noticia-container">
+        <div
+          className={`category-noticia-container ${
+            categoria.toLowerCase() === "politica"
+              ? "politica-bg"
+              : categoria.toLowerCase() === "actualidad"
+              ? "actualidad-bg"
+              : categoria.toLowerCase() === "policiales"
+              ? "policiales-bg"
+              : ""
+          }`}
+        >
           <div className="category-text-overlay">
             <Link
               href={`/pages/categorypage/${categoria}`}

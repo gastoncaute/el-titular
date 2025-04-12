@@ -4,6 +4,15 @@ import React from "react";
 export default async function TituloCategoria({ params }: any) {
   const categoriaSeleccionada = params.categoria.toLowerCase();
 
+  const tituloCategoria: Record<string, string> = {
+    politica: "POLÍTICA",
+    policiales: "POLICIALES",
+    actualidad: "ACTUALIDAD",
+  };
+
+  const tituloAMostrar =
+    tituloCategoria[categoriaSeleccionada] || "Información no disponible.";
+
   const informacionPorCategoria: Record<string, string> = {
     politica:
       "Toda la actualidad política de Mar del Plata, la Provincia de Buenos Aires y el país, junto con noticias internacionales y económicas de impacto.",
@@ -24,7 +33,7 @@ export default async function TituloCategoria({ params }: any) {
       </div>
       <h1>
         <span className="seccion">SECCIÓN</span>
-        <span className="categoria">{categoriaSeleccionada}</span>
+        <span className="categoria">{tituloAMostrar}</span>
       </h1>
       <h2>{informacionAMostrar}</h2>
     </section>
