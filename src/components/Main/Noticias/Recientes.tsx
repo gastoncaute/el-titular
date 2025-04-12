@@ -36,14 +36,12 @@ export default async function Recientes() {
             </video>
           )}
           <div className="text-overlay">
-            <h1>{ultimaNoticia.title}</h1>
+            <h1>
+              <Link href={`/pages/noticepage/${ultimaNoticia.title}`}>
+                {ultimaNoticia.title}
+              </Link>
+            </h1>
             <h2>{ultimaNoticia.bajada}</h2>
-            <Link
-              href={`/pages/noticepage/${ultimaNoticia.title}`}
-              className="leer-noticia"
-            >
-              LEER NOTICIA
-            </Link>
           </div>
         </div>
       </div>
@@ -62,12 +60,26 @@ export default async function Recientes() {
                   noticia.image_principal.imagen?.asset?._ref
                 )}
                 alt={noticia.image_principal.epigrafe}
-                width={300}
+                width={400}
                 height={150}
+                style={{
+                  objectFit: "cover",
+                  maxWidth: "100%",
+                  maxHeight: "200px",
+                }}
               />
             )}
             {noticia.image_principal?.video && (
-              <video controls width={300} height={150}>
+              <video
+                controls
+                width={400}
+                height={150}
+                style={{
+                  objectFit: "cover",
+                  maxWidth: "100%",
+                  maxHeight: "200px",
+                }}
+              >
                 <source
                   src={modifyVideoFileUrl(
                     noticia.image_principal.video.asset._ref
@@ -96,10 +108,24 @@ export default async function Recientes() {
                 alt={noticia.image_principal.epigrafe}
                 width={400}
                 height={150}
+                style={{
+                  objectFit: "cover",
+                  maxWidth: "100%",
+                  maxHeight: "200px",
+                }}
               />
             )}
             {noticia.image_principal?.video && (
-              <video controls width={400} height={150}>
+              <video
+                controls
+                width={400}
+                height={150}
+                style={{
+                  objectFit: "cover",
+                  maxWidth: "100%",
+                  maxHeight: "200px",
+                }}
+              >
                 <source
                   src={modifyVideoFileUrl(
                     noticia.image_principal.video.asset._ref
