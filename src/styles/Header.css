@@ -18,6 +18,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 2rem;
 }
 
 .header-article button {
@@ -28,6 +29,7 @@ header {
 header article ul {
   display: flex;
   gap: 1rem;
+  margin: 0 2rem;
 }
 
 header article ul li {
