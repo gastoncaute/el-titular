@@ -8,7 +8,7 @@ export default function Main() {
     <main>
       <section className="widgets-section">
         <Clima />
-        <Image src={"/Logo.png"} alt="ElTitular" width={224} height={100} />
+        <Image src={"/Logo.png"} alt="ElTitular" width={192} height={100} />
         <Dolar />
       </section>
       <Noticia />
