@@ -38,7 +38,7 @@ main {
   color: white;
   text-align: left;
   z-index: 1;
-  background: #00000031;
+  background: linear-gradient(to bottom, transparent, black);
 }
 
 .text-overlay h1 {
