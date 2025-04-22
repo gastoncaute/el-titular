@@ -10,7 +10,10 @@ export default async function UltimaNoticia() {
   const ultimaNoticia = noticias[0];
 
   return (
-    <Link href={`/pages/noticepage/${encodeURIComponent(ultimaNoticia.title)}`}>
+    <Link
+      href={`/pages/noticepage/${encodeURIComponent(ultimaNoticia.title)}`}
+      className="noticia-destacada"
+    >
       <div className="image-container">
         {ultimaNoticia.image_principal &&
           ultimaNoticia.image_principal.imagen && (
