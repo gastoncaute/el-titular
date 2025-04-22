@@ -128,3 +128,14 @@
 .terminos-main a:hover {
   color: #0056b3;
 }
+
+@media screen and (max-width: 600px) {
+  .category-image {
+    margin-top: 1rem;
+  }
+
+  .category-image div,
+  .category-image h2 {
+    display: none;
+  }
+}
