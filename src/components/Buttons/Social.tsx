@@ -24,11 +24,16 @@ export default function Social() {
         <Image src={"/tiktok-icon.png"} alt="Tik Tok" width={50} height={50} />
       </Link>
       <Link
-        href="https://www.instagram.com/eltitularmdp/"
+        href="https://www.facebook.com/people/El-Titular/61555169820286/"
         target="#"
         className="m-2 flex items-center"
       >
-        <Image src={"/twitter-icon.png"} alt="Twitter" width={50} height={50} />
+        <Image
+          src={"/facebook-icon.png"}
+          alt="Facebook"
+          width={50}
+          height={50}
+        />
       </Link>
       <Link
         href="https://wa.me/5492234544870"
@@ -48,18 +53,6 @@ export default function Social() {
         className="m-2 flex items-center"
       >
         <Image src={"/youtube-icon.png"} alt="YouTube" width={50} height={50} />
-      </Link>
-      <Link
-        href="https://www.facebook.com/people/El-Titular/61555169820286/"
-        target="#"
-        className="m-2 flex items-center"
-      >
-        <Image
-          src={"/facebook-icon.png"}
-          alt="Facebook"
-          width={50}
-          height={50}
-        />
       </Link>
     </>
   );

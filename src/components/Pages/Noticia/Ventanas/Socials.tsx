@@ -15,9 +15,9 @@ export default function Socials() {
       alt: "TikTok",
     },
     {
-      href: "mailto:eltitularmdp@gmail.com",
-      img: "/Twitter.png",
-      alt: "Twitter",
+      href: "https://www.facebook.com/people/El-Titular/61555169820286/",
+      img: "/Facebook.png",
+      alt: "Facebook",
     },
     {
       href: "https://wa.me/5492234544870",
@@ -29,26 +29,21 @@ export default function Socials() {
       img: "/YouTube.png",
       alt: "YouTube",
     },
-    {
-      href: "https://www.facebook.com/people/El-Titular/61555169820286/",
-      img: "/Facebook.png",
-      alt: "Facebook",
-    },
   ];
 
   return (
-    <section className={"ventana-socials"}>
+    <section className="ventana-socials">
       <h3>Nuestras Redes</h3>
       <ul>
         {socialLinks.map(({ href, img, alt }) => (
           <li key={alt}>
-            <Link href={href} target="#" className={"link"}>
+            <Link href={href} target="#" className="link">
               <Image
                 src={img}
                 alt={alt}
                 width={200}
                 height={100}
-                className={"image"}
+                className="image"
               />
             </Link>
           </li>
