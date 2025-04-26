@@ -3,7 +3,7 @@
   color: #fff;
   width: 100%;
   max-width: 40%;
-  height: 12rem;
+  height: 10.5rem;
   border-radius: 8px;
   overflow-x: auto;
   white-space: nowrap;
@@ -17,7 +17,7 @@
   position: sticky;
   display: flex;
   justify-content: center;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 900;
 }
 
@@ -31,8 +31,8 @@
   display: flex;
   flex-direction: column;
   width: max-content;
-  margin: auto 1rem;
-  padding: 1rem;
+  margin: 0.2rem;
+  padding: 0.2rem;
   border: solid 1px;
   border-radius: 8px;
 }
