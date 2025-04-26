@@ -1,0 +1,68 @@
+.clima-section {
+  background: #86082e;
+  color: #fff;
+  width: 100%;
+  max-width: 40%;
+  height: 10.5rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.clima-section h1 {
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+.clima-section ul {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.clima-section ul li {
+  display: grid;
+  max-width: 180px;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-radius: 8px;
+  padding: 0.2rem;
+  border: solid 1px;
+  border-radius: 8px;
+}
+
+.clima-section ul li h2 {
+  grid-column: 1 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-bottom: #fff solid 1px;
+}
+
+.clima-section ul li img {
+  grid-row: 2 / 4;
+  grid-column: 1 / 2;
+}
+
+.clima-temp {
+  grid-column: 2 / 4;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clima-text {
+  grid-column: 2 / 4;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

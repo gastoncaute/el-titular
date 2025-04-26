@@ -1,0 +1,37 @@
+.social-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #86082e;
+  border-radius: 8px;
+  color: #fff;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.social-section h1 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.social-section div {
+  width: 55%;
+  height: 3px;
+  background-color: #fff;
+}
+
+.social-section ul li {
+  display: flex;
+}
+
+.social-section ul li a svg {
+  width: 46px;
+  height: 46px;
+}
+
+@media screen and (max-width: 600px) {
+  .social-section h1,
+  .social-section div {
+    display: none;
+  }
+}

@@ -1,0 +1,141 @@
+.category-main {
+  padding-top: 3rem;
+}
+
+.category-image {
+  width: 100%;
+  max-height: 250px;
+  height: 250px;
+  background-image: url("/Titulo_Categoria.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  color: white;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.category-logo {
+  grid-column: 1 / 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 2rem;
+  height: 100%;
+  border-right: #fff solid 1px;
+  padding-right: 3rem;
+}
+
+.category-image h1 {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.seccion {
+  font-size: 4.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.categoria {
+  font-size: 3rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.category-image h2 {
+  grid-column: 3 / 4;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  font-size: 0.9rem;
+  width: 300px;
+  margin-left: 2rem;
+}
+
+.ventana-section-h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #000;
+  border-bottom: 2px #000 solid;
+  width: 65%;
+}
+
+.ventana-section-h1:hover {
+  color: #86082e;
+}
+
+.pages-title {
+  display: flex;
+  align-items: center;
+  background: #86082e;
+  border-radius: 8px;
+  color: #fff;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.pages-title h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.terminos-main {
+  max-width: 800px;
+  margin: 0.5rem auto;
+  padding: 5rem 2rem 2rem;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.terminos-main h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.terminos-main h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+.terminos-main h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.terminos-main p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.terminos-main a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.terminos-main a:hover {
+  color: #0056b3;
+}
+
+@media screen and (max-width: 600px) {
+  .category-image {
+    margin-top: 1rem;
+  }
+
+  .category-image div,
+  .category-image h2 {
+    display: none;
+  }
+}

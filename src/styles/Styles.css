@@ -1,6 +1,10 @@
 /* -------------------------------------------------------------- widgets styles -------------------------------------------------------------- */
-@import url("../styles/widget/Adds.css");
-@import url("../styles/widget/ClimaWidget.css");
-@import url("../styles/widget/Fotos.css");
+@import url("../styles/Main/widget/Adds.css");
+@import url("../styles/Main/widget/Clima.css");
+@import url("../styles/Main/widget/Dolar.css");
+@import url("../styles/Main/widget/Socials.css");
 /* -------------------------------------------------------------- widgets styles -------------------------------------------------------------- */
+@import url("../styles/Header.css");
+@import url("../styles/NavBar.css");
+@import url("../styles/Main/Main.css");
 @import url("../styles/Footer.css");

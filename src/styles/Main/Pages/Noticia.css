@@ -1,0 +1,185 @@
+.noticias-main {
+  display: flex;
+  width: 100%;
+}
+
+.notice-article {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.noticia-page {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.notice-category {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #86082e;
+}
+
+.notice-category:hover {
+  color: #000;
+}
+
+.title-container {
+  margin: 1rem 0;
+}
+
+.noticia-contenedor h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.noticia-contenedor h2 {
+  font-size: 1.1rem;
+}
+
+.noticia-media {
+  margin: 1rem 0;
+}
+
+.noticia-imagen {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.noticia-video {
+  max-width: 100%;
+  min-width: 300px;
+  max-height: 500px;
+  margin: 0 auto;
+  display: block;
+}
+
+.noticia-epigrafe {
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #555;
+}
+
+.noticia-copete {
+  font-size: 1.4rem;
+}
+
+.noticia-copete p {
+  margin-bottom: 1.2rem;
+}
+
+.notice-aside {
+  width: 30%;
+  padding-left: 20px;
+}
+
+.notice-aside ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.notice-aside ul li img {
+  width: 100%;
+}
+
+.notice-aside section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.notice-aside section a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.notice-aside section a img,
+.notice-aside section a video {
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.notice-aside section a:hover h1 {
+  text-decoration: underline;
+}
+
+.notice-aside section a:hover img,
+.notice-aside section a:hover video {
+  transform: scale(1.1);
+}
+
+.ventana-section-h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.2rem 0.5rem 1.5rem;
+  color: #000;
+}
+
+.ventana-socials {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.ventana-socials h3 {
+  margin: auto;
+  font-size: 2rem;
+  font-weight: 600;
+  border-bottom: #000 solid 2px;
+}
+
+.ventana-socials ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ventana-socials .link {
+  transition: transform 0.3s ease-in-out;
+}
+
+.ventana-socials .link:hover {
+  transform: scale(1.1);
+}
+
+.ventana-socials .image {
+  object-fit: contain;
+}
+
+@media screen and (max-width: 600px) {
+  .notice-article {
+    width: 100%;
+  }
+
+  .notice-aside {
+    display: none;
+  }
+}

@@ -204,34 +204,6 @@ export interface Autor {
   };
 }
 
-export interface Foto {
-  _id: string;
-  title: string;
-  categoria: string;
-  _createdAt: string;
-  _updatedAt: string;
-  _rev: string;
-  _type: string;
-  photo: {
-    _type: string;
-    asset: {
-      _type: string;
-      _ref: string;
-    };
-  };
-}
-
-export interface Video {
-  _id: string;
-  title: any;
-  categoria: string;
-  _createdAt: string;
-  _updatedAt: string;
-  _rev: string;
-  _type: string;
-  link_video: string;
-}
-
 export interface Dolar {
   moneda: string;
   casa: string;
@@ -242,52 +214,11 @@ export interface Dolar {
 }
 
 export interface Clima {
-  coord: {
-    lon: number;
-    lat: number;
+  fecha: string;
+  clima: string;
+  temperatura: {
+    min: number;
+    max: number;
   };
-  weather: [
-    {
-      id: number;
-      main: string;
-      description: string;
-      icon: any;
-    }
-  ];
-  base: string;
-  main: {
-    temp: number;
-    feels_like: number;
-    temp_min: number;
-    temp_max: number;
-    pressure: number;
-    humidity: number;
-  };
-  visibility: number;
-  wind: {
-    speed: number;
-    deg: number;
-    gust: number;
-  };
-  clouds: {
-    all: number;
-  };
-  dt: number;
-  sys: {
-    type: number;
-    id: number;
-    country: string;
-    sunrise: number;
-    sunset: number;
-  };
-  timezone: number;
-  id: number;
-  name: string;
-  cod: number;
-}
-
-export interface SearchPageProps {
-  params: {
-    searchpage: string;
-  };
+  icono: string;
 }
