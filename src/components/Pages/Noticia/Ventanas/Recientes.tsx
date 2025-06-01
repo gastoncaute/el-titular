@@ -36,7 +36,7 @@ export default async function Noticias() {
           );
         })}
         <li>
-          <Link href="https://wa.me/5492236343332" target="#">
+          <Link href="https://www.edeaweb.com.ar" target="#">
             <Image src={"/Edea_cuadrado.webp"} alt={"Edea"} width={100} height={100}/>
           </Link>
         </li>

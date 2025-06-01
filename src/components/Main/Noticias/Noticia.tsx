@@ -18,7 +18,7 @@ export default async function Noticia() {
 
   return (
     <>
-    <Link href="https://wa.me/5492236343332" target="#">
+    <Link href="https://www.edeaweb.com.ar" target="#">
       <Image src={"/Edea_rectangulo.png"} alt={"Edea"} width={1500} height={100}/>
     </Link>
       <Recientes />
