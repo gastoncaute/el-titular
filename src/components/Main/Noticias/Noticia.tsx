@@ -2,6 +2,8 @@ import { obtenerCategorias } from "@/utils/obtenerCategorias";
 import Categoria from "./Categoria";
 import Recientes from "./Recientes";
 import Socials from "../Widgets/Socials";
+import Link from "next/link";
+import Image from "next/image";
 
 export default async function Noticia() {
   const categorias = await obtenerCategorias();
@@ -16,6 +18,9 @@ export default async function Noticia() {
 
   return (
     <>
+    <Link href="https://wa.me/5492236343332" target="#">
+      <Image src={"/Edea_rectangulo.png"} alt={"Edea"} width={1500} height={100}/>
+    </Link>
       <Recientes />
       <Socials />
       {categoriasUnicas.map((categoria: any) => (

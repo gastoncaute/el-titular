@@ -35,6 +35,11 @@ export default async function Noticias() {
             </li>
           );
         })}
+        <li>
+          <Link href="https://wa.me/5492236343332" target="#">
+            <Image src={"/Edea_cuadrado.webp"} alt={"Edea"} width={100} height={100}/>
+          </Link>
+        </li>
       </ul>
       <Link href={"/pages/masrecientes"} className="ventana-section-h1">
         Ultimas Noticias
