@@ -23,7 +23,7 @@ export default async function Noticia() {
         target="#"
       >
         <Image
-          src={"/Edea_rectangulo.png"}
+          src={"/EDEA_Banners ATME_1200x200.gif"}
           alt={"Edea"}
           width={1500}
           height={100}

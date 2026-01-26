@@ -41,7 +41,7 @@ export default async function Noticias() {
             target="#"
           >
             <Image
-              src={"/Edea_cuadrado.webp"}
+              src={"/EDEA_Banners ATME_300x300.gif"}
               alt={"Edea"}
               width={100}
               height={100}
