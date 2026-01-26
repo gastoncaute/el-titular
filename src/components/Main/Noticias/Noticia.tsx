@@ -13,14 +13,22 @@ export default async function Noticia() {
     .filter((categoria: any) => ordenCategorias.includes(categoria))
     .sort(
       (a: any, b: any) =>
-        ordenCategorias.indexOf(a) - ordenCategorias.indexOf(b)
+        ordenCategorias.indexOf(a) - ordenCategorias.indexOf(b),
     );
 
   return (
     <>
-    <Link href="https://www.edeaweb.com.ar" target="#">
-      <Image src={"/Edea_rectangulo.png"} alt={"Edea"} width={1500} height={100}/>
-    </Link>
+      <Link
+        href="https://www.edeaweb.com.ar/recomendaciones-practicas/"
+        target="#"
+      >
+        <Image
+          src={"/Edea_rectangulo.png"}
+          alt={"Edea"}
+          width={1500}
+          height={100}
+        />
+      </Link>
       <Recientes />
       <Socials />
       {categoriasUnicas.map((categoria: any) => (

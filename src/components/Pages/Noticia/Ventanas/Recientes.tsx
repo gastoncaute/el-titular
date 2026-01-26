@@ -36,8 +36,16 @@ export default async function Noticias() {
           );
         })}
         <li>
-          <Link href="https://www.edeaweb.com.ar" target="#">
-            <Image src={"/Edea_cuadrado.webp"} alt={"Edea"} width={100} height={100}/>
+          <Link
+            href="https://www.edeaweb.com.ar/recomendaciones-practicas/"
+            target="#"
+          >
+            <Image
+              src={"/Edea_cuadrado.webp"}
+              alt={"Edea"}
+              width={100}
+              height={100}
+            />
           </Link>
         </li>
       </ul>
@@ -55,7 +63,7 @@ export default async function Noticias() {
               {noticia.image_principal && noticia.image_principal.imagen && (
                 <Image
                   src={modifyImageUrl(
-                    noticia.image_principal.imagen?.asset?._ref
+                    noticia.image_principal.imagen?.asset?._ref,
                   )}
                   alt={noticia.image_principal.epigrafe}
                   width={400}
@@ -81,7 +89,7 @@ export default async function Noticias() {
                   >
                     <source
                       src={modifyVideoFileUrl(
-                        noticia.image_principal.video.asset._ref
+                        noticia.image_principal.video.asset._ref,
                       )}
                       type="video/mp4"
                     />
