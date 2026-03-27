@@ -36,12 +36,9 @@ export default async function Noticias() {
           );
         })}
         <li>
-          <Link
-            href="https://www.edeaweb.com.ar/recomendaciones-practicas/"
-            target="#"
-          >
+          <Link href="https://www.edeaweb.com.ar/" target="#">
             <Image
-              src={"/EDEA_Banners ATME_300x300.gif"}
+              src={"/edea/Banner-300x300.png"}
               alt={"Edea"}
               width={100}
               height={100}
