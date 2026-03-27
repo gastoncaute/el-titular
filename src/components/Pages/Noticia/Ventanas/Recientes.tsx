@@ -10,9 +10,9 @@ export default async function Noticias() {
   const categorias = ["POLITICA", "ACTUALIDAD", "POLICIALES"];
 
   const imagenesPorCategoria: { [key: string]: string } = {
-    POLITICA: "/Banner_politica.png",
-    ACTUALIDAD: "/Banner_actualidad.png",
-    POLICIALES: "/Banner_policiales.png",
+    POLITICA: "/banners/Banner_politica.png",
+    ACTUALIDAD: "/banners/Banner_actualidad.png",
+    POLICIALES: "/banners/Banner_policiales.png",
   };
 
   return (

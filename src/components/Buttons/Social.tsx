@@ -10,7 +10,7 @@ export default function Social() {
         className="m-2 flex items-center"
       >
         <Image
-          src={"/instagram-icon.png"}
+          src={"/redes/instagram-icon.png"}
           alt="Instagram"
           width={50}
           height={50}
@@ -21,7 +21,12 @@ export default function Social() {
         target="#"
         className="m-2 flex items-center"
       >
-        <Image src={"/tiktok-icon.png"} alt="Tik Tok" width={50} height={50} />
+        <Image
+          src={"/redes/tiktok-icon.png"}
+          alt="Tik Tok"
+          width={50}
+          height={50}
+        />
       </Link>
       <Link
         href="https://www.facebook.com/people/El-Titular/61555169820286/"
@@ -29,7 +34,7 @@ export default function Social() {
         className="m-2 flex items-center"
       >
         <Image
-          src={"/facebook-icon.png"}
+          src={"/redes/facebook-icon.png"}
           alt="Facebook"
           width={50}
           height={50}
@@ -41,7 +46,7 @@ export default function Social() {
         className="m-2 flex items-center"
       >
         <Image
-          src={"/whatsapp-icon.png"}
+          src={"/redes/whatsapp-icon.png"}
           alt="WhatsApp"
           width={50}
           height={50}
@@ -52,7 +57,12 @@ export default function Social() {
         target="#"
         className="m-2 flex items-center"
       >
-        <Image src={"/youtube-icon.png"} alt="YouTube" width={50} height={50} />
+        <Image
+          src={"/redes/youtube-icon.png"}
+          alt="YouTube"
+          width={50}
+          height={50}
+        />
       </Link>
     </>
   );

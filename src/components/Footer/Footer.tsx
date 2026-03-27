@@ -11,7 +11,7 @@ export default function Footer() {
           <Link href="/">
             <Image
               className="title-hover"
-              src={"/eltitularwhite.png"}
+              src={"/logos/eltitularwhite.png"}
               alt="EL TITULAR"
               height={80}
               width={350}

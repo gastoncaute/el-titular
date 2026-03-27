@@ -29,7 +29,7 @@ export default async function TituloCategoria({ params }: any) {
   return (
     <section className="category-image">
       <div className="category-logo">
-        <Image src="/Logo.png" alt="Logo" width={160} height={160} />
+        <Image src="/logos/Logo.png" alt="Logo" width={160} height={160} />
       </div>
       <h1>
         <span className="seccion">SECCIÓN</span>

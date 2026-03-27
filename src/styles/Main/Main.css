@@ -148,15 +148,15 @@ main {
 }
 
 .politica-bg {
-  background-image: url("/PoliticaBG.png");
+  background-image: url("/backgraunds/PoliticaBG.png");
 }
 
 .actualidad-bg {
-  background-image: url("/ActualidadBG.png");
+  background-image: url("/backgraunds/ActualidadBG.png");
 }
 
 .policiales-bg {
-  background-image: url("/PolicialesBG.png");
+  background-image: url("/backgraunds/PolicialesBG.png");
 }
 
 .category-text-overlay {
@@ -380,7 +380,9 @@ main {
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
     background-image: none;
     padding: 0;
   }
