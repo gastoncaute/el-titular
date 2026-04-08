@@ -18,7 +18,7 @@ export default async function Noticia() {
 
   return (
     <>
-      <Link href="https://www.edeaweb.com.ar/" target="#">
+      <Link href="https://www.edeaweb.com.ar/recomendaciones-practicas/" target="#">
         <Image
           src={"/edea/Atemporal-1200x200.gif"}
           alt={"Edea"}

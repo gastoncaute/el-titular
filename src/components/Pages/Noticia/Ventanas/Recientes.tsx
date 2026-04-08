@@ -36,7 +36,10 @@ export default async function Noticias() {
           );
         })}
         <li>
-          <Link href="https://www.edeaweb.com.ar/" target="#">
+          <Link
+            href="https://www.edeaweb.com.ar/recomendaciones-practicas/"
+            target="#"
+          >
             <Image
               src={"/edea/Atemporal-300x300.gif"}
               alt={"Edea"}
