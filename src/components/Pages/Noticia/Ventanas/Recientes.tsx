@@ -38,7 +38,7 @@ export default async function Noticias() {
         <li>
           <Link href="https://www.edeaweb.com.ar/" target="#">
             <Image
-              src={"/edea/Banner-300x300.png"}
+              src={"/edea/Atemporal-300x300.gif"}
               alt={"Edea"}
               width={100}
               height={100}

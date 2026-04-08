@@ -20,7 +20,7 @@ export default async function Noticia() {
     <>
       <Link href="https://www.edeaweb.com.ar/" target="#">
         <Image
-          src={"/edea/Banner-1200x200.png"}
+          src={"/edea/Atemporal-1200x200.gif"}
           alt={"Edea"}
           width={1500}
           height={100}
