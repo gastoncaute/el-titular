@@ -37,11 +37,11 @@ export default async function Noticias() {
         })}
         <li>
           <Link
-            href="https://www.edeaweb.com.ar/recomendaciones-practicas/"
+            href="https://www.edeaweb.com.ar/robo-de-energia/"
             target="#"
           >
             <Image
-              src={"/edea/Atemporal-300x300.gif"}
+              src={"/edea/Fraude-300x300.gif"}
               alt={"Edea"}
               width={100}
               height={100}
