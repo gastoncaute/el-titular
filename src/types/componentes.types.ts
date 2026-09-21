@@ -203,22 +203,3 @@ export interface Autor {
     };
   };
 }
-
-export interface Dolar {
-  moneda: string;
-  casa: string;
-  nombre: string;
-  compra: number;
-  venta: any;
-  fechaActualizacion: any;
-}
-
-export interface Clima {
-  fecha: string;
-  clima: string;
-  temperatura: {
-    min: number;
-    max: number;
-  };
-  icono: string;
-}
