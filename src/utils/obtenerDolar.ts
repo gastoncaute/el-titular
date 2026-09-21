@@ -3,10 +3,12 @@ export async function obtenerDolar() {
     method: "GET",
     cache: "no-store",
   });
+
   if (res.ok) {
     const data = await res.json();
-    return data;
+    return data.find((d: any) => d.casa === "blue") || null;
   } else {
     console.error("Error al obtener la API");
+    return null;
   }
 }
