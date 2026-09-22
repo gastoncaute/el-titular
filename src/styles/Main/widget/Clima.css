@@ -9,12 +9,18 @@
 .clima-fecha {
   font-weight: 400;
   margin-right: 6rem;
+  background-color: #c9c9bf77;
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
 }
 
 .clima-info {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  background-color: #c9c9bf77;
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
 }
 
 .clima-icono {
