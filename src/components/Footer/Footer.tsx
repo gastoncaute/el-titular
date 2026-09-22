@@ -95,14 +95,16 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <Link href="/pages/terminosycondiciones">Términos y condiciones</Link>
-        <span> | </span>
-        <Link
+        <p>© 2026 EL TITULAR - Todos los derechos reservados</p>
+        {/* <Link
           href="https://www.linkedin.com/in/gaston-cauteruccio/"
           target="_blank"
           rel="noopener noreferrer"
         >
           Página creada por Gaston Cauteruccio
+        </Link> */}
+        <Link href="/pages/terminosycondiciones">
+          Términos y condiciones | Política y privacidad
         </Link>
       </div>
     </footer>
