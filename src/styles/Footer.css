@@ -25,6 +25,11 @@
   margin: 0;
 }
 
+.footer-brand h2:hover {
+  scale: 1.05;
+  transition: scale 0.3s ease;
+}
+
 .footer-tagline {
   font-size: 0.9rem;
   opacity: 0.9;
