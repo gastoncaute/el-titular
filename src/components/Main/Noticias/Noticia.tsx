@@ -31,7 +31,11 @@ export default async function Noticia() {
         />
       </Link>
       <Recientes />
-      <Socials />
+      <div className="banner-publicidad">
+        <p>
+          <strong>Publicidad</strong>
+        </p>
+      </div>
       {categoriasUnicas.map((categoria: any) => (
         <Categoria key={categoria} categoria={categoria} />
       ))}

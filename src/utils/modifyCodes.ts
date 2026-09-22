@@ -33,3 +33,18 @@ export const modifyTweetCode = (tweetCode: string | undefined) => {
     return "";
   }
 };
+
+export function calcularTiempoTranscurrido(fechaISO: string): string {
+  if (!fechaISO) return "";
+  const fechaNoticia = new Date(fechaISO);
+  const ahora = new Date();
+  const diferenciaMs = ahora.getTime() - fechaNoticia.getTime();
+
+  const minutos = Math.floor(diferenciaMs / (1000 * 60));
+  const horas = Math.floor(diferenciaMs / (1000 * 60 * 60));
+  const dias = Math.floor(diferenciaMs / (1000 * 60 * 60 * 24));
+
+  if (minutos < 60) return `Hace ${minutos <= 0 ? 1 : minutos} min`;
+  if (horas < 24) return `Hace ${horas} ${horas === 1 ? "hora" : "horas"}`;
+  return `Hace ${dias} ${dias === 1 ? "día" : "días"}`;
+}
