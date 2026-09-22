@@ -2,12 +2,12 @@
 @import url("Pages/Noticia.css");
 @import url("Pages/Bloques.css");
 @import url("../Main/Recientes.css");
+@import url("../Main/widget/Adds.css");
 
 main {
   display: flex;
   flex-direction: column;
-  padding-top: 1rem;
-  margin: 0.5rem auto;
+  margin: 1rem auto;
   max-width: 1400px;
 }
 
@@ -20,23 +20,6 @@ main {
 .image-container {
   position: relative;
   width: 100%;
-}
-
-.banner-publicidad {
-  background-color: #800a26;
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  border-radius: 6px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
-}
-
-.banner-publicidad .brand-publi {
-  font-weight: bold;
-  font-size: 1.2rem;
 }
 
 .category-noticia-container {
