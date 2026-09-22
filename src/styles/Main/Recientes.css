@@ -115,7 +115,7 @@
 
 .card-secundaria {
   display: grid;
-  grid-template-columns: 1fr 200px;
+  grid-template-columns: 1fr 160px;
   gap: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #c4c4c4;
