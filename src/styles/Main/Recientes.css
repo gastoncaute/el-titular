@@ -72,6 +72,10 @@
   margin-bottom: 0.5rem;
 }
 
+.text-overlay h1:hover {
+  text-decoration: underline;
+}
+
 .text-overlay h1 a {
   color: #fff;
   text-decoration: none;
