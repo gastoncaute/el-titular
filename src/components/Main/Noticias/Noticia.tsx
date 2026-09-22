@@ -18,12 +18,16 @@ export default async function Noticia() {
 
   return (
     <>
-      <Link href="https://www.edeaweb.com.ar/robo-de-energia/" target="#">
+      <Link
+        href="https://www.edeaweb.com.ar/robo-de-energia/"
+        target="#"
+        className="w-100 m-auto"
+      >
         <Image
-          src={"/edea/Fraude-1200x200.gif"}
+          src={"/edea/Fraude-970x90.gif"}
           alt={"Edea"}
-          width={1500}
-          height={100}
+          width={970}
+          height={90}
         />
       </Link>
       <Recientes />
