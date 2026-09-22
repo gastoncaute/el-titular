@@ -27,15 +27,14 @@ export default async function TituloCategoria({ params }: any) {
     "Información no disponible.";
 
   return (
-    <section className="category-image">
-      <div className="category-logo">
-        <Image src="/logos/Logo.png" alt="Logo" width={160} height={160} />
+    <section className="category-banner">
+      <div>
+        <h1 className="banner-categoria">{tituloAMostrar}</h1>
+        <h2 className="banner-subtitulo">{informacionAMostrar}</h2>
       </div>
-      <h1>
-        <span className="seccion">SECCIÓN</span>
-        <span className="categoria">{tituloAMostrar}</span>
-      </h1>
-      <h2>{informacionAMostrar}</h2>
+      <div className="category-banner-logo">
+        <Image src="/logos/Logo.png" alt="Logo" width={100} height={100} />
+      </div>
     </section>
   );
 }
