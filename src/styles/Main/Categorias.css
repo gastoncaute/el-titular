@@ -1,0 +1,164 @@
+.seccion-categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+/* Tarjeta / Columna Individual */
+.columna-categoria {
+  border: 1px solid #c4c4c4;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Encabezado */
+.categoria-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.categoria-titulo {
+  color: #9b0d34;
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.categoria-ver-mas {
+  color: #9b0d34;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.categoria-ver-mas:hover {
+  text-decoration: underline;
+}
+
+/* Noticia Principal (Superior) */
+.card-cat-principal {
+  margin-bottom: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid #c4c4c4;
+  min-height: 325px;
+}
+
+.card-cat-media {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #e2e8f0;
+  margin-bottom: 0.8rem;
+}
+
+.card-cat-media .media-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-cat-content h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 0.4rem 0;
+}
+
+.card-cat-content h3 a {
+  color: #1a202c;
+  text-decoration: none;
+}
+
+.card-cat-content h3 a:hover {
+  color: #9b0d34;
+  text-decoration: underline;
+}
+
+.tiempo-hace {
+  font-size: 0.75rem;
+  color: #a0aec0;
+  display: block;
+}
+
+/* Lista de Secundarias (Inferiores) */
+.lista-cat-secundarias {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item-cat-secundaria {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0.8rem;
+  align-items: flex-start;
+}
+
+.thumb-container {
+  width: 80px;
+  height: 55px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #cbd5e0;
+  flex-shrink: 0;
+}
+
+.thumb-container .media-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder-thumb {
+  width: 100%;
+  height: 100%;
+  background-color: #cbd5e0;
+}
+
+.item-content h4 {
+  font-size: 0.825rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 0.3rem 0;
+}
+
+.item-content h4 a {
+  color: #2d3748;
+  text-decoration: none;
+}
+
+.item-content h4 a:hover {
+  color: #9b0d34;
+  text-decoration: underline;
+}
+
+/* Adaptación Mobile y Tablet */
+@media screen and (max-width: 1024px) {
+  .seccion-categorias-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .seccion-categorias-grid {
+    grid-template-columns: 1fr;
+  }
+}
