@@ -3,8 +3,9 @@
 @import url("../styles/Main/widget/Clima.css");
 @import url("../styles/Main/widget/Dolar.css");
 @import url("../styles/Main/widget/Socials.css");
-/* -------------------------------------------------------------- widgets styles -------------------------------------------------------------- */
+/* -------------------------------------------------------------- component styles -------------------------------------------------------------- */
 @import url("../styles/Header.css");
 @import url("../styles/NavBar.css");
 @import url("../styles/Main/Main.css");
 @import url("../styles/Footer.css");
+/* -------------------------------------------------------------- main styles -------------------------------------------------------------- */

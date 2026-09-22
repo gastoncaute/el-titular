@@ -1,9 +1,6 @@
-@import url("Pages/Pages.css");
-@import url("Pages/Noticia.css");
-@import url("Pages/Bloques.css");
 @import url("../Main/Recientes.css");
 @import url("../Main/Categorias.css");
-@import url("../Main/widget/Adds.css");
+@import url("Pages/Pages.css");
 
 main {
   display: flex;
