@@ -57,10 +57,6 @@ const Noticias = ({ noticia, autor }: NoticiasProps) => {
             <time className="notice-date">{fechaFormateada}</time>
           </>
         )}
-
-        <div className="notice-share-buttons">
-          <span>Compartir:</span>
-        </div>
       </div>
 
       {/* Imagen / Video Principal */}
