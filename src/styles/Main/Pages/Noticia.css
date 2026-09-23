@@ -110,15 +110,28 @@
 
 .noticia-epigrafe {
   font-size: 0.7rem;
-  color: #666;
+  color: #c4c4c4;
   margin-top: 8px;
 }
 
-.noticia-copete {
+.noticia-copete,
+.bloque-descripcion {
   font-size: 1.1rem;
   line-height: 1.6;
   color: #333;
   margin: 20px 0;
+  white-space: pre-line;
+}
+
+.noticia-copete,
+.bloque-descripcion p {
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.noticia-copete,
+.bloque-descripcion p:last-child {
+  margin-bottom: 0;
 }
 
 /* Tags al final */
