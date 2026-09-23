@@ -10,13 +10,24 @@ export default async function Noticias() {
       <Link
         href="https://www.edeaweb.com.ar/robo-de-energia/"
         target="_blank"
-        className="w-100 m-auto"
+        className="w-100 m-auto block"
       >
         <Image
-          src={"/edea/Fraude-970x90.gif"}
-          alt={"Edea"}
-          width={970}
+          src="/edea/Fraude-Main-Movil.gif"
+          alt="Edea Movil"
+          width={800}
           height={90}
+          className="m-auto banner-edea-mobile"
+          priority
+        />
+
+        <Image
+          src="/edea/Fraude-Main-Pc.gif"
+          alt="Edea PC"
+          width={1200}
+          height={150}
+          className="m-auto banner-edea-pc"
+          priority
         />
       </Link>
       <Recientes />

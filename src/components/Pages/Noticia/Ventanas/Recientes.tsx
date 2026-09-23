@@ -50,7 +50,7 @@ export default async function Recientes() {
       {/* Banner Publicitario EDEA */}
       <Link href="https://www.edeaweb.com.ar/robo-de-energia/" target="#">
         <Image
-          src={"/edea/Fraude-300x300.gif"}
+          src={"/edea/Fraude-NoticePage.gif"}
           alt={"Edea"}
           width={300}
           height={300}

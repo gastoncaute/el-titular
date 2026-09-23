@@ -1,3 +1,21 @@
+.banner-edea-pc {
+  display: none;
+}
+
+.banner-edea-mobile {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .banner-edea-mobile {
+    display: none;
+  }
+
+  .banner-edea-pc {
+    display: block;
+  }
+}
+
 .banner-publicidad {
   background-color: #800a26;
   color: #fff;
