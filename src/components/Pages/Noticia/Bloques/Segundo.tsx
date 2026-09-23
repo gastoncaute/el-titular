@@ -58,7 +58,7 @@ export default async function SegundoBloque({
               ...item,
               children: item.children.map((child: any) => ({
                 ...child,
-                text: child.text.replace(/&/g, ""),
+                text: child.text.replace(/&/g, "\n"),
               })),
             }))}
           />
@@ -71,7 +71,7 @@ export default async function SegundoBloque({
             width="50%"
             height="315"
             src={`https://www.youtube.com/embed/${modifyVideoCode(
-              segundoBloque?.YouTubeCode_1
+              segundoBloque?.YouTubeCode_1,
             )}`}
             title="YouTube video player"
             frameBorder="0"

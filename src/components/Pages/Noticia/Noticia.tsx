@@ -87,7 +87,15 @@ const Noticias = ({ noticia, autor }: NoticiasProps) => {
       {/* Copete / Introducción */}
       {noticia?.copete && (
         <div className="noticia-copete">
-          <PortableText value={noticia.copete} />
+          <PortableText
+            value={noticia?.copete.map((item: any) => ({
+              ...item,
+              children: item.children.map((child: any) => ({
+                ...child,
+                text: child.text.replace(/&/g, "\n"),
+              })),
+            }))}
+          />
         </div>
       )}
 
