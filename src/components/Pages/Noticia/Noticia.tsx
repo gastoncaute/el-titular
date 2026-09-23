@@ -57,6 +57,9 @@ const Noticias = ({ noticia }: NoticiasProps) => {
             />
           </video>
         )}
+        <p className="noticia-epigrafe">
+          <PortableText value={noticia.image_principal.epigrafe} />
+        </p>
       </div>
 
       {/* Copete / Introducción */}

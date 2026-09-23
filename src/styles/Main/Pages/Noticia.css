@@ -108,6 +108,12 @@
   object-fit: cover;
 }
 
+.noticia-epigrafe {
+  font-size: 0.7rem;
+  color: #666;
+  margin-top: 8px;
+}
+
 .noticia-copete {
   font-size: 1.1rem;
   line-height: 1.6;
