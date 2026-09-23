@@ -115,10 +115,6 @@ main {
     width: 100%;
   }
 
-  .noticia-destacada:hover {
-    transform: scale(1.05);
-  }
-
   .noticia-destacada .text-overlay {
     position: static;
     background: transparent;
