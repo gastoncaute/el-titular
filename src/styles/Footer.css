@@ -1,13 +1,16 @@
 .footer {
   color: #6b7280;
   width: 100%;
-  padding: 2.5rem 1.5rem 1rem 1.5rem;
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  box-sizing: border-box;
 }
 
 .footer-container {
   padding-top: 1.5rem;
   display: flex;
   flex-direction: column;
+  align-items: center; /* Centrado prolijo en mobile */
+  text-align: center; /* Centrado de textos en mobile */
   gap: 2rem;
   border-top: 1px solid #c4c4c4;
 }
@@ -15,36 +18,41 @@
 .footer-brand {
   display: flex;
   flex-direction: column;
-  margin-left: 0.5rem;
+  align-items: center;
+  margin: 0;
 }
 
 .footer-brand h2 {
   font-size: 2.2rem;
-  font-weight: bolder;
+  font-weight: 800;
   color: #9b0d34;
   margin: 0;
+  transition: transform 0.3s ease;
 }
 
 .footer-brand h2:hover {
-  scale: 1.05;
-  transition: scale 0.3s ease;
+  transform: scale(1.05);
 }
 
 .footer-tagline {
   font-size: 0.9rem;
   opacity: 0.9;
-  margin: 0;
+  margin-top: 0.25rem;
 }
 
 .footer h3 {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
   color: #111827;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
+/* Navegación Móvil */
 .footer-nav {
-  margin: 0 25%;
+  margin: 0; /* Se elimina el margin: 0 25% que rompía mobile */
+  width: 100%;
 }
 
 .footer-nav ul {
@@ -53,53 +61,88 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.6rem; /* Mayor separación para fácil click táctil */
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: #9b0d34;
+}
+
+/* Contacto y Redes */
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-contact p,
 .footer-contact address {
   font-style: normal;
-  font-size: 0.8rem;
-  margin-bottom: 0.3rem;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
 }
 
 .footer-contact-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.4rem;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  color: inherit;
 }
 
 .footer-contact-link:hover {
   text-decoration: underline;
+  color: #9b0d34;
 }
 
 .footer-social-icons {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
 }
 
 .footer-social-icons a {
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
 }
 
+.footer-social-icons a:hover {
+  transform: translateY(-2px);
+}
+
+/* Pie de Footer (Copyright y Legales) */
 .footer-bottom {
   max-width: 100%;
-  margin: 1rem 0 0;
-  padding-top: 1rem;
-  text-align: center;
+  margin: 1.5rem 0 0;
+  padding-top: 1.2rem;
+  border-top: 1px solid #e5e7eb;
   font-size: 0.8rem;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Apilado en mobile */
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
 }
 
 .footer-bottom a {
   text-decoration: none;
-  opacity: 0.8;
-  font-size: 0.9rem;
+  color: inherit;
+  opacity: 0.85;
+  font-size: 0.85rem;
 }
 
 .footer-bottom a:hover {
@@ -107,11 +150,30 @@
   text-decoration: underline;
 }
 
+/* Media Query para Pantallas Medianas y Grandes */
 @media screen and (min-width: 768px) {
   .footer-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-items: start;
+    text-align: left;
     gap: 2rem;
+  }
+
+  .footer-brand {
+    align-items: flex-start;
+  }
+
+  .footer-contact {
+    align-items: flex-start;
+  }
+
+  .footer-social-icons {
+    justify-content: flex-start;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
