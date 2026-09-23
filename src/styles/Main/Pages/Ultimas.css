@@ -39,19 +39,6 @@
   top: 90px;
 }
 
-.banner-publicidad {
-  width: 100%;
-  height: 600px;
-  background-color: #f2f2f2;
-  border: 1px dashed #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #888;
-  font-weight: bold;
-  border-radius: 6px;
-}
-
 /* Grilla de Tarjetas de Noticias */
 .noticias-cards-grid {
   display: grid;

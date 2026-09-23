@@ -226,6 +226,12 @@ export default async function Noticias({
         </aside>
       </div>
 
+      <div className="banner-publicidad-main">
+        <p>
+          <strong>Publicidad</strong>
+        </p>
+      </div>
+
       {/* SECCIÓN INFERIOR: Grilla de 12 noticias */}
       <div className="cat-cards-grid">
         {restoNoticiasPaginadas.map((noticia: Noticia) => (
@@ -257,6 +263,12 @@ export default async function Noticias({
             </div>
           </Link>
         ))}
+      </div>
+
+      <div className="banner-publicidad-main">
+        <p>
+          <strong>Publicidad</strong>
+        </p>
       </div>
 
       {/* RENDERIZADO DE LA PAGINACIÓN */}

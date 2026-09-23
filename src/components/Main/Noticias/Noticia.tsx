@@ -31,11 +31,11 @@ export default async function Noticias() {
         />
       </Link>
       <Recientes />
-      {/* <div className="banner-publicidad">
+      <div className="banner-publicidad-main">
         <p>
           <strong>Publicidad</strong>
         </p>
-      </div> */}
+      </div>
       <Categoria />
     </>
   );

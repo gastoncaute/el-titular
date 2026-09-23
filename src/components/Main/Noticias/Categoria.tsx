@@ -144,6 +144,11 @@ export default async function Categoria({ categoria }: { categoria?: string }) {
                 </article>
               ))}
             </div>
+            <div className="banner-publicidad-main-category">
+              <p>
+                <strong>Publicidad</strong>
+              </p>
+            </div>
           </div>
         );
       })}

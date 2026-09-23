@@ -29,13 +29,13 @@ export default async function Page() {
           </section>
 
           {/* Sidebar para publicidad */}
-          {/* <aside className="category-sidebar-area">
+          <aside className="category-sidebar-area">
             <div className="ad-sticky-wrapper">
-              <div className="banner-publicidad">
+              <div className="banner-publicidad-categoryPage">
                 <span>Publicidad</span>
               </div>
             </div>
-          </aside> */}
+          </aside>
         </div>
       </main>
       <Footer />
