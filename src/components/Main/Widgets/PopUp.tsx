@@ -61,7 +61,7 @@ export default function PopUp() {
         </button>
 
         <div className="adds-container">
-          <span>Publicidad "PopUp"</span>
+          <span>Publicidad PopUp</span>
         </div>
       </div>
     </div>
