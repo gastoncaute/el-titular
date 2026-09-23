@@ -1,5 +1,6 @@
 @import url("../Pages/Category.css");
 @import url("../Pages/Noticia.css");
+@import url("../Pages/Ultimas.css");
 
 .pages-title {
   display: flex;
