@@ -144,4 +144,21 @@
   .search-container {
     width: auto;
   }
+
+  .top-bar-container {
+    gap: 0.5rem;
+  }
+
+  .top-bar {
+    padding: 0.4rem 0.3rem;
+  }
+
+  .clima-fecha {
+    margin-right: 0;
+  }
+
+  .clima-info {
+    gap: 0.5rem;
+    padding: 0.2rem 0.3rem;
+  }
 }
