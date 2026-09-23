@@ -95,7 +95,7 @@ const Noticias = ({ noticia, autor }: NoticiasProps) => {
       <Bloques noticia={noticia} />
 
       {/* Etiquetas / Tags */}
-      <div className="notice-tags-container">
+      {/* <div className="notice-tags-container">
         <span className="tags-label">Etiquetas:</span>
         <div className="tags-list">
           <span className="tag-pill">{noticia.categoria}</span>
@@ -104,7 +104,7 @@ const Noticias = ({ noticia, autor }: NoticiasProps) => {
           )}
           <span className="tag-pill">Mar del Plata</span>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
