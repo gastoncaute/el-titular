@@ -48,3 +48,15 @@ export function calcularTiempoTranscurrido(fechaISO: string): string {
   if (horas < 24) return `Hace ${horas} ${horas === 1 ? "hora" : "horas"}`;
   return `Hace ${dias} ${dias === 1 ? "día" : "días"}`;
 }
+
+export function formatearFecha(fechaIso: string) {
+  if (!fechaIso) return "";
+  const fecha = new Date(fechaIso);
+  return new Intl.DateTimeFormat("es-AR", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(fecha);
+}

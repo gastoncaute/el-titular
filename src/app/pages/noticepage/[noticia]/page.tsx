@@ -3,20 +3,33 @@ import Footer from "@/components/Footer/Footer";
 import Recientes from "@/components/Pages/Noticia/Ventanas/Recientes";
 import Categoria from "@/components/Pages/Noticia/Ventanas/Categoria";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";
-import { Noticia } from "@/types/componentes.types";
+import { Noticia, Autor } from "@/types/componentes.types";
 import Noticias from "@/components/Pages/Noticia/Noticia";
+import { obtenerAutor } from "@/utils/obtenerAutor";
 
 export default async function Page({
   params,
 }: {
   params: { noticia: string };
 }) {
-  const noticias = await obtenerNoticias();
+  const [noticias, autores] = await Promise.all([
+    obtenerNoticias(),
+    obtenerAutor(),
+  ]);
   const tituloDecodificado = decodeURIComponent(params.noticia);
 
   const noticiaActual =
     noticias.find((n: Noticia) => n.title === tituloDecodificado) ||
     noticias[0];
+
+  const cleanId = (id?: string) => id?.replace(/^drafts\./, "") || "";
+
+  const refAutorNoticia = cleanId(noticiaActual?.autor?._ref);
+
+  // Buscamos el autor comparando los IDs limpios
+  const autorActual = autores?.find(
+    (a: Autor) => cleanId(a._id) === refAutorNoticia,
+  );
 
   return (
     <>
@@ -34,7 +47,7 @@ export default async function Page({
         {/* Layout Principal: Columna izquierda (Noticia) + Columna derecha (Sidebar) */}
         <div className="notice-grid-layout">
           <article className="notice-content-area">
-            <Noticias noticia={noticiaActual} />
+            <Noticias noticia={noticiaActual} autor={autorActual} />
           </article>
 
           <aside className="notice-sidebar-area">

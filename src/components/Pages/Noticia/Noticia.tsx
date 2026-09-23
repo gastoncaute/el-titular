@@ -1,15 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Noticia } from "@/types/componentes.types";
+import { Noticia, Autor } from "@/types/componentes.types";
 import { PortableText } from "@portabletext/react";
-import { modifyImageUrl, modifyVideoFileUrl } from "@/utils/modifyCodes";
+import {
+  formatearFecha,
+  modifyImageUrl,
+  modifyVideoFileUrl,
+} from "@/utils/modifyCodes";
 import Bloques from "./Bloques/Bloques";
 
 type NoticiasProps = {
   noticia: Noticia;
+  autor?: Autor;
 };
 
-const Noticias = ({ noticia }: NoticiasProps) => {
+const Noticias = ({ noticia, autor }: NoticiasProps) => {
+  const nombreAutor = autor?.name ? autor.name.trim() : "Redacción El Titular";
+  const fotoAutorRef = autor?.photo?.asset?._ref;
+  const fechaFormateada = formatearFecha(noticia?._createdAt);
+
   return (
     <div className="noticia-wrapper">
       <Link
@@ -26,11 +35,28 @@ const Noticias = ({ noticia }: NoticiasProps) => {
       {/* Meta datos de la nota */}
       <div className="notice-meta-bar">
         <div className="notice-author-info">
-          <span className="author-badge">ET</span>
-          <span className="author-name">Redacción El Titular</span>
+          {fotoAutorRef ? (
+            <Image
+              src={modifyImageUrl(fotoAutorRef)}
+              alt={nombreAutor}
+              width={28}
+              height={28}
+              className="author-avatar"
+            />
+          ) : (
+            <span className="author-badge">
+              {nombreAutor.substring(0, 2).toUpperCase()}
+            </span>
+          )}
+          <span className="author-name">Redacción {nombreAutor}</span>
         </div>
-        <span className="meta-divider">•</span>
-        <time className="notice-date">24 de agosto de 2026, 10:30</time>
+
+        {fechaFormateada && (
+          <>
+            <span className="meta-divider">•</span>
+            <time className="notice-date">{fechaFormateada}</time>
+          </>
+        )}
 
         <div className="notice-share-buttons">
           <span>Compartir:</span>

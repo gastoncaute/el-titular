@@ -82,6 +82,13 @@
   color: #222;
 }
 
+.author-avatar {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 28px;
+  height: 28px;
+}
+
 .author-badge {
   background: #86082e;
   color: white;
