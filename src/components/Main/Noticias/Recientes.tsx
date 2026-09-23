@@ -80,6 +80,12 @@ export default async function Recientes() {
 
         {/* Noticias Secundarias (Columna derecha) */}
         <aside className="noticias-secundarias">
+          <div className="ultimas-header">
+            <h3>Últimas noticias</h3>
+            <Link href={"/pages/masrecientes"} className="ver-todas">
+              Ver todas las noticias &rarr;
+            </Link>
+          </div>
           {secundarias.map((noticia: Noticia) => (
             <article key={noticia._id} className="card-secundaria">
               <div className="card-secundaria-content">

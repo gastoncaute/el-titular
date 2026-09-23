@@ -214,3 +214,36 @@
   color: #121214;
   text-decoration: none;
 }
+
+@media screen and (max-width: 1024px) {
+  .layout-principal {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 0;
+    flex-direction: column;
+  }
+
+  .noticia-destacada .image-container {
+    background-color: #9b0d34;
+    background: linear-gradient(
+      to top,
+      #9b0d34 0%,
+      #9b0d33a4 60%,
+      transparent 100%
+    );
+  }
+
+  .ultimas-header {
+    border-bottom: 1px solid #c4c4c4;
+  }
+
+  .seccion-ultimas {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .noticias-secundarias .ultimas-header {
+    display: none;
+  }
+}
