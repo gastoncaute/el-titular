@@ -151,11 +151,11 @@
   }
 
   .top-bar {
-    padding: 0.4rem 0.3rem;
+    padding: 0.2rem 0.3rem;
   }
 
   .clima-fecha {
-    margin-right: 0;
+    display: none;
   }
 
   .clima-info {
