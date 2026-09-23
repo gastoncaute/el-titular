@@ -11,58 +11,76 @@ type NoticiasProps = {
 
 const Noticias = ({ noticia }: NoticiasProps) => {
   return (
-    <section className="noticia-page">
+    <div className="noticia-wrapper">
       <Link
         href={`/pages/categorypage/${noticia.categoria}`}
-        className="notice-category"
+        className="notice-category-tag"
       >
         {noticia.categoria}
       </Link>
-      <div className="noticia-contenedor">
-        <div className="title-container">
-          <h1>{noticia?.title}</h1>
-          <h2>{noticia?.bajada}</h2>
+
+      <h1 className="notice-title">{noticia?.title}</h1>
+
+      {noticia?.bajada && <p className="notice-subtitle">{noticia.bajada}</p>}
+
+      {/* Meta datos de la nota */}
+      <div className="notice-meta-bar">
+        <div className="notice-author-info">
+          <span className="author-badge">ET</span>
+          <span className="author-name">Redacción El Titular</span>
         </div>
-        <div className="noticia-media">
-          {noticia.image_principal?.imagen && (
-            <Image
-              className="noticia-imagen"
-              src={modifyImageUrl(noticia.image_principal.imagen.asset._ref)}
-              alt={noticia.image_principal.epigrafe}
-              height={800}
-              width={1000}
-            />
-          )}
-          {noticia.image_principal?.video &&
-            !noticia.image_principal.imagen && (
-              <video controls className="noticia-video">
-                <source
-                  src={modifyVideoFileUrl(
-                    noticia.image_principal.video.asset._ref
-                  )}
-                  type="video/mp4"
-                />
-                Your browser does not support the video tag.
-              </video>
-            )}
-          <p className="noticia-epigrafe">
-            <PortableText value={noticia.image_principal.epigrafe} />
-          </p>
+        <span className="meta-divider">•</span>
+        <time className="notice-date">24 de agosto de 2026, 10:30</time>
+
+        <div className="notice-share-buttons">
+          <span>Compartir:</span>
         </div>
-        <p className="noticia-copete">
-          <PortableText
-            value={noticia?.copete.map((item: any) => ({
-              ...item,
-              children: item.children.map((child: any) => ({
-                ...child,
-                text: child.text.replace(/&/g, ""),
-              })),
-            }))}
-          />
-        </p>
-        <Bloques noticia={noticia} />
       </div>
-    </section>
+
+      {/* Imagen / Video Principal */}
+      <div className="noticia-media">
+        {noticia.image_principal?.imagen && (
+          <Image
+            className="noticia-imagen"
+            src={modifyImageUrl(noticia.image_principal.imagen.asset._ref)}
+            alt={noticia.title}
+            height={600}
+            width={1000}
+            priority
+          />
+        )}
+        {noticia.image_principal?.video && !noticia.image_principal?.imagen && (
+          <video controls className="noticia-video">
+            <source
+              src={modifyVideoFileUrl(noticia.image_principal.video.asset._ref)}
+              type="video/mp4"
+            />
+          </video>
+        )}
+      </div>
+
+      {/* Copete / Introducción */}
+      {noticia?.copete && (
+        <div className="noticia-copete">
+          <PortableText value={noticia.copete} />
+        </div>
+      )}
+
+      {/* Bloques de cuerpo dinámico */}
+      <Bloques noticia={noticia} />
+
+      {/* Etiquetas / Tags */}
+      <div className="notice-tags-container">
+        <span className="tags-label">Etiquetas:</span>
+        <div className="tags-list">
+          <span className="tag-pill">{noticia.categoria}</span>
+          {noticia.categoria && (
+            <span className="tag-pill">{noticia.categoria}</span>
+          )}
+          <span className="tag-pill">Mar del Plata</span>
+        </div>
+      </div>
+    </div>
   );
 };
 
