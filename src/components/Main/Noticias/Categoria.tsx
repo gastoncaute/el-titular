@@ -5,132 +5,148 @@ import { Noticia } from "@/types/componentes.types";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";
 import { modifyImageUrl, modifyVideoFileUrl } from "@/utils/modifyCodes";
 
-export default async function Categoria({ categoria }: { categoria: string }) {
+function calcularTiempoTranscurrido(fechaISO: string): string {
+  if (!fechaISO) return "";
+  const fechaNoticia = new Date(fechaISO);
+  const ahora = new Date();
+  const diferenciaMs = ahora.getTime() - fechaNoticia.getTime();
+
+  const minutos = Math.floor(diferenciaMs / (1000 * 60));
+  const horas = Math.floor(diferenciaMs / (1000 * 60 * 60));
+  const dias = Math.floor(diferenciaMs / (1000 * 60 * 60 * 24));
+
+  if (minutos < 60) return `Hace ${minutos <= 0 ? 1 : minutos} min`;
+  if (horas < 24) return `Hace ${horas} ${horas === 1 ? "hora" : "horas"}`;
+  return `Hace ${dias} ${dias === 1 ? "día" : "días"}`;
+}
+
+function normalizarTexto(texto: string): string {
+  if (!texto) return "";
+  return texto
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
+const CATEGORIAS_DEFAULT = ["Política", "Actualidad", "Policiales"];
+
+export default async function Categoria({ categoria }: { categoria?: string }) {
   const noticias = await obtenerNoticias();
-  const noticiasDeCategoria = noticias.filter(
-    (noticia: Noticia) => noticia.categoria === categoria
-  );
-  const ultimaNoticia = noticiasDeCategoria[0];
+  if (!noticias || noticias.length === 0) return null;
+
+  const categoriasAMostrar = categoria ? [categoria] : CATEGORIAS_DEFAULT;
 
   return (
-    <>
-      <section key={ultimaNoticia._id} className="noticia-section">
-        <div
-          className={`category-noticia-container ${
-            categoria.toLowerCase() === "politica"
-              ? "politica-bg"
-              : categoria.toLowerCase() === "actualidad"
-              ? "actualidad-bg"
-              : categoria.toLowerCase() === "policiales"
-              ? "policiales-bg"
-              : ""
-          }`}
-        >
-          <div className="category-text-overlay">
-            <Link
-              href={`/pages/categorypage/${categoria}`}
-              className="category-link-noticia"
-            >
-              {categoria}
-            </Link>
-            <h1>{ultimaNoticia.title}</h1>
-            <h2>{ultimaNoticia.bajada}</h2>
-            <Link
-              href={`/pages/noticepage/${ultimaNoticia.title}`}
-              className="category-leer-noticia"
-            >
-              LEER NOTICIA
-            </Link>
-          </div>
-          <div className="category-image-container">
-            {ultimaNoticia.image_principal &&
-              ultimaNoticia.image_principal.imagen && (
-                <Image
-                  src={modifyImageUrl(
-                    ultimaNoticia.image_principal.imagen?.asset?._ref
-                  )}
-                  alt={ultimaNoticia.image_principal.epigrafe}
-                  width={700}
-                  height={600}
-                  style={{
-                    objectFit: "cover",
-                    maxWidth: "100%",
-                    maxHeight: "420px",
-                  }}
-                />
-              )}
-            {(!ultimaNoticia.image_principal ||
-              !ultimaNoticia.image_principal.imagen) &&
-              ultimaNoticia.image_principal?.video && (
-                <video
-                  controls
-                  width={1500}
-                  height={600}
-                  style={{
-                    objectFit: "cover",
-                    maxWidth: "100%",
-                    maxHeight: "420px",
-                  }}
-                >
-                  <source
-                    src={modifyVideoFileUrl(
-                      ultimaNoticia.image_principal.video.asset._ref
-                    )}
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
-              )}
-          </div>
-        </div>
+    <section className="seccion-categorias-grid">
+      {categoriasAMostrar.map((catNombre) => {
+        const noticiasCat = noticias.filter(
+          (n: Noticia) =>
+            normalizarTexto(n.categoria) === normalizarTexto(catNombre),
+        );
 
-        <article>
-          {noticiasDeCategoria.slice(1, 5).map((noticia: Noticia) => (
-            <Link
-              href={`/pages/noticepage/${encodeURIComponent(noticia.title)}`}
-              key={noticia._id}
-            >
-              <h1>{noticia.title}</h1>
-              {noticia.image_principal && noticia.image_principal.imagen && (
-                <Image
-                  src={modifyImageUrl(
-                    noticia.image_principal.imagen?.asset?._ref
-                  )}
-                  alt={noticia.image_principal.epigrafe}
-                  width={400}
-                  height={150}
-                  style={{
-                    objectFit: "cover",
-                    maxWidth: "100%",
-                    maxHeight: "200px",
-                  }}
-                />
-              )}
-              {(!noticia.image_principal || !noticia.image_principal.imagen) &&
-                noticia.image_principal?.video && (
-                  <video
-                    controls
+        if (noticiasCat.length === 0) return null;
+
+        const noticiaPrincipal = noticiasCat[0];
+        const noticiasSecundarias = noticiasCat.slice(1, 3);
+
+        return (
+          <div key={catNombre} className="columna-categoria">
+            {/* Header de la Columna */}
+            <div className="categoria-header">
+              <h2 className="categoria-titulo">{catNombre.toUpperCase()}</h2>
+              <Link
+                href={`/pages/categorypage/${encodeURIComponent(
+                  normalizarTexto(catNombre),
+                )}`}
+                className="categoria-ver-mas"
+              >
+                Ver más &rarr;
+              </Link>
+            </div>
+
+            {/* Noticia Principal */}
+            <article className="card-cat-principal">
+              <div className="card-cat-media">
+                {noticiaPrincipal.image_principal?.imagen ? (
+                  <Image
+                    src={modifyImageUrl(
+                      noticiaPrincipal.image_principal.imagen?.asset?._ref,
+                    )}
+                    alt={noticiaPrincipal.title}
                     width={400}
-                    height={150}
-                    style={{
-                      objectFit: "cover",
-                      maxWidth: "100%",
-                      maxHeight: "200px",
-                    }}
-                  >
+                    height={220}
+                    className="media-thumb"
+                  />
+                ) : noticiaPrincipal.image_principal?.video ? (
+                  <video controls className="media-thumb">
                     <source
                       src={modifyVideoFileUrl(
-                        noticia.image_principal.video.asset._ref
+                        noticiaPrincipal.image_principal.video.asset._ref,
                       )}
                       type="video/mp4"
                     />
-                    Your browser does not support the video tag.
                   </video>
+                ) : (
+                  <div className="placeholder-thumb" />
                 )}
-            </Link>
-          ))}
-        </article>
-      </section>
-    </>
+              </div>
+
+              <div className="card-cat-content">
+                <h3>
+                  <Link
+                    href={`/pages/noticepage/${encodeURIComponent(
+                      noticiaPrincipal.title,
+                    )}`}
+                  >
+                    {noticiaPrincipal.title}
+                  </Link>
+                </h3>
+                <span className="tiempo-hace">
+                  {calcularTiempoTranscurrido(noticiaPrincipal._createdAt)}
+                </span>
+              </div>
+            </article>
+
+            {/* Noticias Secundarias */}
+            <div className="lista-cat-secundarias">
+              {noticiasSecundarias.map((noticia: Noticia) => (
+                <article key={noticia._id} className="item-cat-secundaria">
+                  <div className="thumb-container">
+                    {noticia.image_principal?.imagen ? (
+                      <Image
+                        src={modifyImageUrl(
+                          noticia.image_principal.imagen?.asset?._ref,
+                        )}
+                        alt={noticia.title}
+                        width={90}
+                        height={60}
+                        className="media-thumb"
+                      />
+                    ) : (
+                      <div className="placeholder-thumb" />
+                    )}
+                  </div>
+
+                  <div className="item-content">
+                    <h4>
+                      <Link
+                        href={`/pages/noticepage/${encodeURIComponent(
+                          noticia.title,
+                        )}`}
+                      >
+                        {noticia.title}
+                      </Link>
+                    </h4>
+                    <span className="tiempo-hace">
+                      {calcularTiempoTranscurrido(noticia._createdAt)}
+                    </span>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+    </section>
   );
 }

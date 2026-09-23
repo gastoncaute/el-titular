@@ -58,7 +58,7 @@ export default function SextoBloque({
               ...item,
               children: item.children.map((child: any) => ({
                 ...child,
-                text: child.text.replace(/&/g, ""),
+                text: child.text.replace(/&/g, "\n"),
               })),
             }))}
           />
@@ -71,7 +71,7 @@ export default function SextoBloque({
             height="315"
             className="video-iframe"
             src={`https://www.youtube.com/embed/${modifyVideoCode(
-              sextoBloque?.YouTubeCode_4
+              sextoBloque?.YouTubeCode_4,
             )}`}
             title="YouTube video player"
             frameBorder="0"

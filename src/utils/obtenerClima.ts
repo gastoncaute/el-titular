@@ -4,7 +4,7 @@ export async function obtenerClima() {
     {
       method: "GET",
       cache: "no-store",
-    }
+    },
   );
 
   if (!res.ok) {
@@ -15,7 +15,7 @@ export async function obtenerClima() {
 
   const pronosticoDiario = data.list
     .filter((item: any, index: number) => index % 8 === 0)
-    .slice(0, 3)
+    .slice(0, 1)
     .map((item: any) => ({
       fecha: new Date(item.dt * 1000).toLocaleDateString("es-ES", {
         weekday: "long",

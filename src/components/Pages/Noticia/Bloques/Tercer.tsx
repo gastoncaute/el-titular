@@ -58,7 +58,7 @@ export default function TercerBloque({
               ...item,
               children: item.children.map((child: any) => ({
                 ...child,
-                text: child.text.replace(/&/g, ""),
+                text: child.text.replace(/&/g, "\n"),
               })),
             }))}
           />
@@ -71,7 +71,7 @@ export default function TercerBloque({
             height="315"
             className="video-iframe"
             src={`https://www.youtube.com/embed/${modifyVideoCode(
-              tercerBloque?.YouTubeCode_2
+              tercerBloque?.YouTubeCode_2,
             )}`}
             title="YouTube video player"
             frameBorder="0"

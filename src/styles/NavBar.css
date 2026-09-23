@@ -1,93 +1,95 @@
-.navbar {
-  background: #86082e;
-  width: 20rem;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  position: fixed;
-  padding: 1rem 1.75rem;
-  margin-left: 0.5rem;
-  border-radius: 8px;
-  transition: transform 0.9s ease;
-  top: 5rem;
-  z-index: 2;
+/* Ocultar el checkbox de control */
+.menu-toggle-checkbox {
+  display: none !important;
 }
 
-.navbar ul {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.navbar ul li {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  padding: 1rem 0.5rem;
-  list-style: none;
-  color: #fff;
-}
-
-.navbar ul .search-input {
-  display: none;
-}
-
-.navbar ul li {
-  width: min-content;
-}
-
-.navbar ul li a {
-  display: flex;
-  flex-direction: column;
-}
-
-@media screen and (max-width: 1024px) {
-  .navbar {
-    width: 15rem;
-    padding: 0.75rem;
-    padding-top: 1.5rem;
+/* ==========================================================================
+   CONFIGURACIÓN MÓVIL (< 1024px)
+   ========================================================================== */
+@media screen and (max-width: 1023px) {
+  .burger-button {
+    cursor: pointer;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    z-index: 101;
   }
 
-  .navbar ul li {
-    font-size: 14px;
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
-  }
-}
-
-.navbar.open {
-  transform: translateX(0);
-}
-
-.navbar.closed {
-  transform: translateX(-110%);
-}
-
-@media screen and (max-width: 600px) {
+  /* Menú desplegable lateral oculto por defecto */
   .navbar {
-    justify-content: flex-start;
-    padding-top: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 18rem;
     height: 100vh;
+    background-color: #86082e;
+    padding: 2rem 1.5rem;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.35s ease-in-out;
+    transform: translateX(-100%); /* Oculto fuera de pantalla */
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Overlay para cerrar haciendo clic fuera */
+  .navbar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+  }
+
+  /* REGLA CLAVE: Cuando el checkbox está marcado, mostramos el navbar y el overlay */
+  .menu-toggle-checkbox:checked ~ .navbar {
+    transform: translateX(0) !important;
+  }
+
+  .menu-toggle-checkbox:checked ~ .navbar-overlay {
+    display: block !important;
+  }
+
+  .close-menu-btn {
+    align-self: flex-end;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
   }
 
   .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    height: auto;
+    gap: 1.2rem;
   }
 
-  .navbar ul .search-input {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    width: 100%;
+  .navbar ul li {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
   }
 
-  .navbar ul .search-input input {
-    width: 100%;
-    font-size: 1rem;
-    padding: 0.5rem;
-    border-radius: 6px;
+  .navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .burger-button,
+  .navbar,
+  .navbar-overlay {
+    display: none;
   }
 }

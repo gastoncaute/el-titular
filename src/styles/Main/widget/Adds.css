@@ -1,3 +1,41 @@
+.banner-edea-pc {
+  display: none;
+}
+
+.banner-edea-mobile {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .banner-edea-mobile {
+    display: none;
+  }
+
+  .banner-edea-pc {
+    display: block;
+  }
+}
+
+.banner-publicidad {
+  background-color: #800a26;
+  color: #fff;
+  margin: 0 1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+}
+
+.banner-publicidad .brand-publi {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
 /* .pop-up-container {
   position: fixed;
   z-index: 11;

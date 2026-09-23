@@ -1,105 +1,62 @@
 import { Noticia } from "@/types/componentes.types";
-import { modifyImageUrl, modifyVideoFileUrl } from "@/utils/modifyCodes";
+import { modifyImageUrl } from "@/utils/modifyCodes";
 import { obtenerNoticias } from "@/utils/obtenerNoticia";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default async function Noticias() {
+export default async function Recientes() {
   const noticias = await obtenerNoticias();
-  const categorias = ["POLITICA", "ACTUALIDAD", "POLICIALES"];
-
-  const imagenesPorCategoria: { [key: string]: string } = {
-    POLITICA: "/banners/politica.png",
-    ACTUALIDAD: "/banners/actualidad.png",
-    POLICIALES: "/banners/policiales.png",
-  };
 
   return (
-    <>
-      <ul>
-        {categorias.map((categoria) => {
-          const categoriaFormateada =
-            categoria.charAt(0).toUpperCase() +
-            categoria.slice(1).toLowerCase();
-          return (
-            <li key={categoria}>
-              <Link href={`/pages/categorypage/${categoriaFormateada}`}>
-                <Image
-                  src={imagenesPorCategoria[categoria]}
-                  alt={categoria}
-                  width={500}
-                  height={100}
-                />
-              </Link>
-            </li>
-          );
-        })}
-        <li>
-          <Link
-            href="https://www.edeaweb.com.ar/robo-de-energia/"
-            target="#"
-          >
-            <Image
-              src={"/edea/Fraude-300x300.gif"}
-              alt={"Edea"}
-              width={100}
-              height={100}
-            />
-          </Link>
-        </li>
-      </ul>
-      <Link href={"/pages/masrecientes"} className="ventana-section-h1">
-        Ultimas Noticias
-      </Link>
-      <section>
-        {noticias.slice(0, 5).map((noticia: Noticia, index: number) => {
-          return (
+    <div className="sidebar-container">
+      <div className="sidebar-card">
+        <h3 className="sidebar-title">Últimas noticias</h3>
+        <div className="sidebar-list">
+          {noticias.slice(0, 4).map((noticia: Noticia) => (
             <Link
+              key={noticia._id}
               href={`/pages/noticepage/${encodeURIComponent(noticia.title)}`}
-              key={index}
+              className="sidebar-item"
             >
-              <h2 className="ventana-section-h2">{noticia.title}</h2>
-              {noticia.image_principal && noticia.image_principal.imagen && (
-                <Image
-                  src={modifyImageUrl(
-                    noticia.image_principal.imagen?.asset?._ref,
-                  )}
-                  alt={noticia.image_principal.epigrafe}
-                  width={400}
-                  height={150}
-                  style={{
-                    objectFit: "cover",
-                    maxWidth: "100%",
-                    maxHeight: "200px",
-                  }}
-                />
-              )}
-              {(!noticia.image_principal || !noticia.image_principal.imagen) &&
-                noticia.image_principal?.video && (
-                  <video
-                    controls
-                    width={400}
-                    height={150}
-                    style={{
-                      objectFit: "cover",
-                      maxWidth: "100%",
-                      maxHeight: "200px",
-                    }}
-                  >
-                    <source
-                      src={modifyVideoFileUrl(
-                        noticia.image_principal.video.asset._ref,
-                      )}
-                      type="video/mp4"
-                    />
-                    Your browser does not support the video tag.
-                  </video>
+              <div className="sidebar-item-text">
+                <span className="sidebar-tag">{noticia.categoria}</span>
+                <h4>{noticia.title}</h4>
+                <span className="sidebar-time">Hace 2 horas</span>
+              </div>
+              <div className="sidebar-item-thumb">
+                {noticia.image_principal?.imagen ? (
+                  <Image
+                    src={modifyImageUrl(
+                      noticia.image_principal.imagen.asset._ref,
+                    )}
+                    alt={noticia.title}
+                    width={80}
+                    height={60}
+                    className="thumb-img"
+                  />
+                ) : (
+                  <div className="thumb-placeholder" />
                 )}
+              </div>
             </Link>
-          );
-        })}
-      </section>
-    </>
+          ))}
+        </div>
+        <Link href="/pages/masrecientes" className="sidebar-view-all">
+          Ver todas las noticias &rarr;
+        </Link>
+      </div>
+
+      {/* Banner Publicitario EDEA */}
+      <Link href="https://www.edeaweb.com.ar/robo-de-energia/" target="#">
+        <Image
+          src={"/edea/Fraude-NoticePage.gif"}
+          alt={"Edea"}
+          width={300}
+          height={300}
+          className="m-auto"
+        />
+      </Link>
+    </div>
   );
 }

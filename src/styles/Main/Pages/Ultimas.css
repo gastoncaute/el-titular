@@ -1,0 +1,146 @@
+.category-main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+.category-title {
+  font-size: 2rem;
+  font-weight: 800;
+  border-bottom: 3px solid #86082e;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+/* Grilla en 2 Columnas */
+.category-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+@media (min-width: 992px) {
+  .category-grid-layout {
+    grid-template-columns: 1fr 300px; /* Noticias a la izq, Publicidad fija a la der */
+  }
+}
+
+/* Sidebar Publicidad Sticky */
+.category-sidebar-area {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ad-sticky-wrapper {
+  position: sticky;
+  top: 90px;
+}
+
+.banner-publicidad {
+  width: 100%;
+  height: 600px;
+  background-color: #f2f2f2;
+  border: 1px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+/* Grilla de Tarjetas de Noticias */
+.noticias-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.noticia-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.noticia-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.card-media {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  background-color: #eee;
+}
+
+.card-media img,
+.card-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-category {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #86082e;
+  text-transform: uppercase;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  line-height: 1.3;
+  margin: 0;
+  font-weight: 700;
+}
+
+.card-description {
+  font-size: 0.85rem;
+  color: #555;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Botón Cargar Más */
+.load-more-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.btn-cargar-mas {
+  background-color: #86082e;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-cargar-mas:hover {
+  background-color: #630521;
+}

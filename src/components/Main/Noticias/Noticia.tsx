@@ -1,36 +1,42 @@
-import { obtenerCategorias } from "@/utils/obtenerCategorias";
+import React from "react";
 import Categoria from "./Categoria";
 import Recientes from "./Recientes";
-import Socials from "../Widgets/Socials";
 import Link from "next/link";
 import Image from "next/image";
 
-export default async function Noticia() {
-  const categorias = await obtenerCategorias();
-  const ordenCategorias = ["Politica", "Actualidad", "Policiales"];
-
-  const categoriasUnicas = Array.from(new Set(categorias))
-    .filter((categoria: any) => ordenCategorias.includes(categoria))
-    .sort(
-      (a: any, b: any) =>
-        ordenCategorias.indexOf(a) - ordenCategorias.indexOf(b),
-    );
-
+export default async function Noticias() {
   return (
     <>
-      <Link href="https://www.edeaweb.com.ar/robo-de-energia/" target="#">
+      <Link
+        href="https://www.edeaweb.com.ar/robo-de-energia/"
+        target="_blank"
+        className="w-100 m-auto block"
+      >
         <Image
-          src={"/edea/Fraude-1200x200.gif"}
-          alt={"Edea"}
-          width={1500}
-          height={100}
+          src="/edea/Fraude-Main-Movil.gif"
+          alt="Edea Movil"
+          width={800}
+          height={90}
+          className="m-auto banner-edea-mobile"
+          priority
+        />
+
+        <Image
+          src="/edea/Fraude-Main-Pc.gif"
+          alt="Edea PC"
+          width={1200}
+          height={150}
+          className="m-auto banner-edea-pc"
+          priority
         />
       </Link>
       <Recientes />
-      <Socials />
-      {categoriasUnicas.map((categoria: any) => (
-        <Categoria key={categoria} categoria={categoria} />
-      ))}
+      {/* <div className="banner-publicidad">
+        <p>
+          <strong>Publicidad</strong>
+        </p>
+      </div> */}
+      <Categoria />
     </>
   );
 }

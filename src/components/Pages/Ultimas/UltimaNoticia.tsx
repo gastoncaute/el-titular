@@ -1,61 +1,57 @@
 import { Noticia } from "@/types/componentes.types";
 import { modifyImageUrl, modifyVideoFileUrl } from "@/utils/modifyCodes";
-import { obtenerNoticias } from "@/utils/obtenerNoticia";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default async function UltimaNoticia() {
-  const noticias = await obtenerNoticias();
-  const ultimaNoticia = noticias[0];
+type UltimaNoticiaProps = {
+  noticia: Noticia;
+};
+
+export default function UltimaNoticia({ noticia }: UltimaNoticiaProps) {
+  if (!noticia) return null;
 
   return (
     <Link
-      href={`/pages/noticepage/${encodeURIComponent(ultimaNoticia.title)}`}
+      href={`/pages/noticepage/${encodeURIComponent(noticia.title)}`}
       className="noticia-destacada"
     >
       <div className="image-container">
-        {ultimaNoticia.image_principal &&
-          ultimaNoticia.image_principal.imagen && (
-            <Image
-              src={modifyImageUrl(
-                ultimaNoticia.image_principal.imagen?.asset?._ref
-              )}
-              alt={ultimaNoticia.image_principal.epigrafe}
-              width={1500}
-              height={600}
-              style={{
-                objectFit: "cover",
-                maxWidth: "100%",
-                maxHeight: "600px",
-              }}
+        {noticia.image_principal?.imagen && (
+          <Image
+            src={modifyImageUrl(noticia.image_principal.imagen.asset._ref)}
+            alt={noticia.image_principal.epigrafe || noticia.title}
+            width={1500}
+            height={600}
+            priority
+            style={{
+              objectFit: "cover",
+              width: "100%",
+              maxHeight: "500px",
+            }}
+          />
+        )}
+
+        {!noticia.image_principal?.imagen && noticia.image_principal?.video && (
+          <video
+            controls
+            style={{
+              objectFit: "cover",
+              width: "100%",
+              maxHeight: "500px",
+            }}
+          >
+            <source
+              src={modifyVideoFileUrl(noticia.image_principal.video.asset._ref)}
+              type="video/mp4"
             />
-          )}
-        {(!ultimaNoticia.image_principal ||
-          !ultimaNoticia.image_principal.imagen) &&
-          ultimaNoticia.image_principal?.video && (
-            <video
-              controls
-              width={1500}
-              height={600}
-              style={{
-                objectFit: "cover",
-                maxWidth: "100%",
-                maxHeight: "600px",
-              }}
-            >
-              <source
-                src={modifyVideoFileUrl(
-                  ultimaNoticia.image_principal.video.asset._ref
-                )}
-                type="video/mp4"
-              />
-              Tu navegador no soporta el video.
-            </video>
-          )}
+          </video>
+        )}
+
         <div className="text-overlay">
-          <h1>{ultimaNoticia.title}</h1>
-          <h2>{ultimaNoticia.bajada}</h2>
+          <span className="badge-categoria">{noticia.categoria}</span>
+          <h1>{noticia.title}</h1>
+          {noticia.bajada && <h2>{noticia.bajada}</h2>}
         </div>
       </div>
     </Link>

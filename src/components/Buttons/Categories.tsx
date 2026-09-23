@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default function Categories() {
-  const categorias = ["POLITICA", "ACTUALIDAD", "POLICIALES"];
+  const categorias = ["Politica", "Actualidad", "Policiales"];
 
   return (
     <>
