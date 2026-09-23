@@ -9,24 +9,27 @@ import React from "react";
 export default async function Noticias({ params }: any) {
   const noticias = await obtenerNoticias();
   const busqueda = params.searchpage;
+  const busqeudaFormateada = busqueda.replace(/%20/g, " ");
 
   return (
     <main className="category-main">
       <section className="noticia-section">
         <section className="pages-title">
-          <h1>Relacionado a tu búsqueda: "{busqueda}"</h1>
+          <h1>Relacionado a tu búsqueda: "{busqeudaFormateada}"</h1>
         </section>
         <article>
           {noticias
             .filter((noticia: Noticia) =>
-              noticia.title.toLowerCase().includes(busqueda.toLowerCase())
+              noticia.title
+                .toLowerCase()
+                .includes(busqeudaFormateada.toLowerCase()),
             )
             .slice(0, 16)
             .map((noticia: Noticia, index: number) => {
               return (
                 <Link
                   href={`/pages/noticepage/${encodeURIComponent(
-                    noticia.title
+                    noticia.title,
                   )}`}
                   className="noticia-card"
                   key={index}
@@ -36,7 +39,7 @@ export default async function Noticias({ params }: any) {
                     noticia.image_principal.imagen && (
                       <Image
                         src={modifyImageUrl(
-                          noticia.image_principal.imagen?.asset?._ref
+                          noticia.image_principal.imagen?.asset?._ref,
                         )}
                         alt={noticia.image_principal.epigrafe}
                         width={400}
@@ -63,7 +66,7 @@ export default async function Noticias({ params }: any) {
                       >
                         <source
                           src={modifyVideoFileUrl(
-                            noticia.image_principal.video.asset._ref
+                            noticia.image_principal.video.asset._ref,
                           )}
                           type="video/mp4"
                         />
