@@ -6,7 +6,7 @@ import Link from "next/link";
 import React from "react";
 
 export default async function Recientes() {
-  const noticias = await obtenerNoticias();
+  const noticias = await obtenerNoticias(4);
 
   return (
     <div className="sidebar-container">
@@ -29,6 +29,7 @@ export default async function Recientes() {
                   <Image
                     src={modifyImageUrl(
                       noticia.image_principal.imagen.asset._ref,
+                      220,
                     )}
                     alt={noticia.title}
                     width={80}

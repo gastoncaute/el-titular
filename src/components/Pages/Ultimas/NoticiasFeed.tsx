@@ -35,6 +35,7 @@ export default function NoticiasFeed({ noticiasIniciales }: NoticiasFeedProps) {
                 <Image
                   src={modifyImageUrl(
                     noticia.image_principal.imagen.asset._ref,
+                    500,
                   )}
                   alt={noticia.image_principal.epigrafe || noticia.title}
                   width={400}
@@ -42,7 +43,7 @@ export default function NoticiasFeed({ noticiasIniciales }: NoticiasFeedProps) {
                   style={{ objectFit: "cover" }}
                 />
               ) : noticia.image_principal?.video ? (
-                <video controls>
+                <video controls preload="metadata">
                   <source
                     src={modifyVideoFileUrl(
                       noticia.image_principal.video.asset._ref,

@@ -22,7 +22,7 @@ export default function TercerBloque({
       {tercerBloque?.imagen_3 && (
         <div className="bloque-imagen">
           <Image
-            src={modifyImageUrl(tercerBloque?.imagen_3.imagen.asset._ref)}
+            src={modifyImageUrl(tercerBloque?.imagen_3.imagen.asset._ref, 1000)}
             alt={tercerBloque?.imagen_3.epigrafe}
             height={800}
             width={800}
@@ -37,6 +37,7 @@ export default function TercerBloque({
         <div className="bloque-video">
           <video
             controls
+            preload="metadata"
             style={{
               maxHeight: "600px",
               maxWidth: "100%",

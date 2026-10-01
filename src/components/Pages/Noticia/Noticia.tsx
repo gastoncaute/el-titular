@@ -37,7 +37,7 @@ const Noticias = ({ noticia, autor }: NoticiasProps) => {
         <div className="notice-author-info">
           {fotoAutorRef ? (
             <Image
-              src={modifyImageUrl(fotoAutorRef)}
+              src={modifyImageUrl(fotoAutorRef, 64)}
               alt={nombreAutor}
               width={28}
               height={28}
@@ -64,7 +64,7 @@ const Noticias = ({ noticia, autor }: NoticiasProps) => {
         {noticia.image_principal?.imagen && (
           <Image
             className="noticia-imagen"
-            src={modifyImageUrl(noticia.image_principal.imagen.asset._ref)}
+            src={modifyImageUrl(noticia.image_principal.imagen.asset._ref, 1200)}
             alt={noticia.title}
             height={600}
             width={1000}
@@ -72,7 +72,7 @@ const Noticias = ({ noticia, autor }: NoticiasProps) => {
           />
         )}
         {noticia.image_principal?.video && !noticia.image_principal?.imagen && (
-          <video controls className="noticia-video">
+          <video controls preload="metadata" className="noticia-video">
             <source
               src={modifyVideoFileUrl(noticia.image_principal.video.asset._ref)}
               type="video/mp4"

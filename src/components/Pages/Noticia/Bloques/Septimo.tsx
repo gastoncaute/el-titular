@@ -22,7 +22,7 @@ export default function SeptimoBloque({
       {septimoBloque?.imagen_5 && (
         <div className="bloque-imagen">
           <Image
-            src={modifyImageUrl(septimoBloque?.imagen_5.imagen.asset._ref)}
+            src={modifyImageUrl(septimoBloque?.imagen_5.imagen.asset._ref, 1000)}
             alt={septimoBloque?.imagen_5.epigrafe}
             height={800}
             width={800}
@@ -37,6 +37,7 @@ export default function SeptimoBloque({
         <div className="bloque-video">
           <video
             controls
+            preload="metadata"
             style={{
               maxHeight: "600px",
               maxWidth: "100%",

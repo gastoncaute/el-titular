@@ -22,7 +22,7 @@ export default function CuartoBloque({
       {cuartoBloque?.imagen_4 && (
         <div className="bloque-imagen">
           <Image
-            src={modifyImageUrl(cuartoBloque?.imagen_4.imagen.asset._ref)}
+            src={modifyImageUrl(cuartoBloque?.imagen_4.imagen.asset._ref, 1000)}
             alt={cuartoBloque?.imagen_4.epigrafe}
             height={800}
             width={800}
@@ -37,6 +37,7 @@ export default function CuartoBloque({
         <div className="bloque-video">
           <video
             controls
+            preload="metadata"
             style={{
               maxHeight: "600px",
               maxWidth: "100%",

@@ -1,19 +1,35 @@
-export async function obtenerAutor() {
-  const res = await fetch(
-    "https://lrwm6m86.api.sanity.io/v2022-03-07/data/query/production?query=*%5B_type+%3D%3D+%27author%27%5D",
+import { client } from "@/utils/configSanity";
+import { Autor } from "@/types/componentes.types";
+
+const AUTHOR_PROJECTION = `{
+  _id,
+  name,
+  photo
+}`;
+
+export async function obtenerAutorPorReferencia(ref?: string): Promise<Autor | null> {
+  if (!ref) return null;
+
+  const cleanId = ref.replace(/^drafts\./, "");
+  const query = `*[_type == "author" && (_id == $id || _id == $draftId)][0] ${AUTHOR_PROJECTION}`;
+
+  return client.fetch<Autor | null>(
+    query,
     {
-      method: "GET",
-      cache: "no-store",
-    }
+      id: cleanId,
+      draftId: `drafts.${cleanId}`,
+    },
+    { next: { revalidate: 300, tags: ["autores"] } },
   );
-  if (res.ok) {
-    const data = await res.json();
-    if (data && data.result) {
-      return data.result;
-    } else {
-      return [];
-    }
-  } else {
-    console.error("Error al obtener el autor del servidor");
-  }
+}
+
+// Compatibilidad con el código existente. Mantiene todos los autores,
+// pero evita transferir metadatos internos que la interfaz no utiliza.
+export async function obtenerAutor(): Promise<Autor[]> {
+  const query = `*[_type == "author"] ${AUTHOR_PROJECTION}`;
+  return client.fetch<Autor[]>(
+    query,
+    {},
+    { next: { revalidate: 300, tags: ["autores"] } },
+  );
 }

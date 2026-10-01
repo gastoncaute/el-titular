@@ -10,7 +10,7 @@ import {
 } from "@/utils/modifyCodes";
 
 export default async function Recientes() {
-  const noticias = await obtenerNoticias();
+  const noticias = await obtenerNoticias(8);
   if (!noticias || noticias.length === 0) return null;
 
   const ultimaNoticia = noticias[0];
@@ -28,6 +28,7 @@ export default async function Recientes() {
               <Image
                 src={modifyImageUrl(
                   ultimaNoticia.image_principal.imagen?.asset?._ref,
+                  900,
                 )}
                 alt={
                   ultimaNoticia.image_principal.epigrafe || ultimaNoticia.title
@@ -39,7 +40,7 @@ export default async function Recientes() {
               />
             )}
             {ultimaNoticia.image_principal?.video && (
-              <video controls className="noticia-media">
+              <video controls preload="metadata" className="noticia-media">
                 <source
                   src={modifyVideoFileUrl(
                     ultimaNoticia.image_principal.video.asset._ref,
@@ -109,6 +110,7 @@ export default async function Recientes() {
                   <Image
                     src={modifyImageUrl(
                       noticia.image_principal.imagen?.asset?._ref,
+                      300,
                     )}
                     alt={noticia.title}
                     width={150}
@@ -141,6 +143,7 @@ export default async function Recientes() {
                   <Image
                     src={modifyImageUrl(
                       noticia.image_principal.imagen?.asset?._ref,
+                      300,
                     )}
                     alt={noticia.title}
                     width={300}

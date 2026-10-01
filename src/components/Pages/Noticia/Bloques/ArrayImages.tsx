@@ -9,7 +9,7 @@ export default function ArrayImages({ arrayImages }: { arrayImages: any }) {
       {arrayImages?.map((imagen: any) => (
         <div key={imagen._key} className="bloque-imagen">
           <Image
-            src={modifyImageUrl(imagen.imagen.asset._ref)}
+            src={modifyImageUrl(imagen.imagen.asset._ref, 1000)}
             alt={
               imagen.epigrafe && imagen.epigrafe.length > 0
                 ? imagen.epigrafe[0]

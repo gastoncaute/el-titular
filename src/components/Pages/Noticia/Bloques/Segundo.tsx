@@ -22,7 +22,7 @@ export default async function SegundoBloque({
       {segundoBloque?.imagen_2 && (
         <div className="bloque-imagen">
           <Image
-            src={modifyImageUrl(segundoBloque?.imagen_2.imagen.asset._ref)}
+            src={modifyImageUrl(segundoBloque?.imagen_2.imagen.asset._ref, 1000)}
             alt={segundoBloque?.imagen_2.epigrafe}
             height={800}
             width={800}
@@ -37,6 +37,7 @@ export default async function SegundoBloque({
         <div className="bloque-video">
           <video
             controls
+            preload="metadata"
             style={{
               maxHeight: "600px",
               maxWidth: "100%",

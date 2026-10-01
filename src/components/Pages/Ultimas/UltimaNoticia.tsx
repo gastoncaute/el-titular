@@ -19,7 +19,7 @@ export default function UltimaNoticia({ noticia }: UltimaNoticiaProps) {
       <div className="image-container">
         {noticia.image_principal?.imagen && (
           <Image
-            src={modifyImageUrl(noticia.image_principal.imagen.asset._ref)}
+            src={modifyImageUrl(noticia.image_principal.imagen.asset._ref, 1200)}
             alt={noticia.image_principal.epigrafe || noticia.title}
             width={1500}
             height={600}
@@ -35,6 +35,7 @@ export default function UltimaNoticia({ noticia }: UltimaNoticiaProps) {
         {!noticia.image_principal?.imagen && noticia.image_principal?.video && (
           <video
             controls
+            preload="metadata"
             style={{
               objectFit: "cover",
               width: "100%",
