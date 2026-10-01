@@ -37,6 +37,7 @@ export default async function Categoria({ categoria }: { categoria?: string }) {
 
         return (
           <div key={catNombre} className="columna-categoria">
+            {/* Header de la Columna */}
             <div className="categoria-header">
               <h2 className="categoria-titulo">{catNombre.toUpperCase()}</h2>
               <Link
@@ -47,6 +48,7 @@ export default async function Categoria({ categoria }: { categoria?: string }) {
               </Link>
             </div>
 
+            {/* Noticia Principal */}
             <article className="card-cat-principal">
               <div className="card-cat-media">
                 {noticiaPrincipal.image_principal?.imagen ? (
@@ -87,6 +89,7 @@ export default async function Categoria({ categoria }: { categoria?: string }) {
               </div>
             </article>
 
+            {/* Noticias Secundarias */}
             <div className="lista-cat-secundarias">
               {noticiasSecundarias.map((noticia: Noticia) => (
                 <article key={noticia._id} className="item-cat-secundaria">
@@ -120,6 +123,11 @@ export default async function Categoria({ categoria }: { categoria?: string }) {
                   </div>
                 </article>
               ))}
+            </div>
+            <div className="banner-publicidad-main-category">
+              <p>
+                <strong>Publicidad</strong>
+              </p>
             </div>
           </div>
         );

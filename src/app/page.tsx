@@ -6,7 +6,7 @@ import PopUp from "@/components/Main/Widgets/PopUp";
 export default function Home() {
   return (
     <>
-      {/* <PopUp /> */}
+      <PopUp />
       <Header />
       <Main />
       <Footer />

@@ -58,6 +58,9 @@ export default async function Recientes() {
           className="m-auto"
         />
       </Link>
+      <div className="banner-publicidad-notice">
+        <span>Publicidad</span>
+      </div>
     </div>
   );
 }
