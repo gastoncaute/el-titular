@@ -17,7 +17,7 @@ function calcularTiempoTranscurrido(fechaISO: string): string {
   return `Hace ${dias} ${dias === 1 ? "día" : "días"}`;
 }
 
-const CATEGORIAS_DEFAULT = ["Política", "Actualidad", "Policiales"];
+const CATEGORIAS_DEFAULT = ["Politica", "Actualidad", "Policiales"];
 
 export default async function Categoria({ categoria }: { categoria?: string }) {
   const categoriasAMostrar = categoria ? [categoria] : CATEGORIAS_DEFAULT;
@@ -39,7 +39,10 @@ export default async function Categoria({ categoria }: { categoria?: string }) {
           <div key={catNombre} className="columna-categoria">
             <div className="categoria-header">
               <h2 className="categoria-titulo">{catNombre.toUpperCase()}</h2>
-              <Link href={`/pages/categorypage/${encodeURIComponent(catNombre)}`} className="categoria-ver-mas">
+              <Link
+                href={`/pages/categorypage/${encodeURIComponent(catNombre)}`}
+                className="categoria-ver-mas"
+              >
                 Ver más &rarr;
               </Link>
             </div>
@@ -48,7 +51,10 @@ export default async function Categoria({ categoria }: { categoria?: string }) {
               <div className="card-cat-media">
                 {noticiaPrincipal.image_principal?.imagen ? (
                   <Image
-                    src={modifyImageUrl(noticiaPrincipal.image_principal.imagen.asset._ref, 600)}
+                    src={modifyImageUrl(
+                      noticiaPrincipal.image_principal.imagen.asset._ref,
+                      600,
+                    )}
                     alt={noticiaPrincipal.title}
                     width={400}
                     height={220}
@@ -56,13 +62,28 @@ export default async function Categoria({ categoria }: { categoria?: string }) {
                   />
                 ) : noticiaPrincipal.image_principal?.video ? (
                   <video controls preload="metadata" className="media-thumb">
-                    <source src={modifyVideoFileUrl(noticiaPrincipal.image_principal.video.asset._ref)} type="video/mp4" />
+                    <source
+                      src={modifyVideoFileUrl(
+                        noticiaPrincipal.image_principal.video.asset._ref,
+                      )}
+                      type="video/mp4"
+                    />
                   </video>
-                ) : <div className="placeholder-thumb" />}
+                ) : (
+                  <div className="placeholder-thumb" />
+                )}
               </div>
               <div className="card-cat-content">
-                <h3><Link href={`/pages/noticepage/${encodeURIComponent(noticiaPrincipal.title)}`}>{noticiaPrincipal.title}</Link></h3>
-                <span className="tiempo-hace">{calcularTiempoTranscurrido(noticiaPrincipal._createdAt)}</span>
+                <h3>
+                  <Link
+                    href={`/pages/noticepage/${encodeURIComponent(noticiaPrincipal.title)}`}
+                  >
+                    {noticiaPrincipal.title}
+                  </Link>
+                </h3>
+                <span className="tiempo-hace">
+                  {calcularTiempoTranscurrido(noticiaPrincipal._createdAt)}
+                </span>
               </div>
             </article>
 
@@ -72,17 +93,30 @@ export default async function Categoria({ categoria }: { categoria?: string }) {
                   <div className="thumb-container">
                     {noticia.image_principal?.imagen ? (
                       <Image
-                        src={modifyImageUrl(noticia.image_principal.imagen.asset._ref, 220)}
+                        src={modifyImageUrl(
+                          noticia.image_principal.imagen.asset._ref,
+                          220,
+                        )}
                         alt={noticia.title}
                         width={90}
                         height={60}
                         className="media-thumb"
                       />
-                    ) : <div className="placeholder-thumb" />}
+                    ) : (
+                      <div className="placeholder-thumb" />
+                    )}
                   </div>
                   <div className="item-content">
-                    <h4><Link href={`/pages/noticepage/${encodeURIComponent(noticia.title)}`}>{noticia.title}</Link></h4>
-                    <span className="tiempo-hace">{calcularTiempoTranscurrido(noticia._createdAt)}</span>
+                    <h4>
+                      <Link
+                        href={`/pages/noticepage/${encodeURIComponent(noticia.title)}`}
+                      >
+                        {noticia.title}
+                      </Link>
+                    </h4>
+                    <span className="tiempo-hace">
+                      {calcularTiempoTranscurrido(noticia._createdAt)}
+                    </span>
                   </div>
                 </article>
               ))}
