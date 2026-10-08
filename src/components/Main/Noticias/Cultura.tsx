@@ -67,10 +67,6 @@ export default async function Cultura() {
             </Link>
 
             <div className="cultura-contenido">
-              <span className="cultura-categoria">
-                {noticia.categoria || "CULTURA"}
-              </span>
-
               <h3>
                 <Link
                   href={`/pages/noticepage/${encodeURIComponent(
