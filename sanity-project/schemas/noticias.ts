@@ -18,6 +18,7 @@ export default {
       options: {
         list: [
           {title: 'Policiales', value: 'Policiales'},
+          {title: 'Cultura', value: 'Cultura'},
           {title: 'Politica', value: 'Politica'},
           {title: 'Actualidad', value: 'Actualidad'},
         ],

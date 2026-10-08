@@ -17,7 +17,7 @@ function calcularTiempoTranscurrido(fechaISO: string): string {
   return `Hace ${dias} ${dias === 1 ? "día" : "días"}`;
 }
 
-const CATEGORIAS_DEFAULT = ["Politica", "Actualidad", "Policiales"];
+const CATEGORIAS_DEFAULT = ["Politica", "Cultura", "Actualidad", "Policiales"];
 
 export default async function Categoria({ categoria }: { categoria?: string }) {
   const categoriasAMostrar = categoria ? [categoria] : CATEGORIAS_DEFAULT;

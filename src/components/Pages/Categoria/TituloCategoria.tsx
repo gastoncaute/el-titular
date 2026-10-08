@@ -6,6 +6,7 @@ export default async function TituloCategoria({ params }: any) {
 
   const tituloCategoria: Record<string, string> = {
     politica: "POLÍTICA",
+    cultura: "CULTURA",
     policiales: "POLICIALES",
     actualidad: "ACTUALIDAD",
   };
@@ -18,6 +19,8 @@ export default async function TituloCategoria({ params }: any) {
       "Toda la actualidad política de Mar del Plata, la Provincia de Buenos Aires y el país, junto con noticias internacionales y económicas de impacto.",
     policiales:
       "Cobertura de hechos delictivos, investigaciones y casos judiciales de Mar del Plata, Argentina y el mundo.",
+    cultura:
+      "Noticias y eventos culturales de Mar del Plata, la Provincia de Buenos Aires y el país.",
     actualidad:
       "Lo más relevante del día a día, incluyendo deportes, contenidos virales y temas de interés general.",
   };
