@@ -21,7 +21,7 @@ export default function NavBar({ isOpen }: NavBarProps) {
         </li>
         <Categories />
         <li className="button">
-          <Link target="#" href={"https://wa.me/5492234544870"}>
+          <Link target="#" href={"https://wa.me/5492235041739"}>
             CONTACTO
           </Link>
         </li>
