@@ -7,7 +7,6 @@ export default {
       name: 'autor',
       type: 'reference',
       title: 'Autor',
-      validation: (Rule: any) => Rule.required().error('El "Autor" es obligatorio'),
       to: [{type: 'author'}],
     },
     {

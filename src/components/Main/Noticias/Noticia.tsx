@@ -3,6 +3,8 @@ import Categoria from "./Categoria";
 import Recientes from "./Recientes";
 import Link from "next/link";
 import Image from "next/image";
+import Cultura from "./Cultura";
+import MasNoticias from "./MasNoticias";
 
 export default async function Noticias() {
   return (
@@ -37,6 +39,8 @@ export default async function Noticias() {
         </p>
       </div> */}
       <Categoria />
+      <MasNoticias />
+      <Cultura />
     </>
   );
 }
