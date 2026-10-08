@@ -6,14 +6,14 @@ import Link from "next/link";
 import React from "react";
 
 export default async function Recientes() {
-  const noticias = await obtenerNoticias(4);
+  const noticias = await obtenerNoticias(5);
 
   return (
     <div className="sidebar-container">
       <div className="sidebar-card">
         <h3 className="sidebar-title">Últimas noticias</h3>
         <div className="sidebar-list">
-          {noticias.slice(0, 4).map((noticia: Noticia) => (
+          {noticias.slice(1, 5).map((noticia: Noticia) => (
             <Link
               key={noticia._id}
               href={`/pages/noticepage/${encodeURIComponent(noticia.title)}`}

@@ -110,8 +110,9 @@
 
 .noticia-epigrafe {
   font-size: 0.7rem;
-  color: #c4c4c4;
+  color: #5c5c5c;
   margin-top: 8px;
+  border-top: 1px solid #c4c4c4;
 }
 
 .noticia-copete,
