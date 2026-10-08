@@ -10,12 +10,12 @@ import {
 } from "@/utils/modifyCodes";
 
 export default async function Recientes() {
-  const noticias = await obtenerNoticias(8);
+  const noticias = await obtenerNoticias(12);
   if (!noticias || noticias.length === 0) return null;
 
   const ultimaNoticia = noticias[0];
   const secundarias = noticias.slice(1, 4);
-  const ultimasNoticias = noticias.slice(4, 8);
+  const ultimasNoticias = noticias.slice(4, 12);
 
   return (
     <section className="seccion-recientes">
@@ -90,9 +90,12 @@ export default async function Recientes() {
           {secundarias.map((noticia: Noticia) => (
             <article key={noticia._id} className="card-secundaria">
               <div className="card-secundaria-content">
-                <span className="badge-categoria">
+                <Link
+                  href={`/pages/categorypage/${encodeURIComponent(noticia.categoria || "GENERAL")}`}
+                  className="badge-categoria"
+                >
                   {noticia.categoria || "GENERAL"}
-                </span>
+                </Link>
                 <h2>
                   <Link
                     href={`/pages/noticepage/${encodeURIComponent(noticia.title)}`}
@@ -128,13 +131,6 @@ export default async function Recientes() {
 
       {/* Sección Inferior: Últimas Noticias Grid */}
       <div className="seccion-ultimas">
-        <div className="ultimas-header">
-          <h3>Últimas noticias</h3>
-          <Link href={"/pages/masrecientes"} className="ver-todas">
-            Ver todas las noticias &rarr;
-          </Link>
-        </div>
-
         <div className="ultimas-grid">
           {ultimasNoticias.map((noticia: Noticia) => (
             <article key={noticia._id} className="card-grid">
@@ -156,9 +152,12 @@ export default async function Recientes() {
               </div>
 
               <div className="card-grid-content">
-                <span className="badge-categoria">
+                <Link
+                  href={`/pages/categorypage/${encodeURIComponent(noticia.categoria || "GENERAL")}`}
+                  className="badge-categoria"
+                >
                   {noticia.categoria || "CULTURA"}
-                </span>
+                </Link>
                 <h2>
                   <Link
                     href={`/pages/noticepage/${encodeURIComponent(noticia.title)}`}
