@@ -3,34 +3,17 @@
   width: 100%;
   margin: 0 auto;
   max-height: 200px;
-  background-image: url("/backgraunds/Titulo_Categoria.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  color: white;
-  padding: 1rem 2rem;
-}
-
-.category-banner-logo {
-  display: flex;
-  align-items: center;
-  height: 100%;
+  color: #9b0d34;
+  border-bottom: 1px solid #c4c4c4;
 }
 
 .banner-categoria {
   font-size: 3rem;
   font-weight: 900;
   text-transform: uppercase;
-  margin-top: 5px;
-}
-
-.banner-subtitulo {
-  width: 50%;
-  font-size: 1em;
-  font-weight: 500;
 }
 
 /* Layout Principal */
@@ -106,6 +89,10 @@
   margin-top: 0.5rem;
 }
 
+.cat-destacada-info h2:hover {
+  text-decoration: underline;
+}
+
 .cat-destacada-info h2 a {
   color: #fff;
   text-decoration: none;
@@ -175,8 +162,8 @@
 
 .cat-sidebar-thumb {
   position: relative;
-  width: 80px;
-  height: 60px;
+  width: 120px;
+  max-height: 80px;
   flex-shrink: 0;
   background: #d1d5db;
   border-radius: 4px;
