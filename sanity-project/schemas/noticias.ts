@@ -139,18 +139,7 @@ export default {
           title: 'Desarrollo',
           of: [{type: 'block'}],
         },
-        {
-          name: 'YouTubeCode_1',
-          description: 'Campo anterior: conservado por compatibilidad',
-          type: 'string',
-          title: 'Video de YouTube (anterior)',
-        },
-        {
-          name: 'TwitterID_1',
-          description: 'Campo anterior: conservado por compatibilidad',
-          type: 'string',
-          title: 'Tweet (anterior)',
-        },
+
         {
           name: 'incrustaciones',
           title: 'Incrustaciones del segundo bloque',
@@ -207,18 +196,7 @@ export default {
           title: 'Desarrollo',
           of: [{type: 'block'}],
         },
-        {
-          name: 'YouTubeCode_2',
-          description: 'Campo anterior: conservado por compatibilidad',
-          type: 'string',
-          title: 'Video de YouTube (anterior)',
-        },
-        {
-          name: 'TwitterID_2',
-          description: 'Campo anterior: conservado por compatibilidad',
-          type: 'string',
-          title: 'Tweet (anterior)',
-        },
+
         {
           name: 'incrustaciones',
           title: 'Incrustaciones del tercer bloque',
@@ -275,18 +253,7 @@ export default {
           title: 'Desarrollo',
           of: [{type: 'block'}],
         },
-        {
-          name: 'YouTubeCode_3',
-          description: 'Campo anterior: conservado por compatibilidad',
-          type: 'string',
-          title: 'Video de YouTube (anterior)',
-        },
-        {
-          name: 'TwitterID_3',
-          description: 'Campo anterior: conservado por compatibilidad',
-          type: 'string',
-          title: 'Tweet (anterior)',
-        },
+
         {
           name: 'incrustaciones',
           title: 'Incrustaciones del cuarto bloque',
