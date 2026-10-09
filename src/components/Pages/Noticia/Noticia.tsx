@@ -8,6 +8,7 @@ import {
   modifyVideoFileUrl,
 } from "@/utils/modifyCodes";
 import Bloques from "./Bloques/Bloques";
+import Incrustaciones from "./Incrustaciones";
 
 type NoticiasProps = {
   noticia: Noticia;
@@ -107,6 +108,8 @@ const Noticias = ({ noticia, autor }: NoticiasProps) => {
           />
         </div>
       )}
+
+      <Incrustaciones items={noticia.image_principal?.incrustaciones} />
 
       {/* Bloques de cuerpo dinámico */}
       <Bloques noticia={noticia} />

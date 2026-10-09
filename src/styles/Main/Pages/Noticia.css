@@ -163,3 +163,44 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.incrustaciones {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 24px 0;
+  min-width: 0;
+}
+
+.incrustacion-video,
+.incrustacion-pdf {
+  width: 100%;
+  min-width: 0;
+}
+
+.incrustacion-video iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+}
+
+.incrustacion-pdf iframe {
+  display: block;
+  width: 100%;
+  height: 650px;
+  border: 0;
+}
+
+.incrustacion-pdf a,
+.incrustacion-red-social a {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+@media (max-width: 640px) {
+  .incrustacion-pdf iframe {
+    height: 480px;
+  }
+}

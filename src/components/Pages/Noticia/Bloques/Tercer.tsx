@@ -9,6 +9,7 @@ import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import React from "react";
 import { Tweet } from "react-tweet";
+import Incrustaciones from "../Incrustaciones";
 
 export default function TercerBloque({
   tercerBloque,
@@ -84,6 +85,7 @@ export default function TercerBloque({
       {tercerBloque?.TwitterID_2 && (
         <Tweet id={modifyTweetCode(tercerBloque?.TwitterID_2)} />
       )}
+      <Incrustaciones items={tercerBloque.incrustaciones} />
     </section>
   );
 }

@@ -9,6 +9,7 @@ import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import React from "react";
 import { Tweet } from "react-tweet";
+import Incrustaciones from "../Incrustaciones";
 
 export default function CuartoBloque({
   cuartoBloque,
@@ -84,6 +85,8 @@ export default function CuartoBloque({
       {cuartoBloque?.TwitterID_3 && (
         <Tweet id={modifyTweetCode(cuartoBloque.TwitterID_3)} />
       )}
+
+      <Incrustaciones items={cuartoBloque.incrustaciones} />
     </section>
   );
 }

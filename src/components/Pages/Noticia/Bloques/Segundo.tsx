@@ -9,6 +9,7 @@ import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import React from "react";
 import { Tweet } from "react-tweet";
+import Incrustaciones from "../Incrustaciones";
 
 export default async function SegundoBloque({
   segundoBloque,
@@ -22,7 +23,10 @@ export default async function SegundoBloque({
       {segundoBloque?.imagen_2 && (
         <div className="bloque-imagen">
           <Image
-            src={modifyImageUrl(segundoBloque?.imagen_2.imagen.asset._ref, 1000)}
+            src={modifyImageUrl(
+              segundoBloque?.imagen_2.imagen.asset._ref,
+              1000,
+            )}
             alt={segundoBloque?.imagen_2.epigrafe}
             height={800}
             width={800}
@@ -84,6 +88,7 @@ export default async function SegundoBloque({
       {segundoBloque?.TwitterID_1 && (
         <Tweet id={modifyTweetCode(segundoBloque?.TwitterID_1)} />
       )}
+      <Incrustaciones items={segundoBloque.incrustaciones} />
     </section>
   );
 }

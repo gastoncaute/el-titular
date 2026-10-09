@@ -38,6 +38,8 @@ export default {
       title: 'Bajada',
       validation: (Rule: any) => Rule.required().error('La "Bajada" es obligatoria'),
     },
+
+    // BLOQUE PRINCIPAL
     {
       name: 'image_principal',
       title: 'Imagen o Video Principal',
@@ -52,37 +54,45 @@ export default {
         {
           name: 'epigrafe',
           type: 'array',
-          title: 'Epígrafe',
+          title: 'Epígrafe de imagen',
           of: [{type: 'block'}],
         },
         {
           name: 'video',
           type: 'file',
-          description: 'Subir solo videos (formatos permitidos: mp4, webm, ogg)',
           title: 'Video Principal',
+          description: 'Formatos permitidos: mp4, webm, ogg',
+          options: {
+            accept: 'video/mp4,video/webm,video/ogg',
+          },
         },
         {
           name: 'video_epigrafe',
           type: 'array',
-          title: 'Epígrafe',
+          title: 'Epígrafe de video',
           of: [{type: 'block'}],
+        },
+        {
+          name: 'incrustaciones',
+          title: 'Incrustaciones del bloque principal',
+          type: 'array',
+          of: [{type: 'incrustacion'}],
         },
       ],
       validation: (Rule: any) =>
         Rule.required().error('La "Imagen o Video Principal" es obligatoria'),
     },
+
+    // COPETE E INTRODUCCIÓN
     {
       name: 'copete',
       type: 'array',
       title: 'Copete + Desarrollo',
-      validation: (Rule: any) => Rule.required().error('El "Copete + Desarrollo" es obligatorio'),
-      of: [
-        {
-          type: 'block',
-        },
-      ],
+      validation: (Rule: any) => Rule.required().error('"Copete + Desarrollo" es obligatorio'),
+      of: [{type: 'block'}],
     },
 
+    // SEGUNDO BLOQUE
     {
       name: 'segundo_bloque',
       title: 'Segundo Bloque',
@@ -104,7 +114,7 @@ export default {
               type: 'array',
               title: 'Epígrafe',
               of: [{type: 'block'}],
-              validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
+              validation: (Rule: any) => Rule.required().error('El "Epígrafe" es obligatorio'),
             },
           ],
         },
@@ -112,7 +122,7 @@ export default {
           name: 'video',
           title: 'Video',
           type: 'file',
-          description: 'Sube tu video aquí (formatos permitidos: mp4, webm, ogg)',
+          description: 'Formatos permitidos: mp4, webm, ogg',
           options: {
             accept: 'video/mp4,video/webm,video/ogg',
           },
@@ -120,34 +130,37 @@ export default {
         {
           name: 'video_epigrafe',
           type: 'array',
-          title: 'Epígrafe de Video',
+          title: 'Epígrafe de video',
           of: [{type: 'block'}],
         },
         {
           name: 'segunda_descripcion',
           type: 'array',
           title: 'Desarrollo',
-          of: [
-            {
-              type: 'block',
-            },
-          ],
+          of: [{type: 'block'}],
         },
         {
           name: 'YouTubeCode_1',
-          description: 'Colocar Link del Video',
+          description: 'Campo anterior: conservado por compatibilidad',
           type: 'string',
-          title: 'Video de YouTube',
+          title: 'Video de YouTube (anterior)',
         },
         {
           name: 'TwitterID_1',
-          description: 'Colocar Link del Tweet',
+          description: 'Campo anterior: conservado por compatibilidad',
           type: 'string',
-          title: 'Tweet',
+          title: 'Tweet (anterior)',
+        },
+        {
+          name: 'incrustaciones',
+          title: 'Incrustaciones del segundo bloque',
+          type: 'array',
+          of: [{type: 'incrustacion'}],
         },
       ],
     },
 
+    // TERCER BLOQUE
     {
       name: 'tercer_bloque',
       title: 'Tercer Bloque',
@@ -169,7 +182,7 @@ export default {
               type: 'array',
               title: 'Epígrafe',
               of: [{type: 'block'}],
-              validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
+              validation: (Rule: any) => Rule.required().error('El "Epígrafe" es obligatorio'),
             },
           ],
         },
@@ -177,7 +190,7 @@ export default {
           name: 'video',
           title: 'Video',
           type: 'file',
-          description: 'Sube tu video aquí (formatos permitidos: mp4, webm, ogg)',
+          description: 'Formatos permitidos: mp4, webm, ogg',
           options: {
             accept: 'video/mp4,video/webm,video/ogg',
           },
@@ -185,34 +198,37 @@ export default {
         {
           name: 'video_epigrafe',
           type: 'array',
-          title: 'Epígrafe de Video',
+          title: 'Epígrafe de video',
           of: [{type: 'block'}],
         },
         {
           name: 'tercera_descripcion',
           type: 'array',
           title: 'Desarrollo',
-          of: [
-            {
-              type: 'block',
-            },
-          ],
+          of: [{type: 'block'}],
         },
         {
           name: 'YouTubeCode_2',
-          description: 'Colocar Link del Video',
+          description: 'Campo anterior: conservado por compatibilidad',
           type: 'string',
-          title: 'Video de YouTube',
+          title: 'Video de YouTube (anterior)',
         },
         {
           name: 'TwitterID_2',
-          description: 'Colocar Link del Tweet',
+          description: 'Campo anterior: conservado por compatibilidad',
           type: 'string',
-          title: 'Tweet',
+          title: 'Tweet (anterior)',
+        },
+        {
+          name: 'incrustaciones',
+          title: 'Incrustaciones del tercer bloque',
+          type: 'array',
+          of: [{type: 'incrustacion'}],
         },
       ],
     },
 
+    // CUARTO BLOQUE
     {
       name: 'cuarto_bloque',
       title: 'Cuarto Bloque',
@@ -234,7 +250,7 @@ export default {
               type: 'array',
               title: 'Epígrafe',
               of: [{type: 'block'}],
-              validation: (Rule: any) => Rule.required().error('El "Epígrafe" obligatorio'),
+              validation: (Rule: any) => Rule.required().error('El "Epígrafe" es obligatorio'),
             },
           ],
         },
@@ -242,7 +258,7 @@ export default {
           name: 'video',
           title: 'Video',
           type: 'file',
-          description: 'Sube tu video aquí (formatos permitidos: mp4, webm, ogg)',
+          description: 'Formatos permitidos: mp4, webm, ogg',
           options: {
             accept: 'video/mp4,video/webm,video/ogg',
           },
@@ -250,34 +266,37 @@ export default {
         {
           name: 'video_epigrafe',
           type: 'array',
-          title: 'Epígrafe de Video',
+          title: 'Epígrafe de video',
           of: [{type: 'block'}],
         },
         {
           name: 'cuarta_descripcion',
           type: 'array',
           title: 'Desarrollo',
-          of: [
-            {
-              type: 'block',
-            },
-          ],
+          of: [{type: 'block'}],
         },
         {
           name: 'YouTubeCode_3',
-          description: 'Colocar Link del Video',
+          description: 'Campo anterior: conservado por compatibilidad',
           type: 'string',
-          title: 'Video de YouTube',
+          title: 'Video de YouTube (anterior)',
         },
         {
           name: 'TwitterID_3',
-          description: 'Colocar Link del Tweet',
+          description: 'Campo anterior: conservado por compatibilidad',
           type: 'string',
-          title: 'Tweet',
+          title: 'Tweet (anterior)',
+        },
+        {
+          name: 'incrustaciones',
+          title: 'Incrustaciones del cuarto bloque',
+          type: 'array',
+          of: [{type: 'incrustacion'}],
         },
       ],
     },
 
+    // GALERÍA DE IMÁGENES EXISTENTE
     {
       name: 'imagenes_array',
       type: 'array',
