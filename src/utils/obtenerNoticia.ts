@@ -14,8 +14,6 @@ const LIST_PROJECTION = `{
   }
 }`;
 
-// La página de una noticia necesita el contenido completo de sus bloques,
-// pero no necesita metadatos internos como _rev, _updatedAt o _type.
 const ARTICLE_PROJECTION = `{
   _id,
   _createdAt,
@@ -28,10 +26,6 @@ const ARTICLE_PROJECTION = `{
   segundo_bloque,
   tercer_bloque,
   cuarto_bloque,
-  quinto_bloque,
-  sexto_bloque,
-  septimo_bloque,
-  octavo_bloque,
   imagenes_array
 }`;
 
@@ -42,7 +36,9 @@ export async function obtenerNoticias(limite = 20): Promise<Noticia[]> {
   return client.fetch<Noticia[]>(query, { limite }, CACHE_60);
 }
 
-export async function obtenerNoticiaPorTitulo(titulo: string): Promise<Noticia | null> {
+export async function obtenerNoticiaPorTitulo(
+  titulo: string,
+): Promise<Noticia | null> {
   const query = `*[_type == "noticias" && title == $titulo][0] ${ARTICLE_PROJECTION}`;
   return client.fetch<Noticia | null>(query, { titulo }, CACHE_60);
 }
@@ -55,9 +51,6 @@ export async function obtenerNoticiasPorCategoria(
   const start = 5 + Math.max(0, (pagina - 1) * porPagina);
   const end = start + porPagina;
 
-  // Antes se devolvían 5 noticias en "featured" y además otras 12 en
-  // "items". Ahora Sanity entrega una sola lista de hasta 17 noticias y
-  // hacemos el corte en memoria. Así evitamos transferir 5 documentos dos veces.
   const query = `{
     "total": count(*[_type == "noticias" && lower(categoria) == lower($categoria)]),
     "items": *[_type == "noticias" && lower(categoria) == lower($categoria)]
@@ -82,7 +75,10 @@ export async function obtenerNoticiasPorCategoria(
   };
 }
 
-export async function obtenerNoticiasRelacionadas(categoria: string, limite = 5) {
+export async function obtenerNoticiasRelacionadas(
+  categoria: string,
+  limite = 5,
+) {
   const query = `*[_type == "noticias" && lower(categoria) == lower($categoria)]
     | order(_createdAt desc)[0...$limite] ${LIST_PROJECTION}`;
 
