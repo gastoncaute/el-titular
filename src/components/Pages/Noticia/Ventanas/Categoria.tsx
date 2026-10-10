@@ -5,8 +5,22 @@ import { Noticia } from "@/types/componentes.types";
 import { obtenerNoticiasRelacionadas } from "@/utils/obtenerNoticia";
 import { modifyImageUrl } from "@/utils/modifyCodes";
 
-export default async function Categoria({ categoria }: { categoria: string }) {
-  const noticiasRelacionadas = await obtenerNoticiasRelacionadas(categoria, 6);
+interface CategoriaProps {
+  categoria: string;
+  idNoticiaActual?: string;
+}
+
+export default async function Categoria({
+  categoria,
+  idNoticiaActual,
+}: CategoriaProps) {
+  // Traemos un par de noticias extra por si la noticia actual resulta ser una de las primeras
+  const noticiasRelacionadas = await obtenerNoticiasRelacionadas(categoria, 7);
+
+  // Excluimos la noticia que se está mostrando actualmente
+  const noticiasFiltradas = noticiasRelacionadas
+    .filter((noticia: Noticia) => noticia._id !== idNoticiaActual)
+    .slice(0, 5);
 
   return (
     <div className="related-section">
@@ -21,7 +35,7 @@ export default async function Categoria({ categoria }: { categoria: string }) {
       </div>
 
       <div className="related-grid">
-        {noticiasRelacionadas.slice(1, 6).map((noticia: Noticia) => (
+        {noticiasFiltradas.map((noticia: Noticia) => (
           <Link
             key={noticia._id}
             href={`/pages/noticepage/${encodeURIComponent(noticia.title)}`}

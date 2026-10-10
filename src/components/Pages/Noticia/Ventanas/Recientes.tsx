@@ -5,15 +5,24 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default async function Recientes() {
-  const noticias = await obtenerNoticias(5);
+type RecientesProps = {
+  tituloActual?: string;
+};
+
+export default async function Recientes({ tituloActual }: RecientesProps) {
+  const noticias = await obtenerNoticias(6);
+
+  const noticiasFiltradas = noticias
+    .filter((noticia) => noticia.title !== tituloActual)
+    .slice(0, 4);
 
   return (
     <div className="sidebar-container">
       <div className="sidebar-card">
         <h3 className="sidebar-title">Últimas noticias</h3>
+
         <div className="sidebar-list">
-          {noticias.slice(1, 5).map((noticia: Noticia) => (
+          {noticiasFiltradas.map((noticia: Noticia) => (
             <Link
               key={noticia._id}
               href={`/pages/noticepage/${encodeURIComponent(noticia.title)}`}
@@ -24,6 +33,7 @@ export default async function Recientes() {
                 <h4>{noticia.title}</h4>
                 <span className="sidebar-time">Hace 2 horas</span>
               </div>
+
               <div className="sidebar-item-thumb">
                 {noticia.image_principal?.imagen ? (
                   <Image
@@ -43,16 +53,21 @@ export default async function Recientes() {
             </Link>
           ))}
         </div>
+
         <Link href="/pages/masrecientes" className="sidebar-view-all">
           Ver todas las noticias &rarr;
         </Link>
       </div>
 
       {/* Banner Publicitario EDEA */}
-      <Link href="https://www.edeaweb.com.ar/robo-de-energia/" target="#">
+      <Link
+        href="https://www.edeaweb.com.ar/robo-de-energia/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Image
-          src={"/edea/Fraude-NoticePage.gif"}
-          alt={"Edea"}
+          src="/edea/Fraude-NoticePage.gif"
+          alt="Edea"
           width={300}
           height={300}
           className="m-auto"
