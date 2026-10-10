@@ -2,7 +2,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Noticia } from "@/types/componentes.types";
-import { obtenerNoticias } from "@/utils/obtenerNoticia";
+import {
+  obtenerNoticiaDestacada,
+  obtenerNoticias,
+} from "@/utils/obtenerNoticia";
 import {
   calcularTiempoTranscurrido,
   modifyImageUrl,
@@ -10,12 +13,21 @@ import {
 } from "@/utils/modifyCodes";
 
 export default async function Recientes() {
-  const noticias = await obtenerNoticias(12);
+  const [noticias, noticiaDestacada] = await Promise.all([
+    obtenerNoticias(12),
+    obtenerNoticiaDestacada(),
+  ]);
+
   if (!noticias || noticias.length === 0) return null;
 
-  const ultimaNoticia = noticias[0];
-  const secundarias = noticias.slice(1, 4);
-  const ultimasNoticias = noticias.slice(4, 12);
+  const ultimaNoticia = noticiaDestacada ?? noticias[0];
+
+  const noticiasRestantes = noticias.filter(
+    (noticia) => noticia._id !== ultimaNoticia._id,
+  );
+
+  const secundarias = noticiasRestantes.slice(0, 3);
+  const ultimasNoticias = noticiasRestantes.slice(3, 11);
 
   return (
     <section className="seccion-recientes">

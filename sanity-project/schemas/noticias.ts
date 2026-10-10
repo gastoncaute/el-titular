@@ -4,6 +4,13 @@ export default {
   title: 'Noticias',
   fields: [
     {
+      name: 'destacada',
+      title: 'Destacar en portada',
+      type: 'boolean',
+      initialValue: false,
+      description: 'Mostrar esta noticia como destacada en la portada.',
+    },
+    {
       name: 'autor',
       type: 'reference',
       title: 'Autor',

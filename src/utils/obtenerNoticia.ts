@@ -32,15 +32,24 @@ const ARTICLE_PROJECTION = `{
 const CACHE_60 = { next: { revalidate: 60, tags: ["noticias"] } };
 
 export async function obtenerNoticias(limite = 20): Promise<Noticia[]> {
-  const query = `*[_type == "noticias"] | order(_createdAt desc)[0...$limite] ${LIST_PROJECTION}`;
+  const query = `*[_type == "noticias"]
+    | order(_createdAt desc)[0...$limite] ${LIST_PROJECTION}`;
+
   return client.fetch<Noticia[]>(query, { limite }, CACHE_60);
 }
 
-export async function obtenerNoticiaPorTitulo(
-  titulo: string,
-): Promise<Noticia | null> {
-  const query = `*[_type == "noticias" && title == $titulo][0] ${ARTICLE_PROJECTION}`;
-  return client.fetch<Noticia | null>(query, { titulo }, CACHE_60);
+export async function obtenerNoticiaDestacada(): Promise<Noticia | null> {
+  const query = `*[_type == "noticias" && destacada == true]
+    | order(_createdAt desc)[0] ${LIST_PROJECTION}`;
+
+  const destacada = await client.fetch<Noticia | null>(query, {}, CACHE_60);
+
+  if (destacada) return destacada;
+
+  const queryRespaldo = `*[_type == "noticias"]
+    | order(_createdAt desc)[0] ${LIST_PROJECTION}`;
+
+  return client.fetch<Noticia | null>(queryRespaldo, {}, CACHE_60);
 }
 
 export async function obtenerNoticiasPorCategoria(
