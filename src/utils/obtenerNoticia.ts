@@ -38,6 +38,14 @@ export async function obtenerNoticias(limite = 20): Promise<Noticia[]> {
   return client.fetch<Noticia[]>(query, { limite }, CACHE_60);
 }
 
+export async function obtenerNoticiaPorTitulo(
+  titulo: string,
+): Promise<Noticia | null> {
+  const query = `*[_type == "noticias" && title == $titulo][0] ${ARTICLE_PROJECTION}`;
+
+  return client.fetch<Noticia | null>(query, { titulo }, CACHE_60);
+}
+
 export async function obtenerNoticiaDestacada(): Promise<Noticia | null> {
   const query = `*[_type == "noticias" && destacada == true]
     | order(_createdAt desc)[0] ${LIST_PROJECTION}`;
