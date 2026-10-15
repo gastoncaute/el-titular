@@ -47,7 +47,7 @@ export default function Footer() {
           </p>
           <p>
             <Link
-              href="https://wa.me/5492234544870"
+              href="https://wa.me/5492235041739"
               target="_blank"
               rel="noopener noreferrer"
               className="footer-contact-link"

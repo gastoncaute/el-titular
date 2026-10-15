@@ -80,7 +80,7 @@ export default function Header() {
               <Link
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://wa.me/5492234544870"
+                href="https://wa.me/5492235041739"
               >
                 CONTACTO
               </Link>
@@ -117,7 +117,7 @@ export default function Header() {
             <Link
               target="_blank"
               rel="noopener noreferrer"
-              href="https://wa.me/5492234544870"
+              href="https://wa.me/5492235041739"
             >
               CONTACTO
             </Link>

@@ -41,7 +41,7 @@ export default function Social() {
         />
       </Link>
       <Link
-        href="https://wa.me/5492234544870"
+        href="https://wa.me/5492235041739"
         target="#"
         className="m-2 flex items-center"
       >
