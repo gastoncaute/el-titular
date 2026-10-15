@@ -16,7 +16,7 @@ type NoticiasProps = {
 };
 
 const Noticias = ({ noticia, autor }: NoticiasProps) => {
-  const nombreAutor = autor?.name ? autor.name.trim() : "Redacción El Titular";
+  const nombreAutor = autor?.name ? autor.name.trim() : "El Titular";
   const fotoAutorRef = autor?.photo?.asset?._ref;
   const fechaFormateada = formatearFecha(noticia?._createdAt);
 
