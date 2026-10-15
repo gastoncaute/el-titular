@@ -124,13 +124,13 @@
   white-space: pre-line;
 }
 
-.noticia-copete,
+.noticia-copete p,
 .bloque-descripcion p {
   margin-bottom: 1.25rem;
   line-height: 1.6;
 }
 
-.noticia-copete,
+.noticia-copete p:last-child,
 .bloque-descripcion p:last-child {
   margin-bottom: 0;
 }
