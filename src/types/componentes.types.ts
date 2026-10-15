@@ -28,6 +28,7 @@ export interface Noticia {
         _type: string;
       };
     };
+    incrustaciones?: Incrustacion[];
   };
   copete: any;
   segundo_bloque: {
@@ -51,6 +52,7 @@ export interface Noticia {
     YouTubeCode_1: string;
     TwitterID_1: string;
     segunda_descripcion: any;
+    incrustaciones?: Incrustacion[];
   };
   tercer_bloque: {
     imagen_3: {
@@ -73,6 +75,7 @@ export interface Noticia {
     YouTubeCode_2: string;
     TwitterID_2: string;
     tercera_descripcion: any;
+    incrustaciones?: Incrustacion[];
   };
   cuarto_bloque: {
     imagen_4: {
@@ -95,94 +98,7 @@ export interface Noticia {
     YouTubeCode_3: string;
     TwitterID_3: string;
     cuarta_descripcion: any;
-  };
-  quinto_bloque: {
-    imagen_5: {
-      imagen: {
-        _type: any;
-        asset: {
-          _ref: string;
-          _type: string;
-        };
-      };
-      epigrafe: any;
-    };
-    video: {
-      _type: any;
-      asset: {
-        _ref: string;
-        _type: string;
-      };
-    };
-    YouTubeCode_4: string;
-    TwitterID_4: string;
-    quinta_descripcion: any;
-  };
-  sexto_bloque: {
-    imagen_5: {
-      imagen: {
-        _type: any;
-        asset: {
-          _ref: string;
-          _type: string;
-        };
-      };
-      epigrafe: any;
-    };
-    video: {
-      _type: any;
-      asset: {
-        _ref: string;
-        _type: string;
-      };
-    };
-    YouTubeCode_4: string;
-    TwitterID_4: string;
-    quinta_descripcion: any;
-  };
-  septimo_bloque: {
-    imagen_5: {
-      imagen: {
-        _type: any;
-        asset: {
-          _ref: string;
-          _type: string;
-        };
-      };
-      epigrafe: any;
-    };
-    video: {
-      _type: any;
-      asset: {
-        _ref: string;
-        _type: string;
-      };
-    };
-    YouTubeCode_4: string;
-    TwitterID_4: string;
-    quinta_descripcion: any;
-  };
-  octavo_bloque: {
-    imagen_5: {
-      imagen: {
-        _type: any;
-        asset: {
-          _ref: string;
-          _type: string;
-        };
-      };
-      epigrafe: any;
-    };
-    video: {
-      _type: any;
-      asset: {
-        _ref: string;
-        _type: string;
-      };
-    };
-    YouTubeCode_4: string;
-    TwitterID_4: string;
-    quinta_descripcion: any;
+    incrustaciones?: Incrustacion[];
   };
 
   imagenes_array: any;
@@ -203,3 +119,12 @@ export interface Autor {
     };
   };
 }
+
+export type Incrustacion = {
+  _key?: string;
+  tipo: "youtube" | "facebook" | "instagram" | "tiktok" | "html" | "pdf";
+  url?: string;
+  codigoHtml?: string;
+  tituloPdf?: string;
+  archivoPdfUrl?: string;
+};

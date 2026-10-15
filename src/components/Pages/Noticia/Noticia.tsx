@@ -8,6 +8,7 @@ import {
   modifyVideoFileUrl,
 } from "@/utils/modifyCodes";
 import Bloques from "./Bloques/Bloques";
+import Incrustaciones from "./Incrustaciones";
 
 type NoticiasProps = {
   noticia: Noticia;
@@ -45,7 +46,13 @@ const Noticias = ({ noticia, autor }: NoticiasProps) => {
             />
           ) : (
             <span className="author-badge">
-              {nombreAutor.substring(0, 2).toUpperCase()}
+              <Image
+                src={"/logos/Avatar.jpg"}
+                alt={nombreAutor}
+                width={28}
+                height={28}
+                className="author-avatar"
+              />
             </span>
           )}
           <span className="author-name">Redacción {nombreAutor}</span>
@@ -64,7 +71,10 @@ const Noticias = ({ noticia, autor }: NoticiasProps) => {
         {noticia.image_principal?.imagen && (
           <Image
             className="noticia-imagen"
-            src={modifyImageUrl(noticia.image_principal.imagen.asset._ref, 1200)}
+            src={modifyImageUrl(
+              noticia.image_principal.imagen.asset._ref,
+              1200,
+            )}
             alt={noticia.title}
             height={600}
             width={1000}
@@ -98,6 +108,8 @@ const Noticias = ({ noticia, autor }: NoticiasProps) => {
           />
         </div>
       )}
+
+      <Incrustaciones items={noticia.image_principal?.incrustaciones} />
 
       {/* Bloques de cuerpo dinámico */}
       <Bloques noticia={noticia} />
