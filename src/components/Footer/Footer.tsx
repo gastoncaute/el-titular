@@ -103,9 +103,10 @@ export default function Footer() {
         >
           Página creada por Gaston Cauteruccio
         </Link> */}
-        <Link href="/pages/terminosycondiciones">
-          Términos y condiciones | Política y privacidad
-        </Link>
+        <p>
+          <Link href="/pages/terminosycondiciones">Términos y condiciones</Link>{" "}
+          | <Link href="/pages/politicayprivacidad">Política y privacidad</Link>
+        </p>
       </div>
     </footer>
   );

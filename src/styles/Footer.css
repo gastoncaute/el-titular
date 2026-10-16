@@ -145,7 +145,7 @@
   font-size: 0.85rem;
 }
 
-.footer-bottom a:hover {
+.footer-bottom p a:hover {
   opacity: 1;
   text-decoration: underline;
 }
