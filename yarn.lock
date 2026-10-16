@@ -1073,6 +1073,11 @@
   resolved "https://registry.npmjs.org/@types/uuid/-/uuid-8.3.4.tgz"
   integrity sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==
 
+"@types/youtube-player@^5.5.5":
+  version "5.5.11"
+  resolved "https://registry.npmjs.org/@types/youtube-player/-/youtube-player-5.5.11.tgz"
+  integrity sha512-pM41CDBqJqBmTeJWnF7NOGz82IQoYOhqzMYXv5vKCXBqGiYSLldxMtpCk6KAEtADTy49S45AriYaCaZyeUX38Q==
+
 "@typescript-eslint/parser@^5.4.2 || ^6.0.0":
   version "6.10.0"
   resolved "https://registry.npmjs.org/@typescript-eslint/parser/-/parser-6.10.0.tgz"
@@ -1621,10 +1626,10 @@ chownr@^1.1.1:
   resolved "https://registry.npmjs.org/chownr/-/chownr-1.1.4.tgz"
   integrity sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==
 
-classnames@^2.2.5:
-  version "2.3.2"
-  resolved "https://registry.npmjs.org/classnames/-/classnames-2.3.2.tgz"
-  integrity sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==
+classnames@^2.2.5, classnames@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.npmjs.org/classnames/-/classnames-2.5.1.tgz"
+  integrity sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==
 
 client-only@^0.0.1, client-only@0.0.1:
   version "0.0.1"
@@ -1908,6 +1913,13 @@ debounce@1.0.0:
   integrity sha512-4FCfBL8uZFIh3BShn4AlxH4O9F5v+CVriJfiwW8Me/MhO7NqBE5JO5WO48NasbsY9Lww/KYflB79MejA3eKhxw==
   dependencies:
     date-now "1.0.1"
+
+debug@^2.6.6:
+  version "2.6.9"
+  resolved "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz"
+  integrity sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==
+  dependencies:
+    ms "2.0.0"
 
 debug@^3.2.7:
   version "3.2.7"
@@ -3600,6 +3612,11 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.npmjs.org/lines-and-columns/-/lines-and-columns-1.2.4.tgz"
   integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
 
+load-script@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/load-script/-/load-script-1.0.0.tgz"
+  integrity sha512-kPEjMFtZvwL9TaZo0uZ2ml+Ye9HUMmPwbYRJ324qF9tqMejwykJ5ggTyvzmrbBeapCAbk98BSbTeovHEEP1uCA==
+
 locate-path@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npmjs.org/locate-path/-/locate-path-5.0.0.tgz"
@@ -4309,7 +4326,7 @@ progress-stream@^2.0.0:
     speedometer "~1.0.0"
     through2 "~2.0.3"
 
-prop-types@^15.5.4, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
+prop-types@^15.5.4, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1, prop-types@15.8.1:
   version "15.8.1"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -4392,7 +4409,7 @@ react-copy-to-clipboard@^5.0.4:
     copy-to-clipboard "^3.3.1"
     prop-types "^15.8.1"
 
-react-dom@^18, react-dom@^18.0.0, react-dom@^18.2.0, "react-dom@>= 16.8.0", "react-dom@>= 18.0.0", react-dom@>=16.8.0:
+"react-dom@^16.0.0 || ^17.0.0 || ^18.0.0", "react-dom@^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^20.0.0 || ^21.0.0 || ^22.0.0", react-dom@^18, react-dom@^18.0.0, react-dom@^18.2.0, "react-dom@>= 16.8.0", "react-dom@>= 18.0.0", react-dom@>=16.8.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
@@ -4416,6 +4433,11 @@ react-focus-lock@^2.8.1:
     react-clientside-effect "^1.2.6"
     use-callback-ref "^1.3.0"
     use-sidecar "^1.1.2"
+
+react-html-props@^2.0.3:
+  version "2.1.1"
+  resolved "https://registry.npmjs.org/react-html-props/-/react-html-props-2.1.1.tgz"
+  integrity sha512-tM+YCYlr90m3JontKUAa+gNVU2zkyprlCS7OQ9aa3z2MfyJjAioJzrSmi1Vef/+UCTE6CQlPqLX4ebdLIJDKxw==
 
 react-is@^16.13.1:
   version "16.13.1"
@@ -4455,12 +4477,29 @@ react-rx@^2.1.3:
     observable-callback "^1.0.2"
     use-sync-external-store "^1.2.0"
 
+react-social-media-embed@^2.5.18:
+  version "2.5.18"
+  resolved "https://registry.npmjs.org/react-social-media-embed/-/react-social-media-embed-2.5.18.tgz"
+  integrity sha512-+PkzLRGAwnySkxKajaiK5VD+EjOhlFsh/vjNxgHsDfKBTseDpFxPrMXXQWkk6BRCwFBNVWX+V1HZ9AU0y54Wgw==
+  dependencies:
+    "@types/youtube-player" "^5.5.5"
+    classnames "^2.5.1"
+    react-html-props "^2.0.3"
+    react-sub-unsub "^2.2.1"
+    react-twitter-embed "^4.0.4"
+    react-youtube "^10.1.0"
+
 react-style-proptype@^3.2.2:
   version "3.2.2"
   resolved "https://registry.npmjs.org/react-style-proptype/-/react-style-proptype-3.2.2.tgz"
   integrity sha512-ywYLSjNkxKHiZOqNlso9PZByNEY+FTyh3C+7uuziK0xFXu9xzdyfHwg4S9iyiRRoPCR4k2LqaBBsWVmSBwCWYQ==
   dependencies:
     prop-types "^15.5.4"
+
+react-sub-unsub@^2.2.1:
+  version "2.2.8"
+  resolved "https://registry.npmjs.org/react-sub-unsub/-/react-sub-unsub-2.2.8.tgz"
+  integrity sha512-o3tmiOOZPdQUCmRhkdCHXRFLOHnCwdz/N3QZ1JQ14fQGA2HysKMF0kWu56ERnQUCK7wYVCQzI8pFbnivAYNQ+A==
 
 react-tweet@^3.1.1:
   version "3.1.1"
@@ -4472,7 +4511,23 @@ react-tweet@^3.1.1:
     date-fns "^2.30.0"
     swr "^2.2.0"
 
-"react@^15 || ^16 || ^17 || ^18", "react@^15.3.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^15.3.0 || 16 || 17 || 18", "react@^16.11.0 || ^17.0.0 || ^18.0.0", "react@^16.8 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9 || ^17 || ^18", "react@^17 || ^18", react@^18, react@^18.0.0, react@^18.2, react@^18.2.0, "react@>= 16.8.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>= 18.0.0", react@>=15.0.0, react@>=16.8.0, react@>=17.0.0:
+react-twitter-embed@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.npmjs.org/react-twitter-embed/-/react-twitter-embed-4.0.4.tgz"
+  integrity sha512-2JIL7qF+U62zRzpsh6SZDXNI3hRNVYf5vOZ1WRcMvwKouw+xC00PuFaD0aEp2wlyGaZ+f4x2VvX+uDadFQ3HVA==
+  dependencies:
+    scriptjs "^2.5.9"
+
+react-youtube@^10.1.0:
+  version "10.1.0"
+  resolved "https://registry.npmjs.org/react-youtube/-/react-youtube-10.1.0.tgz"
+  integrity sha512-ZfGtcVpk0SSZtWCSTYOQKhfx5/1cfyEW1JN/mugGNfAxT3rmVJeMbGpA9+e78yG21ls5nc/5uZJETE3cm3knBg==
+  dependencies:
+    fast-deep-equal "3.1.3"
+    prop-types "15.8.1"
+    youtube-player "5.5.2"
+
+"react@^15 || ^16 || ^17 || ^18", "react@^15.3.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^15.3.0 || 16 || 17 || 18", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^20.0.0 || ^21.0.0 || ^22.0.0", "react@^16.11.0 || ^17.0.0 || ^18.0.0", "react@^16.8 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9 || ^17 || ^18", "react@^17 || ^18", react@^18, react@^18.0.0, react@^18.2, react@^18.2.0, "react@>= 16.8.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>= 18.0.0", react@>=0.14.1, react@>=15.0.0, react@>=16.8.0, react@>=17.0.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
@@ -4873,6 +4928,11 @@ scheduler@^0.23.0:
   dependencies:
     loose-envify "^1.1.0"
 
+scriptjs@^2.5.9:
+  version "2.5.9"
+  resolved "https://registry.npmjs.org/scriptjs/-/scriptjs-2.5.9.tgz"
+  integrity sha512-qGVDoreyYiP1pkQnbnFAUIS5AjenNwwQBdl7zeos9etl+hYKWahjRTfzAZZYBv5xNHx7vNKCmaLDQZ6Fr2AEXg==
+
 scroll-into-view-if-needed@^2.2.20:
   version "2.2.31"
   resolved "https://registry.npmjs.org/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.2.31.tgz"
@@ -4982,6 +5042,11 @@ simple-wcswidth@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/simple-wcswidth/-/simple-wcswidth-1.0.1.tgz"
   integrity sha512-xMO/8eNREtaROt7tJvWJqHBDTMFN4eiQ5I4JRMuilwfnFcV5W9u7RUkueNkdw0jPqGMX36iCywelS5yilTuOxg==
+
+sister@^3.0.0:
+  version "3.0.2"
+  resolved "https://registry.npmjs.org/sister/-/sister-3.0.2.tgz"
+  integrity sha512-p19rtTs+NksBRKW9qn0UhZ8/TUI9BPw9lmtHny+Y3TinWlOa9jWh9xB0AtPSdmOy49NJJJSSe0Ey4C7h0TrcYA==
 
 sitemap@^8.0.0:
   version "8.0.0"
@@ -5840,6 +5905,15 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+youtube-player@5.5.2:
+  version "5.5.2"
+  resolved "https://registry.npmjs.org/youtube-player/-/youtube-player-5.5.2.tgz"
+  integrity sha512-ZGtsemSpXnDky2AUYWgxjaopgB+shFHgXVpiJFeNB5nWEugpW1KWYDaHKuLqh2b67r24GtP6HoSW5swvf0fFIQ==
+  dependencies:
+    debug "^2.6.6"
+    load-script "^1.0.0"
+    sister "^3.0.0"
 
 zip-stream@^4.1.0:
   version "4.1.1"

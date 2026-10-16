@@ -1,4 +1,11 @@
+"use client";
+
 import React from "react";
+import {
+  InstagramEmbed,
+  FacebookEmbed,
+  TikTokEmbed,
+} from "react-social-media-embed";
 
 export type IncrustacionItem = {
   _key?: string;
@@ -48,6 +55,7 @@ export default function Incrustaciones({
       {items.map((item, index) => {
         const key = item._key ?? `${item.tipo ?? "contenido"}-${index}`;
 
+        // 1. YOUTUBE
         if (item.tipo === "youtube" && item.url) {
           const videoId = obtenerYoutubeId(item.url);
 
@@ -68,6 +76,7 @@ export default function Incrustaciones({
           );
         }
 
+        // 2. PDF
         if (item.tipo === "pdf" && item.archivoPdfUrl) {
           return (
             <div className="incrustacion-pdf" key={key}>
@@ -90,20 +99,53 @@ export default function Incrustaciones({
           );
         }
 
-        if (
-          ["facebook", "instagram", "tiktok"].includes(item.tipo ?? "") &&
-          item.url
-        ) {
+        // 3. INSTAGRAM (Vista previa nativa como tarjeta)
+        if (item.tipo === "instagram" && item.url) {
           return (
-            <div className="incrustacion-red-social" key={key}>
-              <a href={item.url} target="_blank" rel="noopener noreferrer">
-                Ver publicación en{" "}
-                {item.tipo === "facebook"
-                  ? "Facebook"
-                  : item.tipo === "instagram"
-                    ? "Instagram"
-                    : "TikTok"}
-              </a>
+            <div
+              className="incrustacion-red-social instagram-embed-container"
+              key={key}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                width: "100%",
+              }}
+            >
+              <InstagramEmbed url={item.url} width={340} />
+            </div>
+          );
+        }
+
+        // 4. TIKTOK (Vista previa nativa como tarjeta)
+        if (item.tipo === "tiktok" && item.url) {
+          return (
+            <div
+              className="incrustacion-red-social tiktok-embed-container"
+              key={key}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                width: "100%",
+              }}
+            >
+              <TikTokEmbed url={item.url} width={325} />
+            </div>
+          );
+        }
+
+        // 5. FACEBOOK (Vista previa nativa como tarjeta)
+        if (item.tipo === "facebook" && item.url) {
+          return (
+            <div
+              className="incrustacion-red-social facebook-embed-container"
+              key={key}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                width: "100%",
+              }}
+            >
+              <FacebookEmbed url={item.url} width={500} />
             </div>
           );
         }
